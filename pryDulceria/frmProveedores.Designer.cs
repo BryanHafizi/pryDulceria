@@ -13,6 +13,9 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
+
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProveedores));
+
             lblTitulo = new Label();
             dgyProveedores = new DataGridView();
             btnNuevo = new Button();
@@ -28,7 +31,11 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblTitulo.ForeColor = Color.FromArgb(51, 51, 51);
+
+            lblTitulo.Location = new Point(293, 39);
+
             lblTitulo.Location = new Point(195, 33);
+
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(179, 37);
             lblTitulo.TabIndex = 3;
@@ -39,6 +46,9 @@
             // 
             dgyProveedores.BackgroundColor = Color.White;
             dgyProveedores.GridColor = Color.FromArgb(224, 176, 255);
+
+            dgyProveedores.Location = new Point(30, 100);
+
             dgyProveedores.Location = new Point(30, 90);
             dgyProveedores.Name = "dgyProveedores";
             dgyProveedores.Size = new Size(950, 450);
@@ -82,12 +92,21 @@
             // 
             // pictureBox1
             // 
+
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(30, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(257, 92);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 8;
+
             pictureBox1.Image = Properties.Resources.Screenshot_2026_06_28_220345_removebg_preview;
             pictureBox1.Location = new Point(30, 20);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(159, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
+
             pictureBox1.TabStop = false;
             // 
             // frmProveedores
@@ -95,7 +114,11 @@
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
+
+            ClientSize = new Size(1024, 749);
+
             ClientSize = new Size(1024, 768);
+
             Controls.Add(pictureBox1);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
