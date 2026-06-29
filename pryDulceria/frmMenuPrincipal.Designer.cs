@@ -19,6 +19,7 @@
             btnProveedores = new Button();
             btnInventario = new Button();
             btnVentas = new Button();
+            btnCerrarSesion = new Button();
             pnlContenedorMenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -36,6 +37,7 @@
             // pnlContenedorMenu
             // 
             pnlContenedorMenu.BackColor = Color.FromArgb(255, 192, 203);
+            pnlContenedorMenu.Controls.Add(btnCerrarSesion);
             pnlContenedorMenu.Controls.Add(button1);
             pnlContenedorMenu.Controls.Add(btnProveedores);
             pnlContenedorMenu.Controls.Add(btnInventario);
@@ -97,6 +99,18 @@
             btnVentas.Text = "Módulo de Ventas";
             btnVentas.UseVisualStyleBackColor = false;
             // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.BackColor = Color.FromArgb(240, 128, 128);
+            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
+            btnCerrarSesion.ForeColor = Color.White;
+            btnCerrarSesion.Location = new Point(813, 347);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(123, 35);
+            btnCerrarSesion.TabIndex = 3;
+            btnCerrarSesion.Text = "Cerrar Sesion";
+            btnCerrarSesion.UseVisualStyleBackColor = false;
+            // 
             // frmMenuAdmin
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -121,5 +135,6 @@
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnProveedores;
         private Button button1;
+        private Button btnCerrarSesion;
     }
 }

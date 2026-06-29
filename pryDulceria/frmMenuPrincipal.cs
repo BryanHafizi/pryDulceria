@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace pryDulceria 
+namespace pryDulceria
 {
     public partial class frmMenuAdmin : Form
     {
@@ -9,4 +9,10 @@ namespace pryDulceria
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
