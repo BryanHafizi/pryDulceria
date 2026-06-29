@@ -15,11 +15,11 @@
         {
             lblBienvenida = new Label();
             pnlContenedorMenu = new Panel();
+            btnCerrarSesion = new Button();
             button1 = new Button();
             btnProveedores = new Button();
             btnInventario = new Button();
             btnVentas = new Button();
-            btnCerrarSesion = new Button();
             pnlContenedorMenu.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,6 +46,18 @@
             pnlContenedorMenu.Name = "pnlContenedorMenu";
             pnlContenedorMenu.Size = new Size(950, 400);
             pnlContenedorMenu.TabIndex = 1;
+            // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.BackColor = Color.FromArgb(240, 128, 128);
+            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
+            btnCerrarSesion.ForeColor = Color.White;
+            btnCerrarSesion.Location = new Point(813, 347);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(123, 35);
+            btnCerrarSesion.TabIndex = 3;
+            btnCerrarSesion.Text = "Cerrar Sesion";
+            btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -96,20 +108,8 @@
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(161, 150);
             btnVentas.TabIndex = 2;
-            btnVentas.Text = "Módulo de Ventas";
+            btnVentas.Text = "Ventas";
             btnVentas.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrarSesion
-            // 
-            btnCerrarSesion.BackColor = Color.FromArgb(240, 128, 128);
-            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
-            btnCerrarSesion.ForeColor = Color.White;
-            btnCerrarSesion.Location = new Point(813, 347);
-            btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Size = new Size(123, 35);
-            btnCerrarSesion.TabIndex = 3;
-            btnCerrarSesion.Text = "Cerrar Sesion";
-            btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
             // frmMenuAdmin
             // 

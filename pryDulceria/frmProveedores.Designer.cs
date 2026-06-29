@@ -13,7 +13,6 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProveedores));
             lblTitulo = new Label();
             dgyProveedores = new DataGridView();
             btnNuevo = new Button();
@@ -83,7 +82,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.Screenshot_2026_06_28_220345_removebg_preview;
             pictureBox1.Location = new Point(30, 20);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(159, 50);
