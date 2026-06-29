@@ -13,7 +13,7 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            lblTitulo = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             lblUsuario = new Label();
             txtUsuario = new TextBox();
             lblPassword = new Label();
@@ -21,19 +21,9 @@
             lblRol = new Label();
             cmbRol = new ComboBox();
             btnAcceder = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // lblTitulo
-            // 
-            lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblTitulo.ForeColor = Color.FromArgb(51, 51, 51);
-            lblTitulo.Location = new Point(109, 52);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(221, 37);
-            lblTitulo.TabIndex = 7;
-            lblTitulo.Text = "Dulcería Marlyn";
-            lblTitulo.Click += lblTitulo_Click;
             // 
             // lblUsuario
             // 
@@ -100,12 +90,23 @@
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(61, 32);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(257, 92);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
             // frmInicioSesion
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(384, 461);
+            Controls.Add(pictureBox1);
             Controls.Add(btnAcceder);
             Controls.Add(cmbRol);
             Controls.Add(lblRol);
@@ -113,17 +114,16 @@
             Controls.Add(lblPassword);
             Controls.Add(txtUsuario);
             Controls.Add(lblUsuario);
-            Controls.Add(lblTitulo);
             Font = new Font("Segoe UI", 12F);
             Name = "frmInicioSesion";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Acceso al Sistema";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
-        #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
+        #endregion
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblPassword;
@@ -131,5 +131,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Button btnAcceder;
+        private PictureBox pictureBox1;
     }
 }
