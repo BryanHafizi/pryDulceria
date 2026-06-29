@@ -67,7 +67,7 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            lblTotal.Location = new Point(730, 570);
+            lblTotal.Location = new Point(740, 553);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(219, 30);
             lblTotal.TabIndex = 2;
@@ -78,7 +78,7 @@
             btnCobrar.BackColor = Color.FromArgb(255, 105, 180);
             btnCobrar.FlatStyle = FlatStyle.Flat;
             btnCobrar.ForeColor = Color.White;
-            btnCobrar.Location = new Point(860, 630);
+            btnCobrar.Location = new Point(860, 593);
             btnCobrar.Name = "btnCobrar";
             btnCobrar.Size = new Size(120, 40);
             btnCobrar.TabIndex = 1;
@@ -90,7 +90,7 @@
             btnCancelar.BackColor = Color.FromArgb(240, 128, 128);
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.ForeColor = Color.White;
-            btnCancelar.Location = new Point(740, 632);
+            btnCancelar.Location = new Point(740, 598);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(100, 35);
             btnCancelar.TabIndex = 0;
