@@ -15,12 +15,15 @@
         {
             lblBienvenida = new Label();
             pnlContenedorMenu = new Panel();
-            btnCerrarSesion = new Button();
             button1 = new Button();
             btnProveedores = new Button();
             btnInventario = new Button();
             btnVentas = new Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             pnlContenedorMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // lblBienvenida
@@ -28,7 +31,7 @@
             lblBienvenida.AutoSize = true;
             lblBienvenida.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblBienvenida.ForeColor = Color.FromArgb(51, 51, 51);
-            lblBienvenida.Location = new Point(30, 30);
+            lblBienvenida.Location = new Point(240, 40);
             lblBienvenida.Name = "lblBienvenida";
             lblBienvenida.Size = new Size(459, 37);
             lblBienvenida.TabIndex = 2;
@@ -37,7 +40,8 @@
             // pnlContenedorMenu
             // 
             pnlContenedorMenu.BackColor = Color.FromArgb(255, 192, 203);
-            pnlContenedorMenu.Controls.Add(btnCerrarSesion);
+            pnlContenedorMenu.Controls.Add(pictureBox1);
+            pnlContenedorMenu.Controls.Add(lblBienvenida);
             pnlContenedorMenu.Controls.Add(button1);
             pnlContenedorMenu.Controls.Add(btnProveedores);
             pnlContenedorMenu.Controls.Add(btnInventario);
@@ -46,18 +50,6 @@
             pnlContenedorMenu.Name = "pnlContenedorMenu";
             pnlContenedorMenu.Size = new Size(950, 400);
             pnlContenedorMenu.TabIndex = 1;
-            // 
-            // btnCerrarSesion
-            // 
-            btnCerrarSesion.BackColor = Color.FromArgb(240, 128, 128);
-            btnCerrarSesion.FlatStyle = FlatStyle.Flat;
-            btnCerrarSesion.ForeColor = Color.White;
-            btnCerrarSesion.Location = new Point(813, 347);
-            btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Size = new Size(123, 35);
-            btnCerrarSesion.TabIndex = 3;
-            btnCerrarSesion.Text = "Cerrar Sesion";
-            btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -111,21 +103,43 @@
             btnVentas.Text = "Ventas";
             btnVentas.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Screenshot_2026_06_28_224006;
+            pictureBox1.Location = new Point(832, 333);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 35);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Screenshot_2026_06_28_220345_removebg_preview;
+            pictureBox2.Location = new Point(402, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(238, 82);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
+            // 
             // frmMenuAdmin
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(1024, 768);
+            Controls.Add(pictureBox2);
             Controls.Add(pnlContenedorMenu);
-            Controls.Add(lblBienvenida);
             Font = new Font("Segoe UI", 12F);
             Name = "frmMenuAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menú Principal - Administrador";
             pnlContenedorMenu.ResumeLayout(false);
+            pnlContenedorMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
         #endregion
 
@@ -135,6 +149,7 @@
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnProveedores;
         private Button button1;
-        private Button btnCerrarSesion;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
