@@ -13,19 +13,32 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
+
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
+
             lblTitulo = new Label();
             dgyProductos = new DataGridView();
             btnNuevo = new Button();
             btnEditar = new Button();
             btnEliminar = new Button();
+
             ((System.ComponentModel.ISupportInitialize)dgyProductos).BeginInit();
+
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)dgyProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+
             SuspendLayout();
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+
             lblTitulo.Location = new Point(175, 28);
+
+            lblTitulo.Location = new Point(195, 33);
+
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(280, 37);
             lblTitulo.TabIndex = 3;
@@ -76,12 +89,29 @@
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
             // 
+
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(30, 20);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(159, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+
             // frmInventario
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
+
             ClientSize = new Size(1024, 749);
+
+            ClientSize = new Size(1024, 768);
+            Controls.Add(pictureBox1);
+
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
@@ -92,6 +122,10 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inventario";
             ((System.ComponentModel.ISupportInitialize)dgyProductos).EndInit();
+
+
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+
             ResumeLayout(false);
             PerformLayout();
         }
@@ -102,5 +136,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
+        private PictureBox pictureBox1;
     }
 }
