@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace pryDulceria
 {
-    public partial class frmVender : Form
+    public partial class frmVentas : Form
     {
-        public frmVender()
+        public frmVentas()
         {
             InitializeComponent();
         }
@@ -33,5 +33,15 @@ namespace pryDulceria
             dgyVenta.Rows.Add("3", "Bolsa de Totis", "$12.00", "$36.00");
             dgyVenta.Rows.Add("10", "Gansito", "$18.00", "$180.00");
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            // Acción por defecto: cerrar el formulario
+            this.Close();
+        }
+
+
     }
 }
+
+

@@ -17,20 +17,20 @@
             btnNuevo = new Button();
             btnEditar = new Button();
             btnEliminar = new Button();
-            pictureBox1 = new PictureBox();
+            pbLogo = new PictureBox();
             dgyProveedores = new DataGridView();
             clmClave = new DataGridViewTextBoxColumn();
             clmNombreProv = new DataGridViewTextBoxColumn();
             clmEmpresa = new DataGridViewTextBoxColumn();
             clmContacto = new DataGridViewTextBoxColumn();
             lblBuscar = new Label();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            txtBuscar = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pbProveedores = new PictureBox();
+            pbBuscar = new PictureBox();
+            txtBuscarProv = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgyProveedores).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbBuscar).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
@@ -81,15 +81,15 @@
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pbLogo
             // 
-            pictureBox1.Image = Properties.Resources.Screenshot_2026_06_28_220345_removebg_preview;
-            pictureBox1.Location = new Point(30, 20);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(159, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            pbLogo.Image = Properties.Resources.Screenshot_2026_06_28_220345_removebg_preview;
+            pbLogo.Location = new Point(30, 20);
+            pbLogo.Name = "pbLogo";
+            pbLogo.Size = new Size(159, 50);
+            pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbLogo.TabIndex = 5;
+            pbLogo.TabStop = false;
             // 
             // dgyProveedores
             // 
@@ -131,34 +131,35 @@
             lblBuscar.TabIndex = 8;
             lblBuscar.Text = "Buscar proveedor";
             // 
-            // pictureBox2
+            // pbProveedores
             // 
-            pictureBox2.Image = Properties.Resources._1782681922009;
-            pictureBox2.Location = new Point(910, 20);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(88, 58);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 9;
-            pictureBox2.TabStop = false;
+            pbProveedores.AccessibleRole = AccessibleRole.None;
+            pbProveedores.Image = Properties.Resources._1782681922009;
+            pbProveedores.Location = new Point(910, 20);
+            pbProveedores.Name = "pbProveedores";
+            pbProveedores.Size = new Size(88, 58);
+            pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbProveedores.TabIndex = 9;
+            pbProveedores.TabStop = false;
             // 
-            // pictureBox3
+            // pbBuscar
             // 
-            pictureBox3.BackColor = Color.White;
-            pictureBox3.Image = Properties.Resources._1782681978865;
-            pictureBox3.Location = new Point(741, 72);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 29);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 14;
-            pictureBox3.TabStop = false;
+            pbBuscar.BackColor = Color.White;
+            pbBuscar.Image = Properties.Resources._1782681978865;
+            pbBuscar.Location = new Point(741, 72);
+            pbBuscar.Name = "pbBuscar";
+            pbBuscar.Size = new Size(40, 29);
+            pbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbBuscar.TabIndex = 14;
+            pbBuscar.TabStop = false;
             // 
-            // txtBuscar
+            // txtBuscarProv
             // 
-            txtBuscar.Location = new Point(371, 72);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(410, 29);
-            txtBuscar.TabIndex = 13;
-            txtBuscar.Text = "Buscar";
+            txtBuscarProv.Location = new Point(371, 72);
+            txtBuscarProv.Name = "txtBuscarProv";
+            txtBuscarProv.Size = new Size(410, 29);
+            txtBuscarProv.TabIndex = 13;
+            txtBuscarProv.Text = "Buscar";
             // 
             // frmProveedores
             // 
@@ -166,12 +167,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(1024, 749);
-            Controls.Add(pictureBox3);
-            Controls.Add(txtBuscar);
-            Controls.Add(pictureBox2);
+            Controls.Add(pbBuscar);
+            Controls.Add(txtBuscarProv);
+            Controls.Add(pbProveedores);
             Controls.Add(dgyProveedores);
             Controls.Add(lblBuscar);
-            Controls.Add(pictureBox1);
+            Controls.Add(pbLogo);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
@@ -181,10 +182,10 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestión de Proveedores";
             Load += frmProveedores_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgyProveedores).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbBuscar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -194,15 +195,15 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
-        private PictureBox pictureBox1;
+        private PictureBox pbLogo;
         private DataGridView dgyProveedores;
         private Label lblBuscar;
         private DataGridViewTextBoxColumn clmClave;
         private DataGridViewTextBoxColumn clmNombreProv;
         private DataGridViewTextBoxColumn clmEmpresa;
         private DataGridViewTextBoxColumn clmContacto;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private TextBox txtBuscar;
+        private PictureBox pbProveedores;
+        private PictureBox pbBuscar;
+        private TextBox txtBuscarProv;
     }
 }
