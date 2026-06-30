@@ -1,7 +1,7 @@
 ﻿namespace pryDulceria
 
 {
-    partial class frmVender
+    partial class frmVentas
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -14,7 +14,7 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVender));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
             lblTitulo = new Label();
             lblBuscar = new Label();
             dgyVenta = new DataGridView();
@@ -25,14 +25,14 @@
             lblTotal = new Label();
             btnCobrar = new Button();
             btnCancelar = new Button();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            pbLogo = new PictureBox();
+            pbVentas = new PictureBox();
+            pbBuscar = new PictureBox();
             txtBuscar = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgyVenta).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbVentas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbBuscar).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
@@ -121,36 +121,37 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pbLogo
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(39, 23);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(159, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            pbLogo.Image = (Image)resources.GetObject("pbLogo.Image");
+            pbLogo.Location = new Point(39, 23);
+            pbLogo.Name = "pbLogo";
+            pbLogo.Size = new Size(159, 50);
+            pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbLogo.TabIndex = 6;
+            pbLogo.TabStop = false;
             // 
-            // pictureBox2
+            // pbVentas
             // 
-            pictureBox2.Image = Properties.Resources.Code_Generated_Image;
-            pictureBox2.Location = new Point(901, 23);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(92, 50);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 7;
-            pictureBox2.TabStop = false;
+            pbVentas.Image = Properties.Resources.Code_Generated_Image;
+            pbVentas.Location = new Point(901, 23);
+            pbVentas.Name = "pbVentas";
+            pbVentas.Size = new Size(92, 50);
+            pbVentas.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbVentas.TabIndex = 7;
+            pbVentas.TabStop = false;
+            pbVentas.Click += pictureBox2_Click;
             // 
-            // pictureBox3
+            // pbBuscar
             // 
-            pictureBox3.BackColor = Color.White;
-            pictureBox3.Image = Properties.Resources._1782681978865;
-            pictureBox3.Location = new Point(744, 82);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(44, 29);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 14;
-            pictureBox3.TabStop = false;
+            pbBuscar.BackColor = Color.White;
+            pbBuscar.Image = Properties.Resources._1782681978865;
+            pbBuscar.Location = new Point(744, 82);
+            pbBuscar.Name = "pbBuscar";
+            pbBuscar.Size = new Size(44, 29);
+            pbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbBuscar.TabIndex = 14;
+            pbBuscar.TabStop = false;
             // 
             // txtBuscar
             // 
@@ -160,16 +161,16 @@
             txtBuscar.TabIndex = 13;
             txtBuscar.Text = "Buscar";
             // 
-            // frmVender
+            // frmVentas
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(1024, 749);
-            Controls.Add(pictureBox3);
+            Controls.Add(pbBuscar);
             Controls.Add(txtBuscar);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(pbVentas);
+            Controls.Add(pbLogo);
             Controls.Add(btnCancelar);
             Controls.Add(btnCobrar);
             Controls.Add(lblTotal);
@@ -177,14 +178,14 @@
             Controls.Add(lblBuscar);
             Controls.Add(lblTitulo);
             Font = new Font("Segoe UI", 12F);
-            Name = "frmVender";
+            Name = "frmVentas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Módulo de Facturación y Ventas";
             Load += frmVender_Load;
             ((System.ComponentModel.ISupportInitialize)dgyVenta).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbVentas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbBuscar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -196,13 +197,13 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnCobrar;
         private System.Windows.Forms.Button btnCancelar;
-        private PictureBox pictureBox1;
+        private PictureBox pbLogo;
         private DataGridViewTextBoxColumn clmCantidad;
         private DataGridViewTextBoxColumn clmProducto;
         private DataGridViewTextBoxColumn clmPrecioUni;
         private DataGridViewTextBoxColumn clmSubtotal;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
+        private PictureBox pbVentas;
+        private PictureBox pbBuscar;
         private TextBox txtBuscar;
     }
 }
