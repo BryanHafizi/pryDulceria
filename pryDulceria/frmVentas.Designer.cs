@@ -28,6 +28,7 @@
             pbCarrito = new PictureBox();
             pbBuscar = new PictureBox();
             txtBuscar = new TextBox();
+            btnEditar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvVentas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbCarrito).BeginInit();
@@ -111,7 +112,7 @@
             btnCancelar.BackColor = Color.FromArgb(240, 128, 128);
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.ForeColor = Color.White;
-            btnCancelar.Location = new Point(534, 669);
+            btnCancelar.Location = new Point(620, 669);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(120, 40);
             btnCancelar.TabIndex = 0;
@@ -159,12 +160,25 @@
             txtBuscar.TabIndex = 13;
             txtBuscar.Text = "Buscar";
             // 
+            // btnEditar
+            // 
+            btnEditar.BackColor = Color.FromArgb(255, 105, 180);
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.ForeColor = Color.White;
+            btnEditar.Location = new Point(470, 669);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(120, 40);
+            btnEditar.TabIndex = 15;
+            btnEditar.Text = "Cobrar";
+            btnEditar.UseVisualStyleBackColor = false;
+            // 
             // frmVentas
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(1006, 721);
+            Controls.Add(btnEditar);
             Controls.Add(pbBuscar);
             Controls.Add(txtBuscar);
             Controls.Add(pbCarrito);
@@ -201,5 +215,6 @@
         private PictureBox pbCarrito;
         private PictureBox pbBuscar;
         private TextBox txtBuscar;
+        private Button btnEditar;
     }
 }
