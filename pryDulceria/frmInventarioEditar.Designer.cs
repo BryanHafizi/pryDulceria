@@ -1,6 +1,6 @@
 ﻿namespace pryDulceria
 {
-    partial class frmInvenEditar
+    partial class frmInventarioEditar
     {
         /// <summary>
         /// Required designer variable.

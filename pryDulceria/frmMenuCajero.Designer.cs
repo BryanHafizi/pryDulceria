@@ -29,46 +29,46 @@
         private void InitializeComponent()
         {
             pbLogo = new PictureBox();
-            pnlContenedorMenu = new Panel();
+            pnlOpciones = new Panel();
             pbCerrarSesion = new PictureBox();
             lblBienvenida = new Label();
             btnReportes = new Button();
             btnInventario = new Button();
             btnVentas = new Button();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
-            pnlContenedorMenu.SuspendLayout();
+            pnlOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).BeginInit();
             SuspendLayout();
             // 
             // pbLogo
             // 
             pbLogo.Image = Properties.Resources.Screenshot_2026_06_28_220345_removebg_preview;
-            pbLogo.Location = new Point(406, 12);
+            pbLogo.Location = new Point(382, 30);
             pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(238, 82);
+            pbLogo.Size = new Size(260, 100);
             pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogo.TabIndex = 4;
             pbLogo.TabStop = false;
             // 
-            // pnlContenedorMenu
+            // pnlOpciones
             // 
-            pnlContenedorMenu.BackColor = Color.FromArgb(255, 192, 203);
-            pnlContenedorMenu.Controls.Add(pbCerrarSesion);
-            pnlContenedorMenu.Controls.Add(lblBienvenida);
-            pnlContenedorMenu.Controls.Add(btnReportes);
-            pnlContenedorMenu.Controls.Add(btnInventario);
-            pnlContenedorMenu.Controls.Add(btnVentas);
-            pnlContenedorMenu.Location = new Point(34, 100);
-            pnlContenedorMenu.Name = "pnlContenedorMenu";
-            pnlContenedorMenu.Size = new Size(950, 400);
-            pnlContenedorMenu.TabIndex = 3;
+            pnlOpciones.BackColor = Color.FromArgb(255, 192, 203);
+            pnlOpciones.Controls.Add(pbCerrarSesion);
+            pnlOpciones.Controls.Add(lblBienvenida);
+            pnlOpciones.Controls.Add(btnReportes);
+            pnlOpciones.Controls.Add(btnInventario);
+            pnlOpciones.Controls.Add(btnVentas);
+            pnlOpciones.Location = new Point(102, 150);
+            pnlOpciones.Name = "pnlOpciones";
+            pnlOpciones.Size = new Size(820, 420);
+            pnlOpciones.TabIndex = 3;
             // 
             // pbCerrarSesion
             // 
             pbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
-            pbCerrarSesion.Location = new Point(832, 333);
+            pbCerrarSesion.Location = new Point(656, 350);
             pbCerrarSesion.Name = "pbCerrarSesion";
-            pbCerrarSesion.Size = new Size(100, 35);
+            pbCerrarSesion.Size = new Size(120, 40);
             pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
             pbCerrarSesion.TabIndex = 4;
             pbCerrarSesion.TabStop = false;
@@ -78,21 +78,21 @@
             lblBienvenida.AutoSize = true;
             lblBienvenida.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblBienvenida.ForeColor = Color.FromArgb(51, 51, 51);
-            lblBienvenida.Location = new Point(240, 40);
+            lblBienvenida.Location = new Point(150, 30);
             lblBienvenida.Name = "lblBienvenida";
-            lblBienvenida.Size = new Size(459, 37);
+            lblBienvenida.Size = new Size(553, 46);
             lblBienvenida.TabIndex = 2;
-            lblBienvenida.Text = "Panel de Control - Dulcería Marlyn";
+            lblBienvenida.Text = "Panel de Cajero - Dulcería Marlyn";
             // 
             // btnReportes
             // 
             btnReportes.BackColor = Color.FromArgb(255, 105, 180);
             btnReportes.FlatStyle = FlatStyle.Flat;
-            btnReportes.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            btnReportes.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnReportes.ForeColor = Color.White;
-            btnReportes.Location = new Point(533, 120);
+            btnReportes.Location = new Point(450, 150);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(166, 150);
+            btnReportes.Size = new Size(150, 150);
             btnReportes.TabIndex = 3;
             btnReportes.Text = "Reportes";
             btnReportes.UseVisualStyleBackColor = false;
@@ -114,31 +114,31 @@
             // 
             btnVentas.BackColor = Color.FromArgb(255, 105, 180);
             btnVentas.FlatStyle = FlatStyle.Flat;
-            btnVentas.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            btnVentas.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVentas.ForeColor = Color.White;
-            btnVentas.Location = new Point(240, 120);
+            btnVentas.Location = new Point(220, 150);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(161, 150);
+            btnVentas.Size = new Size(150, 150);
             btnVentas.TabIndex = 2;
             btnVentas.Text = "Ventas";
             btnVentas.UseVisualStyleBackColor = false;
             // 
             // frmMenuCajero
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            ClientSize = new Size(1024, 749);
+            ClientSize = new Size(1006, 721);
             Controls.Add(pbLogo);
-            Controls.Add(pnlContenedorMenu);
+            Controls.Add(pnlOpciones);
             Font = new Font("Segoe UI", 12F);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "frmMenuCajero";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu Cajero";
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
-            pnlContenedorMenu.ResumeLayout(false);
-            pnlContenedorMenu.PerformLayout();
+            pnlOpciones.ResumeLayout(false);
+            pnlOpciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).EndInit();
             ResumeLayout(false);
         }
@@ -146,7 +146,7 @@
         #endregion
 
         private PictureBox pbLogo;
-        private Panel pnlContenedorMenu;
+        private Panel pnlOpciones;
         private PictureBox pbCerrarSesion;
         private Label lblBienvenida;
         private Button btnReportes;
