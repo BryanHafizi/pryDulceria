@@ -11,7 +11,13 @@ namespace pryDulceria
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmInicioSesion());
+            using (frmInicioSesion login = new frmInicioSesion())
+            {
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new frmMenuPrincipal());
+                }
+            }
         }
     }
 }
