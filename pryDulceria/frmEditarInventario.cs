@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace pryDulceria
 {
-    public partial class frmMenuCajero : Form
+    public partial class frmEditarInventario : Form
     {
-        public frmMenuCajero()
+        public frmEditarInventario()
         {
             InitializeComponent();
-        }
-
-        private void btnProveedores_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
