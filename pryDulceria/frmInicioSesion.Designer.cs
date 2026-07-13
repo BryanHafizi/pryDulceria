@@ -71,22 +71,23 @@
             // cmbRol
             // 
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbRol.FormattingEnabled = true;
             cmbRol.Items.AddRange(new object[] { "Administrador", "Cajero" });
             cmbRol.Location = new Point(95, 220);
             cmbRol.Name = "cmbRol";
-            cmbRol.Size = new Size(290, 36);
+            cmbRol.Size = new Size(260, 36);
             cmbRol.TabIndex = 1;
             // 
             // btnAcceder
             // 
             btnAcceder.BackColor = Color.FromArgb(255, 105, 180);
             btnAcceder.FlatStyle = FlatStyle.Flat;
-            btnAcceder.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAcceder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = Color.White;
-            btnAcceder.Location = new Point(95, 440);
+            btnAcceder.Location = new Point(150, 440);
             btnAcceder.Name = "btnAcceder";
-            btnAcceder.Size = new Size(260, 45);
+            btnAcceder.Size = new Size(150, 40);
             btnAcceder.TabIndex = 0;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
