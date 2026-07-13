@@ -15,11 +15,11 @@
         {
             pbLogo = new PictureBox();
             pnlMenu = new Panel();
-            pbCerrarSesion = new PictureBox();
             btnProveedores = new Button();
+            pbCerrarSesion = new PictureBox();
             btnReportes = new Button();
-            btnInventario = new Button();
             btnVentas = new Button();
+            btnInventario = new Button();
             pnlContenedor = new Panel();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlMenu.SuspendLayout();
@@ -50,51 +50,51 @@
             pnlMenu.Size = new Size(1000, 60);
             pnlMenu.TabIndex = 7;
             // 
+            // btnProveedores
+            // 
+            btnProveedores.Location = new Point(680, 6);
+            btnProveedores.Name = "btnProveedores";
+            btnProveedores.Size = new Size(150, 40);
+            btnProveedores.TabIndex = 3;
+            btnProveedores.Text = "proveedores";
+            btnProveedores.UseVisualStyleBackColor = true;
+            // 
             // pbCerrarSesion
             // 
             pbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
             pbCerrarSesion.Location = new Point(840, 6);
             pbCerrarSesion.Name = "pbCerrarSesion";
-            pbCerrarSesion.Size = new Size(150, 50);
+            pbCerrarSesion.Size = new Size(150, 40);
             pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
             pbCerrarSesion.TabIndex = 8;
             pbCerrarSesion.TabStop = false;
-            // 
-            // btnProveedores
-            // 
-            btnProveedores.Location = new Point(680, 6);
-            btnProveedores.Name = "btnProveedores";
-            btnProveedores.Size = new Size(150, 50);
-            btnProveedores.TabIndex = 3;
-            btnProveedores.Text = "proveedores";
-            btnProveedores.UseVisualStyleBackColor = true;
             // 
             // btnReportes
             // 
             btnReportes.Location = new Point(520, 6);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(150, 50);
+            btnReportes.Size = new Size(150, 40);
             btnReportes.TabIndex = 2;
             btnReportes.Text = "reportes";
             btnReportes.UseVisualStyleBackColor = true;
-            // 
-            // btnInventario
-            // 
-            btnInventario.Location = new Point(360, 6);
-            btnInventario.Name = "btnInventario";
-            btnInventario.Size = new Size(150, 50);
-            btnInventario.TabIndex = 1;
-            btnInventario.Text = "Inventario";
-            btnInventario.UseVisualStyleBackColor = true;
             // 
             // btnVentas
             // 
             btnVentas.Location = new Point(200, 6);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(150, 50);
+            btnVentas.Size = new Size(150, 40);
             btnVentas.TabIndex = 0;
             btnVentas.Text = "ventas";
             btnVentas.UseVisualStyleBackColor = true;
+            // 
+            // btnInventario
+            // 
+            btnInventario.Location = new Point(360, 6);
+            btnInventario.Name = "btnInventario";
+            btnInventario.Size = new Size(150, 40);
+            btnInventario.TabIndex = 1;
+            btnInventario.Text = "Inventario";
+            btnInventario.UseVisualStyleBackColor = true;
             // 
             // pnlContenedor
             // 
