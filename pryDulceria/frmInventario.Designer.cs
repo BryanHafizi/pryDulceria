@@ -41,9 +41,10 @@
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(294, 70);
+            txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscar.Location = new Point(300, 70);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(550, 27);
+            txtBuscar.Size = new Size(550, 34);
             txtBuscar.TabIndex = 20;
             txtBuscar.Text = "Buscar";
             // 
@@ -63,7 +64,7 @@
             btnEliminar.BackColor = Color.FromArgb(240, 128, 128);
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(614, 519);
+            btnEliminar.Location = new Point(620, 525);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 50);
             btnEliminar.TabIndex = 14;
@@ -75,7 +76,7 @@
             btnEditar.BackColor = Color.HotPink;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(454, 519);
+            btnEditar.Location = new Point(460, 525);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 50);
             btnEditar.TabIndex = 15;
@@ -87,7 +88,7 @@
             btnNuevo.BackColor = Color.HotPink;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(294, 519);
+            btnNuevo.Location = new Point(300, 525);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 50);
             btnNuevo.TabIndex = 16;
@@ -109,7 +110,7 @@
             // 
             dgvInventario.BackgroundColor = Color.White;
             dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventario.Location = new Point(294, 103);
+            dgvInventario.Location = new Point(300, 110);
             dgvInventario.Name = "dgvInventario";
             dgvInventario.RowHeadersWidth = 51;
             dgvInventario.Size = new Size(550, 400);
