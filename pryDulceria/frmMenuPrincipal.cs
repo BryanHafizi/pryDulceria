@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace pryDulceria
 {
-    public partial class frmMenuAdmin : Form
+    public partial class frmMenuPrincipal : Form
     {
-        public frmMenuAdmin()
+        public frmMenuPrincipal()
         {
             InitializeComponent();
         }

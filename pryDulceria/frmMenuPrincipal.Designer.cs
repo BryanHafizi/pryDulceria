@@ -1,6 +1,6 @@
 ﻿namespace pryDulceria
 {
-    partial class frmMenuAdmin
+    partial class frmMenuPrincipal
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -103,7 +103,7 @@
             pnlContenedor.Size = new Size(1000, 650);
             pnlContenedor.TabIndex = 8;
             // 
-            // frmMenuAdmin
+            // frmMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -112,7 +112,7 @@
             Controls.Add(pnlContenedor);
             Controls.Add(pnlMenu);
             Font = new Font("Segoe UI", 12F);
-            Name = "frmMenuAdmin";
+            Name = "frmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menú Administrador";
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
