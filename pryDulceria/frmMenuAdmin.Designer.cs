@@ -13,161 +13,122 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            btnCerrarSesion = new PictureBox();
             pbLogo = new PictureBox();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            pbCerrarSesion = new PictureBox();
+            pnlMenu = new Panel();
             btnProveedores = new Button();
+            pbCerrarSesion = new PictureBox();
             btnReportes = new Button();
-            btnInventario = new Button();
             btnVentas = new Button();
-            panel4 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)btnCerrarSesion).BeginInit();
+            btnInventario = new Button();
+            pnlContenedor = new Panel();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
+            pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).BeginInit();
             SuspendLayout();
-            // 
-            // btnCerrarSesion
-            // 
-            btnCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
-            btnCerrarSesion.Location = new Point(675, 17);
-            btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Size = new Size(120, 40);
-            btnCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
-            btnCerrarSesion.TabIndex = 4;
-            btnCerrarSesion.TabStop = false;
             // 
             // pbLogo
             // 
             pbLogo.Image = Properties.Resources.Screenshot_2026_06_28_220345_removebg_preview;
-            pbLogo.Location = new Point(0, 3);
+            pbLogo.Location = new Point(10, 6);
             pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(156, 50);
+            pbLogo.Size = new Size(150, 50);
             pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogo.TabIndex = 2;
             pbLogo.TabStop = false;
             // 
-            // panel1
+            // pnlMenu
             // 
-            panel1.BackColor = Color.Pink;
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(btnCerrarSesion);
-            panel1.Controls.Add(pbLogo);
-            panel1.Location = new Point(12, 7);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(156, 56);
-            panel1.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Plum;
-            panel2.Location = new Point(160, 13);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(865, 51);
-            panel2.TabIndex = 7;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Pink;
-            panel3.Controls.Add(pbCerrarSesion);
-            panel3.Controls.Add(btnProveedores);
-            panel3.Controls.Add(btnReportes);
-            panel3.Controls.Add(btnInventario);
-            panel3.Controls.Add(btnVentas);
-            panel3.Location = new Point(166, 15);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(868, 46);
-            panel3.TabIndex = 7;
-            // 
-            // pbCerrarSesion
-            // 
-            pbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
-            pbCerrarSesion.Location = new Point(744, 4);
-            pbCerrarSesion.Name = "pbCerrarSesion";
-            pbCerrarSesion.Size = new Size(108, 36);
-            pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbCerrarSesion.TabIndex = 8;
-            pbCerrarSesion.TabStop = false;
+            pnlMenu.BackColor = Color.Pink;
+            pnlMenu.Controls.Add(btnProveedores);
+            pnlMenu.Controls.Add(pbCerrarSesion);
+            pnlMenu.Controls.Add(btnReportes);
+            pnlMenu.Controls.Add(btnVentas);
+            pnlMenu.Controls.Add(btnInventario);
+            pnlMenu.Controls.Add(pbLogo);
+            pnlMenu.Location = new Point(2, 3);
+            pnlMenu.Name = "pnlMenu";
+            pnlMenu.Size = new Size(1000, 60);
+            pnlMenu.TabIndex = 7;
             // 
             // btnProveedores
             // 
-            btnProveedores.Location = new Point(511, 5);
+            btnProveedores.Location = new Point(680, 6);
             btnProveedores.Name = "btnProveedores";
-            btnProveedores.Size = new Size(157, 35);
+            btnProveedores.Size = new Size(150, 40);
             btnProveedores.TabIndex = 3;
             btnProveedores.Text = "proveedores";
             btnProveedores.UseVisualStyleBackColor = true;
             // 
+            // pbCerrarSesion
+            // 
+            pbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
+            pbCerrarSesion.Location = new Point(840, 6);
+            pbCerrarSesion.Name = "pbCerrarSesion";
+            pbCerrarSesion.Size = new Size(150, 40);
+            pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbCerrarSesion.TabIndex = 8;
+            pbCerrarSesion.TabStop = false;
+            // 
             // btnReportes
             // 
-            btnReportes.Location = new Point(354, 5);
+            btnReportes.Location = new Point(520, 6);
             btnReportes.Name = "btnReportes";
-            btnReportes.Size = new Size(151, 36);
+            btnReportes.Size = new Size(150, 40);
             btnReportes.TabIndex = 2;
             btnReportes.Text = "reportes";
             btnReportes.UseVisualStyleBackColor = true;
             // 
-            // btnInventario
-            // 
-            btnInventario.Location = new Point(206, 5);
-            btnInventario.Name = "btnInventario";
-            btnInventario.Size = new Size(142, 37);
-            btnInventario.TabIndex = 1;
-            btnInventario.Text = "inventario";
-            btnInventario.UseVisualStyleBackColor = true;
-            // 
             // btnVentas
             // 
-            btnVentas.Location = new Point(38, 4);
+            btnVentas.Location = new Point(200, 6);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(149, 36);
+            btnVentas.Size = new Size(150, 40);
             btnVentas.TabIndex = 0;
             btnVentas.Text = "ventas";
             btnVentas.UseVisualStyleBackColor = true;
             // 
-            // panel4
+            // btnInventario
             // 
-            panel4.Location = new Point(12, 62);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1022, 760);
-            panel4.TabIndex = 8;
+            btnInventario.Location = new Point(360, 6);
+            btnInventario.Name = "btnInventario";
+            btnInventario.Size = new Size(150, 40);
+            btnInventario.TabIndex = 1;
+            btnInventario.Text = "Inventario";
+            btnInventario.UseVisualStyleBackColor = true;
+            // 
+            // pnlContenedor
+            // 
+            pnlContenedor.Location = new Point(2, 69);
+            pnlContenedor.Name = "pnlContenedor";
+            pnlContenedor.Size = new Size(1000, 650);
+            pnlContenedor.TabIndex = 8;
             // 
             // frmMenuAdmin
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
-            ClientSize = new Size(1048, 842);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
-            Controls.Add(panel1);
+            ClientSize = new Size(1006, 721);
+            Controls.Add(pnlContenedor);
+            Controls.Add(pnlMenu);
             Font = new Font("Segoe UI", 12F);
             Name = "frmMenuAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menú Administrador";
-            ((System.ComponentModel.ISupportInitialize)btnCerrarSesion).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
-            panel1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
+            pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private PictureBox btnCerrarSesion;
         private PictureBox pbLogo;
-        private Panel panel1;
-        private Panel panel2;
-        private Panel panel3;
+        private Panel pnlMenu;
         private Button btnInventario;
         private Button btnVentas;
         private Button btnProveedores;
         private Button btnReportes;
         private PictureBox pbCerrarSesion;
-        private Panel panel4;
+        private Panel pnlContenedor;
     }
 }

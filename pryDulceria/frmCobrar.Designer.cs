@@ -28,163 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCobrar));
-            textBox5 = new TextBox();
-            this.lblCambio = new Label();
-            textBox4 = new TextBox();
-            this.lblCobro = new Label();
-            textBox3 = new TextBox();
-            this.lblTotalPagar = new Label();
-            textBox2 = new TextBox();
-            this.lblImpuesto = new Label();
-            textBox1 = new TextBox();
-            pbLogo = new PictureBox();
-            this.btnVenta = new Button();
-            lblTotal = new Label();
+            lblTitulo = new Label();
             pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
+            textBox5 = new TextBox();
+            lblCambio = new Label();
+            textBox4 = new TextBox();
+            lblMontoRecibido = new Label();
+            textBox3 = new TextBox();
+            lblTotalPagar = new Label();
+            textBox2 = new TextBox();
+            lblImpuesto = new Label();
+            textBox1 = new TextBox();
+            btnVender = new Button();
+            lblTotal = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox5
+            // lblTitulo
             // 
-            textBox5.Location = new Point(305, 305);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(300, 27);
-            textBox5.TabIndex = 27;
-            // 
-            // lblCambio
-            // 
-            this.lblCambio.AutoSize = true;
-            this.lblCambio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.lblCambio.Location = new Point(65, 311);
-            this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new Size(84, 28);
-            this.lblCambio.TabIndex = 26;
-            this.lblCambio.Text = "Cambio:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(305, 255);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(300, 27);
-            textBox4.TabIndex = 25;
-            // 
-            // lblCobro
-            // 
-            this.lblCobro.AutoSize = true;
-            this.lblCobro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.lblCobro.Location = new Point(65, 261);
-            this.lblCobro.Name = "lblCobro";
-            this.lblCobro.Size = new Size(71, 28);
-            this.lblCobro.TabIndex = 24;
-            this.lblCobro.Text = "Cobro:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(305, 205);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(300, 27);
-            textBox3.TabIndex = 23;
-            // 
-            // lblTotalPagar
-            // 
-            this.lblTotalPagar.AutoSize = true;
-            this.lblTotalPagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.lblTotalPagar.Location = new Point(65, 211);
-            this.lblTotalPagar.Name = "lblTotalPagar";
-            this.lblTotalPagar.Size = new Size(127, 28);
-            this.lblTotalPagar.TabIndex = 22;
-            this.lblTotalPagar.Text = "Total a Pagar:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(305, 155);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(300, 27);
-            textBox2.TabIndex = 21;
-            // 
-            // lblImpuesto
-            // 
-            this.lblImpuesto.AutoSize = true;
-            this.lblImpuesto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.lblImpuesto.Location = new Point(65, 161);
-            this.lblImpuesto.Name = "lblImpuesto";
-            this.lblImpuesto.Size = new Size(181, 28);
-            this.lblImpuesto.TabIndex = 20;
-            this.lblImpuesto.Text = "Impuesto Aplicado:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(305, 105);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 27);
-            textBox1.TabIndex = 19;
-            // 
-            // pbLogo
-            // 
-            pbLogo.Image = (Image)resources.GetObject("pbLogo.Image");
-            pbLogo.Location = new Point(95, 35);
-            pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(150, 50);
-            pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbLogo.TabIndex = 17;
-            pbLogo.TabStop = false;
-            // 
-            // btnVenta
-            // 
-            this.btnVenta.BackColor = Color.FromArgb(240, 128, 128);
-            this.btnVenta.FlatStyle = FlatStyle.Flat;
-            this.btnVenta.ForeColor = Color.White;
-            this.btnVenta.Location = new Point(395, 375);
-            this.btnVenta.Name = "btnVenta";
-            this.btnVenta.Size = new Size(150, 40);
-            this.btnVenta.TabIndex = 15;
-            this.btnVenta.Text = "Hacer Venta";
-            this.btnVenta.UseVisualStyleBackColor = false;
-            // 
-            // lblTotal
-            // 
-            lblTotal.AutoSize = true;
-            lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(65, 105);
-            lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(58, 28);
-            lblTotal.TabIndex = 16;
-            lblTotal.Text = "Total:";
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = Color.Black;
+            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(354, 54);
+            lblTitulo.TabIndex = 28;
+            lblTitulo.Text = "Sistema de Cobro";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Code_Generated_Image;
-            pictureBox1.Location = new Point(635, 35);
+            pictureBox1.Location = new Point(440, 9);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
+            // textBox5
+            // 
+            textBox5.ForeColor = Color.Black;
+            textBox5.Location = new Point(260, 310);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(300, 27);
+            textBox5.TabIndex = 39;
+            // 
+            // lblCambio
+            // 
+            lblCambio.AutoSize = true;
+            lblCambio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCambio.ForeColor = Color.Black;
+            lblCambio.Location = new Point(20, 310);
+            lblCambio.Name = "lblCambio";
+            lblCambio.Size = new Size(84, 28);
+            lblCambio.TabIndex = 38;
+            lblCambio.Text = "Cambio:";
+            // 
+            // textBox4
+            // 
+            textBox4.ForeColor = Color.Black;
+            textBox4.Location = new Point(260, 260);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(300, 27);
+            textBox4.TabIndex = 37;
+            // 
+            // lblMontoRecibido
+            // 
+            lblMontoRecibido.AutoSize = true;
+            lblMontoRecibido.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMontoRecibido.ForeColor = Color.Black;
+            lblMontoRecibido.Location = new Point(20, 260);
+            lblMontoRecibido.Name = "lblMontoRecibido";
+            lblMontoRecibido.Size = new Size(157, 28);
+            lblMontoRecibido.TabIndex = 36;
+            lblMontoRecibido.Text = "Monto Recibido:";
+            // 
+            // textBox3
+            // 
+            textBox3.ForeColor = Color.Black;
+            textBox3.Location = new Point(260, 210);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(300, 27);
+            textBox3.TabIndex = 35;
+            // 
+            // lblTotalPagar
+            // 
+            lblTotalPagar.AutoSize = true;
+            lblTotalPagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotalPagar.ForeColor = Color.Black;
+            lblTotalPagar.Location = new Point(20, 210);
+            lblTotalPagar.Name = "lblTotalPagar";
+            lblTotalPagar.Size = new Size(127, 28);
+            lblTotalPagar.TabIndex = 34;
+            lblTotalPagar.Text = "Total a Pagar:";
+            // 
+            // textBox2
+            // 
+            textBox2.ForeColor = Color.Black;
+            textBox2.Location = new Point(260, 160);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(300, 27);
+            textBox2.TabIndex = 33;
+            // 
+            // lblImpuesto
+            // 
+            lblImpuesto.AutoSize = true;
+            lblImpuesto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblImpuesto.ForeColor = Color.Black;
+            lblImpuesto.Location = new Point(20, 160);
+            lblImpuesto.Name = "lblImpuesto";
+            lblImpuesto.Size = new Size(181, 28);
+            lblImpuesto.TabIndex = 32;
+            lblImpuesto.Text = "Impuesto Aplicado:";
+            // 
+            // textBox1
+            // 
+            textBox1.ForeColor = Color.Black;
+            textBox1.Location = new Point(260, 110);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(300, 27);
+            textBox1.TabIndex = 31;
+            // 
+            // btnVender
+            // 
+            btnVender.BackColor = Color.FromArgb(240, 128, 128);
+            btnVender.FlatStyle = FlatStyle.Flat;
+            btnVender.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVender.ForeColor = Color.White;
+            btnVender.Location = new Point(344, 383);
+            btnVender.Name = "btnVender";
+            btnVender.Size = new Size(150, 50);
+            btnVender.TabIndex = 29;
+            btnVender.Text = "Hacer venta";
+            btnVender.UseVisualStyleBackColor = false;
+            // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotal.ForeColor = Color.Black;
+            lblTotal.Location = new Point(20, 110);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(58, 28);
+            lblTotal.TabIndex = 30;
+            lblTotal.Text = "Total:";
+            // 
             // frmCobrar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(632, 453);
             Controls.Add(textBox5);
-            Controls.Add(this.lblCambio);
+            Controls.Add(lblCambio);
             Controls.Add(textBox4);
-            Controls.Add(this.lblCobro);
+            Controls.Add(lblMontoRecibido);
             Controls.Add(textBox3);
-            Controls.Add(this.lblTotalPagar);
+            Controls.Add(lblTotalPagar);
             Controls.Add(textBox2);
-            Controls.Add(this.lblImpuesto);
+            Controls.Add(lblImpuesto);
             Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
-            Controls.Add(pbLogo);
-            Controls.Add(this.btnVenta);
+            Controls.Add(btnVender);
             Controls.Add(lblTotal);
+            Controls.Add(lblTitulo);
+            Controls.Add(pictureBox1);
             Name = "frmCobrar";
             Text = "frmCobrar";
-            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -192,18 +201,18 @@
 
         #endregion
 
-        private TextBox textBox5;
-        private Label lblStock;
-        private TextBox textBox4;
-        private Label lblPrecio;
-        private TextBox textBox3;
-        private Label lblCodigo;
-        private TextBox textBox2;
-        private Label lblCategoria;
-        private TextBox textBox1;
-        private PictureBox pbLogo;
-        private Button btnGuardar;
-        private Label lblTotal;
+        private Label lblTitulo;
         private PictureBox pictureBox1;
+        private TextBox textBox5;
+        private Label lblCambio;
+        private TextBox textBox4;
+        private Label lblMontoRecibido;
+        private TextBox textBox3;
+        private Label lblTotalPagar;
+        private TextBox textBox2;
+        private Label lblImpuesto;
+        private TextBox textBox1;
+        private Button btnVender;
+        private Label lblTotal;
     }
 }

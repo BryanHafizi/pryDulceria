@@ -2,194 +2,148 @@
 {
     partial class frmInventario
     {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null)) { components.Dispose(); }
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
-            lblNombreProducto = new Label();
-            btnGuardar = new Button();
-            pbLogo = new PictureBox();
-            pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            lblCategoria = new Label();
-            textBox3 = new TextBox();
-            lblCodigo = new Label();
-            textBox4 = new TextBox();
-            lblPrecio = new Label();
-            textBox5 = new TextBox();
-            lblStock = new Label();
-            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            txtBuscar = new TextBox();
+            pbProveedores = new PictureBox();
+            btnEliminar = new Button();
+            btnEditar = new Button();
+            btnNuevo = new Button();
+            lblTitulo = new Label();
+            dgvInventario = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvInventario).BeginInit();
             SuspendLayout();
             // 
-            // lblNombreProducto
+            // txtBuscar
             // 
-            lblNombreProducto.AutoSize = true;
-            lblNombreProducto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombreProducto.Location = new Point(20, 110);
-            lblNombreProducto.Name = "lblNombreProducto";
-            lblNombreProducto.Size = new Size(207, 28);
-            lblNombreProducto.TabIndex = 3;
-            lblNombreProducto.Text = "Nombre del Producto:";
+            txtBuscar.Location = new Point(294, 70);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(550, 27);
+            txtBuscar.TabIndex = 20;
+            txtBuscar.Text = "Buscar";
             // 
-            // btnGuardar
+            // pbProveedores
             // 
-            btnGuardar.BackColor = Color.FromArgb(240, 128, 128);
-            btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(350, 380);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(150, 40);
-            btnGuardar.TabIndex = 0;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = false;
+            pbProveedores.AccessibleRole = AccessibleRole.None;
+            pbProveedores.Image = Properties.Resources.Code_Generated_Image__1_;
+            pbProveedores.Location = new Point(230, 13);
+            pbProveedores.Name = "pbProveedores";
+            pbProveedores.Size = new Size(100, 50);
+            pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbProveedores.TabIndex = 19;
+            pbProveedores.TabStop = false;
             // 
-            // pbLogo
+            // btnEliminar
             // 
-            pbLogo.Image = (Image)resources.GetObject("pbLogo.Image");
-            pbLogo.Location = new Point(50, 40);
-            pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(150, 50);
-            pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbLogo.TabIndex = 4;
-            pbLogo.TabStop = false;
+            btnEliminar.BackColor = Color.FromArgb(240, 128, 128);
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.ForeColor = Color.White;
+            btnEliminar.Location = new Point(614, 519);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(150, 50);
+            btnEliminar.TabIndex = 14;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btnEditar
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(590, 40);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            btnEditar.BackColor = Color.HotPink;
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.ForeColor = Color.White;
+            btnEditar.Location = new Point(454, 519);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(150, 50);
+            btnEditar.TabIndex = 15;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // btnNuevo
             // 
-            textBox1.Location = new Point(260, 110);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 34);
-            textBox1.TabIndex = 6;
+            btnNuevo.BackColor = Color.HotPink;
+            btnNuevo.FlatStyle = FlatStyle.Flat;
+            btnNuevo.ForeColor = Color.White;
+            btnNuevo.Location = new Point(294, 519);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(150, 50);
+            btnNuevo.TabIndex = 16;
+            btnNuevo.Text = "Nuevo";
+            btnNuevo.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // lblTitulo
             // 
-            textBox2.Location = new Point(260, 160);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(300, 34);
-            textBox2.TabIndex = 8;
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.ControlText;
+            lblTitulo.Location = new Point(12, 13);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(217, 54);
+            lblTitulo.TabIndex = 17;
+            lblTitulo.Text = "Inventario";
             // 
-            // lblCategoria
+            // dgvInventario
             // 
-            lblCategoria.AutoSize = true;
-            lblCategoria.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCategoria.Location = new Point(20, 166);
-            lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(219, 28);
-            lblCategoria.TabIndex = 7;
-            lblCategoria.Text = "Categoria del Producto:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(260, 210);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(300, 34);
-            textBox3.TabIndex = 10;
-            // 
-            // lblCodigo
-            // 
-            lblCodigo.AutoSize = true;
-            lblCodigo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCodigo.Location = new Point(20, 216);
-            lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(199, 28);
-            lblCodigo.TabIndex = 9;
-            lblCodigo.Text = "Codigo del Producto:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(260, 260);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(300, 34);
-            textBox4.TabIndex = 12;
-            // 
-            // lblPrecio
-            // 
-            lblPrecio.AutoSize = true;
-            lblPrecio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPrecio.Location = new Point(20, 266);
-            lblPrecio.Name = "lblPrecio";
-            lblPrecio.Size = new Size(188, 28);
-            lblPrecio.TabIndex = 11;
-            lblPrecio.Text = "Precio del Producto:";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(260, 310);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(300, 34);
-            textBox5.TabIndex = 14;
-            // 
-            // lblStock
-            // 
-            lblStock.AutoSize = true;
-            lblStock.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblStock.Location = new Point(20, 316);
-            lblStock.Name = "lblStock";
-            lblStock.Size = new Size(182, 28);
-            lblStock.TabIndex = 13;
-            lblStock.Text = "Stock del Producto:";
+            dgvInventario.BackgroundColor = Color.White;
+            dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvInventario.Location = new Point(294, 103);
+            dgvInventario.Name = "dgvInventario";
+            dgvInventario.RowHeadersWidth = 51;
+            dgvInventario.Size = new Size(550, 400);
+            dgvInventario.TabIndex = 21;
             // 
             // frmInventario
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 228, 225);
-            ClientSize = new Size(782, 453);
-            Controls.Add(textBox5);
-            Controls.Add(lblStock);
-            Controls.Add(textBox4);
-            Controls.Add(lblPrecio);
-            Controls.Add(textBox3);
-            Controls.Add(lblCodigo);
-            Controls.Add(textBox2);
-            Controls.Add(lblCategoria);
-            Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
-            Controls.Add(pbLogo);
-            Controls.Add(btnGuardar);
-            Controls.Add(lblNombreProducto);
-            Font = new Font("Segoe UI", 12F);
+            BackColor = Color.MistyRose;
+            ClientSize = new Size(982, 603);
+            Controls.Add(dgvInventario);
+            Controls.Add(txtBuscar);
+            Controls.Add(pbProveedores);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnEditar);
+            Controls.Add(btnNuevo);
+            Controls.Add(lblTitulo);
             Name = "frmInventario";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Editar Inventario";
-            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "frmInventario";
+            ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvInventario).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
+
         #endregion
 
-        private System.Windows.Forms.Label lblNombreProducto;
-        private System.Windows.Forms.Button btnGuardar;
-        private PictureBox pbLogo;
-        private PictureBox pictureBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label lblCategoria;
-        private TextBox textBox3;
-        private Label lblCodigo;
-        private TextBox textBox4;
-        private Label lblPrecio;
-        private TextBox textBox5;
-        private Label lblStock;
+        private TextBox txtBuscar;
+        private PictureBox pbProveedores;
+        private Button btnEliminar;
+        private Button btnEditar;
+        private Button btnNuevo;
+        private Label lblTitulo;
+        private DataGridView dgvInventario;
     }
 }
