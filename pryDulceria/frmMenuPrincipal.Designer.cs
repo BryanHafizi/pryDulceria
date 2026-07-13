@@ -1,6 +1,6 @@
 ﻿namespace pryDulceria
 {
-    partial class frmMenuAdmin
+    partial class frmMenuPrincipal
     {
         private System.ComponentModel.IContainer components = null;
 
