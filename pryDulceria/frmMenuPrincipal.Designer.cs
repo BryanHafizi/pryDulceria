@@ -21,8 +21,10 @@
             pbCerrarSesion = new PictureBox();
             pbVentas = new PictureBox();
             pnlContenedor = new Panel();
+
             pbUsuarios = new PictureBox();
             pbAyuda = new PictureBox();
+
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
@@ -63,7 +65,11 @@
             // pbProveedores
             // 
             pbProveedores.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2212111;
+
             pbProveedores.Location = new Point(658, 9);
+
+            pbProveedores.Location = new Point(684, 9);
+
             pbProveedores.Name = "pbProveedores";
             pbProveedores.Size = new Size(150, 40);
             pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -74,7 +80,11 @@
             // pbReportes
             // 
             pbReportes.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2213191;
+
             pbReportes.Location = new Point(502, 9);
+
+            pbReportes.Location = new Point(520, 9);
+
             pbReportes.Name = "pbReportes";
             pbReportes.Size = new Size(150, 40);
             pbReportes.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -95,9 +105,14 @@
             // 
             // pbCerrarSesion
             // 
+
             pbCerrarSesion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             pbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
             pbCerrarSesion.Location = new Point(1024, 9);
+
+            pbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
+            pbCerrarSesion.Location = new Point(847, 9);
+
             pbCerrarSesion.Name = "pbCerrarSesion";
             pbCerrarSesion.Size = new Size(150, 40);
             pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -118,6 +133,7 @@
             // 
             // pnlContenedor
             // 
+
             pnlContenedor.AutoSize = true;
             pnlContenedor.Controls.Add(pbAyuda);
             pnlContenedor.Location = new Point(2, 69);
@@ -145,9 +161,16 @@
             pbAyuda.TabIndex = 10;
             pbAyuda.TabStop = false;
             // 
+
+            pnlContenedor.Location = new Point(2, 69);
+            pnlContenedor.Name = "pnlContenedor";
+            pnlContenedor.Size = new Size(1000, 650);
+            pnlContenedor.TabIndex = 8;
+            // 
+
             // frmMenuPrincipal
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(255, 228, 225);
@@ -157,7 +180,7 @@
             Font = new Font("Segoe UI", 12F);
             Name = "frmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Menú Administrador";
+            Text = "Menú Principal";
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
