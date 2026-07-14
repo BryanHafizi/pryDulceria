@@ -113,6 +113,86 @@ namespace pryDulceria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_07_13_221153 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-07-13 221153", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_07_13_2211531 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-07-13 2211531", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_07_13_221211 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-07-13 221211", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_07_13_2212111 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-07-13 2212111", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_07_13_221245 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-07-13 221245", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_07_13_2212451 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-07-13 2212451", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_07_13_221319 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-07-13 221319", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_07_13_2213191 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-07-13 2213191", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Code_Generated_Image {
             get {
                 object obj = ResourceManager.GetObject("Code_Generated_Image", resourceCulture);

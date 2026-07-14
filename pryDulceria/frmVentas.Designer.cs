@@ -36,7 +36,7 @@
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.Location = new Point(12, 13);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(149, 54);
+            lblTitulo.Size = new Size(118, 45);
             lblTitulo.TabIndex = 5;
             lblTitulo.Text = "Ventas";
             // 
@@ -86,7 +86,7 @@
             lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotal.Location = new Point(300, 500);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(201, 28);
+            lblTotal.Size = new Size(158, 21);
             lblTotal.TabIndex = 2;
             lblTotal.Text = "Total a Pagar: $0.00";
             // 
@@ -130,7 +130,7 @@
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscar.Location = new Point(300, 50);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(550, 34);
+            txtBuscar.Size = new Size(550, 29);
             txtBuscar.TabIndex = 13;
             txtBuscar.Text = "Buscar Producto";
             // 
@@ -148,7 +148,7 @@
             // 
             // frmVentas
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(982, 603);
@@ -161,6 +161,7 @@
             Controls.Add(dgvVentas);
             Controls.Add(lblTitulo);
             Font = new Font("Segoe UI", 12F);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmVentas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Módulo de Facturación y Ventas";
