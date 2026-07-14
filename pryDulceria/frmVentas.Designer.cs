@@ -152,6 +152,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(982, 603);
+            ControlBox = false;
             Controls.Add(btnEditar);
             Controls.Add(txtBuscar);
             Controls.Add(pbCarrito);
@@ -161,7 +162,6 @@
             Controls.Add(dgvVentas);
             Controls.Add(lblTitulo);
             Font = new Font("Segoe UI", 12F);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "frmVentas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Módulo de Facturación y Ventas";

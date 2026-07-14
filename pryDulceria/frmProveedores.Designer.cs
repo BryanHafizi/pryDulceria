@@ -141,6 +141,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(982, 603);
+            ControlBox = false;
             Controls.Add(txtBuscar);
             Controls.Add(pbProveedores);
             Controls.Add(dgvProveedores);
@@ -149,7 +150,6 @@
             Controls.Add(btnNuevo);
             Controls.Add(lblTitulo);
             Font = new Font("Segoe UI", 12F);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "frmProveedores";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestión de Proveedores";

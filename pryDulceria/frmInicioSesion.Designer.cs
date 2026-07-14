@@ -26,34 +26,50 @@
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
+
+            lblUsuario.Location = new Point(95, 197);
+
             lblUsuario.Location = new Point(95, 191);
+
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(83, 28);
+            lblUsuario.Size = new Size(67, 21);
             lblUsuario.TabIndex = 6;
             lblUsuario.Text = "Usuario:";
             // 
             // txtUsuario
             // 
+
+            txtUsuario.Location = new Point(95, 227);
+
             txtUsuario.Location = new Point(95, 221);
+
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(260, 34);
+            txtUsuario.Size = new Size(260, 29);
             txtUsuario.TabIndex = 5;
             // 
             // lblContraseña
             // 
             lblContraseña.AutoSize = true;
+
+            lblContraseña.Location = new Point(95, 285);
+
             lblContraseña.Location = new Point(95, 266);
+
             lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(114, 28);
+            lblContraseña.Size = new Size(92, 21);
             lblContraseña.TabIndex = 4;
             lblContraseña.Text = "Contraseña:";
             // 
             // txtPassword
             // 
+
+            txtPassword.Location = new Point(95, 315);
+
             txtPassword.Location = new Point(95, 296);
+
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(260, 34);
+            txtPassword.Size = new Size(260, 29);
             txtPassword.TabIndex = 3;
             // 
             // btnAcceder
@@ -62,7 +78,11 @@
             btnAcceder.FlatStyle = FlatStyle.Flat;
             btnAcceder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = Color.White;
+
+            btnAcceder.Location = new Point(147, 371);
+
             btnAcceder.Location = new Point(95, 369);
+
             btnAcceder.Name = "btnAcceder";
             btnAcceder.Size = new Size(260, 61);
             btnAcceder.TabIndex = 0;
@@ -82,7 +102,7 @@
             // 
             // frmInicioSesion
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(432, 553);

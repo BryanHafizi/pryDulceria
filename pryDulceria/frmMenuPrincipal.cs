@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Security.Principal;
 using System.Windows.Forms;
 
@@ -32,11 +32,14 @@ namespace pryDulceria
             principal = new clsMenuPrincipal();
             principal.agregarAlContenedor(new frmInventario(), pnlContenedor);
         }
+
+
         private void pbReportes_Click(object sender, EventArgs e)
         {
             principal = new clsMenuPrincipal();
             principal.agregarAlContenedor(new frmReportes(), pnlContenedor);
         }
+
         private void pbProveedores_Click(object sender, EventArgs e)
         {
             principal = new clsMenuPrincipal();
@@ -47,5 +50,12 @@ namespace pryDulceria
         {
             Application.Restart();
         }
+
+
+     
+
+       
+
+
     }
 }

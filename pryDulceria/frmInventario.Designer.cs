@@ -128,6 +128,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             ClientSize = new Size(859, 452);
+            ControlBox = false;
             Controls.Add(dgvInventario);
             Controls.Add(txtBuscar);
             Controls.Add(pbProveedores);
@@ -135,7 +136,6 @@
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(lblTitulo);
-            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmInventario";
             Text = "frmInventario";
