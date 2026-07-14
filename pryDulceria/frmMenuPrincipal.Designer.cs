@@ -126,7 +126,7 @@
             Font = new Font("Segoe UI", 12F);
             Name = "frmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Menú Administrador";
+            Text = "Menú Principal";
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).EndInit();
