@@ -33,11 +33,7 @@ namespace pryDulceria
             principal = new clsMenuPrincipal();
             principal.agregarAlContenedor(new frmInventario(), pnlContenedor);
         }
-        /*private void pbReportes_Click(object sender, EventArgs e)
-        {
-            principal = new clsMenuPrincipal();
-            principal.agregarAlContenedor(new frm(), pnlContenedor);
-        }*/
+
         private void pbProveedores_Click(object sender, EventArgs e)
         {
             principal = new clsMenuPrincipal();
@@ -48,6 +44,13 @@ namespace pryDulceria
         {
 
         }
+
+        private void pbCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+       
 
     }
 }
