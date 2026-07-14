@@ -15,18 +15,18 @@
         {
             pbLogo = new PictureBox();
             pnlMenu = new Panel();
-            pbCerrarSesion = new PictureBox();
-            pnlContenedor = new Panel();
-            pbInventario = new PictureBox();
-            pbReportes = new PictureBox();
             pbProveedores = new PictureBox();
+            pbReportes = new PictureBox();
+            pbInventario = new PictureBox();
+            pbCerrarSesion = new PictureBox();
             pbVentas = new PictureBox();
+            pnlContenedor = new Panel();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbInventario).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbReportes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbReportes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbInventario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbVentas).BeginInit();
             SuspendLayout();
             // 
@@ -54,33 +54,16 @@
             pnlMenu.Size = new Size(1000, 60);
             pnlMenu.TabIndex = 7;
             // 
-            // pbCerrarSesion
+            // pbProveedores
             // 
-            pbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
-            pbCerrarSesion.Location = new Point(847, 9);
-            pbCerrarSesion.Name = "pbCerrarSesion";
-            pbCerrarSesion.Size = new Size(150, 40);
-            pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbCerrarSesion.TabIndex = 8;
-            pbCerrarSesion.TabStop = false;
-            // 
-            // pnlContenedor
-            // 
-            pnlContenedor.Location = new Point(2, 69);
-            pnlContenedor.Name = "pnlContenedor";
-            pnlContenedor.Size = new Size(1000, 650);
-            pnlContenedor.TabIndex = 8;
-            // 
-            // pbInventario
-            // 
-            pbInventario.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2212451;
-            pbInventario.Location = new Point(355, 9);
-            pbInventario.Name = "pbInventario";
-            pbInventario.Size = new Size(150, 40);
-            pbInventario.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbInventario.TabIndex = 12;
-            pbInventario.TabStop = false;
-            pbInventario.Click += pbInventarios_Click;
+            pbProveedores.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2212111;
+            pbProveedores.Location = new Point(684, 9);
+            pbProveedores.Name = "pbProveedores";
+            pbProveedores.Size = new Size(150, 40);
+            pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbProveedores.TabIndex = 10;
+            pbProveedores.TabStop = false;
+            pbProveedores.Click += pbProveedores_Click;
             // 
             // pbReportes
             // 
@@ -93,16 +76,27 @@
             pbReportes.TabStop = false;
             pbReportes.Click += pbReportes_Click;
             // 
-            // pbProveedores
+            // pbInventario
             // 
-            pbProveedores.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2212111;
-            pbProveedores.Location = new Point(684, 9);
-            pbProveedores.Name = "pbProveedores";
-            pbProveedores.Size = new Size(150, 40);
-            pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbProveedores.TabIndex = 10;
-            pbProveedores.TabStop = false;
-            pbProveedores.Click += pbProveedores_Click;
+            pbInventario.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2212451;
+            pbInventario.Location = new Point(355, 9);
+            pbInventario.Name = "pbInventario";
+            pbInventario.Size = new Size(150, 40);
+            pbInventario.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbInventario.TabIndex = 12;
+            pbInventario.TabStop = false;
+            pbInventario.Click += pbInventarios_Click;
+            // 
+            // pbCerrarSesion
+            // 
+            pbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
+            pbCerrarSesion.Location = new Point(847, 9);
+            pbCerrarSesion.Name = "pbCerrarSesion";
+            pbCerrarSesion.Size = new Size(150, 40);
+            pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbCerrarSesion.TabIndex = 8;
+            pbCerrarSesion.TabStop = false;
+            pbCerrarSesion.Click += pbCerrarSesion_Click;
             // 
             // pbVentas
             // 
@@ -115,9 +109,16 @@
             pbVentas.TabStop = false;
             pbVentas.Click += pbVentas_Click;
             // 
+            // pnlContenedor
+            // 
+            pnlContenedor.Location = new Point(2, 69);
+            pnlContenedor.Name = "pnlContenedor";
+            pnlContenedor.Size = new Size(1000, 650);
+            pnlContenedor.TabIndex = 8;
+            // 
             // frmMenuPrincipal
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(1006, 721);
@@ -129,10 +130,10 @@
             Text = "Menú Principal";
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbInventario).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbReportes).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbReportes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbInventario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbVentas).EndInit();
             ResumeLayout(false);
         }

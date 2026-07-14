@@ -22,7 +22,6 @@ namespace pryDulceria
             pcb.Location = new Point(pcb.Location.X - 3, pcb.Location.Y - 3);
 
         }
-
         private void pbVentas_Click(object sender, EventArgs e)
         {
             principal = new clsMenuPrincipal();
@@ -33,21 +32,20 @@ namespace pryDulceria
             principal = new clsMenuPrincipal();
             principal.agregarAlContenedor(new frmInventario(), pnlContenedor);
         }
-        /*private void pbReportes_Click(object sender, EventArgs e)
+        private void pbReportes_Click(object sender, EventArgs e)
         {
             principal = new clsMenuPrincipal();
-            principal.agregarAlContenedor(new frm(), pnlContenedor);
-        }*/
+            principal.agregarAlContenedor(new frmReportes(), pnlContenedor);
+        }
         private void pbProveedores_Click(object sender, EventArgs e)
         {
             principal = new clsMenuPrincipal();
             principal.agregarAlContenedor(new frmProveedores(), pnlContenedor);
         }
 
-        private void pbReportes_Click(object sender, EventArgs e)
+        private void pbCerrarSesion_Click(object sender, EventArgs e)
         {
-
+            Application.Restart();
         }
-
     }
 }
