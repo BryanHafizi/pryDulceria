@@ -65,7 +65,7 @@ namespace pryDulceria
                 {
                     if (tipoOperacion == 0) // Nuevo Registro
                     {
-                        string sqlN = "INSERT INTO tblusuarios(vchnombreUsuario, vchPassword, vchRol) VALUES(@nombre, @pass, @rol);";
+                        string sqlN = "INSERT INTO tblusuarios(vchnombreUsuario, vchPassword, vchRol) VALUES(@nombre, MD5(@pass), @rol);";
                         using (comando = new MySqlCommand(sqlN, conexion))
                         {
                             comando.Parameters.AddWithValue("@nombre", NombreUsuario);
@@ -76,7 +76,7 @@ namespace pryDulceria
                     }
                     else // Actualizar Registro
                     {
-                        string sqlA = "UPDATE tblusuarios SET vchnombreUsuario = @nombre, vchPassword = @pass, vchRol = @rol WHERE intIdUsuario = @id;";
+                        string sqlA = "UPDATE tblusuarios SET vchnombreUsuario = @nombre, vchPassword = MD5(@pass), vchRol = @rol WHERE intIdUsuario = @id;";
                         using (comando = new MySqlCommand(sqlA, conexion))
                         {
                             comando.Parameters.AddWithValue("@id", IdUsuario);

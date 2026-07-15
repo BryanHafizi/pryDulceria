@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvUsuarios = new DataGridView();
             txtBuscar = new TextBox();
             pbProveedores = new PictureBox();
@@ -41,13 +42,22 @@
             // 
             // dgvUsuarios
             // 
+            dgvUsuarios.AllowUserToAddRows = false;
+            dgvUsuarios.AllowUserToDeleteRows = false;
             dgvUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvUsuarios.BackgroundColor = Color.White;
+            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvUsuarios.BackgroundColor = SystemColors.ActiveBorder;
+            dgvUsuarios.BorderStyle = BorderStyle.None;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsuarios.Location = new Point(191, 84);
             dgvUsuarios.Margin = new Padding(3, 2, 3, 2);
             dgvUsuarios.Name = "dgvUsuarios";
+            dgvUsuarios.ReadOnly = true;
+            dgvUsuarios.RowHeadersVisible = false;
             dgvUsuarios.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsuarios.Size = new Size(708, 459);
             dgvUsuarios.TabIndex = 28;
             // 
@@ -58,9 +68,10 @@
             txtBuscar.Location = new Point(191, 51);
             txtBuscar.Margin = new Padding(3, 2, 3, 2);
             txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar usuario";
             txtBuscar.Size = new Size(709, 29);
             txtBuscar.TabIndex = 27;
-            txtBuscar.Text = "Buscar";
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // pbProveedores
             // 

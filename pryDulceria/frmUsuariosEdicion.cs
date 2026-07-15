@@ -19,8 +19,7 @@ namespace pryDulceria
         {
             InitializeComponent();
             tipoOperacion = operacion;
-            idUsuarioModificar = 0; // Como es nuevo, no hay ID aún
-
+            idUsuarioModificar = 0; 
             CargarComboRoles(); // Llenamos el combobox
         }
 
@@ -33,18 +32,17 @@ namespace pryDulceria
 
             CargarComboRoles(); // Llenamos el combobox
 
-            // Rellenamos las cajas y el combo con la info que nos mandó el form principal
+            // Rellenamos las cajas y el combo con info del form principal
             txtUsuario.Text = nombre;
             txtPassword.Text = pass;
             cmbRol.Text = rol; // Esto va a seleccionar automáticamente el rol en el combo
         }
 
-        // METODO NUEVO: Como es una sola tabla, metemos los datos manuales al combo
         private void CargarComboRoles()
         {
             cmbRol.Items.Clear();
             cmbRol.Items.Add("-- Selecciona un Rol --");
-            cmbRol.Items.Add("Administrador"); // Igualito a como está en tu Base de Datos
+            cmbRol.Items.Add("Administrador"); 
             cmbRol.Items.Add("Cajero");
 
             // DropDownList evita que el usuario escriba a lo loco en el combo
@@ -58,7 +56,7 @@ namespace pryDulceria
         {
             try
             {
-                // Mini validación para que no guarden el placeholder "-- Selecciona un Rol --"
+                // validación para que no guarden el placeholder "-- Selecciona un Rol --"
                 if (cmbRol.SelectedIndex == 0)
                 {
                     MessageBox.Show("Por favor, selecciona un rol de la lista.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);

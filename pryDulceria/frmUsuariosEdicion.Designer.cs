@@ -36,6 +36,7 @@
             lblTitulo = new Label();
             pcbIcono = new PictureBox();
             cmbRol = new ComboBox();
+            lblRol = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbIcono).BeginInit();
             SuspendLayout();
             // 
@@ -126,12 +127,24 @@
             cmbRol.Size = new Size(263, 23);
             cmbRol.TabIndex = 47;
             // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRol.ForeColor = Color.Black;
+            lblRol.Location = new Point(99, 163);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(36, 21);
+            lblRol.TabIndex = 48;
+            lblRol.Text = "Rol:";
+            // 
             // frmUsuariosEdicion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             ClientSize = new Size(553, 340);
+            Controls.Add(lblRol);
             Controls.Add(cmbRol);
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
@@ -164,5 +177,6 @@
         private Label lblTitulo;
         private PictureBox pcbIcono;
         private ComboBox cmbRol;
+        private Label lblRol;
     }
 }
