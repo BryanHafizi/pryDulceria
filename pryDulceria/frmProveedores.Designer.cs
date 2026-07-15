@@ -140,7 +140,7 @@
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
-            ClientSize = new Size(982, 603);
+            ClientSize = new Size(1086, 611);
             ControlBox = false;
             Controls.Add(txtBuscar);
             Controls.Add(pbProveedores);

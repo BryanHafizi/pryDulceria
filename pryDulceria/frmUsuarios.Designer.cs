@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvInventario = new DataGridView();
-            txtBuscarUsuarios = new TextBox();
+            dgvUsuarios = new DataGridView();
+            txtBuscar = new TextBox();
             pbProveedores = new PictureBox();
             btnEliminar = new Button();
             btnEditar = new Button();
             btnNuevo = new Button();
             lblTitulo = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvInventario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
             SuspendLayout();
             // 
-            // dgvInventario
+            // dgvUsuarios
             // 
-            dgvInventario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            dgvInventario.BackgroundColor = Color.White;
-            dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventario.Location = new Point(191, 84);
-            dgvInventario.Margin = new Padding(3, 2, 3, 2);
-            dgvInventario.Name = "dgvInventario";
-            dgvInventario.RowHeadersWidth = 51;
-            dgvInventario.Size = new Size(481, 300);
-            dgvInventario.TabIndex = 28;
+            dgvUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvUsuarios.BackgroundColor = Color.White;
+            dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUsuarios.Location = new Point(191, 84);
+            dgvUsuarios.Margin = new Padding(3, 2, 3, 2);
+            dgvUsuarios.Name = "dgvUsuarios";
+            dgvUsuarios.RowHeadersWidth = 51;
+            dgvUsuarios.Size = new Size(708, 459);
+            dgvUsuarios.TabIndex = 28;
             // 
-            // txtBuscarUsuarios
+            // txtBuscar
             // 
-            txtBuscarUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            txtBuscarUsuarios.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscarUsuarios.Location = new Point(191, 51);
-            txtBuscarUsuarios.Margin = new Padding(3, 2, 3, 2);
-            txtBuscarUsuarios.Name = "txtBuscarUsuarios";
-            txtBuscarUsuarios.Size = new Size(482, 29);
-            txtBuscarUsuarios.TabIndex = 27;
-            txtBuscarUsuarios.Text = "Buscar";
+            txtBuscar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscar.Location = new Point(191, 51);
+            txtBuscar.Margin = new Padding(3, 2, 3, 2);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(709, 29);
+            txtBuscar.TabIndex = 27;
+            txtBuscar.Text = "Buscar";
             // 
             // pbProveedores
             // 
@@ -76,43 +76,48 @@
             // 
             // btnEliminar
             // 
+            btnEliminar.Anchor = AnchorStyles.Bottom;
             btnEliminar.BackColor = Color.FromArgb(240, 128, 128);
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(541, 393);
+            btnEliminar.Location = new Point(698, 552);
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(131, 38);
             btnEliminar.TabIndex = 22;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnEditar
             // 
+            btnEditar.Anchor = AnchorStyles.Bottom;
             btnEditar.BackColor = Color.HotPink;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(374, 393);
+            btnEditar.Location = new Point(475, 552);
             btnEditar.Margin = new Padding(3, 2, 3, 2);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(131, 38);
             btnEditar.TabIndex = 23;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnNuevo
             // 
-            btnNuevo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnNuevo.Anchor = AnchorStyles.Bottom;
             btnNuevo.BackColor = Color.HotPink;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(191, 393);
+            btnNuevo.Location = new Point(261, 552);
             btnNuevo.Margin = new Padding(3, 2, 3, 2);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(131, 38);
             btnNuevo.TabIndex = 24;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // lblTitulo
             // 
@@ -130,9 +135,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            ClientSize = new Size(859, 452);
-            Controls.Add(dgvInventario);
-            Controls.Add(txtBuscarUsuarios);
+            ClientSize = new Size(1086, 611);
+            Controls.Add(dgvUsuarios);
+            Controls.Add(txtBuscar);
             Controls.Add(pbProveedores);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
@@ -140,7 +145,7 @@
             Controls.Add(lblTitulo);
             Name = "frmUsuarios";
             Text = "frmUsuarios";
-            ((System.ComponentModel.ISupportInitialize)dgvInventario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -148,8 +153,8 @@
 
         #endregion
 
-        private DataGridView dgvInventario;
-        private TextBox txtBuscarUsuarios;
+        private DataGridView dgvUsuarios;
+        private TextBox txtBuscar;
         private PictureBox pbProveedores;
         private Button btnEliminar;
         private Button btnEditar;
