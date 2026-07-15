@@ -130,7 +130,6 @@
             Name = "frmProveedores";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestión de Proveedores";
-            Load += frmProveedores_Load;
             ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvProveedores).EndInit();
             ResumeLayout(false);
