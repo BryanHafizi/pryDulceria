@@ -41,6 +41,7 @@
             // 
             // txtBuscar
             // 
+            txtBuscar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscar.Location = new Point(262, 52);
             txtBuscar.Margin = new Padding(3, 2, 3, 2);
@@ -89,6 +90,7 @@
             // 
             // btnNuevo
             // 
+            btnNuevo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             btnNuevo.BackColor = Color.HotPink;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.ForeColor = Color.White;
@@ -113,6 +115,7 @@
             // 
             // dgvInventario
             // 
+            dgvInventario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             dgvInventario.BackgroundColor = Color.White;
             dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvInventario.Location = new Point(262, 82);
