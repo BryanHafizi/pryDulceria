@@ -29,7 +29,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT intIdUsuario AS Clave, vchnombreUsuario AS Usuario, vchPassword AS Contrasena, vchRol AS Rol FROM tblusuarios;";
+                    string sql = "SELECT intIdUsuario AS Id, vchnombreUsuario AS Usuario, vchPassword AS Password, vchRol AS Rol FROM tblusuarios;";
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
@@ -48,7 +48,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT intIdUsuario AS Clave, vchnombreUsuario AS Usuario, vchPassword AS Contrasena, vchRol AS Rol FROM tblusuarios WHERE vchnombreUsuario LIKE @nombre;";
+                    string sql = "SELECT intIdUsuario AS Id, vchnombreUsuario AS Usuario, vchPassword AS Password, vchRol AS Rol FROM tblusuarios WHERE vchnombreUsuario LIKE @nombre;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
                         consultar.Parameters.AddWithValue("@nombre", "%" + NombreUsuario + "%");

@@ -32,7 +32,7 @@
             lblTitulo.ForeColor = SystemColors.ControlText;
             lblTitulo.Location = new Point(2, 8);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(208, 45);
+            lblTitulo.Size = new Size(259, 54);
             lblTitulo.TabIndex = 3;
             lblTitulo.Text = "Proveedores";
             // 
@@ -41,7 +41,7 @@
             btnNuevo.BackColor = Color.HotPink;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(261, 552);
+            btnNuevo.Location = new Point(320, 745);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 50);
             btnNuevo.TabIndex = 2;
@@ -53,7 +53,7 @@
             btnEditar.BackColor = Color.HotPink;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(475, 552);
+            btnEditar.Location = new Point(560, 745);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 50);
             btnEditar.TabIndex = 1;
@@ -65,7 +65,7 @@
             btnEliminar.BackColor = Color.FromArgb(240, 128, 128);
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(698, 552);
+            btnEliminar.Location = new Point(800, 745);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 50);
             btnEliminar.TabIndex = 0;
@@ -76,7 +76,7 @@
             // 
             pbProveedores.AccessibleRole = AccessibleRole.None;
             pbProveedores.Image = Properties.Resources._1782681922009;
-            pbProveedores.Location = new Point(205, 3);
+            pbProveedores.Location = new Point(256, 3);
             pbProveedores.Name = "pbProveedores";
             pbProveedores.Size = new Size(100, 50);
             pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -85,10 +85,10 @@
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(191, 51);
+            txtBuscar.Location = new Point(218, 68);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar proveedor";
-            txtBuscar.Size = new Size(709, 29);
+            txtBuscar.Size = new Size(809, 34);
             txtBuscar.TabIndex = 13;
             // 
             // dgvProveedores
@@ -100,7 +100,7 @@
             dgvProveedores.BackgroundColor = SystemColors.ActiveBorder;
             dgvProveedores.BorderStyle = BorderStyle.None;
             dgvProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProveedores.Location = new Point(191, 84);
+            dgvProveedores.Location = new Point(218, 112);
             dgvProveedores.Margin = new Padding(3, 2, 3, 2);
             dgvProveedores.Name = "dgvProveedores";
             dgvProveedores.ReadOnly = true;
@@ -109,15 +109,15 @@
             dataGridViewCellStyle2.Padding = new Padding(3);
             dgvProveedores.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvProveedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProveedores.Size = new Size(708, 459);
+            dgvProveedores.Size = new Size(809, 612);
             dgvProveedores.TabIndex = 29;
             // 
             // frmProveedores
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
-            ClientSize = new Size(1086, 611);
+            ClientSize = new Size(1241, 815);
             ControlBox = false;
             Controls.Add(dgvProveedores);
             Controls.Add(txtBuscar);

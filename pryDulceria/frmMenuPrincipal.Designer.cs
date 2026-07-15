@@ -63,7 +63,6 @@
             // 
             // pbUsuarios
             // 
-            pbUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             pbUsuarios.Image = Properties.Resources._1782681922009;
             pbUsuarios.Location = new Point(790, 9);
             pbUsuarios.Name = "pbUsuarios";
@@ -151,7 +150,7 @@
             // 
             // frmMenuPrincipal
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(255, 228, 225);
