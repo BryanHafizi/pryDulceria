@@ -64,12 +64,14 @@
             // pbUsuarios
             // 
             pbUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            pbUsuarios.Image = Properties.Resources._1782681922009;
             pbUsuarios.Location = new Point(790, 9);
             pbUsuarios.Name = "pbUsuarios";
             pbUsuarios.Size = new Size(150, 40);
             pbUsuarios.SizeMode = PictureBoxSizeMode.StretchImage;
             pbUsuarios.TabIndex = 9;
             pbUsuarios.TabStop = false;
+            pbUsuarios.Click += pbUsuarios_Click;
             // 
             // pbProveedores
             // 
