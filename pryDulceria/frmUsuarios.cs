@@ -15,22 +15,31 @@ namespace pryDulceria
 
         public void CargarGrid()
         {
+            dgvUsuarios.DataSource = null;
+            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             try
             {
                 dgvUsuarios.DataSource = usuarios.CargarDataGrid();
-                dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e) // Evento de la caja de búsqueda
         {
+            dgvUsuarios.DataSource = null;
+            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             try
             {
                 usuarios.NombreUsuario = txtBuscar.Text;
                 dgvUsuarios.DataSource = usuarios.ConsultarCoincidencias();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message); 
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

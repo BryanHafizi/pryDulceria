@@ -94,7 +94,7 @@
             btnEliminar.Location = new Point(698, 552);
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(131, 38);
+            btnEliminar.Size = new Size(150, 50);
             btnEliminar.TabIndex = 22;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
@@ -109,7 +109,7 @@
             btnEditar.Location = new Point(475, 552);
             btnEditar.Margin = new Padding(3, 2, 3, 2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(131, 38);
+            btnEditar.Size = new Size(150, 50);
             btnEditar.TabIndex = 23;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -124,7 +124,7 @@
             btnNuevo.Location = new Point(261, 552);
             btnNuevo.Margin = new Padding(3, 2, 3, 2);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(131, 38);
+            btnNuevo.Size = new Size(150, 50);
             btnNuevo.TabIndex = 24;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;

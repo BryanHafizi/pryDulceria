@@ -7,10 +7,15 @@ namespace pryDulceria
     internal class clsUsuarios
     {
         // Propiedades adaptadas a tblusuarios
-        public int IdUsuario { get; set; }
-        public string NombreUsuario { get; set; }
-        public string Password { get; set; }
-        public string Rol { get; set; }
+        private int idUsuario;
+        private string nombreUsuario;
+        private string password;
+        private string rol;
+
+        public int IdUsuario { get => idUsuario; set => idUsuario = value; }
+        public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
+        public string Password { get => password; set => password = value; }
+        public string Rol { get => rol; set => rol = value; }
 
         private MySqlDataAdapter consulta;
         private MySqlCommand comando;
@@ -71,7 +76,15 @@ namespace pryDulceria
                             comando.Parameters.AddWithValue("@nombre", NombreUsuario);
                             comando.Parameters.AddWithValue("@pass", Password);
                             comando.Parameters.AddWithValue("@rol", Rol);
-                            msg = comando.ExecuteNonQuery() > 0 ? "Usuario guardado correctamente" : "Error al guardar";
+                            int filasAfectadas = comando.ExecuteNonQuery();
+                            if (filasAfectadas > 0)
+                            {
+                                msg = "Registro guardado correctamente";
+                            }
+                            else
+                            {
+                                msg = "Error, Datos no guardados";
+                            }
                         }
                     }
                     else // Actualizar Registro
@@ -83,7 +96,15 @@ namespace pryDulceria
                             comando.Parameters.AddWithValue("@nombre", NombreUsuario);
                             comando.Parameters.AddWithValue("@pass", Password);
                             comando.Parameters.AddWithValue("@rol", Rol);
-                            msg = comando.ExecuteNonQuery() > 0 ? "Usuario actualizado correctamente" : "Error al actualizar";
+                            int filasAfectadas = comando.ExecuteNonQuery();
+                            if (filasAfectadas > 0)
+                            {
+                                msg = "Registro guardado correctamente";
+                            }
+                            else
+                            {
+                                msg = "Error, Datos no guardados";
+                            }
                         }
                     }
                 }

@@ -94,7 +94,6 @@
             lblUsuario.Size = new Size(67, 21);
             lblUsuario.TabIndex = 43;
             lblUsuario.Text = "Usuario:";
-            lblUsuario.Click += lblTotal_Click;
             // 
             // lblTitulo
             // 
@@ -106,7 +105,6 @@
             lblTitulo.Size = new Size(232, 45);
             lblTitulo.TabIndex = 41;
             lblTitulo.Text = "Editar Usuario";
-            lblTitulo.Click += lblTitulo_Click;
             // 
             // pcbIcono
             // 
@@ -121,6 +119,7 @@
             // 
             // cmbRol
             // 
+            cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRol.FormattingEnabled = true;
             cmbRol.Location = new Point(184, 165);
             cmbRol.Name = "cmbRol";

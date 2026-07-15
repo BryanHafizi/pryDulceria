@@ -14,7 +14,7 @@ namespace pryDulceria
         int idUsuarioModificar;
         clsUsuarios usuarios = new clsUsuarios();
 
-        // 1er Constructor: Se dispara cuando presionas "Nuevo"
+        // para Nuevo
         public frmUsuariosEdicion(int operacion)
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace pryDulceria
             CargarComboRoles(); // Llenamos el combobox
         }
 
-        // 2do Constructor: Se dispara cuando presionas "Editar"
+        //para Editar
         public frmUsuariosEdicion(int operacion, int id, string nombre, string pass, string rol)
         {
             InitializeComponent();
@@ -44,10 +44,6 @@ namespace pryDulceria
             cmbRol.Items.Add("-- Selecciona un Rol --");
             cmbRol.Items.Add("Administrador"); 
             cmbRol.Items.Add("Cajero");
-
-            // DropDownList evita que el usuario escriba a lo loco en el combo
-            cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
-
             // Hacemos que por defecto muestre "-- Selecciona un Rol --"
             cmbRol.SelectedIndex = 0;
         }
@@ -73,8 +69,8 @@ namespace pryDulceria
                 MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Le decimos al Formulario Principal que todo fue un éxito y nos cerramos
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                DialogResult = DialogResult.OK;
+                Close();
             }
             catch (Exception ex)
             {
@@ -85,18 +81,8 @@ namespace pryDulceria
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             // Cerramos la ventana sin hacer nada
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTotal_Click(object sender, EventArgs e)
-        {
-
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
     }
 }

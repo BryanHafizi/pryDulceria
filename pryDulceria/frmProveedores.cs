@@ -15,11 +15,6 @@ namespace pryDulceria
             InitializeComponent();
         }
 
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmProveedores_Load(object sender, EventArgs e)
         {
             // El orden es: Clave, Nombre del proveedor, Empresa, Contacto
