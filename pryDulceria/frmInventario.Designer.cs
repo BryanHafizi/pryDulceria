@@ -46,7 +46,7 @@
             txtBuscar.Location = new Point(350, 33);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(600, 34);
-            txtBuscar.TabIndex = 20;
+            txtBuscar.TabIndex = 0;
             txtBuscar.Text = "Buscar Producto";
             // 
             // pbProveedores
@@ -70,7 +70,7 @@
             btnEliminar.Location = new Point(670, 500);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 51);
-            btnEliminar.TabIndex = 14;
+            btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
             // 
@@ -84,7 +84,7 @@
             btnEditar.Location = new Point(510, 500);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 51);
-            btnEditar.TabIndex = 15;
+            btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
             // 
@@ -98,7 +98,7 @@
             btnNuevo.Location = new Point(350, 500);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 51);
-            btnNuevo.TabIndex = 16;
+            btnNuevo.TabIndex = 1;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
             btnNuevo.Click += btnNuevo_Click;
@@ -132,7 +132,7 @@
             dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvInventario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInventario.Size = new Size(900, 400);
-            dgvInventario.TabIndex = 29;
+            dgvInventario.TabIndex = 4;
             // 
             // frmInventario
             // 

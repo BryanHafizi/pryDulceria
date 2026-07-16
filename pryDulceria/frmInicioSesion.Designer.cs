@@ -37,7 +37,7 @@
             txtUsuario.Location = new Point(95, 210);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(260, 34);
-            txtUsuario.TabIndex = 5;
+            txtUsuario.TabIndex = 0;
             // 
             // lblContraseña
             // 
@@ -54,7 +54,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(260, 34);
-            txtPassword.TabIndex = 3;
+            txtPassword.TabIndex = 1;
             // 
             // btnAcceder
             // 
@@ -65,7 +65,7 @@
             btnAcceder.Location = new Point(150, 380);
             btnAcceder.Name = "btnAcceder";
             btnAcceder.Size = new Size(150, 50);
-            btnAcceder.TabIndex = 0;
+            btnAcceder.TabIndex = 2;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
             btnAcceder.Click += btnAcceder_Click_1;

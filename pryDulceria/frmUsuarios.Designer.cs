@@ -58,7 +58,7 @@
             dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsuarios.Size = new Size(900, 400);
-            dgvUsuarios.TabIndex = 28;
+            dgvUsuarios.TabIndex = 4;
             // 
             // txtBuscar
             // 
@@ -67,7 +67,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar usuario";
             txtBuscar.Size = new Size(600, 34);
-            txtBuscar.TabIndex = 27;
+            txtBuscar.TabIndex = 0;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // pbProveedores
@@ -91,7 +91,7 @@
             btnEliminar.Location = new Point(670, 500);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 50);
-            btnEliminar.TabIndex = 22;
+            btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
             btnEliminar.Click += btnEliminar_Click;
@@ -106,7 +106,7 @@
             btnEditar.Location = new Point(510, 500);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 50);
-            btnEditar.TabIndex = 23;
+            btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
             btnEditar.Click += btnEditar_Click;
@@ -121,7 +121,7 @@
             btnNuevo.Location = new Point(350, 500);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 50);
-            btnNuevo.TabIndex = 24;
+            btnNuevo.TabIndex = 1;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
             btnNuevo.Click += btnNuevo_Click;
