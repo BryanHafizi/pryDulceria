@@ -8,7 +8,11 @@ namespace pryDulceria
 {
     internal class clsProveedores
     {
+
         // Propiedades adaptadas a proveedor
+
+        // Propiedades adaptadas a provw
+
         private int idProveedor;
         private string nombre;
         private string ap;
@@ -100,6 +104,7 @@ namespace pryDulceria
                     }
                     else // Actualizar Registro
                     {
+
                         string sqlA = "UPDATE proveedor SET Nombre = @nombre,Ap = @ap,Am = @am,Tel = @tel,Tel_secundario = @tel_secundario  WHERE Id_proveedor = @id;";
                         using (comando = new MySqlCommand(sqlA, conexion))
                         {
@@ -117,7 +122,7 @@ namespace pryDulceria
                             else
                             {
                                 msg = "Error, Datos no guardados";
-                            }
+                            }                                               
                         }
                     }
                 }
@@ -134,11 +139,13 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
+
                     string sql = "DELETE FROM proveedor WHERE Id_proveedor = @id;";
                     using (comando = new MySqlCommand(sql, conexion))
                     {
                         comando.Parameters.AddWithValue("@id", IdProveedor);
                         msg = comando.ExecuteNonQuery() > 0 ? "Proveedor eliminado correctamente" : "Error al eliminar";
+
                     }
                 }
             }
