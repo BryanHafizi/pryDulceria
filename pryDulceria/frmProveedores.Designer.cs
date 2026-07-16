@@ -13,7 +13,7 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             btnNuevo = new Button();
             btnEditar = new Button();
@@ -32,7 +32,7 @@
             lblTitulo.ForeColor = SystemColors.ControlText;
             lblTitulo.Location = new Point(2, 8);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(259, 54);
+            lblTitulo.Size = new Size(208, 45);
             lblTitulo.TabIndex = 3;
             lblTitulo.Text = "Proveedores";
             // 
@@ -88,7 +88,7 @@
             txtBuscar.Location = new Point(218, 68);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar proveedor";
-            txtBuscar.Size = new Size(809, 34);
+            txtBuscar.Size = new Size(809, 29);
             txtBuscar.TabIndex = 13;
             // 
             // dgvProveedores
@@ -106,15 +106,15 @@
             dgvProveedores.ReadOnly = true;
             dgvProveedores.RowHeadersVisible = false;
             dgvProveedores.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Padding = new Padding(3);
-            dgvProveedores.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvProveedores.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvProveedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProveedores.Size = new Size(809, 612);
             dgvProveedores.TabIndex = 29;
             // 
             // frmProveedores
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(1241, 815);

@@ -14,6 +14,7 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             lblTotal = new Label();
             btnCobrar = new Button();
@@ -21,10 +22,6 @@
             pbCarrito = new PictureBox();
             txtBuscar = new TextBox();
             btnEditar = new Button();
-            clmSubtotal = new DataGridViewTextBoxColumn();
-            clmPrecioUni = new DataGridViewTextBoxColumn();
-            clmProducto = new DataGridViewTextBoxColumn();
-            clmCantidad = new DataGridViewTextBoxColumn();
             dgvVentas = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pbCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvVentas).BeginInit();
@@ -88,9 +85,9 @@
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(300, 50);
+            txtBuscar.Location = new Point(257, 69);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(550, 29);
+            txtBuscar.Size = new Size(559, 29);
             txtBuscar.TabIndex = 13;
             txtBuscar.Text = "Buscar Producto";
             // 
@@ -106,45 +103,26 @@
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
             // 
-            // clmSubtotal
-            // 
-            clmSubtotal.HeaderText = "Subtotal";
-            clmSubtotal.MinimumWidth = 6;
-            clmSubtotal.Name = "clmSubtotal";
-            clmSubtotal.Width = 125;
-            // 
-            // clmPrecioUni
-            // 
-            clmPrecioUni.HeaderText = "Precio uni.";
-            clmPrecioUni.MinimumWidth = 6;
-            clmPrecioUni.Name = "clmPrecioUni";
-            clmPrecioUni.Width = 125;
-            // 
-            // clmProducto
-            // 
-            clmProducto.HeaderText = "producto";
-            clmProducto.MinimumWidth = 6;
-            clmProducto.Name = "clmProducto";
-            clmProducto.Width = 125;
-            // 
-            // clmCantidad
-            // 
-            clmCantidad.HeaderText = "Cantidad";
-            clmCantidad.MinimumWidth = 6;
-            clmCantidad.Name = "clmCantidad";
-            clmCantidad.Width = 125;
-            // 
             // dgvVentas
             // 
-            dgvVentas.BackgroundColor = Color.White;
+            dgvVentas.AllowUserToAddRows = false;
+            dgvVentas.AllowUserToDeleteRows = false;
+            dgvVentas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvVentas.BackgroundColor = SystemColors.ActiveBorder;
+            dgvVentas.BorderStyle = BorderStyle.None;
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVentas.Columns.AddRange(new DataGridViewColumn[] { clmCantidad, clmProducto, clmPrecioUni, clmSubtotal });
-            dgvVentas.GridColor = Color.FromArgb(224, 176, 255);
-            dgvVentas.Location = new Point(300, 90);
+            dgvVentas.Location = new Point(257, 103);
+            dgvVentas.Margin = new Padding(3, 2, 3, 2);
             dgvVentas.Name = "dgvVentas";
+            dgvVentas.ReadOnly = true;
+            dgvVentas.RowHeadersVisible = false;
             dgvVentas.RowHeadersWidth = 51;
-            dgvVentas.Size = new Size(550, 400);
-            dgvVentas.TabIndex = 2;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvVentas.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvVentas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvVentas.Size = new Size(559, 395);
+            dgvVentas.TabIndex = 30;
             // 
             // frmVentas
             // 
@@ -153,13 +131,13 @@
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(982, 603);
             ControlBox = false;
+            Controls.Add(dgvVentas);
             Controls.Add(btnEditar);
             Controls.Add(txtBuscar);
             Controls.Add(pbCarrito);
             Controls.Add(btnCancelar);
             Controls.Add(btnCobrar);
             Controls.Add(lblTotal);
-            Controls.Add(dgvVentas);
             Controls.Add(lblTitulo);
             Font = new Font("Segoe UI", 12F);
             Name = "frmVentas";
@@ -180,10 +158,6 @@
         private PictureBox pbCarrito;
         private TextBox txtBuscar;
         private Button btnEditar;
-        private DataGridViewTextBoxColumn clmSubtotal;
-        private DataGridViewTextBoxColumn clmPrecioUni;
-        private DataGridViewTextBoxColumn clmProducto;
-        private DataGridViewTextBoxColumn clmCantidad;
         private DataGridView dgvVentas;
     }
 }
