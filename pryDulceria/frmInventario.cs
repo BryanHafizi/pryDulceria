@@ -15,5 +15,11 @@ namespace pryDulceria
             InitializeComponent();
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmNuevoProducto emergente = new frmNuevoProducto();
+
+            emergente.ShowDialog();
+        }
     }
 }
