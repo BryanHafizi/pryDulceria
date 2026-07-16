@@ -83,7 +83,6 @@
             pbCarrito.SizeMode = PictureBoxSizeMode.StretchImage;
             pbCarrito.TabIndex = 7;
             pbCarrito.TabStop = false;
-            pbCarrito.Click += pictureBox2_Click;
             // 
             // txtBuscar
             // 
@@ -147,7 +146,6 @@
             Name = "frmVentas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Módulo de Facturación y Ventas";
-            Load += frmVender_Load;
             ((System.ComponentModel.ISupportInitialize)pbCarrito).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvVentas).EndInit();
             ResumeLayout(false);
