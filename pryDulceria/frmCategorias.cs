@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace pryDulceria
 {
-    public partial class frmEditarInventario : Form
+    public partial class frmCategorias : Form
     {
-        public frmEditarInventario()
+        public frmCategorias()
         {
             InitializeComponent();
-        }
-
-        private void pcbNuevaCategoria_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

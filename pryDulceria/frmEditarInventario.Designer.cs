@@ -18,7 +18,6 @@
             btnGuardar = new Button();
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
             lblCategoria = new Label();
             textBox3 = new TextBox();
             lblCodigo = new Label();
@@ -27,7 +26,10 @@
             textBox5 = new TextBox();
             lblStock = new Label();
             lblTitulo = new Label();
+            comboBox1 = new ComboBox();
+            pcbNuevaCategoria = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbNuevaCategoria).BeginInit();
             SuspendLayout();
             // 
             // lblNombreProducto
@@ -37,7 +39,7 @@
             lblNombreProducto.ForeColor = Color.Black;
             lblNombreProducto.Location = new Point(20, 110);
             lblNombreProducto.Name = "lblNombreProducto";
-            lblNombreProducto.Size = new Size(207, 28);
+            lblNombreProducto.Size = new Size(163, 21);
             lblNombreProducto.TabIndex = 3;
             lblNombreProducto.Text = "Nombre del Producto:";
             // 
@@ -68,16 +70,8 @@
             textBox1.ForeColor = Color.Black;
             textBox1.Location = new Point(260, 110);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 34);
+            textBox1.Size = new Size(300, 29);
             textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(260, 160);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(300, 34);
-            textBox2.TabIndex = 8;
             // 
             // lblCategoria
             // 
@@ -86,7 +80,7 @@
             lblCategoria.ForeColor = Color.Black;
             lblCategoria.Location = new Point(20, 160);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(219, 28);
+            lblCategoria.Size = new Size(172, 21);
             lblCategoria.TabIndex = 7;
             lblCategoria.Text = "Categoria del Producto:";
             // 
@@ -95,7 +89,7 @@
             textBox3.ForeColor = Color.Black;
             textBox3.Location = new Point(260, 210);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(300, 34);
+            textBox3.Size = new Size(300, 29);
             textBox3.TabIndex = 10;
             // 
             // lblCodigo
@@ -105,7 +99,7 @@
             lblCodigo.ForeColor = Color.Black;
             lblCodigo.Location = new Point(20, 210);
             lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(199, 28);
+            lblCodigo.Size = new Size(155, 21);
             lblCodigo.TabIndex = 9;
             lblCodigo.Text = "Codigo del Producto:";
             // 
@@ -114,7 +108,7 @@
             textBox4.ForeColor = Color.Black;
             textBox4.Location = new Point(260, 260);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(300, 34);
+            textBox4.Size = new Size(300, 29);
             textBox4.TabIndex = 12;
             // 
             // lblPrecio
@@ -124,7 +118,7 @@
             lblPrecio.ForeColor = Color.Black;
             lblPrecio.Location = new Point(20, 260);
             lblPrecio.Name = "lblPrecio";
-            lblPrecio.Size = new Size(188, 28);
+            lblPrecio.Size = new Size(148, 21);
             lblPrecio.TabIndex = 11;
             lblPrecio.Text = "Precio del Producto:";
             // 
@@ -133,7 +127,7 @@
             textBox5.ForeColor = Color.Black;
             textBox5.Location = new Point(260, 310);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(300, 34);
+            textBox5.Size = new Size(300, 29);
             textBox5.TabIndex = 14;
             // 
             // lblStock
@@ -143,7 +137,7 @@
             lblStock.ForeColor = Color.Black;
             lblStock.Location = new Point(20, 310);
             lblStock.Name = "lblStock";
-            lblStock.Size = new Size(182, 28);
+            lblStock.Size = new Size(142, 21);
             lblStock.TabIndex = 13;
             lblStock.Text = "Stock del Producto:";
             // 
@@ -154,16 +148,37 @@
             lblTitulo.ForeColor = Color.Black;
             lblTitulo.Location = new Point(12, 9);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(418, 54);
+            lblTitulo.Size = new Size(337, 45);
             lblTitulo.TabIndex = 15;
             lblTitulo.Text = "Edición de Productos";
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(260, 157);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(259, 29);
+            comboBox1.TabIndex = 16;
+            // 
+            // pcbNuevaCategoria
+            // 
+            pcbNuevaCategoria.Image = (Image)resources.GetObject("pcbNuevaCategoria.Image");
+            pcbNuevaCategoria.Location = new Point(525, 157);
+            pcbNuevaCategoria.Name = "pcbNuevaCategoria";
+            pcbNuevaCategoria.Size = new Size(35, 29);
+            pcbNuevaCategoria.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbNuevaCategoria.TabIndex = 17;
+            pcbNuevaCategoria.TabStop = false;
+            pcbNuevaCategoria.Click += pcbNuevaCategoria_Click;
+            // 
             // frmEditarInventario
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(632, 453);
+            Controls.Add(pcbNuevaCategoria);
+            Controls.Add(comboBox1);
             Controls.Add(lblTitulo);
             Controls.Add(textBox5);
             Controls.Add(lblStock);
@@ -171,7 +186,6 @@
             Controls.Add(lblPrecio);
             Controls.Add(textBox3);
             Controls.Add(lblCodigo);
-            Controls.Add(textBox2);
             Controls.Add(lblCategoria);
             Controls.Add(textBox1);
             Controls.Add(pictureBox1);
@@ -182,6 +196,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Editar Inventario";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbNuevaCategoria).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -191,7 +206,6 @@
         private System.Windows.Forms.Button btnGuardar;
         private PictureBox pictureBox1;
         private TextBox textBox1;
-        private TextBox textBox2;
         private Label lblCategoria;
         private TextBox textBox3;
         private Label lblCodigo;
@@ -200,5 +214,7 @@
         private TextBox textBox5;
         private Label lblStock;
         private Label lblTitulo;
+        private ComboBox comboBox1;
+        private PictureBox pcbNuevaCategoria;
     }
 }
