@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace pryDulceria
 {
-    public partial class frmEditarProveedores : Form
+    public partial class frmProveedoresEdicion : Form
     {
-        public frmEditarProveedores()
+        public frmProveedoresEdicion()
         {
             InitializeComponent();
         }

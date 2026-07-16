@@ -63,7 +63,7 @@
             // 
             // pbUsuarios
             // 
-            pbUsuarios.Image = Properties.Resources._1782681922009;
+            pbUsuarios.Image = Properties.Resources.Captura_de_pantalla_2026_07_15_085651;
             pbUsuarios.Location = new Point(790, 9);
             pbUsuarios.Name = "pbUsuarios";
             pbUsuarios.Size = new Size(150, 40);
@@ -74,7 +74,7 @@
             // 
             // pbProveedores
             // 
-            pbProveedores.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2212111;
+            pbProveedores.Image = Properties.Resources.Captura_de_pantalla_2026_07_15_085607;
             pbProveedores.Location = new Point(634, 9);
             pbProveedores.Name = "pbProveedores";
             pbProveedores.Size = new Size(150, 40);
@@ -85,7 +85,7 @@
             // 
             // pbReportes
             // 
-            pbReportes.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2213191;
+            pbReportes.Image = Properties.Resources.Captura_de_pantalla_2026_07_15_085548;
             pbReportes.Location = new Point(478, 9);
             pbReportes.Name = "pbReportes";
             pbReportes.Size = new Size(150, 40);
@@ -96,7 +96,7 @@
             // 
             // pbInventario
             // 
-            pbInventario.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2212451;
+            pbInventario.Image = Properties.Resources.Captura_de_pantalla_2026_07_15_085622;
             pbInventario.Location = new Point(322, 9);
             pbInventario.Name = "pbInventario";
             pbInventario.Size = new Size(150, 40);
@@ -119,7 +119,7 @@
             // 
             // pbVentas
             // 
-            pbVentas.Image = Properties.Resources.Captura_de_pantalla_2026_07_13_2211531;
+            pbVentas.Image = Properties.Resources.Captura_de_pantalla_2026_07_15_085530;
             pbVentas.Location = new Point(166, 9);
             pbVentas.Name = "pbVentas";
             pbVentas.Size = new Size(150, 40);
@@ -150,7 +150,7 @@
             // 
             // frmMenuPrincipal
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(255, 228, 225);
