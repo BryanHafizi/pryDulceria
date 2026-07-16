@@ -68,7 +68,7 @@
             // textBox5
             // 
             textBox5.ForeColor = Color.Black;
-            textBox5.Location = new Point(260, 310);
+            textBox5.Location = new Point(306, 313);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(300, 27);
             textBox5.TabIndex = 39;
@@ -78,7 +78,7 @@
             lblCambio.AutoSize = true;
             lblCambio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCambio.ForeColor = Color.Black;
-            lblCambio.Location = new Point(20, 310);
+            lblCambio.Location = new Point(66, 313);
             lblCambio.Name = "lblCambio";
             lblCambio.Size = new Size(84, 28);
             lblCambio.TabIndex = 38;
@@ -87,7 +87,7 @@
             // textBox4
             // 
             textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(260, 260);
+            textBox4.Location = new Point(306, 263);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(300, 27);
             textBox4.TabIndex = 37;
@@ -97,7 +97,7 @@
             lblMontoRecibido.AutoSize = true;
             lblMontoRecibido.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMontoRecibido.ForeColor = Color.Black;
-            lblMontoRecibido.Location = new Point(20, 260);
+            lblMontoRecibido.Location = new Point(66, 263);
             lblMontoRecibido.Name = "lblMontoRecibido";
             lblMontoRecibido.Size = new Size(157, 28);
             lblMontoRecibido.TabIndex = 36;
@@ -106,7 +106,7 @@
             // textBox3
             // 
             textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(260, 210);
+            textBox3.Location = new Point(306, 213);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(300, 27);
             textBox3.TabIndex = 35;
@@ -116,7 +116,7 @@
             lblTotalPagar.AutoSize = true;
             lblTotalPagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTotalPagar.ForeColor = Color.Black;
-            lblTotalPagar.Location = new Point(20, 210);
+            lblTotalPagar.Location = new Point(66, 213);
             lblTotalPagar.Name = "lblTotalPagar";
             lblTotalPagar.Size = new Size(127, 28);
             lblTotalPagar.TabIndex = 34;
@@ -125,7 +125,7 @@
             // textBox2
             // 
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(260, 160);
+            textBox2.Location = new Point(306, 163);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(300, 27);
             textBox2.TabIndex = 33;
@@ -135,7 +135,7 @@
             lblImpuesto.AutoSize = true;
             lblImpuesto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblImpuesto.ForeColor = Color.Black;
-            lblImpuesto.Location = new Point(20, 160);
+            lblImpuesto.Location = new Point(66, 163);
             lblImpuesto.Name = "lblImpuesto";
             lblImpuesto.Size = new Size(181, 28);
             lblImpuesto.TabIndex = 32;
@@ -144,7 +144,7 @@
             // textBox1
             // 
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(260, 110);
+            textBox1.Location = new Point(306, 113);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(300, 27);
             textBox1.TabIndex = 31;
@@ -155,7 +155,7 @@
             btnVender.FlatStyle = FlatStyle.Flat;
             btnVender.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVender.ForeColor = Color.White;
-            btnVender.Location = new Point(344, 383);
+            btnVender.Location = new Point(390, 386);
             btnVender.Name = "btnVender";
             btnVender.Size = new Size(150, 50);
             btnVender.TabIndex = 29;
@@ -167,7 +167,7 @@
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTotal.ForeColor = Color.Black;
-            lblTotal.Location = new Point(20, 110);
+            lblTotal.Location = new Point(66, 113);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(58, 28);
             lblTotal.TabIndex = 30;
@@ -178,7 +178,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            ClientSize = new Size(632, 453);
+            ClientSize = new Size(782, 553);
             Controls.Add(textBox5);
             Controls.Add(lblCambio);
             Controls.Add(textBox4);

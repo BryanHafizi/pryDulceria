@@ -33,26 +33,28 @@
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.Location = new Point(12, 13);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(118, 45);
+            lblTitulo.Size = new Size(149, 54);
             lblTitulo.TabIndex = 5;
             lblTitulo.Text = "Ventas";
             // 
             // lblTotal
             // 
+            lblTotal.Anchor = AnchorStyles.Bottom;
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(300, 500);
+            lblTotal.Location = new Point(300, 490);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(158, 21);
+            lblTotal.Size = new Size(201, 28);
             lblTotal.TabIndex = 2;
             lblTotal.Text = "Total a Pagar: $0.00";
             // 
             // btnCobrar
             // 
+            btnCobrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnCobrar.BackColor = Color.FromArgb(255, 105, 180);
             btnCobrar.FlatStyle = FlatStyle.Flat;
             btnCobrar.ForeColor = Color.White;
-            btnCobrar.Location = new Point(300, 535);
+            btnCobrar.Location = new Point(300, 530);
             btnCobrar.Name = "btnCobrar";
             btnCobrar.Size = new Size(150, 50);
             btnCobrar.TabIndex = 1;
@@ -61,10 +63,11 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnCancelar.BackColor = Color.FromArgb(240, 128, 128);
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.ForeColor = Color.White;
-            btnCancelar.Location = new Point(620, 535);
+            btnCancelar.Location = new Point(620, 530);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 50);
             btnCancelar.TabIndex = 0;
@@ -85,18 +88,19 @@
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(257, 69);
+            txtBuscar.Location = new Point(300, 33);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(559, 29);
+            txtBuscar.Size = new Size(600, 34);
             txtBuscar.TabIndex = 13;
             txtBuscar.Text = "Buscar Producto";
             // 
             // btnEditar
             // 
+            btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnEditar.BackColor = Color.FromArgb(255, 105, 180);
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(460, 535);
+            btnEditar.Location = new Point(460, 530);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 50);
             btnEditar.TabIndex = 15;
@@ -112,7 +116,7 @@
             dgvVentas.BackgroundColor = SystemColors.ActiveBorder;
             dgvVentas.BorderStyle = BorderStyle.None;
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVentas.Location = new Point(257, 103);
+            dgvVentas.Location = new Point(300, 80);
             dgvVentas.Margin = new Padding(3, 2, 3, 2);
             dgvVentas.Name = "dgvVentas";
             dgvVentas.ReadOnly = true;
@@ -121,15 +125,15 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvVentas.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvVentas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvVentas.Size = new Size(559, 395);
+            dgvVentas.Size = new Size(900, 400);
             dgvVentas.TabIndex = 30;
             // 
             // frmVentas
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
-            ClientSize = new Size(982, 603);
+            ClientSize = new Size(1316, 603);
             ControlBox = false;
             Controls.Add(dgvVentas);
             Controls.Add(btnEditar);

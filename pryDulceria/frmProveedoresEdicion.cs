@@ -19,12 +19,12 @@ namespace pryDulceria
         {
             InitializeComponent();
             tipoOperacion = operacion;
-            idProveedorModificar= 0;
-            
+            idProveedorModificar = 0;
+
         }
 
         //para Editar
-        public frmProveedoresEdicion(int operacion, int id, string nombre, string ap, string am,int tel, int tel_sec)
+        public frmProveedoresEdicion(int operacion, int id, string nombre, string ap, string am, int tel, int tel_sec)
         {
             InitializeComponent();
             tipoOperacion = operacion;
@@ -33,19 +33,19 @@ namespace pryDulceria
 
             // Rellenamos las cajas y el combo con info del form principal
             txtNombre.Text = nombre;
-            txtAp.Text =ap;
+            txtAp.Text = ap;
             txtAm.Text = am;
-            txtTel.Text = tel.ToString(); 
+            txtTel.Text = tel.ToString();
             txtTel.Text = tel_sec.ToString();
         }
 
-        
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
- 
+
                 proveedores.IdProveedor = idProveedorModificar;
                 proveedores.Nombre = txtNombre.Text;
                 proveedores.Ap = txtAp.Text;

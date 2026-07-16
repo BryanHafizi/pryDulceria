@@ -26,50 +26,34 @@
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
-
-            lblUsuario.Location = new Point(95, 197);
-
-            lblUsuario.Location = new Point(95, 191);
-
+            lblUsuario.Location = new Point(95, 180);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(67, 21);
+            lblUsuario.Size = new Size(83, 28);
             lblUsuario.TabIndex = 6;
             lblUsuario.Text = "Usuario:";
             // 
             // txtUsuario
             // 
-
-            txtUsuario.Location = new Point(95, 227);
-
-            txtUsuario.Location = new Point(95, 221);
-
+            txtUsuario.Location = new Point(95, 210);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(260, 29);
+            txtUsuario.Size = new Size(260, 34);
             txtUsuario.TabIndex = 5;
             // 
             // lblContraseña
             // 
             lblContraseña.AutoSize = true;
-
-            lblContraseña.Location = new Point(95, 285);
-
-            lblContraseña.Location = new Point(95, 266);
-
+            lblContraseña.Location = new Point(95, 270);
             lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(92, 21);
+            lblContraseña.Size = new Size(114, 28);
             lblContraseña.TabIndex = 4;
             lblContraseña.Text = "Contraseña:";
             // 
             // txtPassword
             // 
-
-            txtPassword.Location = new Point(95, 315);
-
-            txtPassword.Location = new Point(95, 296);
-
+            txtPassword.Location = new Point(95, 310);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(260, 29);
+            txtPassword.Size = new Size(260, 34);
             txtPassword.TabIndex = 3;
             // 
             // btnAcceder
@@ -78,13 +62,9 @@
             btnAcceder.FlatStyle = FlatStyle.Flat;
             btnAcceder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = Color.White;
-
-            btnAcceder.Location = new Point(147, 371);
-
-            btnAcceder.Location = new Point(95, 369);
-
+            btnAcceder.Location = new Point(150, 380);
             btnAcceder.Name = "btnAcceder";
-            btnAcceder.Size = new Size(260, 61);
+            btnAcceder.Size = new Size(150, 50);
             btnAcceder.TabIndex = 0;
             btnAcceder.Text = "Acceder";
             btnAcceder.UseVisualStyleBackColor = false;
@@ -93,7 +73,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(95, 64);
+            pictureBox1.Location = new Point(95, 50);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(260, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -102,10 +82,10 @@
             // 
             // frmInicioSesion
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
-            ClientSize = new Size(432, 553);
+            ClientSize = new Size(432, 503);
             Controls.Add(pictureBox1);
             Controls.Add(btnAcceder);
             Controls.Add(txtPassword);

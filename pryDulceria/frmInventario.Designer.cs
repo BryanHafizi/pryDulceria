@@ -42,31 +42,32 @@
             // 
             // txtBuscar
             // 
-            txtBuscar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(218, 68);
+            txtBuscar.Location = new Point(350, 33);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(809, 34);
+            txtBuscar.Size = new Size(600, 34);
             txtBuscar.TabIndex = 20;
-            txtBuscar.Text = "Buscar";
+            txtBuscar.Text = "Buscar Producto";
             // 
             // pbProveedores
             // 
             pbProveedores.AccessibleRole = AccessibleRole.None;
             pbProveedores.Image = Properties.Resources.Code_Generated_Image__1_;
-            pbProveedores.Location = new Point(232, 12);
+            pbProveedores.Location = new Point(232, 13);
             pbProveedores.Name = "pbProveedores";
-            pbProveedores.Size = new Size(101, 51);
+            pbProveedores.Size = new Size(100, 50);
             pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
             pbProveedores.TabIndex = 19;
             pbProveedores.TabStop = false;
             // 
             // btnEliminar
             // 
+            btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnEliminar.BackColor = Color.FromArgb(240, 128, 128);
             btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.Font = new Font("Segoe UI", 12F);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(798, 736);
+            btnEliminar.Location = new Point(670, 500);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 51);
             btnEliminar.TabIndex = 14;
@@ -75,10 +76,12 @@
             // 
             // btnEditar
             // 
+            btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnEditar.BackColor = Color.HotPink;
             btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.Font = new Font("Segoe UI", 12F);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(543, 736);
+            btnEditar.Location = new Point(510, 500);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 51);
             btnEditar.TabIndex = 15;
@@ -87,10 +90,12 @@
             // 
             // btnNuevo
             // 
+            btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnNuevo.BackColor = Color.HotPink;
             btnNuevo.FlatStyle = FlatStyle.Flat;
+            btnNuevo.Font = new Font("Segoe UI", 12F);
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(62, 492);
+            btnNuevo.Location = new Point(350, 500);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 51);
             btnNuevo.TabIndex = 16;
@@ -103,7 +108,7 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = SystemColors.ControlText;
-            lblTitulo.Location = new Point(14, 12);
+            lblTitulo.Location = new Point(12, 13);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(217, 54);
             lblTitulo.TabIndex = 17;
@@ -118,7 +123,7 @@
             dgvInventario.BackgroundColor = SystemColors.ActiveBorder;
             dgvInventario.BorderStyle = BorderStyle.None;
             dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventario.Location = new Point(218, 112);
+            dgvInventario.Location = new Point(350, 80);
             dgvInventario.Name = "dgvInventario";
             dgvInventario.ReadOnly = true;
             dgvInventario.RowHeadersVisible = false;
@@ -126,7 +131,7 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvInventario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvInventario.Size = new Size(809, 612);
+            dgvInventario.Size = new Size(900, 400);
             dgvInventario.TabIndex = 29;
             // 
             // frmInventario
@@ -134,7 +139,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            ClientSize = new Size(1241, 815);
+            ClientSize = new Size(1316, 603);
             ControlBox = false;
             Controls.Add(dgvInventario);
             Controls.Add(txtBuscar);

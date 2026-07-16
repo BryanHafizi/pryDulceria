@@ -44,9 +44,9 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Black;
-            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Location = new Point(12, 13);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(311, 45);
+            lblTitulo.Size = new Size(389, 54);
             lblTitulo.TabIndex = 16;
             lblTitulo.Text = "Agregar Categorias";
             // 
@@ -54,9 +54,9 @@
             // 
             lblNombreCategoria.AutoSize = true;
             lblNombreCategoria.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombreCategoria.Location = new Point(12, 85);
+            lblNombreCategoria.Location = new Point(12, 100);
             lblNombreCategoria.Name = "lblNombreCategoria";
-            lblNombreCategoria.Size = new Size(179, 21);
+            lblNombreCategoria.Size = new Size(226, 28);
             lblNombreCategoria.TabIndex = 17;
             lblNombreCategoria.Text = "Nombre de la Categoria:";
             // 
@@ -69,8 +69,7 @@
             dgvCategorias.BackgroundColor = SystemColors.ActiveBorder;
             dgvCategorias.BorderStyle = BorderStyle.None;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCategorias.Location = new Point(97, 196);
-            dgvCategorias.Margin = new Padding(3, 2, 3, 2);
+            dgvCategorias.Location = new Point(12, 210);
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.ReadOnly = true;
             dgvCategorias.RowHeadersVisible = false;
@@ -78,20 +77,23 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategorias.Size = new Size(300, 232);
+            dgvCategorias.Size = new Size(600, 300);
             dgvCategorias.TabIndex = 29;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(205, 87);
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(244, 104);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(236, 23);
+            textBox1.Size = new Size(300, 34);
             textBox1.TabIndex = 30;
             // 
             // button1
             // 
             button1.BackColor = Color.LightCoral;
-            button1.Location = new Point(12, 128);
+            button1.Location = new Point(12, 150);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(150, 50);
             button1.TabIndex = 31;
@@ -101,7 +103,8 @@
             // button2
             // 
             button2.BackColor = Color.LightCoral;
-            button2.Location = new Point(168, 128);
+            button2.Location = new Point(172, 150);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(150, 50);
             button2.TabIndex = 32;
@@ -111,7 +114,8 @@
             // button3
             // 
             button3.BackColor = Color.LightCoral;
-            button3.Location = new Point(324, 128);
+            button3.Location = new Point(332, 150);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(150, 50);
             button3.TabIndex = 33;
@@ -120,10 +124,10 @@
             // 
             // frmCategorias
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            ClientSize = new Size(482, 453);
+            ClientSize = new Size(782, 553);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -131,6 +135,7 @@
             Controls.Add(dgvCategorias);
             Controls.Add(lblNombreCategoria);
             Controls.Add(lblTitulo);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmCategorias";
             Text = "frmCategorias";
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();

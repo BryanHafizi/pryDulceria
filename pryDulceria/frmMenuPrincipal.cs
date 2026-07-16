@@ -24,38 +24,46 @@ namespace pryDulceria
         }
         private void pbVentas_Click(object sender, EventArgs e)
         {
-            principal = new clsMenuPrincipal();
-            principal.agregarAlContenedor(new frmVentas(), pnlContenedor);
+            AbrirFormularioEnPanel(new frmVentas());
+        
         }
         private void pbInventarios_Click(object sender, EventArgs e)
         {
-            principal = new clsMenuPrincipal();
-            principal.agregarAlContenedor(new frmInventario(), pnlContenedor);
+            AbrirFormularioEnPanel(new frmInventario());
         }
-
-
         private void pbReportes_Click(object sender, EventArgs e)
         {
-            principal = new clsMenuPrincipal();
-            principal.agregarAlContenedor(new frmReportes(), pnlContenedor);
+            AbrirFormularioEnPanel(new frmReportes());
         }
-
         private void pbProveedores_Click(object sender, EventArgs e)
         {
-            principal = new clsMenuPrincipal();
-            principal.agregarAlContenedor(new frmProveedores(), pnlContenedor);
+            AbrirFormularioEnPanel(new frmProveedores());
         }
             private void pbUsuarios_Click(object sender, EventArgs e)
         {
-            principal = new clsMenuPrincipal();
-            principal.agregarAlContenedor(new frmUsuarios(), pnlContenedor);
+            AbrirFormularioEnPanel(new frmUsuarios());
         }
 
         private void pbCerrarSesion_Click(object sender, EventArgs e)
         {
             Application.Restart();
         }
+        private void AbrirFormularioEnPanel(Form formHijo)
+        {
+            if (this.pnlContenedor.Controls.Count > 0)
+            {
+                this.pnlContenedor.Controls.RemoveAt(0);
+            }
 
-        
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+
+            formHijo.Dock = DockStyle.Fill;
+
+            this.pnlContenedor.Controls.Add(formHijo);
+            this.pnlContenedor.Tag = formHijo;
+            formHijo.Show();
+        }
+
     }
 }
