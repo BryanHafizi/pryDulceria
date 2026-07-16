@@ -27,9 +27,9 @@
             lblStock = new Label();
             lblTitulo = new Label();
             comboBox1 = new ComboBox();
-            pcbNuevaCategoria = new PictureBox();
+            pcbEditarCategoria = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pcbNuevaCategoria).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbEditarCategoria).BeginInit();
             SuspendLayout();
             // 
             // lblNombreProducto
@@ -160,16 +160,16 @@
             comboBox1.Size = new Size(259, 29);
             comboBox1.TabIndex = 16;
             // 
-            // pcbNuevaCategoria
+            // pcbEditarCategoria
             // 
-            pcbNuevaCategoria.Image = (Image)resources.GetObject("pcbNuevaCategoria.Image");
-            pcbNuevaCategoria.Location = new Point(525, 157);
-            pcbNuevaCategoria.Name = "pcbNuevaCategoria";
-            pcbNuevaCategoria.Size = new Size(35, 29);
-            pcbNuevaCategoria.SizeMode = PictureBoxSizeMode.StretchImage;
-            pcbNuevaCategoria.TabIndex = 17;
-            pcbNuevaCategoria.TabStop = false;
-            pcbNuevaCategoria.Click += pcbNuevaCategoria_Click;
+            pcbEditarCategoria.Image = (Image)resources.GetObject("pcbEditarCategoria.Image");
+            pcbEditarCategoria.Location = new Point(525, 157);
+            pcbEditarCategoria.Name = "pcbEditarCategoria";
+            pcbEditarCategoria.Size = new Size(35, 29);
+            pcbEditarCategoria.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbEditarCategoria.TabIndex = 17;
+            pcbEditarCategoria.TabStop = false;
+            pcbEditarCategoria.Click += pcbNuevaCategoria_Click;
             // 
             // frmEditarInventario
             // 
@@ -177,7 +177,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
             ClientSize = new Size(632, 453);
-            Controls.Add(pcbNuevaCategoria);
+            Controls.Add(pcbEditarCategoria);
             Controls.Add(comboBox1);
             Controls.Add(lblTitulo);
             Controls.Add(textBox5);
@@ -196,7 +196,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Editar Inventario";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pcbNuevaCategoria).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbEditarCategoria).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,6 +215,6 @@
         private Label lblStock;
         private Label lblTitulo;
         private ComboBox comboBox1;
-        private PictureBox pcbNuevaCategoria;
+        private PictureBox pcbEditarCategoria;
     }
 }
