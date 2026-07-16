@@ -15,19 +15,19 @@
         private void InitializeComponent()
         {
             lblTitulo = new Label();
-            dgvVentas = new DataGridView();
-            clmCantidad = new DataGridViewTextBoxColumn();
-            clmProducto = new DataGridViewTextBoxColumn();
-            clmPrecioUni = new DataGridViewTextBoxColumn();
-            clmSubtotal = new DataGridViewTextBoxColumn();
             lblTotal = new Label();
             btnCobrar = new Button();
             btnCancelar = new Button();
             pbCarrito = new PictureBox();
             txtBuscar = new TextBox();
             btnEditar = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvVentas).BeginInit();
+            clmSubtotal = new DataGridViewTextBoxColumn();
+            clmPrecioUni = new DataGridViewTextBoxColumn();
+            clmProducto = new DataGridViewTextBoxColumn();
+            clmCantidad = new DataGridViewTextBoxColumn();
+            dgvVentas = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)pbCarrito).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvVentas).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
@@ -39,46 +39,6 @@
             lblTitulo.Size = new Size(118, 45);
             lblTitulo.TabIndex = 5;
             lblTitulo.Text = "Ventas";
-            // 
-            // dgvVentas
-            // 
-            dgvVentas.BackgroundColor = Color.White;
-            dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVentas.Columns.AddRange(new DataGridViewColumn[] { clmCantidad, clmProducto, clmPrecioUni, clmSubtotal });
-            dgvVentas.GridColor = Color.FromArgb(224, 176, 255);
-            dgvVentas.Location = new Point(300, 90);
-            dgvVentas.Name = "dgvVentas";
-            dgvVentas.RowHeadersWidth = 51;
-            dgvVentas.Size = new Size(550, 400);
-            dgvVentas.TabIndex = 2;
-            // 
-            // clmCantidad
-            // 
-            clmCantidad.HeaderText = "Cantidad";
-            clmCantidad.MinimumWidth = 6;
-            clmCantidad.Name = "clmCantidad";
-            clmCantidad.Width = 125;
-            // 
-            // clmProducto
-            // 
-            clmProducto.HeaderText = "producto";
-            clmProducto.MinimumWidth = 6;
-            clmProducto.Name = "clmProducto";
-            clmProducto.Width = 125;
-            // 
-            // clmPrecioUni
-            // 
-            clmPrecioUni.HeaderText = "Precio uni.";
-            clmPrecioUni.MinimumWidth = 6;
-            clmPrecioUni.Name = "clmPrecioUni";
-            clmPrecioUni.Width = 125;
-            // 
-            // clmSubtotal
-            // 
-            clmSubtotal.HeaderText = "Subtotal";
-            clmSubtotal.MinimumWidth = 6;
-            clmSubtotal.Name = "clmSubtotal";
-            clmSubtotal.Width = 125;
             // 
             // lblTotal
             // 
@@ -146,6 +106,46 @@
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
             // 
+            // clmSubtotal
+            // 
+            clmSubtotal.HeaderText = "Subtotal";
+            clmSubtotal.MinimumWidth = 6;
+            clmSubtotal.Name = "clmSubtotal";
+            clmSubtotal.Width = 125;
+            // 
+            // clmPrecioUni
+            // 
+            clmPrecioUni.HeaderText = "Precio uni.";
+            clmPrecioUni.MinimumWidth = 6;
+            clmPrecioUni.Name = "clmPrecioUni";
+            clmPrecioUni.Width = 125;
+            // 
+            // clmProducto
+            // 
+            clmProducto.HeaderText = "producto";
+            clmProducto.MinimumWidth = 6;
+            clmProducto.Name = "clmProducto";
+            clmProducto.Width = 125;
+            // 
+            // clmCantidad
+            // 
+            clmCantidad.HeaderText = "Cantidad";
+            clmCantidad.MinimumWidth = 6;
+            clmCantidad.Name = "clmCantidad";
+            clmCantidad.Width = 125;
+            // 
+            // dgvVentas
+            // 
+            dgvVentas.BackgroundColor = Color.White;
+            dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvVentas.Columns.AddRange(new DataGridViewColumn[] { clmCantidad, clmProducto, clmPrecioUni, clmSubtotal });
+            dgvVentas.GridColor = Color.FromArgb(224, 176, 255);
+            dgvVentas.Location = new Point(300, 90);
+            dgvVentas.Name = "dgvVentas";
+            dgvVentas.RowHeadersWidth = 51;
+            dgvVentas.Size = new Size(550, 400);
+            dgvVentas.TabIndex = 2;
+            // 
             // frmVentas
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -166,24 +166,24 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Módulo de Facturación y Ventas";
             Load += frmVender_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvVentas).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbCarrito).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvVentas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnCobrar;
         private System.Windows.Forms.Button btnCancelar;
-        private DataGridViewTextBoxColumn clmCantidad;
-        private DataGridViewTextBoxColumn clmProducto;
-        private DataGridViewTextBoxColumn clmPrecioUni;
-        private DataGridViewTextBoxColumn clmSubtotal;
         private PictureBox pbCarrito;
         private TextBox txtBuscar;
         private Button btnEditar;
+        private DataGridViewTextBoxColumn clmSubtotal;
+        private DataGridViewTextBoxColumn clmPrecioUni;
+        private DataGridViewTextBoxColumn clmProducto;
+        private DataGridViewTextBoxColumn clmCantidad;
+        private DataGridView dgvVentas;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             txtBuscar = new TextBox();
             pbProveedores = new PictureBox();
             btnEliminar = new Button();
@@ -114,15 +115,24 @@
             // 
             // dgvInventario
             // 
-            dgvInventario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            dgvInventario.BackgroundColor = Color.White;
+            dgvInventario.AllowUserToAddRows = false;
+            dgvInventario.AllowUserToDeleteRows = false;
+            dgvInventario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvInventario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvInventario.BackgroundColor = SystemColors.ActiveBorder;
+            dgvInventario.BorderStyle = BorderStyle.None;
             dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvInventario.Location = new Point(191, 84);
             dgvInventario.Margin = new Padding(3, 2, 3, 2);
             dgvInventario.Name = "dgvInventario";
+            dgvInventario.ReadOnly = true;
+            dgvInventario.RowHeadersVisible = false;
             dgvInventario.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvInventario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInventario.Size = new Size(708, 459);
-            dgvInventario.TabIndex = 21;
+            dgvInventario.TabIndex = 29;
             // 
             // frmInventario
             // 

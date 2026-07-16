@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             lblNombreCategoria = new Label();
-            dgvUsuarios = new DataGridView();
+            dgvCategorias = new DataGridView();
             textBox1 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
@@ -57,26 +57,26 @@
             lblNombreCategoria.TabIndex = 17;
             lblNombreCategoria.Text = "Nombre de la Categoria:";
             // 
-            // dgvUsuarios
+            // dgvCategorias
             // 
-            dgvUsuarios.AllowUserToAddRows = false;
-            dgvUsuarios.AllowUserToDeleteRows = false;
-            dgvUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvUsuarios.BackgroundColor = SystemColors.ActiveBorder;
-            dgvUsuarios.BorderStyle = BorderStyle.None;
-            dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsuarios.Location = new Point(394, 73);
-            dgvUsuarios.Margin = new Padding(3, 2, 3, 2);
-            dgvUsuarios.Name = "dgvUsuarios";
-            dgvUsuarios.ReadOnly = true;
-            dgvUsuarios.RowHeadersVisible = false;
-            dgvUsuarios.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Padding = new Padding(3);
-            dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsuarios.Size = new Size(215, 243);
-            dgvUsuarios.TabIndex = 29;
+            dgvCategorias.AllowUserToAddRows = false;
+            dgvCategorias.AllowUserToDeleteRows = false;
+            dgvCategorias.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvCategorias.BackgroundColor = SystemColors.ActiveBorder;
+            dgvCategorias.BorderStyle = BorderStyle.None;
+            dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCategorias.Location = new Point(394, 73);
+            dgvCategorias.Margin = new Padding(3, 2, 3, 2);
+            dgvCategorias.Name = "dgvCategorias";
+            dgvCategorias.ReadOnly = true;
+            dgvCategorias.RowHeadersVisible = false;
+            dgvCategorias.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvCategorias.Size = new Size(215, 243);
+            dgvCategorias.TabIndex = 29;
             // 
             // textBox1
             // 
@@ -92,12 +92,12 @@
             BackColor = Color.MistyRose;
             ClientSize = new Size(632, 453);
             Controls.Add(textBox1);
-            Controls.Add(dgvUsuarios);
+            Controls.Add(dgvCategorias);
             Controls.Add(lblNombreCategoria);
             Controls.Add(lblTitulo);
             Name = "frmCategorias";
             Text = "frmCategorias";
-            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -106,7 +106,7 @@
 
         private Label lblTitulo;
         private Label lblNombreCategoria;
-        private DataGridView dgvUsuarios;
+        private DataGridView dgvCategorias;
         private TextBox textBox1;
     }
 }
