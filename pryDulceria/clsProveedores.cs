@@ -8,7 +8,7 @@ namespace pryDulceria
 {
     internal class clsProveedores
     {
-        // Propiedades adaptadas a tblusuarios
+        // Propiedades adaptadas a proveedor
         private int idProveedor;
         private string nombre;
         private string ap;
@@ -100,13 +100,15 @@ namespace pryDulceria
                     }
                     else // Actualizar Registro
                     {
-                        string sqlA = "UPDATE tblusuarios SET nombre = @nombre,@ap = AP,  WHERE intIdUsuario = @id;";
+                        string sqlA = "UPDATE proveedor SET Nombre = @nombre,Ap = @ap,Am = @am,Tel = @tel,Tel_secundario = @tel_secundario  WHERE Id_proveedor = @id;";
                         using (comando = new MySqlCommand(sqlA, conexion))
                         {
-                            comando.Parameters.AddWithValue("@id", IdUsuario);
-                            comando.Parameters.AddWithValue("@nombre", NombreUsuario);
-                            comando.Parameters.AddWithValue("@pass", Password);
-                            comando.Parameters.AddWithValue("@rol", Rol);
+                            comando.Parameters.AddWithValue("@id", IdProveedor);
+                            comando.Parameters.AddWithValue("@nombre", Nombre);
+                            comando.Parameters.AddWithValue("@ap", Ap);
+                            comando.Parameters.AddWithValue("@am", Am);
+                            comando.Parameters.AddWithValue("@tel", Tel);
+                            comando.Parameters.AddWithValue("@tel_secundario", Tel_secundario);
                             int filasAfectadas = comando.ExecuteNonQuery();
                             if (filasAfectadas > 0)
                             {
@@ -132,11 +134,11 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "DELETE FROM tblusuarios WHERE intIdUsuario = @id;";
+                    string sql = "DELETE FROM proveedor WHERE Id_proveedor = @id;";
                     using (comando = new MySqlCommand(sql, conexion))
                     {
-                        comando.Parameters.AddWithValue("@id", IdUsuario);
-                        msg = comando.ExecuteNonQuery() > 0 ? "Usuario eliminado correctamente" : "Error al eliminar";
+                        comando.Parameters.AddWithValue("@id", IdProveedor);
+                        msg = comando.ExecuteNonQuery() > 0 ? "Proveedor eliminado correctamente" : "Error al eliminar";
                     }
                 }
             }
