@@ -42,7 +42,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT Id_proveedor AS Id,Nombre AS nom,Ap AS a_p,AM AS a_m,Tel AS telf,Tel_secundario AS tel_sec FROM proveedor;";
+                    string sql = "SELECT Id_proveedor AS Id,Nombre AS nom,Ap AS a_p,AM AS a_m,Tel AS telf,Tel_secundario AS tel_sec FROM tblproveedor;";
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
@@ -61,7 +61,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT Id_proveedor AS Id,Nombre AS nom,Ap AS a_p,AM AS a_m,Tel AS telf,Tel_secundario AS tel_sec FROM proveedor;";
+                    string sql = "SELECT Id_proveedor AS Id,Nombre AS nom,Ap AS a_p,AM AS a_m,Tel AS telf,Tel_secundario AS tel_sec FROM tblproveedor;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
                         consultar.Parameters.AddWithValue("@nombre", "%" + Nombre + "%");
@@ -83,7 +83,7 @@ namespace pryDulceria
                 {
                     if (tipoOperacion == 0) // Nuevo Registro
                     {
-                        string sqlN = "INSERT INTO proveedor(Nombre, Ap, Am,Tel,Tel_secundario) VALUES(@nombre,@ap,@am,@tel,@tel_secundario);";
+                        string sqlN = "INSERT INTO tblproveedor(Nombre, Ap, Am,Tel,Tel_secundario) VALUES(@nombre,@ap,@am,@tel,@tel_secundario);";
                         using (comando = new MySqlCommand(sqlN, conexion))
                         {
                             comando.Parameters.AddWithValue("@nombre", Nombre);
@@ -105,7 +105,7 @@ namespace pryDulceria
                     else // Actualizar Registro
                     {
 
-                        string sqlA = "UPDATE proveedor SET Nombre = @nombre,Ap = @ap,Am = @am,Tel = @tel,Tel_secundario = @tel_secundario  WHERE Id_proveedor = @id;";
+                        string sqlA = "UPDATE tblproveedor SET Nombre = @nombre,Ap = @ap,Am = @am,Tel = @tel,Tel_secundario = @tel_secundario  WHERE Id_proveedor = @id;";
                         using (comando = new MySqlCommand(sqlA, conexion))
                         {
                             comando.Parameters.AddWithValue("@id", IdProveedor);
@@ -140,7 +140,7 @@ namespace pryDulceria
                 using (var conexion = conexionBD.AbrirConexion())
                 {
 
-                    string sql = "DELETE FROM proveedor WHERE Id_proveedor = @id;";
+                    string sql = "DELETE FROM tblproveedor WHERE Id_proveedor = @id;";
                     using (comando = new MySqlCommand(sql, conexion))
                     {
                         comando.Parameters.AddWithValue("@id", IdProveedor);

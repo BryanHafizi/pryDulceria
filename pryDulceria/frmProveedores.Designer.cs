@@ -49,7 +49,7 @@
             dgvProvedores.BackgroundColor = SystemColors.ActiveBorder;
             dgvProvedores.BorderStyle = BorderStyle.None;
             dgvProvedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProvedores.Location = new Point(201, 84);
+            dgvProvedores.Location = new Point(202, 93);
             dgvProvedores.Margin = new Padding(3, 2, 3, 2);
             dgvProvedores.Name = "dgvProvedores";
             dgvProvedores.ReadOnly = true;
@@ -71,6 +71,7 @@
             txtBuscar.PlaceholderText = "Buscar Proveedores";
             txtBuscar.Size = new Size(709, 29);
             txtBuscar.TabIndex = 34;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // pbProveedores
             // 
@@ -90,13 +91,14 @@
             btnEliminar.BackColor = Color.FromArgb(240, 128, 128);
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(703, 559);
+            btnEliminar.Location = new Point(692, 574);
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(131, 38);
             btnEliminar.TabIndex = 29;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnEditar
             // 
@@ -104,13 +106,14 @@
             btnEditar.BackColor = Color.HotPink;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(498, 559);
+            btnEditar.Location = new Point(490, 574);
             btnEditar.Margin = new Padding(3, 2, 3, 2);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(131, 38);
             btnEditar.TabIndex = 30;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnNuevo
             // 
@@ -118,13 +121,14 @@
             btnNuevo.BackColor = Color.HotPink;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(268, 559);
+            btnNuevo.Location = new Point(270, 574);
             btnNuevo.Margin = new Padding(3, 2, 3, 2);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(131, 38);
             btnNuevo.TabIndex = 31;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // lblTitulo
             // 
@@ -142,7 +146,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            ClientSize = new Size(1086, 574);
+            ClientSize = new Size(1086, 623);
             Controls.Add(dgvProvedores);
             Controls.Add(txtBuscar);
             Controls.Add(pbProveedores);
