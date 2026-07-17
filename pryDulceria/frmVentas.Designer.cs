@@ -53,6 +53,7 @@
             btnCobrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnCobrar.BackColor = Color.FromArgb(255, 105, 180);
             btnCobrar.FlatStyle = FlatStyle.Flat;
+            btnCobrar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCobrar.ForeColor = Color.White;
             btnCobrar.Location = new Point(300, 530);
             btnCobrar.Name = "btnCobrar";
@@ -66,6 +67,7 @@
             btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnCancelar.BackColor = Color.FromArgb(240, 128, 128);
             btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = Color.White;
             btnCancelar.Location = new Point(620, 530);
             btnCancelar.Name = "btnCancelar";
@@ -98,6 +100,7 @@
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnEditar.BackColor = Color.FromArgb(255, 105, 180);
             btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
             btnEditar.Location = new Point(460, 530);
             btnEditar.Name = "btnEditar";
@@ -112,8 +115,8 @@
             dgvVentas.AllowUserToDeleteRows = false;
             dgvVentas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvVentas.BackgroundColor = SystemColors.ActiveBorder;
-            dgvVentas.BorderStyle = BorderStyle.None;
+            dgvVentas.BackgroundColor = Color.White;
+            dgvVentas.BorderStyle = BorderStyle.Fixed3D;
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVentas.Location = new Point(300, 80);
             dgvVentas.Margin = new Padding(3, 2, 3, 2);
@@ -143,6 +146,7 @@
             Controls.Add(lblTotal);
             Controls.Add(lblTitulo);
             Font = new Font("Segoe UI", 12F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmVentas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Módulo de Facturación y Ventas";

@@ -84,7 +84,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 228, 225);
+            BackColor = Color.MistyRose;
             ClientSize = new Size(432, 503);
             Controls.Add(pictureBox1);
             Controls.Add(btnAcceder);

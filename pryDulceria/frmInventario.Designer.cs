@@ -65,7 +65,7 @@
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnEliminar.BackColor = Color.FromArgb(240, 128, 128);
             btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Font = new Font("Segoe UI", 12F);
+            btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
             btnEliminar.Location = new Point(670, 500);
             btnEliminar.Name = "btnEliminar";
@@ -79,7 +79,7 @@
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnEditar.BackColor = Color.HotPink;
             btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.Font = new Font("Segoe UI", 12F);
+            btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
             btnEditar.Location = new Point(510, 500);
             btnEditar.Name = "btnEditar";
@@ -93,7 +93,7 @@
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnNuevo.BackColor = Color.HotPink;
             btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Font = new Font("Segoe UI", 12F);
+            btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
             btnNuevo.Location = new Point(350, 500);
             btnNuevo.Name = "btnNuevo";
@@ -120,7 +120,7 @@
             dgvInventario.AllowUserToDeleteRows = false;
             dgvInventario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvInventario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvInventario.BackgroundColor = SystemColors.ActiveBorder;
+            dgvInventario.BackgroundColor = Color.White;
             dgvInventario.BorderStyle = BorderStyle.None;
             dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvInventario.Location = new Point(350, 80);
@@ -148,8 +148,9 @@
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmInventario";
-            Text = "frmInventario";
+            Text = "Modulo de Inventario";
             ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvInventario).EndInit();
             ResumeLayout(false);

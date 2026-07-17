@@ -16,17 +16,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarInventario));
             lblNombreProducto = new Label();
             btnGuardar = new Button();
-            pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
+            pcbEditar = new PictureBox();
+            txtNombre = new TextBox();
             lblCategoria = new Label();
-            textBox4 = new TextBox();
+            txtPrecio = new TextBox();
             lblPrecio = new Label();
-            textBox5 = new TextBox();
+            txtStock = new TextBox();
             lblStock = new Label();
             lblTitulo = new Label();
-            comboBox1 = new ComboBox();
+            cmbCategoria = new ComboBox();
             pcbEditarCategoria = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbEditar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbEditarCategoria).BeginInit();
             SuspendLayout();
             // 
@@ -35,7 +35,7 @@
             lblNombreProducto.AutoSize = true;
             lblNombreProducto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNombreProducto.ForeColor = Color.Black;
-            lblNombreProducto.Location = new Point(20, 110);
+            lblNombreProducto.Location = new Point(20, 100);
             lblNombreProducto.Name = "lblNombreProducto";
             lblNombreProducto.Size = new Size(207, 28);
             lblNombreProducto.TabIndex = 3;
@@ -43,33 +43,33 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.BackColor = Color.FromArgb(240, 128, 128);
+            btnGuardar.BackColor = Color.HotPink;
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(350, 380);
+            btnGuardar.Location = new Point(300, 350);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 50);
             btnGuardar.TabIndex = 0;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pcbEditar
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(440, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            pcbEditar.Image = (Image)resources.GetObject("pcbEditar.Image");
+            pcbEditar.Location = new Point(440, 13);
+            pcbEditar.Name = "pcbEditar";
+            pcbEditar.Size = new Size(100, 50);
+            pcbEditar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbEditar.TabIndex = 5;
+            pcbEditar.TabStop = false;
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(260, 110);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 34);
-            textBox1.TabIndex = 6;
+            txtNombre.ForeColor = Color.Black;
+            txtNombre.Location = new Point(260, 100);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(260, 34);
+            txtNombre.TabIndex = 6;
             // 
             // lblCategoria
             // 
@@ -82,39 +82,39 @@
             lblCategoria.TabIndex = 7;
             lblCategoria.Text = "Categoria del Producto:";
             // 
-            // textBox4
+            // txtPrecio
             // 
-            textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(260, 214);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(300, 34);
-            textBox4.TabIndex = 12;
+            txtPrecio.ForeColor = Color.Black;
+            txtPrecio.Location = new Point(260, 220);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(260, 34);
+            txtPrecio.TabIndex = 12;
             // 
             // lblPrecio
             // 
             lblPrecio.AutoSize = true;
             lblPrecio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPrecio.ForeColor = Color.Black;
-            lblPrecio.Location = new Point(20, 217);
+            lblPrecio.Location = new Point(20, 220);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(188, 28);
             lblPrecio.TabIndex = 11;
             lblPrecio.Text = "Precio del Producto:";
             // 
-            // textBox5
+            // txtStock
             // 
-            textBox5.ForeColor = Color.Black;
-            textBox5.Location = new Point(260, 269);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(300, 34);
-            textBox5.TabIndex = 14;
+            txtStock.ForeColor = Color.Black;
+            txtStock.Location = new Point(260, 280);
+            txtStock.Name = "txtStock";
+            txtStock.Size = new Size(260, 34);
+            txtStock.TabIndex = 14;
             // 
             // lblStock
             // 
             lblStock.AutoSize = true;
             lblStock.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStock.ForeColor = Color.Black;
-            lblStock.Location = new Point(20, 272);
+            lblStock.Location = new Point(20, 280);
             lblStock.Name = "lblStock";
             lblStock.Size = new Size(182, 28);
             lblStock.TabIndex = 13;
@@ -125,26 +125,27 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Black;
-            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Location = new Point(12, 13);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(418, 54);
             lblTitulo.TabIndex = 15;
             lblTitulo.Text = "Edición de Productos";
             // 
-            // comboBox1
+            // cmbCategoria
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(260, 157);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(259, 36);
-            comboBox1.TabIndex = 16;
+            cmbCategoria.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Location = new Point(260, 160);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(260, 36);
+            cmbCategoria.TabIndex = 16;
             // 
             // pcbEditarCategoria
             // 
             pcbEditarCategoria.Image = (Image)resources.GetObject("pcbEditarCategoria.Image");
-            pcbEditarCategoria.Location = new Point(525, 157);
+            pcbEditarCategoria.Location = new Point(550, 160);
             pcbEditarCategoria.Name = "pcbEditarCategoria";
-            pcbEditarCategoria.Size = new Size(35, 29);
+            pcbEditarCategoria.Size = new Size(50, 50);
             pcbEditarCategoria.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbEditarCategoria.TabIndex = 17;
             pcbEditarCategoria.TabStop = false;
@@ -155,24 +156,25 @@
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 228, 225);
-            ClientSize = new Size(632, 453);
+            ClientSize = new Size(782, 553);
             Controls.Add(pcbEditarCategoria);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbCategoria);
             Controls.Add(lblTitulo);
-            Controls.Add(textBox5);
+            Controls.Add(txtStock);
             Controls.Add(lblStock);
-            Controls.Add(textBox4);
+            Controls.Add(txtPrecio);
             Controls.Add(lblPrecio);
             Controls.Add(lblCategoria);
-            Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
+            Controls.Add(txtNombre);
+            Controls.Add(pcbEditar);
             Controls.Add(btnGuardar);
             Controls.Add(lblNombreProducto);
             Font = new Font("Segoe UI", 12F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmEditarInventario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Editar Inventario";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbEditar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbEditarCategoria).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -181,15 +183,15 @@
 
         private System.Windows.Forms.Label lblNombreProducto;
         private System.Windows.Forms.Button btnGuardar;
-        private PictureBox pictureBox1;
-        private TextBox textBox1;
+        private PictureBox pcbEditar;
+        private TextBox txtNombre;
         private Label lblCategoria;
-        private TextBox textBox4;
+        private TextBox txtPrecio;
         private Label lblPrecio;
-        private TextBox textBox5;
+        private TextBox txtStock;
         private Label lblStock;
         private Label lblTitulo;
-        private ComboBox comboBox1;
+        private ComboBox cmbCategoria;
         private PictureBox pcbEditarCategoria;
     }
 }

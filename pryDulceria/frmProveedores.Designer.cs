@@ -46,8 +46,8 @@
             dgvProvedores.AllowUserToDeleteRows = false;
             dgvProvedores.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvProvedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProvedores.BackgroundColor = SystemColors.ActiveBorder;
-            dgvProvedores.BorderStyle = BorderStyle.None;
+            dgvProvedores.BackgroundColor = Color.White;
+            dgvProvedores.BorderStyle = BorderStyle.Fixed3D;
             dgvProvedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProvedores.Location = new Point(380, 80);
             dgvProvedores.Name = "dgvProvedores";
@@ -150,9 +150,10 @@
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmProveedores";
-            Text = "frmProveedores";
+            Text = "Modulo de Proveedores";
             ((System.ComponentModel.ISupportInitialize)dgvProvedores).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
             ResumeLayout(false);

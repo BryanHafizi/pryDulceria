@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             lblNombreCategoria = new Label();
             dgvCategorias = new DataGridView();
@@ -48,7 +48,7 @@
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(389, 54);
             lblTitulo.TabIndex = 16;
-            lblTitulo.Text = "Agregar Categorias";
+            lblTitulo.Text = "Agregar Categorías";
             // 
             // lblNombreCategoria
             // 
@@ -66,7 +66,7 @@
             dgvCategorias.AllowUserToDeleteRows = false;
             dgvCategorias.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvCategorias.BackgroundColor = SystemColors.ActiveBorder;
+            dgvCategorias.BackgroundColor = Color.White;
             dgvCategorias.BorderStyle = BorderStyle.None;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCategorias.Location = new Point(12, 210);
@@ -74,8 +74,8 @@
             dgvCategorias.ReadOnly = true;
             dgvCategorias.RowHeadersVisible = false;
             dgvCategorias.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Padding = new Padding(3);
-            dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCategorias.Size = new Size(600, 300);
             dgvCategorias.TabIndex = 29;
@@ -86,7 +86,7 @@
             textBox1.Location = new Point(244, 104);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 34);
+            textBox1.Size = new Size(260, 34);
             textBox1.TabIndex = 30;
             // 
             // button1
@@ -135,9 +135,10 @@
             Controls.Add(dgvCategorias);
             Controls.Add(lblNombreCategoria);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmCategorias";
-            Text = "frmCategorias";
+            Text = "Módulo para Agregar una Categoría";
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -20,7 +20,7 @@
             pcbProveedores = new PictureBox();
             pcbReportes = new PictureBox();
             pcbInventario = new PictureBox();
-            pbCerrarSesion = new PictureBox();
+            pcbCerrarSesion = new PictureBox();
             pcbVentas = new PictureBox();
             pnlContenedor = new Panel();
             pbAyuda = new PictureBox();
@@ -30,7 +30,7 @@
             ((System.ComponentModel.ISupportInitialize)pcbProveedores).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbReportes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbInventario).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbCerrarSesion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbVentas).BeginInit();
             pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbAyuda).BeginInit();
@@ -49,12 +49,13 @@
             // pnlMenu
             // 
             pnlMenu.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pnlMenu.BackColor = Color.Pink;
+            pnlMenu.BackColor = Color.MistyRose;
+            pnlMenu.BorderStyle = BorderStyle.Fixed3D;
             pnlMenu.Controls.Add(pcbUsuarios);
             pnlMenu.Controls.Add(pcbProveedores);
             pnlMenu.Controls.Add(pcbReportes);
             pnlMenu.Controls.Add(pcbInventario);
-            pnlMenu.Controls.Add(pbCerrarSesion);
+            pnlMenu.Controls.Add(pcbCerrarSesion);
             pnlMenu.Controls.Add(pcbLogo);
             pnlMenu.Controls.Add(pcbVentas);
             pnlMenu.Location = new Point(2, 3);
@@ -106,17 +107,17 @@
             pcbInventario.TabStop = false;
             pcbInventario.Click += pbInventarios_Click;
             // 
-            // pbCerrarSesion
+            // pcbCerrarSesion
             // 
-            pbCerrarSesion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            pbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
-            pbCerrarSesion.Location = new Point(1180, 6);
-            pbCerrarSesion.Name = "pbCerrarSesion";
-            pbCerrarSesion.Size = new Size(150, 50);
-            pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbCerrarSesion.TabIndex = 8;
-            pbCerrarSesion.TabStop = false;
-            pbCerrarSesion.Click += pbCerrarSesion_Click;
+            pcbCerrarSesion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            pcbCerrarSesion.Image = Properties.Resources.Screenshot_2026_06_28_224006;
+            pcbCerrarSesion.Location = new Point(1176, 6);
+            pcbCerrarSesion.Name = "pcbCerrarSesion";
+            pcbCerrarSesion.Size = new Size(150, 46);
+            pcbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbCerrarSesion.TabIndex = 8;
+            pcbCerrarSesion.TabStop = false;
+            pcbCerrarSesion.Click += pbCerrarSesion_Click;
             // 
             // pcbVentas
             // 
@@ -133,6 +134,8 @@
             // 
             pnlContenedor.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             pnlContenedor.AutoSize = true;
+            pnlContenedor.BackColor = Color.MistyRose;
+            pnlContenedor.BorderStyle = BorderStyle.Fixed3D;
             pnlContenedor.Controls.Add(pbAyuda);
             pnlContenedor.Location = new Point(2, 69);
             pnlContenedor.Name = "pnlContenedor";
@@ -142,9 +145,9 @@
             // pbAyuda
             // 
             pbAyuda.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            pbAyuda.Location = new Point(1455, 3);
+            pbAyuda.Location = new Point(1451, 3);
             pbAyuda.Name = "pbAyuda";
-            pbAyuda.Size = new Size(52, 40);
+            pbAyuda.Size = new Size(52, 36);
             pbAyuda.SizeMode = PictureBoxSizeMode.StretchImage;
             pbAyuda.TabIndex = 10;
             pbAyuda.TabStop = false;
@@ -154,7 +157,7 @@
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = Color.FromArgb(255, 228, 225);
+            BackColor = Color.MistyRose;
             ClientSize = new Size(1348, 721);
             Controls.Add(pnlContenedor);
             Controls.Add(pnlMenu);
@@ -168,7 +171,7 @@
             ((System.ComponentModel.ISupportInitialize)pcbProveedores).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbReportes).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbInventario).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbCerrarSesion).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbVentas).EndInit();
             pnlContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbAyuda).EndInit();
@@ -179,7 +182,7 @@
         #endregion
         private PictureBox pcbLogo;
         private Panel pnlMenu;
-        private PictureBox pbCerrarSesion;
+        private PictureBox pcbCerrarSesion;
         private Panel pnlContenedor;
         private PictureBox pcbInventario;
         private PictureBox pcbReportes;
