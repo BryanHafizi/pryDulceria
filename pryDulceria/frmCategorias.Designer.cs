@@ -93,6 +93,7 @@
             // 
             button1.BackColor = Color.HotPink;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
             button1.Location = new Point(12, 150);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
@@ -105,6 +106,7 @@
             // 
             button2.BackColor = Color.HotPink;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            button2.ForeColor = Color.White;
             button2.Location = new Point(172, 150);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
@@ -117,6 +119,7 @@
             // 
             button3.BackColor = Color.LightCoral;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            button3.ForeColor = Color.White;
             button3.Location = new Point(332, 150);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
