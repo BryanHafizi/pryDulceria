@@ -43,9 +43,10 @@
             // txtPassword
             // 
             txtPassword.ForeColor = Color.Black;
-            txtPassword.Location = new Point(210, 161);
+            txtPassword.Location = new Point(184, 121);
+            txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(300, 27);
+            txtPassword.Size = new Size(263, 23);
             txtPassword.TabIndex = 46;
             // 
             // lblPassword
@@ -53,29 +54,31 @@
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPassword.ForeColor = Color.Black;
-            lblPassword.Location = new Point(113, 159);
+            lblPassword.Location = new Point(99, 119);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(97, 28);
+            lblPassword.Size = new Size(79, 21);
             lblPassword.TabIndex = 45;
             lblPassword.Text = "Password:";
             // 
             // txtUsuario
             // 
             txtUsuario.ForeColor = Color.Black;
-            txtUsuario.Location = new Point(210, 111);
+            txtUsuario.Location = new Point(184, 83);
+            txtUsuario.Margin = new Padding(3, 2, 3, 2);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(300, 27);
+            txtUsuario.Size = new Size(263, 23);
             txtUsuario.TabIndex = 44;
             // 
             // btnAceptar
             // 
-            btnAceptar.BackColor = Color.FromArgb(240, 128, 128);
+            btnAceptar.BackColor = Color.FromArgb(77, 130, 188);
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAceptar.ForeColor = Color.White;
-            btnAceptar.Location = new Point(266, 313);
+            btnAceptar.Location = new Point(470, 154);
+            btnAceptar.Margin = new Padding(3, 2, 3, 2);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(150, 51);
+            btnAceptar.Size = new Size(131, 38);
             btnAceptar.TabIndex = 42;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = false;
@@ -86,29 +89,30 @@
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsuario.ForeColor = Color.Black;
-            lblUsuario.Location = new Point(113, 108);
+            lblUsuario.Location = new Point(111, 81);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(83, 28);
+            lblUsuario.Size = new Size(67, 21);
             lblUsuario.TabIndex = 43;
             lblUsuario.Text = "Usuario:";
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Black;
-            lblTitulo.Location = new Point(11, 11);
+            lblTitulo.Location = new Point(106, 12);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(289, 54);
+            lblTitulo.Size = new Size(199, 37);
             lblTitulo.TabIndex = 41;
             lblTitulo.Text = "Editar Usuario";
             // 
             // pcbIcono
             // 
             pcbIcono.Image = Properties.Resources._1782681922009;
-            pcbIcono.Location = new Point(440, 11);
+            pcbIcono.Location = new Point(12, 11);
+            pcbIcono.Margin = new Padding(3, 2, 3, 2);
             pcbIcono.Name = "pcbIcono";
-            pcbIcono.Size = new Size(101, 51);
+            pcbIcono.Size = new Size(88, 38);
             pcbIcono.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbIcono.TabIndex = 40;
             pcbIcono.TabStop = false;
@@ -117,10 +121,9 @@
             // 
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRol.FormattingEnabled = true;
-            cmbRol.Location = new Point(210, 220);
-            cmbRol.Margin = new Padding(3, 4, 3, 4);
+            cmbRol.Location = new Point(184, 165);
             cmbRol.Name = "cmbRol";
-            cmbRol.Size = new Size(300, 28);
+            cmbRol.Size = new Size(263, 23);
             cmbRol.TabIndex = 47;
             // 
             // lblRol
@@ -128,18 +131,18 @@
             lblRol.AutoSize = true;
             lblRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRol.ForeColor = Color.Black;
-            lblRol.Location = new Point(113, 217);
+            lblRol.Location = new Point(142, 163);
             lblRol.Name = "lblRol";
-            lblRol.Size = new Size(44, 28);
+            lblRol.Size = new Size(36, 21);
             lblRol.TabIndex = 48;
             lblRol.Text = "Rol:";
             // 
             // frmUsuariosEdicion
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
-            ClientSize = new Size(632, 453);
+            BackColor = Color.DarkGray;
+            ClientSize = new Size(838, 271);
             Controls.Add(lblRol);
             Controls.Add(cmbRol);
             Controls.Add(txtPassword);
@@ -149,7 +152,6 @@
             Controls.Add(lblUsuario);
             Controls.Add(lblTitulo);
             Controls.Add(pcbIcono);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmUsuariosEdicion";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmUsuariosEdicion";
