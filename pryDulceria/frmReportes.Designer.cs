@@ -30,19 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportes));
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+
             pbProveedores = new PictureBox();
+
+            pcbReportes = new PictureBox();
+
             lblTitulo = new Label();
-            textBox1 = new TextBox();
-            lblIngreseFecha = new Label();
+            lblFecha = new Label();
             dgvReportes = new DataGridView();
             btnGenerar = new Button();
             btnPdf = new Button();
-            ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
+            txtFecha = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)pcbReportes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvReportes).BeginInit();
             SuspendLayout();
             // 
-            // pbProveedores
+            // pcbReportes
             // 
+
             pbProveedores.AccessibleRole = AccessibleRole.None;
             pbProveedores.Image = (Image)resources.GetObject("pbProveedores.Image");
             pbProveedores.Location = new Point(12, 10);
@@ -52,6 +57,16 @@
             pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
             pbProveedores.TabIndex = 11;
             pbProveedores.TabStop = false;
+
+            pcbReportes.AccessibleRole = AccessibleRole.None;
+            pcbReportes.Image = (Image)resources.GetObject("pcbReportes.Image");
+            pcbReportes.Location = new Point(200, 13);
+            pcbReportes.Name = "pcbReportes";
+            pcbReportes.Size = new Size(100, 50);
+            pcbReportes.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbReportes.TabIndex = 11;
+            pcbReportes.TabStop = false;
+
             // 
             // lblTitulo
             // 
@@ -64,8 +79,9 @@
             lblTitulo.TabIndex = 10;
             lblTitulo.Text = "Reportes";
             // 
-            // textBox1
+            // lblFecha
             // 
+
             textBox1.Font = new Font("Segoe UI", 12F);
             textBox1.Location = new Point(395, 31);
             textBox1.Margin = new Padding(3, 2, 3, 2);
@@ -83,6 +99,15 @@
             lblIngreseFecha.Size = new Size(165, 21);
             lblIngreseFecha.TabIndex = 14;
             lblIngreseFecha.Text = "Ingrese fecha de corte:";
+
+            lblFecha.AutoSize = true;
+            lblFecha.Font = new Font("Segoe UI", 12F);
+            lblFecha.Location = new Point(480, 30);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(207, 28);
+            lblFecha.TabIndex = 14;
+            lblFecha.Text = "Ingrese fecha de corte:";
+
             // 
             // dgvReportes
             // 
@@ -91,10 +116,16 @@
             dgvReportes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvReportes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvReportes.BackgroundColor = Color.White;
+
             dgvReportes.BorderStyle = BorderStyle.None;
             dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReportes.Location = new Point(15, 70);
             dgvReportes.Margin = new Padding(3, 2, 3, 2);
+
+            dgvReportes.BorderStyle = BorderStyle.Fixed3D;
+            dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvReportes.Location = new Point(320, 140);
+
             dgvReportes.Name = "dgvReportes";
             dgvReportes.ReadOnly = true;
             dgvReportes.RowHeadersVisible = false;
@@ -102,7 +133,11 @@
             dataGridViewCellStyle2.Padding = new Padding(3);
             dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvReportes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
             dgvReportes.Size = new Size(664, 190);
+
+            dgvReportes.Size = new Size(900, 400);
+
             dgvReportes.TabIndex = 15;
             // 
             // btnGenerar
@@ -112,8 +147,12 @@
             btnGenerar.FlatStyle = FlatStyle.Flat;
             btnGenerar.Font = new Font("Segoe UI", 12F);
             btnGenerar.ForeColor = Color.White;
+
             btnGenerar.Location = new Point(548, 25);
             btnGenerar.Margin = new Padding(3, 2, 3, 2);
+
+            btnGenerar.Location = new Point(700, 80);
+
             btnGenerar.Name = "btnGenerar";
             btnGenerar.Size = new Size(131, 38);
             btnGenerar.TabIndex = 16;
@@ -127,13 +166,26 @@
             btnPdf.FlatStyle = FlatStyle.Flat;
             btnPdf.Font = new Font("Segoe UI", 12F);
             btnPdf.ForeColor = Color.White;
+
             btnPdf.Location = new Point(685, 222);
             btnPdf.Margin = new Padding(3, 2, 3, 2);
+
+            btnPdf.Location = new Point(700, 550);
+
             btnPdf.Name = "btnPdf";
             btnPdf.Size = new Size(131, 38);
             btnPdf.TabIndex = 17;
             btnPdf.Text = "Generar PDF";
             btnPdf.UseVisualStyleBackColor = false;
+            // 
+            // txtFecha
+            // 
+            txtFecha.Font = new Font("Segoe UI", 12F);
+            txtFecha.Location = new Point(700, 30);
+            txtFecha.Name = "txtFecha";
+            txtFecha.PlaceholderText = "DD/MM/AAAA";
+            txtFecha.Size = new Size(150, 34);
+            txtFecha.TabIndex = 12;
             // 
             // frmReportes
             // 
@@ -144,14 +196,18 @@
             Controls.Add(btnPdf);
             Controls.Add(btnGenerar);
             Controls.Add(dgvReportes);
-            Controls.Add(lblIngreseFecha);
-            Controls.Add(textBox1);
-            Controls.Add(pbProveedores);
+            Controls.Add(lblFecha);
+            Controls.Add(txtFecha);
+            Controls.Add(pcbReportes);
             Controls.Add(lblTitulo);
+
             Margin = new Padding(3, 2, 3, 2);
+
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+
             Name = "frmReportes";
-            Text = "frmReportes";
-            ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
+            Text = "Modulo de Generación de Reportes";
+            ((System.ComponentModel.ISupportInitialize)pcbReportes).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvReportes).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -159,12 +215,12 @@
 
         #endregion
 
-        private PictureBox pbProveedores;
+        private PictureBox pcbReportes;
         private Label lblTitulo;
-        private TextBox textBox1;
-        private Label lblIngreseFecha;
+        private Label lblFecha;
         private DataGridView dgvReportes;
         private Button btnGenerar;
         private Button btnPdf;
+        private TextBox txtFecha;
     }
 }

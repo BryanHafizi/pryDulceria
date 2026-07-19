@@ -67,7 +67,7 @@
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnEliminar.BackColor = Color.IndianRed;
             btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Font = new Font("Segoe UI", 12F);
+            btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
             btnEliminar.Location = new Point(695, 204);
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
@@ -82,7 +82,7 @@
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnEditar.BackColor = Color.FromArgb(77, 130, 188);
             btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.Font = new Font("Segoe UI", 12F);
+            btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
             btnEditar.Location = new Point(695, 108);
             btnEditar.Margin = new Padding(3, 2, 3, 2);
@@ -97,7 +97,7 @@
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnNuevo.BackColor = Color.FromArgb(77, 130, 188);
             btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Font = new Font("Segoe UI", 12F);
+            btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
             btnNuevo.Location = new Point(695, 66);
             btnNuevo.Margin = new Padding(3, 2, 3, 2);
@@ -154,9 +154,13 @@
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(lblTitulo);
+
             Margin = new Padding(3, 2, 3, 2);
+
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+
             Name = "frmInventario";
-            Text = "frmInventario";
+            Text = "Modulo de Inventario";
             ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvInventario).EndInit();
             ResumeLayout(false);

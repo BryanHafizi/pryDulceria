@@ -48,7 +48,7 @@
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(389, 54);
             lblTitulo.TabIndex = 16;
-            lblTitulo.Text = "Agregar Categorias";
+            lblTitulo.Text = "Agregar Categorías";
             // 
             // lblNombreCategoria
             // 
@@ -66,7 +66,7 @@
             dgvCategorias.AllowUserToDeleteRows = false;
             dgvCategorias.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvCategorias.BackgroundColor = SystemColors.ActiveBorder;
+            dgvCategorias.BackgroundColor = Color.White;
             dgvCategorias.BorderStyle = BorderStyle.None;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCategorias.Location = new Point(12, 210);
@@ -86,12 +86,14 @@
             textBox1.Location = new Point(244, 104);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 34);
+            textBox1.Size = new Size(260, 34);
             textBox1.TabIndex = 30;
             // 
             // button1
             // 
-            button1.BackColor = Color.LightCoral;
+            button1.BackColor = Color.HotPink;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
             button1.Location = new Point(12, 150);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
@@ -102,7 +104,9 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.LightCoral;
+            button2.BackColor = Color.HotPink;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            button2.ForeColor = Color.White;
             button2.Location = new Point(172, 150);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
@@ -114,6 +118,8 @@
             // button3
             // 
             button3.BackColor = Color.LightCoral;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            button3.ForeColor = Color.White;
             button3.Location = new Point(332, 150);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
@@ -135,9 +141,10 @@
             Controls.Add(dgvCategorias);
             Controls.Add(lblNombreCategoria);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmCategorias";
-            Text = "frmCategorias";
+            Text = "Módulo para Agregar una Categoría";
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();
             ResumeLayout(false);
             PerformLayout();
