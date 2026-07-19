@@ -28,7 +28,7 @@
             lblUsuario.AutoSize = true;
             lblUsuario.Location = new Point(95, 180);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(83, 28);
+            lblUsuario.Size = new Size(67, 21);
             lblUsuario.TabIndex = 6;
             lblUsuario.Text = "Usuario:";
             // 
@@ -36,7 +36,7 @@
             // 
             txtUsuario.Location = new Point(95, 210);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(260, 34);
+            txtUsuario.Size = new Size(260, 29);
             txtUsuario.TabIndex = 0;
             // 
             // lblContraseña
@@ -44,7 +44,7 @@
             lblContraseña.AutoSize = true;
             lblContraseña.Location = new Point(95, 270);
             lblContraseña.Name = "lblContraseña";
-            lblContraseña.Size = new Size(114, 28);
+            lblContraseña.Size = new Size(92, 21);
             lblContraseña.TabIndex = 4;
             lblContraseña.Text = "Contraseña:";
             // 
@@ -53,7 +53,7 @@
             txtPassword.Location = new Point(95, 310);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(260, 34);
+            txtPassword.Size = new Size(260, 29);
             txtPassword.TabIndex = 1;
             // 
             // btnAcceder
@@ -82,9 +82,13 @@
             // 
             // frmInicioSesion
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+
+            BackColor = Color.FromArgb(224, 224, 224);
+
             BackColor = Color.MistyRose;
+
             ClientSize = new Size(432, 503);
             Controls.Add(pictureBox1);
             Controls.Add(btnAcceder);

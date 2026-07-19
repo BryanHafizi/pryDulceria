@@ -47,9 +47,14 @@
             dgvProvedores.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvProvedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProvedores.BackgroundColor = Color.White;
+
+            dgvProvedores.BorderStyle = BorderStyle.None;
+
             dgvProvedores.BorderStyle = BorderStyle.Fixed3D;
+
             dgvProvedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProvedores.Location = new Point(380, 80);
+            dgvProvedores.Location = new Point(12, 66);
+            dgvProvedores.Margin = new Padding(3, 2, 3, 2);
             dgvProvedores.Name = "dgvProvedores";
             dgvProvedores.ReadOnly = true;
             dgvProvedores.RowHeadersVisible = false;
@@ -57,16 +62,17 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvProvedores.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvProvedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProvedores.Size = new Size(900, 400);
+            dgvProvedores.Size = new Size(677, 176);
             dgvProvedores.TabIndex = 4;
             // 
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(380, 33);
+            txtBuscar.Location = new Point(246, 20);
+            txtBuscar.Margin = new Padding(3, 2, 3, 2);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar Proveedor";
-            txtBuscar.Size = new Size(600, 34);
+            txtBuscar.Size = new Size(443, 29);
             txtBuscar.TabIndex = 0;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
@@ -74,9 +80,10 @@
             // 
             pbProveedores.AccessibleRole = AccessibleRole.None;
             pbProveedores.Image = Properties.Resources._1782681922009;
-            pbProveedores.Location = new Point(265, 13);
+            pbProveedores.Location = new Point(12, 11);
+            pbProveedores.Margin = new Padding(3, 2, 3, 2);
             pbProveedores.Name = "pbProveedores";
-            pbProveedores.Size = new Size(100, 50);
+            pbProveedores.Size = new Size(52, 38);
             pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
             pbProveedores.TabIndex = 33;
             pbProveedores.TabStop = false;
@@ -88,9 +95,10 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 12F);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(700, 500);
+            btnEliminar.Location = new Point(695, 204);
+            btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(150, 50);
+            btnEliminar.Size = new Size(131, 38);
             btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
@@ -103,9 +111,10 @@
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 12F);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(540, 500);
+            btnEditar.Location = new Point(695, 108);
+            btnEditar.Margin = new Padding(3, 2, 3, 2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(150, 50);
+            btnEditar.Size = new Size(131, 38);
             btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -118,9 +127,10 @@
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Segoe UI", 12F);
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(380, 500);
+            btnNuevo.Location = new Point(695, 66);
+            btnNuevo.Margin = new Padding(3, 2, 3, 2);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(150, 50);
+            btnNuevo.Size = new Size(131, 38);
             btnNuevo.TabIndex = 1;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
@@ -129,20 +139,20 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = SystemColors.ControlText;
-            lblTitulo.Location = new Point(12, 13);
+            lblTitulo.Location = new Point(70, 12);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(259, 54);
+            lblTitulo.Size = new Size(179, 37);
             lblTitulo.TabIndex = 32;
             lblTitulo.Text = "Proveedores";
             // 
             // frmProveedores
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
-            ClientSize = new Size(1316, 603);
+            BackColor = Color.DarkGray;
+            ClientSize = new Size(838, 271);
             Controls.Add(dgvProvedores);
             Controls.Add(txtBuscar);
             Controls.Add(pbProveedores);
@@ -150,8 +160,10 @@
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(lblTitulo);
+
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
+
             Name = "frmProveedores";
             Text = "Modulo de Proveedores";
             ((System.ComponentModel.ISupportInitialize)dgvProvedores).EndInit();

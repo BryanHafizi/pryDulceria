@@ -30,10 +30,10 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(12, 13);
+            lblTitulo.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(80, 25);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(149, 54);
+            lblTitulo.Size = new Size(102, 37);
             lblTitulo.TabIndex = 5;
             lblTitulo.Text = "Ventas";
             // 
@@ -41,23 +41,23 @@
             // 
             lblTotal.Anchor = AnchorStyles.Bottom;
             lblTotal.AutoSize = true;
-            lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(300, 490);
+            lblTotal.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotal.Location = new Point(677, 39);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(201, 28);
+            lblTotal.Size = new Size(149, 20);
             lblTotal.TabIndex = 2;
             lblTotal.Text = "Total a Pagar: $0.00";
             // 
             // btnCobrar
             // 
             btnCobrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnCobrar.BackColor = Color.FromArgb(255, 105, 180);
+            btnCobrar.BackColor = Color.FromArgb(77, 130, 188);
             btnCobrar.FlatStyle = FlatStyle.Flat;
             btnCobrar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCobrar.ForeColor = Color.White;
-            btnCobrar.Location = new Point(300, 530);
+            btnCobrar.Location = new Point(692, 70);
             btnCobrar.Name = "btnCobrar";
-            btnCobrar.Size = new Size(150, 50);
+            btnCobrar.Size = new Size(131, 38);
             btnCobrar.TabIndex = 1;
             btnCobrar.Text = "Cobrar";
             btnCobrar.UseVisualStyleBackColor = false;
@@ -69,9 +69,9 @@
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = Color.White;
-            btnCancelar.Location = new Point(620, 530);
+            btnCancelar.Location = new Point(692, 221);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(150, 50);
+            btnCancelar.Size = new Size(131, 38);
             btnCancelar.TabIndex = 0;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
@@ -79,9 +79,9 @@
             // pbCarrito
             // 
             pbCarrito.Image = Properties.Resources.Code_Generated_Image;
-            pbCarrito.Location = new Point(167, 13);
+            pbCarrito.Location = new Point(12, 13);
             pbCarrito.Name = "pbCarrito";
-            pbCarrito.Size = new Size(100, 50);
+            pbCarrito.Size = new Size(72, 49);
             pbCarrito.SizeMode = PictureBoxSizeMode.StretchImage;
             pbCarrito.TabIndex = 7;
             pbCarrito.TabStop = false;
@@ -89,22 +89,22 @@
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(300, 33);
+            txtBuscar.Location = new Point(198, 33);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(600, 34);
+            txtBuscar.Size = new Size(478, 29);
             txtBuscar.TabIndex = 13;
             txtBuscar.Text = "Buscar Producto";
             // 
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.BackColor = Color.FromArgb(255, 105, 180);
+            btnEditar.BackColor = Color.FromArgb(77, 130, 188);
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(460, 530);
+            btnEditar.Location = new Point(692, 114);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(150, 50);
+            btnEditar.Size = new Size(131, 38);
             btnEditar.TabIndex = 15;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -116,9 +116,13 @@
             dgvVentas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvVentas.BackgroundColor = Color.White;
+
+            dgvVentas.BorderStyle = BorderStyle.None;
+
             dgvVentas.BorderStyle = BorderStyle.Fixed3D;
+
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVentas.Location = new Point(300, 80);
+            dgvVentas.Location = new Point(12, 70);
             dgvVentas.Margin = new Padding(3, 2, 3, 2);
             dgvVentas.Name = "dgvVentas";
             dgvVentas.ReadOnly = true;
@@ -127,15 +131,15 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvVentas.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvVentas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvVentas.Size = new Size(900, 400);
+            dgvVentas.Size = new Size(664, 190);
             dgvVentas.TabIndex = 30;
             // 
             // frmVentas
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 228, 225);
-            ClientSize = new Size(1316, 603);
+            BackColor = Color.DarkGray;
+            ClientSize = new Size(838, 271);
             ControlBox = false;
             Controls.Add(dgvVentas);
             Controls.Add(btnEditar);
