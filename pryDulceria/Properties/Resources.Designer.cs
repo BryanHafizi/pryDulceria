@@ -123,36 +123,6 @@ namespace pryDulceria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap btnProveedores {
-            get {
-                object obj = ResourceManager.GetObject("btnProveedores", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap btnUsuarios {
-            get {
-                object obj = ResourceManager.GetObject("btnUsuarios", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap btnVentas {
-            get {
-                object obj = ResourceManager.GetObject("btnVentas", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2026_07_13_221153 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2026-07-13 221153", resourceCulture);

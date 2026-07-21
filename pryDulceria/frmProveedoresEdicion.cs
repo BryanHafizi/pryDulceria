@@ -74,7 +74,5 @@ namespace pryDulceria
             DialogResult = DialogResult.Cancel;
             Close();
         }
-
-      
     }
 }
