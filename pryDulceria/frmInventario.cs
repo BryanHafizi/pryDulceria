@@ -21,5 +21,12 @@ namespace pryDulceria
 
             emergente.ShowDialog();
         }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            frmCategorias emergente = new frmCategorias();
+
+            emergente.ShowDialog();
+        }
     }
 }

@@ -36,6 +36,7 @@
             btnNuevo = new Button();
             lblTitulo = new Label();
             dgvInventario = new DataGridView();
+            btnCategorias = new Button();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvInventario).BeginInit();
             SuspendLayout();
@@ -134,6 +135,21 @@
             dgvInventario.Size = new Size(900, 400);
             dgvInventario.TabIndex = 4;
             // 
+            // btnCategorias
+            // 
+            btnCategorias.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnCategorias.BackColor = Color.HotPink;
+            btnCategorias.FlatStyle = FlatStyle.Flat;
+            btnCategorias.Font = new Font("Segoe UI", 12F);
+            btnCategorias.ForeColor = Color.White;
+            btnCategorias.Location = new Point(1100, 500);
+            btnCategorias.Name = "btnCategorias";
+            btnCategorias.Size = new Size(150, 51);
+            btnCategorias.TabIndex = 20;
+            btnCategorias.Text = "Categorias";
+            btnCategorias.UseVisualStyleBackColor = false;
+            btnCategorias.Click += btnCategorias_Click;
+            // 
             // frmInventario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -141,6 +157,7 @@
             BackColor = Color.MistyRose;
             ClientSize = new Size(1316, 603);
             ControlBox = false;
+            Controls.Add(btnCategorias);
             Controls.Add(dgvInventario);
             Controls.Add(txtBuscar);
             Controls.Add(pbProveedores);
@@ -165,5 +182,6 @@
         private Button btnNuevo;
         private Label lblTitulo;
         private DataGridView dgvInventario;
+        private Button btnCategorias;
     }
 }

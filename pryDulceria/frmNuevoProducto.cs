@@ -26,7 +26,7 @@ namespace pryDulceria
                     return;
                 }
 
-                if (!float.TryParse(txtCodigoProducto.Text, out float codigo))
+                if (float.TryParse(txtCodigoProducto.Text, out float codigo))
                 {
                     MessageBox.Show("Por favor, ingresa un numero válido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
