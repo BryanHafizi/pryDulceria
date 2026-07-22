@@ -28,29 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportes));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            pbProveedores = new PictureBox();
+            pcbReportes = new PictureBox();
             lblTitulo = new Label();
-            textBox1 = new TextBox();
+            txtFecha = new TextBox();
             lblIngreseFecha = new Label();
             dgvReportes = new DataGridView();
             btnGenerar = new Button();
             btnPdf = new Button();
-            ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbReportes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvReportes).BeginInit();
             SuspendLayout();
             // 
-            // pbProveedores
+            // pcbReportes
             // 
-            pbProveedores.AccessibleRole = AccessibleRole.None;
-            pbProveedores.Image = (Image)resources.GetObject("pbProveedores.Image");
-            pbProveedores.Location = new Point(210, 13);
-            pbProveedores.Name = "pbProveedores";
-            pbProveedores.Size = new Size(100, 75);
-            pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbProveedores.TabIndex = 11;
-            pbProveedores.TabStop = false;
+            pcbReportes.AccessibleRole = AccessibleRole.None;
+            pcbReportes.Location = new Point(210, 13);
+            pcbReportes.Name = "pcbReportes";
+            pcbReportes.Size = new Size(100, 75);
+            pcbReportes.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbReportes.TabIndex = 11;
+            pcbReportes.TabStop = false;
             // 
             // lblTitulo
             // 
@@ -63,14 +61,15 @@
             lblTitulo.TabIndex = 10;
             lblTitulo.Text = "Reportes";
             // 
-            // textBox1
+            // txtFecha
             // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(543, 115);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "DD/MM/AAAA";
-            textBox1.Size = new Size(167, 34);
-            textBox1.TabIndex = 12;
+            txtFecha.BorderStyle = BorderStyle.FixedSingle;
+            txtFecha.Font = new Font("Segoe UI", 12F);
+            txtFecha.Location = new Point(543, 115);
+            txtFecha.Name = "txtFecha";
+            txtFecha.PlaceholderText = "DD/MM/AAAA";
+            txtFecha.Size = new Size(167, 34);
+            txtFecha.TabIndex = 12;
             // 
             // lblIngreseFecha
             // 
@@ -88,8 +87,7 @@
             dgvReportes.AllowUserToDeleteRows = false;
             dgvReportes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvReportes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvReportes.BackgroundColor = SystemColors.ActiveBorder;
-            dgvReportes.BorderStyle = BorderStyle.None;
+            dgvReportes.BackgroundColor = Color.FromArgb(226, 232, 240);
             dgvReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReportes.Location = new Point(313, 169);
             dgvReportes.Name = "dgvReportes";
@@ -105,7 +103,7 @@
             // btnGenerar
             // 
             btnGenerar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnGenerar.BackColor = Color.HotPink;
+            btnGenerar.BackColor = Color.FromArgb(100, 116, 139);
             btnGenerar.FlatStyle = FlatStyle.Flat;
             btnGenerar.Font = new Font("Segoe UI", 12F);
             btnGenerar.ForeColor = Color.White;
@@ -119,7 +117,7 @@
             // btnPdf
             // 
             btnPdf.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnPdf.BackColor = Color.HotPink;
+            btnPdf.BackColor = Color.FromArgb(29, 53, 87);
             btnPdf.FlatStyle = FlatStyle.Flat;
             btnPdf.Font = new Font("Segoe UI", 12F);
             btnPdf.ForeColor = Color.White;
@@ -134,18 +132,18 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(1316, 603);
             Controls.Add(btnPdf);
             Controls.Add(btnGenerar);
             Controls.Add(dgvReportes);
             Controls.Add(lblIngreseFecha);
-            Controls.Add(textBox1);
-            Controls.Add(pbProveedores);
+            Controls.Add(txtFecha);
+            Controls.Add(pcbReportes);
             Controls.Add(lblTitulo);
             Name = "frmReportes";
             Text = "frmReportes";
-            ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbReportes).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvReportes).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -153,9 +151,9 @@
 
         #endregion
 
-        private PictureBox pbProveedores;
+        private PictureBox pcbReportes;
         private Label lblTitulo;
-        private TextBox textBox1;
+        private TextBox txtFecha;
         private Label lblIngreseFecha;
         private DataGridView dgvReportes;
         private Button btnGenerar;

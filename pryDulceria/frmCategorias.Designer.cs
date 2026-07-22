@@ -30,7 +30,6 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitulo = new Label();
-            lblNombreCategoria = new Label();
             dgvCategorias = new DataGridView();
             textBox1 = new TextBox();
             button1 = new Button();
@@ -46,19 +45,9 @@
             lblTitulo.ForeColor = Color.Black;
             lblTitulo.Location = new Point(12, 13);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(389, 54);
+            lblTitulo.Size = new Size(224, 54);
             lblTitulo.TabIndex = 16;
-            lblTitulo.Text = "Agregar Categorías";
-            // 
-            // lblNombreCategoria
-            // 
-            lblNombreCategoria.AutoSize = true;
-            lblNombreCategoria.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombreCategoria.Location = new Point(12, 100);
-            lblNombreCategoria.Name = "lblNombreCategoria";
-            lblNombreCategoria.Size = new Size(226, 28);
-            lblNombreCategoria.TabIndex = 17;
-            lblNombreCategoria.Text = "Nombre de la Categoria:";
+            lblTitulo.Text = "Categorías";
             // 
             // dgvCategorias
             // 
@@ -67,9 +56,8 @@
             dgvCategorias.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCategorias.BackgroundColor = Color.White;
-            dgvCategorias.BorderStyle = BorderStyle.None;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCategorias.Location = new Point(95, 153);
+            dgvCategorias.Location = new Point(350, 80);
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.ReadOnly = true;
             dgvCategorias.RowHeadersVisible = false;
@@ -77,24 +65,26 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategorias.Size = new Size(600, 300);
+            dgvCategorias.Size = new Size(900, 400);
             dgvCategorias.TabIndex = 29;
             // 
             // textBox1
             // 
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(244, 104);
+            textBox1.Location = new Point(350, 33);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(260, 34);
+            textBox1.Size = new Size(600, 34);
             textBox1.TabIndex = 30;
+            textBox1.Text = "Buscar Categoria";
             // 
             // button1
             // 
-            button1.BackColor = Color.HotPink;
+            button1.BackColor = Color.FromArgb(29, 53, 87);
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(59, 460);
+            button1.Location = new Point(350, 500);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(150, 50);
@@ -105,10 +95,10 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.HotPink;
+            button2.BackColor = Color.FromArgb(29, 53, 87);
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(311, 460);
+            button2.Location = new Point(510, 500);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(150, 50);
@@ -118,10 +108,10 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.LightCoral;
+            button3.BackColor = Color.FromArgb(100, 116, 139);
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(582, 460);
+            button3.Location = new Point(670, 500);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(150, 50);
@@ -133,14 +123,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
-            ClientSize = new Size(782, 553);
+            BackColor = Color.FromArgb(248, 250, 252);
+            ClientSize = new Size(1316, 603);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(dgvCategorias);
-            Controls.Add(lblNombreCategoria);
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
@@ -154,7 +143,6 @@
         #endregion
 
         private Label lblTitulo;
-        private Label lblNombreCategoria;
         private DataGridView dgvCategorias;
         private TextBox textBox1;
         private Button button1;

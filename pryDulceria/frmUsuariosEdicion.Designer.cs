@@ -42,10 +42,12 @@
             // 
             // txtPassword
             // 
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
+            txtPassword.Font = new Font("Segoe UI", 12F);
             txtPassword.ForeColor = Color.Black;
             txtPassword.Location = new Point(210, 161);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(300, 27);
+            txtPassword.Size = new Size(260, 34);
             txtPassword.TabIndex = 46;
             // 
             // lblPassword
@@ -61,17 +63,19 @@
             // 
             // txtUsuario
             // 
+            txtUsuario.BorderStyle = BorderStyle.FixedSingle;
+            txtUsuario.Font = new Font("Segoe UI", 12F);
             txtUsuario.ForeColor = Color.Black;
             txtUsuario.Location = new Point(210, 111);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(300, 27);
+            txtUsuario.Size = new Size(260, 34);
             txtUsuario.TabIndex = 44;
             // 
             // btnAceptar
             // 
-            btnAceptar.BackColor = Color.FromArgb(240, 128, 128);
+            btnAceptar.BackColor = Color.FromArgb(29, 53, 87);
             btnAceptar.FlatStyle = FlatStyle.Flat;
-            btnAceptar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAceptar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAceptar.ForeColor = Color.White;
             btnAceptar.Location = new Point(266, 313);
             btnAceptar.Name = "btnAceptar";
@@ -116,11 +120,12 @@
             // cmbRol
             // 
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRol.Font = new Font("Segoe UI", 12F);
             cmbRol.FormattingEnabled = true;
             cmbRol.Location = new Point(210, 220);
             cmbRol.Margin = new Padding(3, 4, 3, 4);
             cmbRol.Name = "cmbRol";
-            cmbRol.Size = new Size(300, 28);
+            cmbRol.Size = new Size(260, 36);
             cmbRol.TabIndex = 47;
             // 
             // lblRol
@@ -138,7 +143,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(632, 453);
             Controls.Add(lblRol);
             Controls.Add(cmbRol);

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dgvUsuarios = new DataGridView();
             txtBuscar = new TextBox();
             pbProveedores = new PictureBox();
@@ -46,22 +46,22 @@
             dgvUsuarios.AllowUserToDeleteRows = false;
             dgvUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvUsuarios.BackgroundColor = SystemColors.ActiveBorder;
-            dgvUsuarios.BorderStyle = BorderStyle.None;
+            dgvUsuarios.BackgroundColor = Color.FromArgb(226, 232, 240);
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsuarios.Location = new Point(350, 80);
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.ReadOnly = true;
             dgvUsuarios.RowHeadersVisible = false;
             dgvUsuarios.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Padding = new Padding(3);
-            dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUsuarios.Size = new Size(900, 400);
             dgvUsuarios.TabIndex = 4;
             // 
             // txtBuscar
             // 
+            txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscar.Location = new Point(350, 33);
             txtBuscar.Name = "txtBuscar";
@@ -84,9 +84,9 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEliminar.BackColor = Color.FromArgb(240, 128, 128);
+            btnEliminar.BackColor = Color.FromArgb(100, 116, 139);
             btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Font = new Font("Segoe UI", 12F);
+            btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
             btnEliminar.Location = new Point(670, 500);
             btnEliminar.Name = "btnEliminar";
@@ -99,9 +99,9 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.BackColor = Color.HotPink;
+            btnEditar.BackColor = Color.FromArgb(29, 53, 87);
             btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.Font = new Font("Segoe UI", 12F);
+            btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
             btnEditar.Location = new Point(510, 500);
             btnEditar.Name = "btnEditar";
@@ -114,9 +114,9 @@
             // btnNuevo
             // 
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnNuevo.BackColor = Color.HotPink;
+            btnNuevo.BackColor = Color.FromArgb(29, 53, 87);
             btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Font = new Font("Segoe UI", 12F);
+            btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
             btnNuevo.Location = new Point(350, 500);
             btnNuevo.Name = "btnNuevo";
@@ -141,7 +141,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(1316, 603);
             Controls.Add(dgvUsuarios);
             Controls.Add(txtBuscar);

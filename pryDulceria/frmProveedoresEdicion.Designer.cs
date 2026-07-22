@@ -46,11 +46,12 @@
             // 
             // txtAp
             // 
+            txtAp.BorderStyle = BorderStyle.FixedSingle;
             txtAp.Font = new Font("Segoe UI", 12F);
             txtAp.ForeColor = Color.Black;
             txtAp.Location = new Point(350, 150);
             txtAp.Name = "txtAp";
-            txtAp.Size = new Size(300, 34);
+            txtAp.Size = new Size(260, 34);
             txtAp.TabIndex = 55;
             // 
             // lblAp
@@ -66,18 +67,19 @@
             // 
             // txtNombre
             // 
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Font = new Font("Segoe UI", 12F);
             txtNombre.ForeColor = Color.Black;
             txtNombre.Location = new Point(350, 100);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(300, 34);
+            txtNombre.Size = new Size(260, 34);
             txtNombre.TabIndex = 53;
             // 
             // btnAceptar
             // 
-            btnAceptar.BackColor = Color.FromArgb(240, 128, 128);
+            btnAceptar.BackColor = Color.FromArgb(29, 53, 87);
             btnAceptar.FlatStyle = FlatStyle.Flat;
-            btnAceptar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAceptar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAceptar.ForeColor = Color.White;
             btnAceptar.Location = new Point(350, 400);
             btnAceptar.Name = "btnAceptar";
@@ -121,11 +123,12 @@
             // 
             // txtTelSecundario
             // 
+            txtTelSecundario.BorderStyle = BorderStyle.FixedSingle;
             txtTelSecundario.Font = new Font("Segoe UI", 12F);
             txtTelSecundario.ForeColor = Color.Black;
             txtTelSecundario.Location = new Point(350, 300);
             txtTelSecundario.Name = "txtTelSecundario";
-            txtTelSecundario.Size = new Size(300, 34);
+            txtTelSecundario.Size = new Size(260, 34);
             txtTelSecundario.TabIndex = 59;
             // 
             // label1
@@ -141,11 +144,12 @@
             // 
             // txtTel
             // 
+            txtTel.BorderStyle = BorderStyle.FixedSingle;
             txtTel.Font = new Font("Segoe UI", 12F);
             txtTel.ForeColor = Color.Black;
             txtTel.Location = new Point(350, 250);
             txtTel.Name = "txtTel";
-            txtTel.Size = new Size(300, 34);
+            txtTel.Size = new Size(260, 34);
             txtTel.TabIndex = 63;
             // 
             // label3
@@ -161,11 +165,12 @@
             // 
             // txtAm
             // 
+            txtAm.BorderStyle = BorderStyle.FixedSingle;
             txtAm.Font = new Font("Segoe UI", 12F);
             txtAm.ForeColor = Color.Black;
             txtAm.Location = new Point(350, 200);
             txtAm.Name = "txtAm";
-            txtAm.Size = new Size(300, 34);
+            txtAm.Size = new Size(260, 34);
             txtAm.TabIndex = 61;
             // 
             // lblAm
@@ -183,7 +188,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(782, 553);
             Controls.Add(txtTel);
             Controls.Add(label3);

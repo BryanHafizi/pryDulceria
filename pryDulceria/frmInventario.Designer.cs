@@ -43,6 +43,7 @@
             // 
             // txtBuscar
             // 
+            txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscar.Location = new Point(350, 33);
             txtBuscar.Name = "txtBuscar";
@@ -64,13 +65,13 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEliminar.BackColor = Color.FromArgb(240, 128, 128);
+            btnEliminar.BackColor = Color.FromArgb(100, 116, 139);
             btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Font = new Font("Segoe UI", 12F);
+            btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
             btnEliminar.Location = new Point(670, 500);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(150, 51);
+            btnEliminar.Size = new Size(150, 50);
             btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
@@ -78,13 +79,13 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.BackColor = Color.HotPink;
+            btnEditar.BackColor = Color.FromArgb(29, 53, 87);
             btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.Font = new Font("Segoe UI", 12F);
+            btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
             btnEditar.Location = new Point(510, 500);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(150, 51);
+            btnEditar.Size = new Size(150, 50);
             btnEditar.TabIndex = 2;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
@@ -92,13 +93,13 @@
             // btnNuevo
             // 
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnNuevo.BackColor = Color.HotPink;
+            btnNuevo.BackColor = Color.FromArgb(29, 53, 87);
             btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Font = new Font("Segoe UI", 12F);
+            btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
             btnNuevo.Location = new Point(350, 500);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(150, 51);
+            btnNuevo.Size = new Size(150, 50);
             btnNuevo.TabIndex = 1;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
@@ -121,8 +122,7 @@
             dgvInventario.AllowUserToDeleteRows = false;
             dgvInventario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvInventario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvInventario.BackgroundColor = SystemColors.ActiveBorder;
-            dgvInventario.BorderStyle = BorderStyle.None;
+            dgvInventario.BackgroundColor = Color.FromArgb(226, 232, 240);
             dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvInventario.Location = new Point(350, 80);
             dgvInventario.Name = "dgvInventario";
@@ -138,13 +138,13 @@
             // btnCategorias
             // 
             btnCategorias.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnCategorias.BackColor = Color.HotPink;
+            btnCategorias.BackColor = Color.FromArgb(100, 116, 139);
             btnCategorias.FlatStyle = FlatStyle.Flat;
-            btnCategorias.Font = new Font("Segoe UI", 12F);
+            btnCategorias.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnCategorias.ForeColor = Color.White;
             btnCategorias.Location = new Point(1100, 500);
             btnCategorias.Name = "btnCategorias";
-            btnCategorias.Size = new Size(150, 51);
+            btnCategorias.Size = new Size(150, 50);
             btnCategorias.TabIndex = 20;
             btnCategorias.Text = "Categorias";
             btnCategorias.UseVisualStyleBackColor = false;
@@ -154,7 +154,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(1316, 603);
             ControlBox = false;
             Controls.Add(btnCategorias);

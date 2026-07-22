@@ -25,7 +25,7 @@ namespace pryDulceria
         private void pbVentas_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new frmVentas());
-        
+
         }
         private void pbInventarios_Click(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace pryDulceria
         {
             AbrirFormularioEnPanel(new frmProveedores());
         }
-            private void pbUsuarios_Click(object sender, EventArgs e)
+        private void pbUsuarios_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new frmUsuarios());
         }
@@ -64,6 +64,5 @@ namespace pryDulceria
             this.pnlContenedor.Tag = formHijo;
             formHijo.Show();
         }
-
     }
 }

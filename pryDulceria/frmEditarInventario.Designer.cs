@@ -16,7 +16,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarInventario));
             lblNombreProducto = new Label();
             btnGuardar = new Button();
-            pictureBox1 = new PictureBox();
+            pcbEditar = new PictureBox();
             textBox1 = new TextBox();
             lblCategoria = new Label();
             textBox4 = new TextBox();
@@ -26,7 +26,7 @@
             lblTitulo = new Label();
             comboBox1 = new ComboBox();
             pcbEditarCategoria = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbEditar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbEditarCategoria).BeginInit();
             SuspendLayout();
             // 
@@ -43,25 +43,26 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.BackColor = Color.FromArgb(240, 128, 128);
+            btnGuardar.BackColor = Color.FromArgb(29, 53, 87);
             btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(350, 380);
+            btnGuardar.Location = new Point(350, 330);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 50);
             btnGuardar.TabIndex = 0;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pcbEditar
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(440, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            pcbEditar.Image = (Image)resources.GetObject("pcbEditar.Image");
+            pcbEditar.Location = new Point(440, 9);
+            pcbEditar.Name = "pcbEditar";
+            pcbEditar.Size = new Size(100, 50);
+            pcbEditar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbEditar.TabIndex = 5;
+            pcbEditar.TabStop = false;
             // 
             // textBox1
             // 
@@ -144,7 +145,7 @@
             pcbEditarCategoria.Image = (Image)resources.GetObject("pcbEditarCategoria.Image");
             pcbEditarCategoria.Location = new Point(525, 157);
             pcbEditarCategoria.Name = "pcbEditarCategoria";
-            pcbEditarCategoria.Size = new Size(35, 29);
+            pcbEditarCategoria.Size = new Size(50, 50);
             pcbEditarCategoria.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbEditarCategoria.TabIndex = 17;
             pcbEditarCategoria.TabStop = false;
@@ -154,7 +155,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 228, 225);
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(632, 453);
             Controls.Add(pcbEditarCategoria);
             Controls.Add(comboBox1);
@@ -165,14 +166,14 @@
             Controls.Add(lblPrecio);
             Controls.Add(lblCategoria);
             Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
+            Controls.Add(pcbEditar);
             Controls.Add(btnGuardar);
             Controls.Add(lblNombreProducto);
             Font = new Font("Segoe UI", 12F);
             Name = "frmEditarInventario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Editar Inventario";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbEditar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbEditarCategoria).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -181,7 +182,7 @@
 
         private System.Windows.Forms.Label lblNombreProducto;
         private System.Windows.Forms.Button btnGuardar;
-        private PictureBox pictureBox1;
+        private PictureBox pcbEditar;
         private TextBox textBox1;
         private Label lblCategoria;
         private TextBox textBox4;

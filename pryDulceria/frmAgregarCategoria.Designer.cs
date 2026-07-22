@@ -37,7 +37,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.BackColor = Color.LightCoral;
+            btnGuardar.BackColor = Color.FromArgb(29, 53, 87);
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnGuardar.ForeColor = Color.White;
             btnGuardar.Location = new Point(321, 387);
@@ -50,16 +50,18 @@
             // 
             // txtCategoria
             // 
+            txtCategoria.Font = new Font("Segoe UI", 12F);
             txtCategoria.Location = new Point(345, 164);
             txtCategoria.Name = "txtCategoria";
-            txtCategoria.Size = new Size(300, 27);
+            txtCategoria.Size = new Size(260, 34);
             txtCategoria.TabIndex = 2;
             // 
             // txtCodigoCategoria
             // 
+            txtCodigoCategoria.Font = new Font("Segoe UI", 12F);
             txtCodigoCategoria.Location = new Point(345, 264);
             txtCodigoCategoria.Name = "txtCodigoCategoria";
-            txtCodigoCategoria.Size = new Size(300, 27);
+            txtCodigoCategoria.Size = new Size(260, 34);
             txtCodigoCategoria.TabIndex = 3;
             // 
             // lblImpuesto
@@ -88,7 +90,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(782, 553);
             Controls.Add(label1);
             Controls.Add(lblImpuesto);

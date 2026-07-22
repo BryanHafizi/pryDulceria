@@ -58,9 +58,9 @@
             // 
             // btnAcceder
             // 
-            btnAcceder.BackColor = Color.FromArgb(255, 105, 180);
+            btnAcceder.BackColor = Color.FromArgb(29, 53, 87);
             btnAcceder.FlatStyle = FlatStyle.Flat;
-            btnAcceder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAcceder.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = Color.White;
             btnAcceder.Location = new Point(150, 380);
             btnAcceder.Name = "btnAcceder";
@@ -73,9 +73,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(95, 50);
+            pictureBox1.Location = new Point(125, 60);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(260, 100);
+            pictureBox1.Size = new Size(200, 100);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -84,7 +84,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 228, 225);
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(432, 503);
             Controls.Add(pictureBox1);
             Controls.Add(btnAcceder);

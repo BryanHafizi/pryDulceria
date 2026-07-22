@@ -44,30 +44,38 @@
             // 
             // txtNombreProducto
             // 
+            txtNombreProducto.BorderStyle = BorderStyle.FixedSingle;
+            txtNombreProducto.Font = new Font("Segoe UI", 12F);
             txtNombreProducto.Location = new Point(283, 107);
             txtNombreProducto.Name = "txtNombreProducto";
-            txtNombreProducto.Size = new Size(300, 27);
+            txtNombreProducto.Size = new Size(260, 34);
             txtNombreProducto.TabIndex = 0;
             // 
             // txtPrecioProducto
             // 
+            txtPrecioProducto.BorderStyle = BorderStyle.FixedSingle;
+            txtPrecioProducto.Font = new Font("Segoe UI", 12F);
             txtPrecioProducto.Location = new Point(283, 242);
             txtPrecioProducto.Name = "txtPrecioProducto";
-            txtPrecioProducto.Size = new Size(300, 27);
+            txtPrecioProducto.Size = new Size(260, 34);
             txtPrecioProducto.TabIndex = 1;
             // 
             // txtCodigoProducto
             // 
+            txtCodigoProducto.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigoProducto.Font = new Font("Segoe UI", 12F);
             txtCodigoProducto.Location = new Point(283, 197);
             txtCodigoProducto.Name = "txtCodigoProducto";
-            txtCodigoProducto.Size = new Size(300, 27);
+            txtCodigoProducto.Size = new Size(260, 34);
             txtCodigoProducto.TabIndex = 2;
             // 
             // txtStock
             // 
+            txtStock.BorderStyle = BorderStyle.FixedSingle;
+            txtStock.Font = new Font("Segoe UI", 12F);
             txtStock.Location = new Point(283, 296);
             txtStock.Name = "txtStock";
-            txtStock.Size = new Size(300, 27);
+            txtStock.Size = new Size(260, 34);
             txtStock.TabIndex = 3;
             // 
             // lblNombreProducto
@@ -138,7 +146,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.BackColor = Color.LightCoral;
+            btnGuardar.BackColor = Color.FromArgb(29, 53, 87);
             btnGuardar.Font = new Font("Segoe UI", 12F);
             btnGuardar.ForeColor = SystemColors.ControlLightLight;
             btnGuardar.Location = new Point(376, 353);
@@ -151,17 +159,19 @@
             // 
             // txtCategoriaProducto
             // 
+            txtCategoriaProducto.BorderStyle = BorderStyle.FixedSingle;
+            txtCategoriaProducto.Font = new Font("Segoe UI", 12F);
             txtCategoriaProducto.Location = new Point(283, 153);
             txtCategoriaProducto.Name = "txtCategoriaProducto";
-            txtCategoriaProducto.Size = new Size(300, 27);
+            txtCategoriaProducto.Size = new Size(260, 34);
             txtCategoriaProducto.TabIndex = 19;
             // 
             // frmNuevoProducto
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
-            ClientSize = new Size(632, 453);
+            BackColor = Color.FromArgb(248, 250, 252);
+            ClientSize = new Size(782, 553);
             Controls.Add(txtCategoriaProducto);
             Controls.Add(btnGuardar);
             Controls.Add(lblTitulo);

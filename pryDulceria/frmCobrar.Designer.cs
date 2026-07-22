@@ -39,8 +39,9 @@
             textBox2 = new TextBox();
             lblImpuesto = new Label();
             textBox1 = new TextBox();
-            btnVender = new Button();
+            btnCancelar = new Button();
             lblTotal = new Label();
+            btnVender = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             // 
             // textBox5
             // 
+            textBox5.BorderStyle = BorderStyle.FixedSingle;
             textBox5.ForeColor = Color.Black;
             textBox5.Location = new Point(306, 313);
             textBox5.Name = "textBox5";
@@ -86,6 +88,7 @@
             // 
             // textBox4
             // 
+            textBox4.BorderStyle = BorderStyle.FixedSingle;
             textBox4.ForeColor = Color.Black;
             textBox4.Location = new Point(306, 263);
             textBox4.Name = "textBox4";
@@ -105,6 +108,7 @@
             // 
             // textBox3
             // 
+            textBox3.BorderStyle = BorderStyle.FixedSingle;
             textBox3.ForeColor = Color.Black;
             textBox3.Location = new Point(306, 213);
             textBox3.Name = "textBox3";
@@ -124,6 +128,7 @@
             // 
             // textBox2
             // 
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
             textBox2.ForeColor = Color.Black;
             textBox2.Location = new Point(306, 163);
             textBox2.Name = "textBox2";
@@ -143,24 +148,25 @@
             // 
             // textBox1
             // 
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.ForeColor = Color.Black;
             textBox1.Location = new Point(306, 113);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(300, 27);
             textBox1.TabIndex = 31;
             // 
-            // btnVender
+            // btnCancelar
             // 
-            btnVender.BackColor = Color.FromArgb(240, 128, 128);
-            btnVender.FlatStyle = FlatStyle.Flat;
-            btnVender.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnVender.ForeColor = Color.White;
-            btnVender.Location = new Point(390, 386);
-            btnVender.Name = "btnVender";
-            btnVender.Size = new Size(150, 50);
-            btnVender.TabIndex = 29;
-            btnVender.Text = "Hacer venta";
-            btnVender.UseVisualStyleBackColor = false;
+            btnCancelar.BackColor = Color.FromArgb(100, 116, 139);
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancelar.ForeColor = Color.White;
+            btnCancelar.Location = new Point(476, 379);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(150, 50);
+            btnCancelar.TabIndex = 29;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
             // lblTotal
             // 
@@ -173,12 +179,26 @@
             lblTotal.TabIndex = 30;
             lblTotal.Text = "Total:";
             // 
+            // btnVender
+            // 
+            btnVender.BackColor = Color.FromArgb(29, 53, 87);
+            btnVender.FlatStyle = FlatStyle.Flat;
+            btnVender.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVender.ForeColor = Color.White;
+            btnVender.Location = new Point(281, 379);
+            btnVender.Name = "btnVender";
+            btnVender.Size = new Size(150, 50);
+            btnVender.TabIndex = 40;
+            btnVender.Text = "Vender";
+            btnVender.UseVisualStyleBackColor = false;
+            // 
             // frmCobrar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.MistyRose;
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(782, 553);
+            Controls.Add(btnVender);
             Controls.Add(textBox5);
             Controls.Add(lblCambio);
             Controls.Add(textBox4);
@@ -188,10 +208,11 @@
             Controls.Add(textBox2);
             Controls.Add(lblImpuesto);
             Controls.Add(textBox1);
-            Controls.Add(btnVender);
+            Controls.Add(btnCancelar);
             Controls.Add(lblTotal);
             Controls.Add(lblTitulo);
             Controls.Add(pictureBox1);
+            ForeColor = SystemColors.ActiveCaptionText;
             Name = "frmCobrar";
             Text = "frmCobrar";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -212,7 +233,8 @@
         private TextBox textBox2;
         private Label lblImpuesto;
         private TextBox textBox1;
-        private Button btnVender;
+        private Button btnCancelar;
         private Label lblTotal;
+        private Button btnVender;
     }
 }
