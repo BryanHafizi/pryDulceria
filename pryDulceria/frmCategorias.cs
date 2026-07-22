@@ -14,5 +14,11 @@ namespace pryDulceria
         {
             InitializeComponent();
         }
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmAgregarCategoria formularioAgregar = new frmAgregarCategoria();
+
+            formularioAgregar.ShowDialog();
+        }
     }
 }
