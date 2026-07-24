@@ -31,10 +31,10 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             dgvCategorias = new DataGridView();
-            textBox1 = new TextBox();
+            txtBuscar = new TextBox();
             button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnEditar = new Button();
+            btnEliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
             SuspendLayout();
             // 
@@ -68,16 +68,17 @@
             dgvCategorias.Size = new Size(900, 400);
             dgvCategorias.TabIndex = 29;
             // 
-            // textBox1
+            // txtBuscar
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(350, 33);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(600, 34);
-            textBox1.TabIndex = 30;
-            textBox1.Text = "Buscar Categoria";
+            txtBuscar.BorderStyle = BorderStyle.FixedSingle;
+            txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscar.Location = new Point(350, 33);
+            txtBuscar.Margin = new Padding(3, 4, 3, 4);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar Categoria";
+            txtBuscar.Size = new Size(600, 34);
+            txtBuscar.TabIndex = 30;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // button1
             // 
@@ -93,31 +94,33 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += btnNuevo_Click;
             // 
-            // button2
+            // btnEditar
             // 
-            button2.BackColor = Color.FromArgb(29, 53, 87);
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(510, 500);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(150, 50);
-            button2.TabIndex = 32;
-            button2.Text = "Editar";
-            button2.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.FromArgb(29, 53, 87);
+            btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnEditar.ForeColor = Color.White;
+            btnEditar.Location = new Point(510, 500);
+            btnEditar.Margin = new Padding(3, 4, 3, 4);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(150, 50);
+            btnEditar.TabIndex = 32;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
-            // button3
+            // btnEliminar
             // 
-            button3.BackColor = Color.FromArgb(100, 116, 139);
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(670, 500);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(150, 50);
-            button3.TabIndex = 33;
-            button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = false;
+            btnEliminar.BackColor = Color.FromArgb(100, 116, 139);
+            btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnEliminar.ForeColor = Color.White;
+            btnEliminar.Location = new Point(670, 500);
+            btnEliminar.Margin = new Padding(3, 4, 3, 4);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(150, 50);
+            btnEliminar.TabIndex = 33;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // frmCategorias
             // 
@@ -125,10 +128,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(1316, 603);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnEditar);
             Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(txtBuscar);
             Controls.Add(dgvCategorias);
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -144,9 +147,9 @@
 
         private Label lblTitulo;
         private DataGridView dgvCategorias;
-        private TextBox textBox1;
+        private TextBox txtBuscar;
         private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnEditar;
+        private Button btnEliminar;
     }
 }
