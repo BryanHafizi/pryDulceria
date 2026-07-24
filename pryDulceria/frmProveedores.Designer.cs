@@ -46,8 +46,9 @@
             dgvProvedores.AllowUserToDeleteRows = false;
             dgvProvedores.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvProvedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProvedores.BackgroundColor = Color.FromArgb(226, 232, 240);
+            dgvProvedores.BackgroundColor = Color.White;
             dgvProvedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProvedores.GridColor = Color.Black;
             dgvProvedores.Location = new Point(380, 80);
             dgvProvedores.Name = "dgvProvedores";
             dgvProvedores.ReadOnly = true;
@@ -84,7 +85,7 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEliminar.BackColor = Color.FromArgb(100, 116, 139);
+            btnEliminar.BackColor = Color.LightCoral;
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
@@ -99,7 +100,7 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.BackColor = Color.FromArgb(29, 53, 87);
+            btnEditar.BackColor = Color.FromArgb(194, 24, 91);
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
@@ -114,7 +115,7 @@
             // btnNuevo
             // 
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnNuevo.BackColor = Color.FromArgb(29, 53, 87);
+            btnNuevo.BackColor = Color.FromArgb(194, 24, 91);
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
@@ -141,7 +142,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 250, 252);
+            BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(1316, 603);
             Controls.Add(dgvProvedores);
             Controls.Add(txtBuscar);
@@ -150,6 +151,7 @@
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmProveedores";
             Text = "frmProveedores";

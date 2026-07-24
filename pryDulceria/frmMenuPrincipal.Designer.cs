@@ -24,7 +24,6 @@
             pbCerrarSesion = new PictureBox();
             pcbVentas = new PictureBox();
             pnlContenedor = new Panel();
-            pbAyuda = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbCompras).BeginInit();
@@ -34,13 +33,11 @@
             ((System.ComponentModel.ISupportInitialize)pcbInventario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbVentas).BeginInit();
-            pnlContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbAyuda).BeginInit();
             SuspendLayout();
             // 
             // pcbLogo
             // 
-            pcbLogo.Image = Properties.Resources.Screenshot_2026_06_28_220345_removebg_preview;
+            pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
             pcbLogo.Location = new Point(4, 6);
             pcbLogo.Name = "pcbLogo";
             pcbLogo.Size = new Size(150, 50);
@@ -51,7 +48,8 @@
             // pnlMenu
             // 
             pnlMenu.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pnlMenu.BackColor = Color.FromArgb(226, 232, 240);
+            pnlMenu.BackColor = Color.FromArgb(194, 24, 91);
+            pnlMenu.BorderStyle = BorderStyle.FixedSingle;
             pnlMenu.Controls.Add(pcbCompras);
             pnlMenu.Controls.Add(pcbUsuarios);
             pnlMenu.Controls.Add(pcbProveedores);
@@ -60,6 +58,7 @@
             pnlMenu.Controls.Add(pbCerrarSesion);
             pnlMenu.Controls.Add(pcbLogo);
             pnlMenu.Controls.Add(pcbVentas);
+            pnlMenu.ForeColor = Color.White;
             pnlMenu.Location = new Point(2, 3);
             pnlMenu.Name = "pnlMenu";
             pnlMenu.Size = new Size(1344, 60);
@@ -67,7 +66,8 @@
             // 
             // pcbCompras
             // 
-            pcbCompras.Location = new Point(960, 6);
+            pcbCompras.Image = (Image)resources.GetObject("pcbCompras.Image");
+            pcbCompras.Location = new Point(320, 6);
             pcbCompras.Name = "pcbCompras";
             pcbCompras.Size = new Size(150, 50);
             pcbCompras.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -77,7 +77,7 @@
             // pcbUsuarios
             // 
             pcbUsuarios.Image = (Image)resources.GetObject("pcbUsuarios.Image");
-            pcbUsuarios.Location = new Point(800, 6);
+            pcbUsuarios.Location = new Point(960, 6);
             pcbUsuarios.Name = "pcbUsuarios";
             pcbUsuarios.Size = new Size(150, 50);
             pcbUsuarios.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             // pcbProveedores
             // 
             pcbProveedores.Image = (Image)resources.GetObject("pcbProveedores.Image");
-            pcbProveedores.Location = new Point(640, 6);
+            pcbProveedores.Location = new Point(800, 6);
             pcbProveedores.Name = "pcbProveedores";
             pcbProveedores.Size = new Size(150, 50);
             pcbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -99,7 +99,7 @@
             // pcbReportes
             // 
             pcbReportes.Image = (Image)resources.GetObject("pcbReportes.Image");
-            pcbReportes.Location = new Point(480, 6);
+            pcbReportes.Location = new Point(640, 6);
             pcbReportes.Name = "pcbReportes";
             pcbReportes.Size = new Size(150, 50);
             pcbReportes.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@
             // pcbInventario
             // 
             pcbInventario.Image = (Image)resources.GetObject("pcbInventario.Image");
-            pcbInventario.Location = new Point(320, 6);
+            pcbInventario.Location = new Point(480, 6);
             pcbInventario.Name = "pcbInventario";
             pcbInventario.Size = new Size(150, 50);
             pcbInventario.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -121,10 +121,11 @@
             // pbCerrarSesion
             // 
             pbCerrarSesion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            pbCerrarSesion.BackColor = Color.LightCoral;
             pbCerrarSesion.Image = (Image)resources.GetObject("pbCerrarSesion.Image");
-            pbCerrarSesion.Location = new Point(1190, 6);
+            pbCerrarSesion.Location = new Point(1188, 6);
             pbCerrarSesion.Name = "pbCerrarSesion";
-            pbCerrarSesion.Size = new Size(150, 50);
+            pbCerrarSesion.Size = new Size(150, 48);
             pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
             pbCerrarSesion.TabIndex = 8;
             pbCerrarSesion.TabStop = false;
@@ -145,33 +146,24 @@
             // 
             pnlContenedor.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             pnlContenedor.AutoSize = true;
-            pnlContenedor.BackColor = Color.FromArgb(226, 232, 240);
-            pnlContenedor.Controls.Add(pbAyuda);
+            pnlContenedor.BackColor = Color.White;
+            pnlContenedor.BorderStyle = BorderStyle.FixedSingle;
             pnlContenedor.Location = new Point(2, 69);
             pnlContenedor.Name = "pnlContenedor";
             pnlContenedor.Size = new Size(1344, 650);
             pnlContenedor.TabIndex = 8;
-            // 
-            // pbAyuda
-            // 
-            pbAyuda.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            pbAyuda.Location = new Point(1455, 3);
-            pbAyuda.Name = "pbAyuda";
-            pbAyuda.Size = new Size(52, 40);
-            pbAyuda.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbAyuda.TabIndex = 10;
-            pbAyuda.TabStop = false;
             // 
             // frmMenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = Color.FromArgb(248, 250, 252);
+            BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(1348, 721);
             Controls.Add(pnlContenedor);
             Controls.Add(pnlMenu);
             Font = new Font("Segoe UI", 12F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menú Principal";
@@ -184,8 +176,6 @@
             ((System.ComponentModel.ISupportInitialize)pcbInventario).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbCerrarSesion).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbVentas).EndInit();
-            pnlContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbAyuda).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -200,7 +190,6 @@
         private PictureBox pcbProveedores;
         private PictureBox pcbVentas;
         private PictureBox pcbUsuarios;
-        private PictureBox pbAyuda;
         private PictureBox pcbCompras;
     }
 }

@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             lblTitulo = new Label();
-            pictureBox1 = new PictureBox();
-            textBox5 = new TextBox();
+            pcbCarrito = new PictureBox();
+            txtCambio = new TextBox();
             lblCambio = new Label();
-            textBox4 = new TextBox();
+            txtMontoRecibido = new TextBox();
             lblMontoRecibido = new Label();
-            textBox3 = new TextBox();
+            txtTotalPagar = new TextBox();
             lblTotalPagar = new Label();
-            textBox2 = new TextBox();
+            txtImpuesto = new TextBox();
             lblImpuesto = new Label();
-            textBox1 = new TextBox();
-            btnCancelar = new Button();
+            txtTotal = new TextBox();
             lblTotal = new Label();
             btnVender = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbCarrito).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
@@ -50,130 +49,122 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Black;
-            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Location = new Point(12, 13);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(354, 54);
             lblTitulo.TabIndex = 28;
             lblTitulo.Text = "Sistema de Cobro";
             // 
-            // pictureBox1
+            // pcbCarrito
             // 
-            pictureBox1.Image = Properties.Resources.Code_Generated_Image;
-            pictureBox1.Location = new Point(440, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 18;
-            pictureBox1.TabStop = false;
+            pcbCarrito.Image = Properties.Resources.Code_Generated_Image;
+            pcbCarrito.Location = new Point(365, 13);
+            pcbCarrito.Name = "pcbCarrito";
+            pcbCarrito.Size = new Size(100, 50);
+            pcbCarrito.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbCarrito.TabIndex = 18;
+            pcbCarrito.TabStop = false;
             // 
-            // textBox5
+            // txtCambio
             // 
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.ForeColor = Color.Black;
-            textBox5.Location = new Point(306, 313);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(300, 27);
-            textBox5.TabIndex = 39;
+            txtCambio.BorderStyle = BorderStyle.FixedSingle;
+            txtCambio.Font = new Font("Segoe UI", 12F);
+            txtCambio.ForeColor = Color.Black;
+            txtCambio.Location = new Point(300, 300);
+            txtCambio.Name = "txtCambio";
+            txtCambio.Size = new Size(260, 34);
+            txtCambio.TabIndex = 39;
             // 
             // lblCambio
             // 
             lblCambio.AutoSize = true;
             lblCambio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCambio.ForeColor = Color.Black;
-            lblCambio.Location = new Point(66, 313);
+            lblCambio.Location = new Point(80, 300);
             lblCambio.Name = "lblCambio";
             lblCambio.Size = new Size(84, 28);
             lblCambio.TabIndex = 38;
             lblCambio.Text = "Cambio:";
             // 
-            // textBox4
+            // txtMontoRecibido
             // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(306, 263);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(300, 27);
-            textBox4.TabIndex = 37;
+            txtMontoRecibido.BorderStyle = BorderStyle.FixedSingle;
+            txtMontoRecibido.Font = new Font("Segoe UI", 12F);
+            txtMontoRecibido.ForeColor = Color.Black;
+            txtMontoRecibido.Location = new Point(300, 250);
+            txtMontoRecibido.Name = "txtMontoRecibido";
+            txtMontoRecibido.Size = new Size(260, 34);
+            txtMontoRecibido.TabIndex = 37;
             // 
             // lblMontoRecibido
             // 
             lblMontoRecibido.AutoSize = true;
             lblMontoRecibido.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMontoRecibido.ForeColor = Color.Black;
-            lblMontoRecibido.Location = new Point(66, 263);
+            lblMontoRecibido.Location = new Point(80, 250);
             lblMontoRecibido.Name = "lblMontoRecibido";
             lblMontoRecibido.Size = new Size(157, 28);
             lblMontoRecibido.TabIndex = 36;
             lblMontoRecibido.Text = "Monto Recibido:";
             // 
-            // textBox3
+            // txtTotalPagar
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(306, 213);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(300, 27);
-            textBox3.TabIndex = 35;
+            txtTotalPagar.BorderStyle = BorderStyle.FixedSingle;
+            txtTotalPagar.Font = new Font("Segoe UI", 12F);
+            txtTotalPagar.ForeColor = Color.Black;
+            txtTotalPagar.Location = new Point(300, 200);
+            txtTotalPagar.Name = "txtTotalPagar";
+            txtTotalPagar.Size = new Size(260, 34);
+            txtTotalPagar.TabIndex = 35;
             // 
             // lblTotalPagar
             // 
             lblTotalPagar.AutoSize = true;
             lblTotalPagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTotalPagar.ForeColor = Color.Black;
-            lblTotalPagar.Location = new Point(66, 213);
+            lblTotalPagar.Location = new Point(80, 200);
             lblTotalPagar.Name = "lblTotalPagar";
             lblTotalPagar.Size = new Size(127, 28);
             lblTotalPagar.TabIndex = 34;
             lblTotalPagar.Text = "Total a Pagar:";
             // 
-            // textBox2
+            // txtImpuesto
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(306, 163);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(300, 27);
-            textBox2.TabIndex = 33;
+            txtImpuesto.BorderStyle = BorderStyle.FixedSingle;
+            txtImpuesto.Font = new Font("Segoe UI", 12F);
+            txtImpuesto.ForeColor = Color.Black;
+            txtImpuesto.Location = new Point(300, 150);
+            txtImpuesto.Name = "txtImpuesto";
+            txtImpuesto.Size = new Size(260, 34);
+            txtImpuesto.TabIndex = 33;
             // 
             // lblImpuesto
             // 
             lblImpuesto.AutoSize = true;
             lblImpuesto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblImpuesto.ForeColor = Color.Black;
-            lblImpuesto.Location = new Point(66, 163);
+            lblImpuesto.Location = new Point(80, 150);
             lblImpuesto.Name = "lblImpuesto";
             lblImpuesto.Size = new Size(181, 28);
             lblImpuesto.TabIndex = 32;
             lblImpuesto.Text = "Impuesto Aplicado:";
             // 
-            // textBox1
+            // txtTotal
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(306, 113);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 27);
-            textBox1.TabIndex = 31;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.BackColor = Color.FromArgb(100, 116, 139);
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCancelar.ForeColor = Color.White;
-            btnCancelar.Location = new Point(476, 379);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(150, 50);
-            btnCancelar.TabIndex = 29;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = false;
+            txtTotal.BorderStyle = BorderStyle.FixedSingle;
+            txtTotal.Font = new Font("Segoe UI", 12F);
+            txtTotal.ForeColor = Color.Black;
+            txtTotal.Location = new Point(300, 100);
+            txtTotal.Name = "txtTotal";
+            txtTotal.Size = new Size(260, 34);
+            txtTotal.TabIndex = 31;
             // 
             // lblTotal
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTotal.ForeColor = Color.Black;
-            lblTotal.Location = new Point(66, 113);
+            lblTotal.Location = new Point(80, 100);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(58, 28);
             lblTotal.TabIndex = 30;
@@ -181,11 +172,11 @@
             // 
             // btnVender
             // 
-            btnVender.BackColor = Color.FromArgb(29, 53, 87);
+            btnVender.BackColor = Color.FromArgb(194, 24, 91);
             btnVender.FlatStyle = FlatStyle.Flat;
-            btnVender.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVender.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnVender.ForeColor = Color.White;
-            btnVender.Location = new Point(281, 379);
+            btnVender.Location = new Point(360, 350);
             btnVender.Name = "btnVender";
             btnVender.Size = new Size(150, 50);
             btnVender.TabIndex = 40;
@@ -196,26 +187,26 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 250, 252);
-            ClientSize = new Size(782, 553);
+            BackColor = Color.FromArgb(255, 242, 245);
+            ClientSize = new Size(632, 453);
             Controls.Add(btnVender);
-            Controls.Add(textBox5);
+            Controls.Add(txtCambio);
             Controls.Add(lblCambio);
-            Controls.Add(textBox4);
+            Controls.Add(txtMontoRecibido);
             Controls.Add(lblMontoRecibido);
-            Controls.Add(textBox3);
+            Controls.Add(txtTotalPagar);
             Controls.Add(lblTotalPagar);
-            Controls.Add(textBox2);
+            Controls.Add(txtImpuesto);
             Controls.Add(lblImpuesto);
-            Controls.Add(textBox1);
-            Controls.Add(btnCancelar);
+            Controls.Add(txtTotal);
             Controls.Add(lblTotal);
             Controls.Add(lblTitulo);
-            Controls.Add(pictureBox1);
+            Controls.Add(pcbCarrito);
             ForeColor = SystemColors.ActiveCaptionText;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmCobrar";
-            Text = "frmCobrar";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "Módulo de Cobro";
+            ((System.ComponentModel.ISupportInitialize)pcbCarrito).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -223,17 +214,16 @@
         #endregion
 
         private Label lblTitulo;
-        private PictureBox pictureBox1;
-        private TextBox textBox5;
+        private PictureBox pcbCarrito;
+        private TextBox txtCambio;
         private Label lblCambio;
-        private TextBox textBox4;
+        private TextBox txtMontoRecibido;
         private Label lblMontoRecibido;
-        private TextBox textBox3;
+        private TextBox txtTotalPagar;
         private Label lblTotalPagar;
-        private TextBox textBox2;
+        private TextBox txtImpuesto;
         private Label lblImpuesto;
-        private TextBox textBox1;
-        private Button btnCancelar;
+        private TextBox txtTotal;
         private Label lblTotal;
         private Button btnVender;
     }

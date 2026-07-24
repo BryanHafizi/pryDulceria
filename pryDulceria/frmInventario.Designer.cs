@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             txtBuscar = new TextBox();
-            pbProveedores = new PictureBox();
+            pcbInventario = new PictureBox();
             btnEliminar = new Button();
             btnEditar = new Button();
             btnNuevo = new Button();
             lblTitulo = new Label();
             dgvInventario = new DataGridView();
             btnCategorias = new Button();
-            ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbInventario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvInventario).BeginInit();
             SuspendLayout();
             // 
@@ -51,21 +51,21 @@
             txtBuscar.TabIndex = 0;
             txtBuscar.Text = "Buscar Producto";
             // 
-            // pbProveedores
+            // pcbInventario
             // 
-            pbProveedores.AccessibleRole = AccessibleRole.None;
-            pbProveedores.Image = Properties.Resources.Code_Generated_Image__1_;
-            pbProveedores.Location = new Point(232, 13);
-            pbProveedores.Name = "pbProveedores";
-            pbProveedores.Size = new Size(100, 50);
-            pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbProveedores.TabIndex = 19;
-            pbProveedores.TabStop = false;
+            pcbInventario.AccessibleRole = AccessibleRole.None;
+            pcbInventario.Image = Properties.Resources.Code_Generated_Image__1_;
+            pcbInventario.Location = new Point(232, 13);
+            pcbInventario.Name = "pcbInventario";
+            pcbInventario.Size = new Size(100, 50);
+            pcbInventario.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbInventario.TabIndex = 19;
+            pcbInventario.TabStop = false;
             // 
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEliminar.BackColor = Color.FromArgb(100, 116, 139);
+            btnEliminar.BackColor = Color.LightCoral;
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
@@ -79,7 +79,7 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.BackColor = Color.FromArgb(29, 53, 87);
+            btnEditar.BackColor = Color.FromArgb(194, 24, 91);
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
@@ -93,7 +93,7 @@
             // btnNuevo
             // 
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnNuevo.BackColor = Color.FromArgb(29, 53, 87);
+            btnNuevo.BackColor = Color.FromArgb(194, 24, 91);
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
@@ -122,15 +122,15 @@
             dgvInventario.AllowUserToDeleteRows = false;
             dgvInventario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvInventario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvInventario.BackgroundColor = Color.FromArgb(226, 232, 240);
+            dgvInventario.BackgroundColor = Color.White;
             dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvInventario.Location = new Point(350, 80);
             dgvInventario.Name = "dgvInventario";
             dgvInventario.ReadOnly = true;
             dgvInventario.RowHeadersVisible = false;
             dgvInventario.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Padding = new Padding(3);
-            dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvInventario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInventario.Size = new Size(900, 400);
             dgvInventario.TabIndex = 4;
@@ -138,7 +138,7 @@
             // btnCategorias
             // 
             btnCategorias.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnCategorias.BackColor = Color.FromArgb(100, 116, 139);
+            btnCategorias.BackColor = Color.LightCoral;
             btnCategorias.FlatStyle = FlatStyle.Flat;
             btnCategorias.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnCategorias.ForeColor = Color.White;
@@ -146,7 +146,7 @@
             btnCategorias.Name = "btnCategorias";
             btnCategorias.Size = new Size(150, 50);
             btnCategorias.TabIndex = 20;
-            btnCategorias.Text = "Categorias";
+            btnCategorias.Text = "Categorías";
             btnCategorias.UseVisualStyleBackColor = false;
             btnCategorias.Click += btnCategorias_Click;
             // 
@@ -154,20 +154,21 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 250, 252);
+            BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(1316, 603);
             ControlBox = false;
             Controls.Add(btnCategorias);
             Controls.Add(dgvInventario);
             Controls.Add(txtBuscar);
-            Controls.Add(pbProveedores);
+            Controls.Add(pcbInventario);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmInventario";
             Text = "frmInventario";
-            ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbInventario).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvInventario).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -176,7 +177,7 @@
         #endregion
 
         private TextBox txtBuscar;
-        private PictureBox pbProveedores;
+        private PictureBox pcbInventario;
         private Button btnEliminar;
         private Button btnEditar;
         private Button btnNuevo;

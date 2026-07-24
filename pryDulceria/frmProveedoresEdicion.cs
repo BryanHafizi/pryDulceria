@@ -33,8 +33,8 @@ namespace pryDulceria
 
             // Rellenamos las cajas y el combo con info del form principal
             txtNombre.Text = nombre;
-            txtAp.Text = ap;
-            txtAm.Text = am;
+            txtAP.Text = ap;
+            txtAM.Text = am;
             txtTel.Text = tel.ToString();
             txtTel.Text = tel_sec.ToString();
         }
@@ -48,8 +48,8 @@ namespace pryDulceria
 
                 proveedores.IdProveedor = idProveedorModificar;
                 proveedores.Nombre = txtNombre.Text;
-                proveedores.Ap = txtAp.Text;
-                proveedores.Am = txtAm.Text;
+                proveedores.Ap = txtAP.Text;
+                proveedores.Am = txtAM.Text;
                 proveedores.Tel = txtTel.Text;
                 proveedores.Tel_secundario = txtTelSecundario.Text;
 

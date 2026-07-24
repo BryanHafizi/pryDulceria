@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtAp = new TextBox();
+            txtAP = new TextBox();
             lblAp = new Label();
             txtNombre = new TextBox();
             btnAceptar = new Button();
             lblNombre = new Label();
             lblTitulo = new Label();
-            pcbIcono = new PictureBox();
+            pcbProveedores = new PictureBox();
             txtTelSecundario = new TextBox();
-            label1 = new Label();
+            lblTelefonoSecundario = new Label();
             txtTel = new TextBox();
-            label3 = new Label();
-            txtAm = new TextBox();
+            lblTel = new Label();
+            txtAM = new TextBox();
             lblAm = new Label();
-            ((System.ComponentModel.ISupportInitialize)pcbIcono).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbProveedores).BeginInit();
             SuspendLayout();
             // 
-            // txtAp
+            // txtAP
             // 
-            txtAp.BorderStyle = BorderStyle.FixedSingle;
-            txtAp.Font = new Font("Segoe UI", 12F);
-            txtAp.ForeColor = Color.Black;
-            txtAp.Location = new Point(350, 150);
-            txtAp.Name = "txtAp";
-            txtAp.Size = new Size(260, 34);
-            txtAp.TabIndex = 55;
+            txtAP.BorderStyle = BorderStyle.FixedSingle;
+            txtAP.Font = new Font("Segoe UI", 12F);
+            txtAP.ForeColor = Color.Black;
+            txtAP.Location = new Point(300, 150);
+            txtAP.Name = "txtAP";
+            txtAP.Size = new Size(260, 34);
+            txtAP.TabIndex = 55;
             // 
             // lblAp
             // 
             lblAp.AutoSize = true;
             lblAp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblAp.ForeColor = Color.Black;
-            lblAp.Location = new Point(160, 150);
+            lblAp.Location = new Point(100, 150);
             lblAp.Name = "lblAp";
             lblAp.Size = new Size(164, 28);
             lblAp.TabIndex = 54;
@@ -70,20 +70,20 @@
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Font = new Font("Segoe UI", 12F);
             txtNombre.ForeColor = Color.Black;
-            txtNombre.Location = new Point(350, 100);
+            txtNombre.Location = new Point(300, 100);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(260, 34);
             txtNombre.TabIndex = 53;
             // 
             // btnAceptar
             // 
-            btnAceptar.BackColor = Color.FromArgb(29, 53, 87);
+            btnAceptar.BackColor = Color.FromArgb(194, 24, 91);
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAceptar.ForeColor = Color.White;
-            btnAceptar.Location = new Point(350, 400);
+            btnAceptar.Location = new Point(350, 366);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(150, 51);
+            btnAceptar.Size = new Size(150, 50);
             btnAceptar.TabIndex = 51;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNombre.ForeColor = Color.Black;
-            lblNombre.Location = new Point(160, 100);
+            lblNombre.Location = new Point(100, 100);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(89, 28);
             lblNombre.TabIndex = 52;
@@ -111,74 +111,74 @@
             lblTitulo.TabIndex = 50;
             lblTitulo.Text = "Editar Proveedor";
             // 
-            // pcbIcono
+            // pcbProveedores
             // 
-            pcbIcono.Image = Properties.Resources._1782681922009;
-            pcbIcono.Location = new Point(350, 13);
-            pcbIcono.Name = "pcbIcono";
-            pcbIcono.Size = new Size(101, 51);
-            pcbIcono.SizeMode = PictureBoxSizeMode.StretchImage;
-            pcbIcono.TabIndex = 49;
-            pcbIcono.TabStop = false;
+            pcbProveedores.Image = Properties.Resources._1782681922009;
+            pcbProveedores.Location = new Point(350, 13);
+            pcbProveedores.Name = "pcbProveedores";
+            pcbProveedores.Size = new Size(101, 51);
+            pcbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbProveedores.TabIndex = 49;
+            pcbProveedores.TabStop = false;
             // 
             // txtTelSecundario
             // 
             txtTelSecundario.BorderStyle = BorderStyle.FixedSingle;
             txtTelSecundario.Font = new Font("Segoe UI", 12F);
             txtTelSecundario.ForeColor = Color.Black;
-            txtTelSecundario.Location = new Point(350, 300);
+            txtTelSecundario.Location = new Point(300, 300);
             txtTelSecundario.Name = "txtTelSecundario";
             txtTelSecundario.Size = new Size(260, 34);
             txtTelSecundario.TabIndex = 59;
             // 
-            // label1
+            // lblTelefonoSecundario
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(160, 300);
-            label1.Name = "label1";
-            label1.Size = new Size(190, 28);
-            label1.TabIndex = 58;
-            label1.Text = "Telefono secundario:\r\n";
+            lblTelefonoSecundario.AutoSize = true;
+            lblTelefonoSecundario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTelefonoSecundario.ForeColor = Color.Black;
+            lblTelefonoSecundario.Location = new Point(100, 300);
+            lblTelefonoSecundario.Name = "lblTelefonoSecundario";
+            lblTelefonoSecundario.Size = new Size(190, 28);
+            lblTelefonoSecundario.TabIndex = 58;
+            lblTelefonoSecundario.Text = "Teléfono secundario:\r\n";
             // 
             // txtTel
             // 
             txtTel.BorderStyle = BorderStyle.FixedSingle;
             txtTel.Font = new Font("Segoe UI", 12F);
             txtTel.ForeColor = Color.Black;
-            txtTel.Location = new Point(350, 250);
+            txtTel.Location = new Point(300, 250);
             txtTel.Name = "txtTel";
             txtTel.Size = new Size(260, 34);
             txtTel.TabIndex = 63;
             // 
-            // label3
+            // lblTel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(160, 250);
-            label3.Name = "label3";
-            label3.Size = new Size(90, 28);
-            label3.TabIndex = 62;
-            label3.Text = "Telefono:";
+            lblTel.AutoSize = true;
+            lblTel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTel.ForeColor = Color.Black;
+            lblTel.Location = new Point(100, 250);
+            lblTel.Name = "lblTel";
+            lblTel.Size = new Size(90, 28);
+            lblTel.TabIndex = 62;
+            lblTel.Text = "Teléfono:";
             // 
-            // txtAm
+            // txtAM
             // 
-            txtAm.BorderStyle = BorderStyle.FixedSingle;
-            txtAm.Font = new Font("Segoe UI", 12F);
-            txtAm.ForeColor = Color.Black;
-            txtAm.Location = new Point(350, 200);
-            txtAm.Name = "txtAm";
-            txtAm.Size = new Size(260, 34);
-            txtAm.TabIndex = 61;
+            txtAM.BorderStyle = BorderStyle.FixedSingle;
+            txtAM.Font = new Font("Segoe UI", 12F);
+            txtAM.ForeColor = Color.Black;
+            txtAM.Location = new Point(300, 200);
+            txtAM.Name = "txtAM";
+            txtAM.Size = new Size(260, 34);
+            txtAM.TabIndex = 61;
             // 
             // lblAm
             // 
             lblAm.AutoSize = true;
             lblAm.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblAm.ForeColor = Color.Black;
-            lblAm.Location = new Point(160, 200);
+            lblAm.Location = new Point(100, 200);
             lblAm.Name = "lblAm";
             lblAm.Size = new Size(169, 28);
             lblAm.TabIndex = 60;
@@ -188,42 +188,43 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 250, 252);
-            ClientSize = new Size(782, 553);
+            BackColor = Color.FromArgb(255, 242, 245);
+            ClientSize = new Size(632, 453);
             Controls.Add(txtTel);
-            Controls.Add(label3);
-            Controls.Add(txtAm);
+            Controls.Add(lblTel);
+            Controls.Add(txtAM);
             Controls.Add(lblAm);
             Controls.Add(txtTelSecundario);
-            Controls.Add(label1);
-            Controls.Add(txtAp);
+            Controls.Add(lblTelefonoSecundario);
+            Controls.Add(txtAP);
             Controls.Add(lblAp);
             Controls.Add(txtNombre);
             Controls.Add(btnAceptar);
             Controls.Add(lblNombre);
             Controls.Add(lblTitulo);
-            Controls.Add(pcbIcono);
+            Controls.Add(pcbProveedores);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmProveedoresEdicion";
             Text = "Editar Proveedor ";
-            ((System.ComponentModel.ISupportInitialize)pcbIcono).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbProveedores).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private TextBox txtAp;
+        private TextBox txtAP;
         private Label lblAp;
         private TextBox txtNombre;
         private Button btnAceptar;
         private Label lblNombre;
         private Label lblTitulo;
-        private PictureBox pcbIcono;
+        private PictureBox pcbProveedores;
         private TextBox txtTelSecundario;
-        private Label label1;
+        private Label lblTelefonoSecundario;
         private TextBox txtTel;
-        private Label label3;
-        private TextBox txtAm;
+        private Label lblTel;
+        private TextBox txtAM;
         private Label lblAm;
     }
 }

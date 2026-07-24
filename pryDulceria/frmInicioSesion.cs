@@ -13,7 +13,7 @@ namespace pryDulceria
             {
                 clsInicioSesion login = new clsInicioSesion();
                 login.Usuario = txtUsuario.Text;
-                login.Password = txtPassword.Text;
+                login.Password = txtContraseña.Text;
 
                 bool resp = login.ValidarAcceso();
                 if (resp == true)

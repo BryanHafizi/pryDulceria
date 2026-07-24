@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuariosEdicion));
             txtPassword = new TextBox();
             lblPassword = new Label();
             txtUsuario = new TextBox();
             btnAceptar = new Button();
             lblUsuario = new Label();
             lblTitulo = new Label();
-            pcbIcono = new PictureBox();
+            pcbUsuario = new PictureBox();
             cmbRol = new ComboBox();
             lblRol = new Label();
-            ((System.ComponentModel.ISupportInitialize)pcbIcono).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbUsuario).BeginInit();
             SuspendLayout();
             // 
             // txtPassword
@@ -45,7 +46,7 @@
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.Font = new Font("Segoe UI", 12F);
             txtPassword.ForeColor = Color.Black;
-            txtPassword.Location = new Point(210, 161);
+            txtPassword.Location = new Point(200, 150);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(260, 34);
             txtPassword.TabIndex = 46;
@@ -55,7 +56,7 @@
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPassword.ForeColor = Color.Black;
-            lblPassword.Location = new Point(113, 159);
+            lblPassword.Location = new Point(100, 150);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(97, 28);
             lblPassword.TabIndex = 45;
@@ -66,18 +67,18 @@
             txtUsuario.BorderStyle = BorderStyle.FixedSingle;
             txtUsuario.Font = new Font("Segoe UI", 12F);
             txtUsuario.ForeColor = Color.Black;
-            txtUsuario.Location = new Point(210, 111);
+            txtUsuario.Location = new Point(200, 100);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(260, 34);
             txtUsuario.TabIndex = 44;
             // 
             // btnAceptar
             // 
-            btnAceptar.BackColor = Color.FromArgb(29, 53, 87);
+            btnAceptar.BackColor = Color.FromArgb(194, 24, 91);
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAceptar.ForeColor = Color.White;
-            btnAceptar.Location = new Point(266, 313);
+            btnAceptar.Location = new Point(280, 250);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(150, 51);
             btnAceptar.TabIndex = 42;
@@ -90,7 +91,7 @@
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsuario.ForeColor = Color.Black;
-            lblUsuario.Location = new Point(113, 108);
+            lblUsuario.Location = new Point(100, 100);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(83, 28);
             lblUsuario.TabIndex = 43;
@@ -107,22 +108,22 @@
             lblTitulo.TabIndex = 41;
             lblTitulo.Text = "Editar Usuario";
             // 
-            // pcbIcono
+            // pcbUsuario
             // 
-            pcbIcono.Image = Properties.Resources._1782681922009;
-            pcbIcono.Location = new Point(440, 11);
-            pcbIcono.Name = "pcbIcono";
-            pcbIcono.Size = new Size(101, 51);
-            pcbIcono.SizeMode = PictureBoxSizeMode.StretchImage;
-            pcbIcono.TabIndex = 40;
-            pcbIcono.TabStop = false;
+            pcbUsuario.Image = (Image)resources.GetObject("pcbUsuario.Image");
+            pcbUsuario.Location = new Point(280, 13);
+            pcbUsuario.Name = "pcbUsuario";
+            pcbUsuario.Size = new Size(100, 50);
+            pcbUsuario.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbUsuario.TabIndex = 40;
+            pcbUsuario.TabStop = false;
             // 
             // cmbRol
             // 
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbRol.Font = new Font("Segoe UI", 12F);
             cmbRol.FormattingEnabled = true;
-            cmbRol.Location = new Point(210, 220);
+            cmbRol.Location = new Point(200, 200);
             cmbRol.Margin = new Padding(3, 4, 3, 4);
             cmbRol.Name = "cmbRol";
             cmbRol.Size = new Size(260, 36);
@@ -133,7 +134,7 @@
             lblRol.AutoSize = true;
             lblRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRol.ForeColor = Color.Black;
-            lblRol.Location = new Point(113, 217);
+            lblRol.Location = new Point(100, 200);
             lblRol.Name = "lblRol";
             lblRol.Size = new Size(44, 28);
             lblRol.TabIndex = 48;
@@ -143,7 +144,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 250, 252);
+            BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(632, 453);
             Controls.Add(lblRol);
             Controls.Add(cmbRol);
@@ -153,12 +154,12 @@
             Controls.Add(btnAceptar);
             Controls.Add(lblUsuario);
             Controls.Add(lblTitulo);
-            Controls.Add(pcbIcono);
+            Controls.Add(pcbUsuario);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmUsuariosEdicion";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmUsuariosEdicion";
-            ((System.ComponentModel.ISupportInitialize)pcbIcono).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbUsuario).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,7 +178,7 @@
         private Button btnAceptar;
         private Label lblUsuario;
         private Label lblTitulo;
-        private PictureBox pcbIcono;
+        private PictureBox pcbUsuario;
         private ComboBox cmbRol;
         private Label lblRol;
     }

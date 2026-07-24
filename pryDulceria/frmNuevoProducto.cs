@@ -20,19 +20,19 @@ namespace pryDulceria
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtNombreProducto.Text))
+                if (string.IsNullOrWhiteSpace(txtNombre.Text))
                 {
                     MessageBox.Show("Por favor, ingresa un nombre válido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                if (float.TryParse(txtCodigoProducto.Text, out float codigo))
+                if (float.TryParse(txtCodigo.Text, out float codigo))
                 {
                     MessageBox.Show("Por favor, ingresa un numero válido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                if (!float.TryParse(txtPrecioProducto.Text, out float precio))
+                if (!float.TryParse(txtPrecio.Text, out float precio))
                 {
                     MessageBox.Show("Por favor, ingresa un precio válido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -44,7 +44,7 @@ namespace pryDulceria
                     return;
                 }
 
-                producto.Nombre1 = txtNombreProducto.Text.Trim();
+                producto.Nombre1 = txtNombre.Text.Trim();
                 producto.Precio1 = precio;
                 producto.Stock1 = stock;
 
@@ -54,12 +54,12 @@ namespace pryDulceria
                     MessageBox.Show("¡Producto guardado exitosamente!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     ///Limpiar los campos despues de guardar
-                    txtNombreProducto.Clear();
-                    txtCodigoProducto.Clear();
-                    txtPrecioProducto.Clear();
+                    txtNombre.Clear();
+                    txtCodigo.Clear();
+                    txtPrecio.Clear();
                     txtStock.Clear();
-                    txtCategoriaProducto.Clear();
-                    txtNombreProducto.Focus();
+                    txtCategoria.Clear();
+                    txtNombre.Focus();
                 }
             }
             catch (Exception ex)

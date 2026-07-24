@@ -28,73 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtNombreProducto = new TextBox();
-            txtPrecioProducto = new TextBox();
-            txtCodigoProducto = new TextBox();
+            txtNombre = new TextBox();
+            txtPrecio = new TextBox();
+            txtCodigo = new TextBox();
             txtStock = new TextBox();
-            lblNombreProducto = new Label();
+            lblNombre = new Label();
             lblCategoria = new Label();
             lblStock = new Label();
             lblPrecio = new Label();
-            label1 = new Label();
+            lblCodigo = new Label();
             lblTitulo = new Label();
             btnGuardar = new Button();
-            txtCategoriaProducto = new TextBox();
+            txtCategoria = new TextBox();
             SuspendLayout();
             // 
-            // txtNombreProducto
+            // txtNombre
             // 
-            txtNombreProducto.BorderStyle = BorderStyle.FixedSingle;
-            txtNombreProducto.Font = new Font("Segoe UI", 12F);
-            txtNombreProducto.Location = new Point(283, 107);
-            txtNombreProducto.Name = "txtNombreProducto";
-            txtNombreProducto.Size = new Size(260, 34);
-            txtNombreProducto.TabIndex = 0;
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
+            txtNombre.Font = new Font("Segoe UI", 12F);
+            txtNombre.Location = new Point(300, 100);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(260, 34);
+            txtNombre.TabIndex = 0;
             // 
-            // txtPrecioProducto
+            // txtPrecio
             // 
-            txtPrecioProducto.BorderStyle = BorderStyle.FixedSingle;
-            txtPrecioProducto.Font = new Font("Segoe UI", 12F);
-            txtPrecioProducto.Location = new Point(283, 242);
-            txtPrecioProducto.Name = "txtPrecioProducto";
-            txtPrecioProducto.Size = new Size(260, 34);
-            txtPrecioProducto.TabIndex = 1;
+            txtPrecio.BorderStyle = BorderStyle.FixedSingle;
+            txtPrecio.Font = new Font("Segoe UI", 12F);
+            txtPrecio.Location = new Point(300, 200);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(260, 34);
+            txtPrecio.TabIndex = 1;
             // 
-            // txtCodigoProducto
+            // txtCodigo
             // 
-            txtCodigoProducto.BorderStyle = BorderStyle.FixedSingle;
-            txtCodigoProducto.Font = new Font("Segoe UI", 12F);
-            txtCodigoProducto.Location = new Point(283, 197);
-            txtCodigoProducto.Name = "txtCodigoProducto";
-            txtCodigoProducto.Size = new Size(260, 34);
-            txtCodigoProducto.TabIndex = 2;
+            txtCodigo.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigo.Font = new Font("Segoe UI", 12F);
+            txtCodigo.Location = new Point(300, 250);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(260, 34);
+            txtCodigo.TabIndex = 2;
             // 
             // txtStock
             // 
             txtStock.BorderStyle = BorderStyle.FixedSingle;
             txtStock.Font = new Font("Segoe UI", 12F);
-            txtStock.Location = new Point(283, 296);
+            txtStock.Location = new Point(300, 300);
             txtStock.Name = "txtStock";
             txtStock.Size = new Size(260, 34);
             txtStock.TabIndex = 3;
             // 
-            // lblNombreProducto
+            // lblNombre
             // 
-            lblNombreProducto.AutoSize = true;
-            lblNombreProducto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombreProducto.ForeColor = Color.Black;
-            lblNombreProducto.Location = new Point(36, 106);
-            lblNombreProducto.Name = "lblNombreProducto";
-            lblNombreProducto.Size = new Size(207, 28);
-            lblNombreProducto.TabIndex = 5;
-            lblNombreProducto.Text = "Nombre del Producto:";
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNombre.ForeColor = Color.Black;
+            lblNombre.Location = new Point(50, 100);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(207, 28);
+            lblNombre.TabIndex = 5;
+            lblNombre.Text = "Nombre del Producto:";
             // 
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
             lblCategoria.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCategoria.ForeColor = Color.Black;
-            lblCategoria.Location = new Point(36, 152);
+            lblCategoria.Location = new Point(50, 150);
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(219, 28);
             lblCategoria.TabIndex = 8;
@@ -105,7 +105,7 @@
             lblStock.AutoSize = true;
             lblStock.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStock.ForeColor = Color.Black;
-            lblStock.Location = new Point(36, 296);
+            lblStock.Location = new Point(50, 300);
             lblStock.Name = "lblStock";
             lblStock.Size = new Size(182, 28);
             lblStock.TabIndex = 14;
@@ -116,29 +116,29 @@
             lblPrecio.AutoSize = true;
             lblPrecio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPrecio.ForeColor = Color.Black;
-            lblPrecio.Location = new Point(36, 241);
+            lblPrecio.Location = new Point(50, 250);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(188, 28);
             lblPrecio.TabIndex = 15;
             lblPrecio.Text = "Precio del Producto:";
             // 
-            // label1
+            // lblCodigo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(36, 196);
-            label1.Name = "label1";
-            label1.Size = new Size(199, 28);
-            label1.TabIndex = 16;
-            label1.Text = "Codigo del Producto:";
+            lblCodigo.AutoSize = true;
+            lblCodigo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCodigo.ForeColor = Color.Black;
+            lblCodigo.Location = new Point(50, 200);
+            lblCodigo.Name = "lblCodigo";
+            lblCodigo.Size = new Size(199, 28);
+            lblCodigo.TabIndex = 16;
+            lblCodigo.Text = "Codigo del Producto:";
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Black;
-            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Location = new Point(12, 13);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(524, 54);
             lblTitulo.TabIndex = 17;
@@ -146,10 +146,10 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.BackColor = Color.FromArgb(29, 53, 87);
-            btnGuardar.Font = new Font("Segoe UI", 12F);
+            btnGuardar.BackColor = Color.FromArgb(194, 24, 91);
+            btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = SystemColors.ControlLightLight;
-            btnGuardar.Location = new Point(376, 353);
+            btnGuardar.Location = new Point(350, 350);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 50);
             btnGuardar.TabIndex = 18;
@@ -157,33 +157,33 @@
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
-            // txtCategoriaProducto
+            // txtCategoria
             // 
-            txtCategoriaProducto.BorderStyle = BorderStyle.FixedSingle;
-            txtCategoriaProducto.Font = new Font("Segoe UI", 12F);
-            txtCategoriaProducto.Location = new Point(283, 153);
-            txtCategoriaProducto.Name = "txtCategoriaProducto";
-            txtCategoriaProducto.Size = new Size(260, 34);
-            txtCategoriaProducto.TabIndex = 19;
+            txtCategoria.BorderStyle = BorderStyle.FixedSingle;
+            txtCategoria.Font = new Font("Segoe UI", 12F);
+            txtCategoria.Location = new Point(300, 150);
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(260, 34);
+            txtCategoria.TabIndex = 19;
             // 
             // frmNuevoProducto
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 250, 252);
-            ClientSize = new Size(782, 553);
-            Controls.Add(txtCategoriaProducto);
+            BackColor = Color.FromArgb(255, 242, 245);
+            ClientSize = new Size(632, 453);
+            Controls.Add(txtCategoria);
             Controls.Add(btnGuardar);
             Controls.Add(lblTitulo);
-            Controls.Add(label1);
+            Controls.Add(lblCodigo);
             Controls.Add(lblPrecio);
             Controls.Add(lblStock);
             Controls.Add(lblCategoria);
-            Controls.Add(lblNombreProducto);
+            Controls.Add(lblNombre);
             Controls.Add(txtStock);
-            Controls.Add(txtCodigoProducto);
-            Controls.Add(txtPrecioProducto);
-            Controls.Add(txtNombreProducto);
+            Controls.Add(txtCodigo);
+            Controls.Add(txtPrecio);
+            Controls.Add(txtNombre);
             Name = "frmNuevoProducto";
             Text = "frmNuevoProducto";
             ResumeLayout(false);
@@ -192,17 +192,17 @@
 
         #endregion
 
-        private TextBox txtNombreProducto;
-        private TextBox txtPrecioProducto;
-        private TextBox txtCodigoProducto;
+        private TextBox txtNombre;
+        private TextBox txtPrecio;
+        private TextBox txtCodigo;
         private TextBox txtStock;
-        private Label lblNombreProducto;
+        private Label lblNombre;
         private Label lblCategoria;
         private Label lblStock;
         private Label lblPrecio;
-        private Label label1;
+        private Label lblCodigo;
         private Label lblTitulo;
         private Button btnGuardar;
-        private TextBox txtCategoriaProducto;
+        private TextBox txtCategoria;
     }
 }

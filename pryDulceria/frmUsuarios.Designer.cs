@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             dgvUsuarios = new DataGridView();
             txtBuscar = new TextBox();
-            pbProveedores = new PictureBox();
+            pcbUsuarios = new PictureBox();
             btnEliminar = new Button();
             btnEditar = new Button();
             btnNuevo = new Button();
             lblTitulo = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbUsuarios).BeginInit();
             SuspendLayout();
             // 
             // dgvUsuarios
@@ -46,7 +47,7 @@
             dgvUsuarios.AllowUserToDeleteRows = false;
             dgvUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvUsuarios.BackgroundColor = Color.FromArgb(226, 232, 240);
+            dgvUsuarios.BackgroundColor = Color.White;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsuarios.Location = new Point(350, 80);
             dgvUsuarios.Name = "dgvUsuarios";
@@ -70,21 +71,21 @@
             txtBuscar.TabIndex = 0;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
-            // pbProveedores
+            // pcbUsuarios
             // 
-            pbProveedores.AccessibleRole = AccessibleRole.None;
-            pbProveedores.Image = Properties.Resources.Code_Generated_Image__1_;
-            pbProveedores.Location = new Point(200, 13);
-            pbProveedores.Name = "pbProveedores";
-            pbProveedores.Size = new Size(101, 51);
-            pbProveedores.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbProveedores.TabIndex = 26;
-            pbProveedores.TabStop = false;
+            pcbUsuarios.AccessibleRole = AccessibleRole.None;
+            pcbUsuarios.Image = (Image)resources.GetObject("pcbUsuarios.Image");
+            pcbUsuarios.Location = new Point(200, 13);
+            pcbUsuarios.Name = "pcbUsuarios";
+            pcbUsuarios.Size = new Size(101, 51);
+            pcbUsuarios.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbUsuarios.TabIndex = 26;
+            pcbUsuarios.TabStop = false;
             // 
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEliminar.BackColor = Color.FromArgb(100, 116, 139);
+            btnEliminar.BackColor = Color.LightCoral;
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
@@ -99,7 +100,7 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.BackColor = Color.FromArgb(29, 53, 87);
+            btnEditar.BackColor = Color.FromArgb(194, 24, 91);
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
@@ -114,7 +115,7 @@
             // btnNuevo
             // 
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnNuevo.BackColor = Color.FromArgb(29, 53, 87);
+            btnNuevo.BackColor = Color.FromArgb(194, 24, 91);
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
@@ -141,20 +142,20 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(248, 250, 252);
+            BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(1316, 603);
             Controls.Add(dgvUsuarios);
             Controls.Add(txtBuscar);
-            Controls.Add(pbProveedores);
+            Controls.Add(pcbUsuarios);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(btnNuevo);
             Controls.Add(lblTitulo);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmUsuarios";
-            Text = "frmUsuarios";
+            Text = "Módulo de Usuarios";
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbUsuarios).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -163,7 +164,7 @@
 
         private DataGridView dgvUsuarios;
         private TextBox txtBuscar;
-        private PictureBox pbProveedores;
+        private PictureBox pcbUsuarios;
         private Button btnEliminar;
         private Button btnEditar;
         private Button btnNuevo;
