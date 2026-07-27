@@ -14,7 +14,7 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             lblTotal = new Label();
             btnCobrar = new Button();
@@ -93,9 +93,9 @@
             txtBuscar.ForeColor = Color.FromArgb(30, 41, 59);
             txtBuscar.Location = new Point(300, 33);
             txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar Producto";
             txtBuscar.Size = new Size(600, 34);
             txtBuscar.TabIndex = 13;
-            txtBuscar.Text = "Buscar Producto";
             // 
             // btnEditar
             // 
@@ -126,8 +126,8 @@
             dgvVentas.ReadOnly = true;
             dgvVentas.RowHeadersVisible = false;
             dgvVentas.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Padding = new Padding(3);
-            dgvVentas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvVentas.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvVentas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvVentas.Size = new Size(900, 400);
             dgvVentas.TabIndex = 30;

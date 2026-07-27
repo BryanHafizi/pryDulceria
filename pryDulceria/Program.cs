@@ -8,10 +8,10 @@ namespace pryDulceria
         [STAThread]
         static void Main()
         {
-            Application.Run(new frmMenuPrincipal());
-            /* To customize application configuration such as set high DPI settings or default font,
+            //Application.Run(new frmMenuPrincipal());
+            // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
+            //ApplicationConfiguration.Initialize();
             using (frmInicioSesion login = new frmInicioSesion())
             {
                 if (login.ShowDialog() == DialogResult.OK)
@@ -19,7 +19,7 @@ namespace pryDulceria
                     Application.Run(new frmMenuPrincipal());
                 }
             }
-            */
+            
         }
     }
 }

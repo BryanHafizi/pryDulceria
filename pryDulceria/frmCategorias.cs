@@ -57,7 +57,6 @@ namespace pryDulceria
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
-            formularioAgregar.ShowDialog();
         }
     }
 }

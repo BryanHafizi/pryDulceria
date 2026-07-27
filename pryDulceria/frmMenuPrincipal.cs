@@ -27,6 +27,10 @@ namespace pryDulceria
             AbrirFormularioEnPanel(new frmVentas());
 
         }
+        private void pcbCompras_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new frmCompras());
+        }
         private void pbInventarios_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new frmInventario());

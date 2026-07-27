@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             dgvCategorias = new DataGridView();
             txtBuscar = new TextBox();
-            btnGuardar = new Button();
+            btnNuevo = new Button();
             btnEliminar = new Button();
             lblNombre = new Label();
             txtNombre = new TextBox();
+            btnGuardar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
             SuspendLayout();
             // 
@@ -63,10 +64,10 @@
             dgvCategorias.ReadOnly = true;
             dgvCategorias.RowHeadersVisible = false;
             dgvCategorias.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Padding = new Padding(3);
-            dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategorias.Size = new Size(500, 200);
+            dgvCategorias.Size = new Size(500, 300);
             dgvCategorias.TabIndex = 29;
             dgvCategorias.CellContentClick += dgvCategorias_CellContentClick;
             // 
@@ -77,30 +78,31 @@
             txtBuscar.Location = new Point(60, 150);
             txtBuscar.Margin = new Padding(3, 4, 3, 4);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(200, 34);
+            txtBuscar.PlaceholderText = "Buscar categoria";
+            txtBuscar.Size = new Size(500, 34);
             txtBuscar.TabIndex = 30;
-            txtBuscar.Text = "Buscar Categoria";
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
-            // btnGuardar
+            // btnNuevo
             // 
-            btnGuardar.BackColor = Color.FromArgb(194, 24, 91);
-            btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(60, 420);
-            btnGuardar.Margin = new Padding(3, 4, 3, 4);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(150, 50);
-            btnGuardar.TabIndex = 31;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = false;
-            btnGuardar.Click += btnNuevo_Click;
+            btnNuevo.BackColor = Color.FromArgb(194, 24, 91);
+            btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnNuevo.ForeColor = Color.White;
+            btnNuevo.Location = new Point(60, 519);
+            btnNuevo.Margin = new Padding(3, 4, 3, 4);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(150, 50);
+            btnNuevo.TabIndex = 31;
+            btnNuevo.Text = "Nuevo";
+            btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnEliminar
             // 
             btnEliminar.BackColor = Color.LightCoral;
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(220, 420);
+            btnEliminar.Location = new Point(410, 519);
             btnEliminar.Margin = new Padding(3, 4, 3, 4);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 50);
@@ -113,7 +115,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(50, 100);
+            lblNombre.Location = new Point(60, 100);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(231, 28);
             lblNombre.TabIndex = 34;
@@ -123,10 +125,23 @@
             // 
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombre.Location = new Point(300, 100);
+            txtNombre.Location = new Point(297, 100);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(200, 34);
+            txtNombre.Size = new Size(263, 34);
             txtNombre.TabIndex = 35;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.BackColor = Color.FromArgb(194, 24, 91);
+            btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.Location = new Point(239, 519);
+            btnGuardar.Margin = new Padding(3, 4, 3, 4);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(150, 50);
+            btnGuardar.TabIndex = 36;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = false;
             // 
             // frmCategorias
             // 
@@ -134,10 +149,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(632, 603);
+            Controls.Add(btnGuardar);
             Controls.Add(txtNombre);
             Controls.Add(lblNombre);
             Controls.Add(btnEliminar);
-            Controls.Add(btnGuardar);
+            Controls.Add(btnNuevo);
             Controls.Add(txtBuscar);
             Controls.Add(dgvCategorias);
             Controls.Add(lblTitulo);
@@ -155,9 +171,10 @@
         private Label lblTitulo;
         private DataGridView dgvCategorias;
         private TextBox txtBuscar;
-        private Button btnGuardar;
+        private Button btnNuevo;
         private Button btnEliminar;
         private Label lblNombre;
         private TextBox txtNombre;
+        private Button btnGuardar;
     }
 }

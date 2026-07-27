@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompras));
             dgvCompras = new DataGridView();
             btnEditar = new Button();
@@ -57,11 +57,11 @@
             dgvCompras.ReadOnly = true;
             dgvCompras.RowHeadersVisible = false;
             dgvCompras.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Padding = new Padding(3);
-            dgvCompras.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvCompras.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvCompras.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCompras.Size = new Size(900, 400);
-            dgvCompras.TabIndex = 38;
+            dgvCompras.TabIndex = 1;
             // 
             // btnEditar
             // 
@@ -73,7 +73,7 @@
             btnEditar.Location = new Point(480, 525);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 50);
-            btnEditar.TabIndex = 37;
+            btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
             // 
@@ -84,9 +84,9 @@
             txtBuscar.ForeColor = Color.FromArgb(30, 41, 59);
             txtBuscar.Location = new Point(320, 33);
             txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar Producto";
             txtBuscar.Size = new Size(600, 34);
-            txtBuscar.TabIndex = 36;
-            txtBuscar.Text = "Buscar Producto";
+            txtBuscar.TabIndex = 0;
             // 
             // pcbCarrito
             // 
@@ -108,7 +108,7 @@
             btnCancelar.Location = new Point(640, 525);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 50);
-            btnCancelar.TabIndex = 31;
+            btnCancelar.TabIndex = 4;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
@@ -122,7 +122,7 @@
             btnComprar.Location = new Point(320, 525);
             btnComprar.Name = "btnComprar";
             btnComprar.Size = new Size(150, 50);
-            btnComprar.TabIndex = 32;
+            btnComprar.TabIndex = 2;
             btnComprar.Text = "Comprar";
             btnComprar.UseVisualStyleBackColor = false;
             // 

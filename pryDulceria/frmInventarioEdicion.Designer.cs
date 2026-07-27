@@ -1,6 +1,6 @@
 ﻿namespace pryDulceria
 {
-    partial class frmEditarInventario
+    partial class frmInventarioEdicion
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -13,7 +13,7 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarInventario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventarioEdicion));
             lblNombre = new Label();
             btnGuardar = new Button();
             pcbEditar = new PictureBox();

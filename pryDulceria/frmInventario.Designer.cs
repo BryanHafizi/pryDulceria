@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             txtBuscar = new TextBox();
             pcbInventario = new PictureBox();
             btnEliminar = new Button();
@@ -47,9 +47,9 @@
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscar.Location = new Point(350, 33);
             txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar Producto";
             txtBuscar.Size = new Size(600, 34);
             txtBuscar.TabIndex = 0;
-            txtBuscar.Text = "Buscar Producto";
             // 
             // pcbInventario
             // 
@@ -72,7 +72,7 @@
             btnEliminar.Location = new Point(670, 500);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 50);
-            btnEliminar.TabIndex = 3;
+            btnEliminar.TabIndex = 4;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
             // 
@@ -86,7 +86,7 @@
             btnEditar.Location = new Point(510, 500);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 50);
-            btnEditar.TabIndex = 2;
+            btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
             // 
@@ -100,7 +100,7 @@
             btnNuevo.Location = new Point(350, 500);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 50);
-            btnNuevo.TabIndex = 1;
+            btnNuevo.TabIndex = 2;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
             btnNuevo.Click += btnNuevo_Click;
@@ -129,11 +129,11 @@
             dgvInventario.ReadOnly = true;
             dgvInventario.RowHeadersVisible = false;
             dgvInventario.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Padding = new Padding(3);
-            dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvInventario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInventario.Size = new Size(900, 400);
-            dgvInventario.TabIndex = 4;
+            dgvInventario.TabIndex = 1;
             // 
             // btnCategorias
             // 
@@ -145,7 +145,7 @@
             btnCategorias.Location = new Point(1100, 500);
             btnCategorias.Name = "btnCategorias";
             btnCategorias.Size = new Size(150, 50);
-            btnCategorias.TabIndex = 20;
+            btnCategorias.TabIndex = 5;
             btnCategorias.Text = "Categorías";
             btnCategorias.UseVisualStyleBackColor = false;
             btnCategorias.Click += btnCategorias_Click;

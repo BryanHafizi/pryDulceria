@@ -73,6 +73,7 @@
             pcbCompras.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbCompras.TabIndex = 13;
             pcbCompras.TabStop = false;
+            pcbCompras.Click += pcbCompras_Click;
             // 
             // pcbUsuarios
             // 
@@ -150,7 +151,7 @@
             pnlContenedor.BorderStyle = BorderStyle.FixedSingle;
             pnlContenedor.Location = new Point(2, 69);
             pnlContenedor.Name = "pnlContenedor";
-            pnlContenedor.Size = new Size(1344, 650);
+            pnlContenedor.Size = new Size(1344, 693);
             pnlContenedor.TabIndex = 8;
             // 
             // frmMenuPrincipal
@@ -159,7 +160,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(255, 242, 245);
-            ClientSize = new Size(1348, 721);
+            ClientSize = new Size(1348, 757);
             Controls.Add(pnlContenedor);
             Controls.Add(pnlMenu);
             Font = new Font("Segoe UI", 12F);

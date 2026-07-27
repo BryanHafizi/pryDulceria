@@ -21,6 +21,7 @@ namespace pryDulceria
             tipoOperacion = operacion;
             idUsuarioModificar = 0; 
             CargarComboRoles(); // Llenamos el combobox
+            lblTitulo.Text = "Agregar Usuario";
         }
 
         //para Editar
@@ -29,8 +30,8 @@ namespace pryDulceria
             InitializeComponent();
             tipoOperacion = operacion;
             idUsuarioModificar = id;
-
             CargarComboRoles(); // Llenamos el combobox
+            lblTitulo.Text = "Editar Usuario";
 
             // Rellenamos las cajas y el combo con info del form principal
             txtUsuario.Text = nombre;
