@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             dgvUsuarios = new DataGridView();
             txtBuscar = new TextBox();
@@ -37,8 +37,10 @@
             btnEditar = new Button();
             btnNuevo = new Button();
             lblTitulo = new Label();
+            pcbBuscar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbUsuarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbBuscar).BeginInit();
             SuspendLayout();
             // 
             // dgvUsuarios
@@ -49,22 +51,22 @@
             dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvUsuarios.BackgroundColor = Color.White;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsuarios.Location = new Point(350, 80);
+            dgvUsuarios.Location = new Point(350, 120);
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.ReadOnly = true;
             dgvUsuarios.RowHeadersVisible = false;
             dgvUsuarios.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Padding = new Padding(3);
-            dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsuarios.Size = new Size(900, 400);
+            dgvUsuarios.Size = new Size(900, 360);
             dgvUsuarios.TabIndex = 4;
             // 
             // txtBuscar
             // 
             txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(350, 33);
+            txtBuscar.Location = new Point(386, 80);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar usuario";
             txtBuscar.Size = new Size(600, 34);
@@ -138,12 +140,23 @@
             lblTitulo.TabIndex = 25;
             lblTitulo.Text = "Usuarios";
             // 
+            // pcbBuscar
+            // 
+            pcbBuscar.Image = Properties.Resources.buscar;
+            pcbBuscar.Location = new Point(350, 80);
+            pcbBuscar.Name = "pcbBuscar";
+            pcbBuscar.Size = new Size(30, 34);
+            pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbBuscar.TabIndex = 37;
+            pcbBuscar.TabStop = false;
+            // 
             // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(1316, 603);
+            Controls.Add(pcbBuscar);
             Controls.Add(dgvUsuarios);
             Controls.Add(txtBuscar);
             Controls.Add(pcbUsuarios);
@@ -156,6 +169,7 @@
             Text = "Módulo de Usuarios";
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbUsuarios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbBuscar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,5 +183,6 @@
         private Button btnEditar;
         private Button btnNuevo;
         private Label lblTitulo;
+        private PictureBox pcbBuscar;
     }
 }

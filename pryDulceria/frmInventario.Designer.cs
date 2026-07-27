@@ -37,15 +37,17 @@
             lblTitulo = new Label();
             dgvInventario = new DataGridView();
             btnCategorias = new Button();
+            pcbBuscar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pcbInventario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvInventario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbBuscar).BeginInit();
             SuspendLayout();
             // 
             // txtBuscar
             // 
             txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(350, 33);
+            txtBuscar.Location = new Point(386, 80);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar Producto";
             txtBuscar.Size = new Size(600, 34);
@@ -124,7 +126,7 @@
             dgvInventario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvInventario.BackgroundColor = Color.White;
             dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventario.Location = new Point(350, 80);
+            dgvInventario.Location = new Point(350, 120);
             dgvInventario.Name = "dgvInventario";
             dgvInventario.ReadOnly = true;
             dgvInventario.RowHeadersVisible = false;
@@ -132,7 +134,7 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvInventario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvInventario.Size = new Size(900, 400);
+            dgvInventario.Size = new Size(900, 360);
             dgvInventario.TabIndex = 1;
             // 
             // btnCategorias
@@ -150,6 +152,16 @@
             btnCategorias.UseVisualStyleBackColor = false;
             btnCategorias.Click += btnCategorias_Click;
             // 
+            // pcbBuscar
+            // 
+            pcbBuscar.Image = Properties.Resources.buscar;
+            pcbBuscar.Location = new Point(350, 80);
+            pcbBuscar.Name = "pcbBuscar";
+            pcbBuscar.Size = new Size(30, 34);
+            pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbBuscar.TabIndex = 36;
+            pcbBuscar.TabStop = false;
+            // 
             // frmInventario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -157,6 +169,7 @@
             BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(1316, 603);
             ControlBox = false;
+            Controls.Add(pcbBuscar);
             Controls.Add(btnCategorias);
             Controls.Add(dgvInventario);
             Controls.Add(txtBuscar);
@@ -170,6 +183,7 @@
             Text = "frmInventario";
             ((System.ComponentModel.ISupportInitialize)pcbInventario).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvInventario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbBuscar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,5 +198,6 @@
         private Label lblTitulo;
         private DataGridView dgvInventario;
         private Button btnCategorias;
+        private PictureBox pcbBuscar;
     }
 }

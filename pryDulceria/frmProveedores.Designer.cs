@@ -36,8 +36,10 @@
             btnEditar = new Button();
             btnNuevo = new Button();
             lblTitulo = new Label();
+            pcbBuscar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvProvedores).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbBuscar).BeginInit();
             SuspendLayout();
             // 
             // dgvProvedores
@@ -49,7 +51,7 @@
             dgvProvedores.BackgroundColor = Color.White;
             dgvProvedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProvedores.GridColor = Color.Black;
-            dgvProvedores.Location = new Point(380, 80);
+            dgvProvedores.Location = new Point(350, 120);
             dgvProvedores.Name = "dgvProvedores";
             dgvProvedores.ReadOnly = true;
             dgvProvedores.RowHeadersVisible = false;
@@ -57,14 +59,14 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvProvedores.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvProvedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProvedores.Size = new Size(900, 400);
+            dgvProvedores.Size = new Size(900, 362);
             dgvProvedores.TabIndex = 4;
             // 
             // txtBuscar
             // 
             txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(380, 33);
+            txtBuscar.Location = new Point(386, 78);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar Proveedor";
             txtBuscar.Size = new Size(600, 34);
@@ -89,7 +91,7 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(700, 500);
+            btnEliminar.Location = new Point(670, 500);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 50);
             btnEliminar.TabIndex = 3;
@@ -104,7 +106,7 @@
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(540, 500);
+            btnEditar.Location = new Point(510, 500);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 50);
             btnEditar.TabIndex = 2;
@@ -119,7 +121,7 @@
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(380, 500);
+            btnNuevo.Location = new Point(350, 500);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 50);
             btnNuevo.TabIndex = 1;
@@ -138,12 +140,23 @@
             lblTitulo.TabIndex = 32;
             lblTitulo.Text = "Proveedores";
             // 
+            // pcbBuscar
+            // 
+            pcbBuscar.Image = Properties.Resources.buscar;
+            pcbBuscar.Location = new Point(350, 80);
+            pcbBuscar.Name = "pcbBuscar";
+            pcbBuscar.Size = new Size(30, 34);
+            pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbBuscar.TabIndex = 46;
+            pcbBuscar.TabStop = false;
+            // 
             // frmProveedores
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(1316, 603);
+            Controls.Add(pcbBuscar);
             Controls.Add(dgvProvedores);
             Controls.Add(txtBuscar);
             Controls.Add(pbProveedores);
@@ -157,6 +170,7 @@
             Text = "frmProveedores";
             ((System.ComponentModel.ISupportInitialize)dgvProvedores).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbBuscar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -170,5 +184,6 @@
         private Button btnEditar;
         private Button btnNuevo;
         private Label lblTitulo;
+        private PictureBox pcbBuscar;
     }
 }

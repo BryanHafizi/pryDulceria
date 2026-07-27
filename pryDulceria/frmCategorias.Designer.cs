@@ -37,7 +37,9 @@
             lblNombre = new Label();
             txtNombre = new TextBox();
             btnGuardar = new Button();
+            pcbBuscar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbBuscar).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
@@ -67,7 +69,7 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategorias.Size = new Size(500, 300);
+            dgvCategorias.Size = new Size(500, 274);
             dgvCategorias.TabIndex = 29;
             dgvCategorias.CellContentClick += dgvCategorias_CellContentClick;
             // 
@@ -75,11 +77,11 @@
             // 
             txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(60, 150);
+            txtBuscar.Location = new Point(96, 150);
             txtBuscar.Margin = new Padding(3, 4, 3, 4);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar categoria";
-            txtBuscar.Size = new Size(500, 34);
+            txtBuscar.Size = new Size(464, 34);
             txtBuscar.TabIndex = 30;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
@@ -88,7 +90,7 @@
             btnNuevo.BackColor = Color.FromArgb(194, 24, 91);
             btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(60, 519);
+            btnNuevo.Location = new Point(60, 495);
             btnNuevo.Margin = new Padding(3, 4, 3, 4);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 50);
@@ -102,7 +104,7 @@
             btnEliminar.BackColor = Color.LightCoral;
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(410, 519);
+            btnEliminar.Location = new Point(410, 495);
             btnEliminar.Margin = new Padding(3, 4, 3, 4);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 50);
@@ -135,7 +137,7 @@
             btnGuardar.BackColor = Color.FromArgb(194, 24, 91);
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(239, 519);
+            btnGuardar.Location = new Point(241, 495);
             btnGuardar.Margin = new Padding(3, 4, 3, 4);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 50);
@@ -143,12 +145,23 @@
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
             // 
+            // pcbBuscar
+            // 
+            pcbBuscar.Image = Properties.Resources.buscar;
+            pcbBuscar.Location = new Point(60, 150);
+            pcbBuscar.Name = "pcbBuscar";
+            pcbBuscar.Size = new Size(30, 34);
+            pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbBuscar.TabIndex = 37;
+            pcbBuscar.TabStop = false;
+            // 
             // frmCategorias
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 242, 245);
             ClientSize = new Size(632, 603);
+            Controls.Add(pcbBuscar);
             Controls.Add(btnGuardar);
             Controls.Add(txtNombre);
             Controls.Add(lblNombre);
@@ -162,6 +175,7 @@
             Name = "frmCategorias";
             Text = "Módulo de Categorías";
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbBuscar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -176,5 +190,6 @@
         private Label lblNombre;
         private TextBox txtNombre;
         private Button btnGuardar;
+        private PictureBox pcbBuscar;
     }
 }
