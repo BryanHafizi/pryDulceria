@@ -59,14 +59,14 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvProvedores.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvProvedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProvedores.Size = new Size(900, 362);
+            dgvProvedores.Size = new Size(900, 350);
             dgvProvedores.TabIndex = 4;
             // 
             // txtBuscar
             // 
             txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(386, 78);
+            txtBuscar.Location = new Point(386, 80);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar Proveedor";
             txtBuscar.Size = new Size(600, 34);
@@ -87,11 +87,11 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEliminar.BackColor = Color.LightCoral;
+            btnEliminar.BackColor = Color.FromArgb(108, 117, 125);
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(670, 500);
+            btnEliminar.Location = new Point(670, 480);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 50);
             btnEliminar.TabIndex = 3;
@@ -102,11 +102,11 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.BackColor = Color.FromArgb(194, 24, 91);
+            btnEditar.BackColor = Color.FromArgb(30, 41, 59);
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(510, 500);
+            btnEditar.Location = new Point(510, 480);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 50);
             btnEditar.TabIndex = 2;
@@ -117,11 +117,11 @@
             // btnNuevo
             // 
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnNuevo.BackColor = Color.FromArgb(194, 24, 91);
+            btnNuevo.BackColor = Color.FromArgb(30, 41, 59);
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(350, 500);
+            btnNuevo.Location = new Point(350, 480);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 50);
             btnNuevo.TabIndex = 1;
@@ -145,7 +145,7 @@
             pcbBuscar.Image = Properties.Resources.buscar;
             pcbBuscar.Location = new Point(350, 80);
             pcbBuscar.Name = "pcbBuscar";
-            pcbBuscar.Size = new Size(30, 34);
+            pcbBuscar.Size = new Size(35, 35);
             pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbBuscar.TabIndex = 46;
             pcbBuscar.TabStop = false;
@@ -154,7 +154,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 242, 245);
+            BackColor = Color.FromArgb(243, 244, 246);
             ClientSize = new Size(1316, 603);
             Controls.Add(pcbBuscar);
             Controls.Add(dgvProvedores);
@@ -167,7 +167,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmProveedores";
-            Text = "frmProveedores";
+            Text = "Módulo de Proveedores";
             ((System.ComponentModel.ISupportInitialize)dgvProvedores).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbProveedores).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbBuscar).EndInit();

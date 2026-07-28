@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             txtBuscar = new TextBox();
             pcbInventario = new PictureBox();
             btnEliminar = new Button();
@@ -67,7 +67,7 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEliminar.BackColor = Color.LightCoral;
+            btnEliminar.BackColor = Color.FromArgb(108, 117, 125);
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
@@ -81,7 +81,7 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.BackColor = Color.FromArgb(194, 24, 91);
+            btnEditar.BackColor = Color.FromArgb(30, 41, 59);
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
@@ -95,7 +95,7 @@
             // btnNuevo
             // 
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnNuevo.BackColor = Color.FromArgb(194, 24, 91);
+            btnNuevo.BackColor = Color.FromArgb(30, 41, 59);
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
@@ -131,16 +131,16 @@
             dgvInventario.ReadOnly = true;
             dgvInventario.RowHeadersVisible = false;
             dgvInventario.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Padding = new Padding(3);
-            dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvInventario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvInventario.Size = new Size(900, 360);
+            dgvInventario.Size = new Size(900, 350);
             dgvInventario.TabIndex = 1;
             // 
             // btnCategorias
             // 
             btnCategorias.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnCategorias.BackColor = Color.LightCoral;
+            btnCategorias.BackColor = Color.FromArgb(108, 117, 125);
             btnCategorias.FlatStyle = FlatStyle.Flat;
             btnCategorias.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnCategorias.ForeColor = Color.White;
@@ -157,7 +157,7 @@
             pcbBuscar.Image = Properties.Resources.buscar;
             pcbBuscar.Location = new Point(350, 80);
             pcbBuscar.Name = "pcbBuscar";
-            pcbBuscar.Size = new Size(30, 34);
+            pcbBuscar.Size = new Size(35, 35);
             pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbBuscar.TabIndex = 36;
             pcbBuscar.TabStop = false;
@@ -166,7 +166,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 242, 245);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(1316, 603);
             ControlBox = false;
             Controls.Add(pcbBuscar);
@@ -180,7 +180,7 @@
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmInventario";
-            Text = "frmInventario";
+            Text = "Módulo de Inventario";
             ((System.ComponentModel.ISupportInitialize)pcbInventario).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvInventario).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbBuscar).EndInit();

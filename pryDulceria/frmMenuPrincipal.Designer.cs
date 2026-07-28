@@ -37,6 +37,7 @@
             // 
             // pcbLogo
             // 
+            pcbLogo.BackColor = Color.Transparent;
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
             pcbLogo.Location = new Point(4, 6);
             pcbLogo.Name = "pcbLogo";
@@ -48,7 +49,7 @@
             // pnlMenu
             // 
             pnlMenu.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pnlMenu.BackColor = Color.FromArgb(194, 24, 91);
+            pnlMenu.BackColor = Color.FromArgb(30, 41, 59);
             pnlMenu.BorderStyle = BorderStyle.FixedSingle;
             pnlMenu.Controls.Add(pcbCompras);
             pnlMenu.Controls.Add(pcbUsuarios);
@@ -66,17 +67,19 @@
             // 
             // pcbCompras
             // 
+            pcbCompras.BackColor = Color.Transparent;
             pcbCompras.Image = (Image)resources.GetObject("pcbCompras.Image");
             pcbCompras.Location = new Point(320, 6);
             pcbCompras.Name = "pcbCompras";
             pcbCompras.Size = new Size(150, 50);
-            pcbCompras.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbCompras.SizeMode = PictureBoxSizeMode.Zoom;
             pcbCompras.TabIndex = 13;
             pcbCompras.TabStop = false;
             pcbCompras.Click += pcbCompras_Click;
             // 
             // pcbUsuarios
             // 
+            pcbUsuarios.BackColor = Color.Transparent;
             pcbUsuarios.Image = (Image)resources.GetObject("pcbUsuarios.Image");
             pcbUsuarios.Location = new Point(960, 6);
             pcbUsuarios.Name = "pcbUsuarios";
@@ -88,6 +91,7 @@
             // 
             // pcbProveedores
             // 
+            pcbProveedores.BackColor = Color.Transparent;
             pcbProveedores.Image = (Image)resources.GetObject("pcbProveedores.Image");
             pcbProveedores.Location = new Point(800, 6);
             pcbProveedores.Name = "pcbProveedores";
@@ -99,6 +103,7 @@
             // 
             // pcbReportes
             // 
+            pcbReportes.BackColor = Color.Transparent;
             pcbReportes.Image = (Image)resources.GetObject("pcbReportes.Image");
             pcbReportes.Location = new Point(640, 6);
             pcbReportes.Name = "pcbReportes";
@@ -110,6 +115,7 @@
             // 
             // pcbInventario
             // 
+            pcbInventario.BackColor = Color.Transparent;
             pcbInventario.Image = (Image)resources.GetObject("pcbInventario.Image");
             pcbInventario.Location = new Point(480, 6);
             pcbInventario.Name = "pcbInventario";
@@ -122,11 +128,11 @@
             // pbCerrarSesion
             // 
             pbCerrarSesion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            pbCerrarSesion.BackColor = Color.LightCoral;
+            pbCerrarSesion.BackColor = Color.Transparent;
             pbCerrarSesion.Image = (Image)resources.GetObject("pbCerrarSesion.Image");
             pbCerrarSesion.Location = new Point(1188, 6);
             pbCerrarSesion.Name = "pbCerrarSesion";
-            pbCerrarSesion.Size = new Size(150, 48);
+            pbCerrarSesion.Size = new Size(150, 50);
             pbCerrarSesion.SizeMode = PictureBoxSizeMode.StretchImage;
             pbCerrarSesion.TabIndex = 8;
             pbCerrarSesion.TabStop = false;
@@ -134,6 +140,7 @@
             // 
             // pcbVentas
             // 
+            pcbVentas.BackColor = Color.Transparent;
             pcbVentas.Image = (Image)resources.GetObject("pcbVentas.Image");
             pcbVentas.Location = new Point(160, 6);
             pcbVentas.Name = "pcbVentas";
@@ -151,7 +158,7 @@
             pnlContenedor.BorderStyle = BorderStyle.FixedSingle;
             pnlContenedor.Location = new Point(2, 69);
             pnlContenedor.Name = "pnlContenedor";
-            pnlContenedor.Size = new Size(1344, 693);
+            pnlContenedor.Size = new Size(1344, 650);
             pnlContenedor.TabIndex = 8;
             // 
             // frmMenuPrincipal
@@ -159,8 +166,8 @@
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = Color.FromArgb(255, 242, 245);
-            ClientSize = new Size(1348, 757);
+            BackColor = Color.FromArgb(243, 244, 246);
+            ClientSize = new Size(1348, 721);
             Controls.Add(pnlContenedor);
             Controls.Add(pnlMenu);
             Font = new Font("Segoe UI", 12F);

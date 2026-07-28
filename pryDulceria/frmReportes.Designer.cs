@@ -97,7 +97,7 @@
             // 
             // btnCargarDatos
             // 
-            btnCargarDatos.BackColor = Color.FromArgb(194, 24, 91);
+            btnCargarDatos.BackColor = Color.FromArgb(30, 41, 59);
             btnCargarDatos.FlatStyle = FlatStyle.Flat;
             btnCargarDatos.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCargarDatos.ForeColor = Color.White;
@@ -111,7 +111,7 @@
             // btnPdf
             // 
             btnPdf.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnPdf.BackColor = Color.FromArgb(194, 24, 91);
+            btnPdf.BackColor = Color.FromArgb(30, 41, 59);
             btnPdf.FlatStyle = FlatStyle.Flat;
             btnPdf.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPdf.ForeColor = Color.White;
@@ -147,6 +147,7 @@
             // 
             // cmbTipoReporte
             // 
+            cmbTipoReporte.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTipoReporte.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbTipoReporte.ForeColor = Color.Black;
             cmbTipoReporte.FormattingEnabled = true;
@@ -155,13 +156,12 @@
             cmbTipoReporte.Size = new Size(260, 36);
             cmbTipoReporte.TabIndex = 20;
             cmbTipoReporte.Tag = "";
-            cmbTipoReporte.Text = "Seleccione un tipo";
             // 
             // frmReportes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 242, 245);
+            BackColor = Color.FromArgb(243, 244, 246);
             ClientSize = new Size(1316, 603);
             Controls.Add(cmbTipoReporte);
             Controls.Add(lblTipoReporte);
@@ -174,7 +174,7 @@
             Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmReportes";
-            Text = "frmReportes";
+            Text = "Módulo para Generar Reportes";
             ((System.ComponentModel.ISupportInitialize)pcbReportes).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvReportes).EndInit();
             ResumeLayout(false);

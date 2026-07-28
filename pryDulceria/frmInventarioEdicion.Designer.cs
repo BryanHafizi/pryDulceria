@@ -19,7 +19,7 @@
             pcbEditar = new PictureBox();
             txtNombre = new TextBox();
             lblCategoria = new Label();
-            txtPrecioCompra = new TextBox();
+            txtPrecio = new TextBox();
             lblPrecio = new Label();
             txtStock = new TextBox();
             lblStock = new Label();
@@ -45,11 +45,11 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.BackColor = Color.FromArgb(194, 24, 91);
+            btnGuardar.BackColor = Color.FromArgb(30, 41, 59);
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(294, 391);
+            btnGuardar.Location = new Point(300, 390);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 50);
             btnGuardar.TabIndex = 0;
@@ -86,14 +86,14 @@
             lblCategoria.TabIndex = 7;
             lblCategoria.Text = "Categoría del Producto:";
             // 
-            // txtPrecioCompra
+            // txtPrecio
             // 
-            txtPrecioCompra.BorderStyle = BorderStyle.FixedSingle;
-            txtPrecioCompra.ForeColor = Color.Black;
-            txtPrecioCompra.Location = new Point(267, 188);
-            txtPrecioCompra.Name = "txtPrecioCompra";
-            txtPrecioCompra.Size = new Size(260, 34);
-            txtPrecioCompra.TabIndex = 12;
+            txtPrecio.BorderStyle = BorderStyle.FixedSingle;
+            txtPrecio.ForeColor = Color.Black;
+            txtPrecio.Location = new Point(267, 188);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(260, 34);
+            txtPrecio.TabIndex = 12;
             // 
             // lblPrecio
             // 
@@ -102,15 +102,15 @@
             lblPrecio.ForeColor = Color.Black;
             lblPrecio.Location = new Point(27, 188);
             lblPrecio.Name = "lblPrecio";
-            lblPrecio.Size = new Size(169, 28);
+            lblPrecio.Size = new Size(188, 28);
             lblPrecio.TabIndex = 11;
-            lblPrecio.Text = "Precio de compra:";
+            lblPrecio.Text = "Precio del Producto:";
             // 
             // txtStock
             // 
             txtStock.BorderStyle = BorderStyle.FixedSingle;
             txtStock.ForeColor = Color.Black;
-            txtStock.Location = new Point(267, 331);
+            txtStock.Location = new Point(267, 338);
             txtStock.Name = "txtStock";
             txtStock.Size = new Size(260, 34);
             txtStock.TabIndex = 14;
@@ -120,7 +120,7 @@
             lblStock.AutoSize = true;
             lblStock.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStock.ForeColor = Color.Black;
-            lblStock.Location = new Point(27, 331);
+            lblStock.Location = new Point(27, 338);
             lblStock.Name = "lblStock";
             lblStock.Size = new Size(182, 28);
             lblStock.TabIndex = 13;
@@ -159,7 +159,7 @@
             lblMargenGanancia.AutoSize = true;
             lblMargenGanancia.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMargenGanancia.ForeColor = Color.Black;
-            lblMargenGanancia.Location = new Point(27, 240);
+            lblMargenGanancia.Location = new Point(27, 238);
             lblMargenGanancia.Name = "lblMargenGanancia";
             lblMargenGanancia.Size = new Size(194, 28);
             lblMargenGanancia.TabIndex = 18;
@@ -169,7 +169,7 @@
             // 
             txtPrecioVenta.BorderStyle = BorderStyle.FixedSingle;
             txtPrecioVenta.ForeColor = Color.Black;
-            txtPrecioVenta.Location = new Point(267, 285);
+            txtPrecioVenta.Location = new Point(267, 288);
             txtPrecioVenta.Name = "txtPrecioVenta";
             txtPrecioVenta.Size = new Size(260, 34);
             txtPrecioVenta.TabIndex = 19;
@@ -179,7 +179,7 @@
             lblPrecioVenta.AutoSize = true;
             lblPrecioVenta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPrecioVenta.ForeColor = Color.Black;
-            lblPrecioVenta.Location = new Point(27, 291);
+            lblPrecioVenta.Location = new Point(27, 288);
             lblPrecioVenta.Name = "lblPrecioVenta";
             lblPrecioVenta.Size = new Size(150, 28);
             lblPrecioVenta.TabIndex = 20;
@@ -189,7 +189,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 242, 245);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(632, 453);
             Controls.Add(lblPrecioVenta);
             Controls.Add(txtPrecioVenta);
@@ -199,7 +199,7 @@
             Controls.Add(lblTitulo);
             Controls.Add(txtStock);
             Controls.Add(lblStock);
-            Controls.Add(txtPrecioCompra);
+            Controls.Add(txtPrecio);
             Controls.Add(lblPrecio);
             Controls.Add(lblCategoria);
             Controls.Add(txtNombre);
@@ -221,7 +221,7 @@
         private PictureBox pcbEditar;
         private TextBox txtNombre;
         private Label lblCategoria;
-        private TextBox txtPrecioCompra;
+        private TextBox txtPrecio;
         private Label lblPrecio;
         private TextBox txtStock;
         private Label lblStock;

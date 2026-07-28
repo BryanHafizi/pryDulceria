@@ -33,10 +33,10 @@
             lblCambio = new Label();
             txtMontoRecibido = new TextBox();
             lblMontoRecibido = new Label();
-            lblTotalPagar = new Label();
+            lblTotal = new Label();
             btnVender = new Button();
             txtCambio = new TextBox();
-            txtTotalAPagar = new TextBox();
+            txtTotal = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pcbCarrito).BeginInit();
             SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             lblCambio.AutoSize = true;
             lblCambio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCambio.ForeColor = Color.Black;
-            lblCambio.Location = new Point(94, 279);
+            lblCambio.Location = new Point(100, 250);
             lblCambio.Name = "lblCambio";
             lblCambio.Size = new Size(84, 28);
             lblCambio.TabIndex = 38;
@@ -77,7 +77,7 @@
             txtMontoRecibido.BorderStyle = BorderStyle.FixedSingle;
             txtMontoRecibido.Font = new Font("Segoe UI", 12F);
             txtMontoRecibido.ForeColor = Color.Black;
-            txtMontoRecibido.Location = new Point(299, 206);
+            txtMontoRecibido.Location = new Point(300, 200);
             txtMontoRecibido.Name = "txtMontoRecibido";
             txtMontoRecibido.Size = new Size(243, 34);
             txtMontoRecibido.TabIndex = 1;
@@ -87,30 +87,30 @@
             lblMontoRecibido.AutoSize = true;
             lblMontoRecibido.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMontoRecibido.ForeColor = Color.Black;
-            lblMontoRecibido.Location = new Point(92, 208);
+            lblMontoRecibido.Location = new Point(100, 200);
             lblMontoRecibido.Name = "lblMontoRecibido";
             lblMontoRecibido.Size = new Size(157, 28);
             lblMontoRecibido.TabIndex = 36;
             lblMontoRecibido.Text = "Monto Recibido:";
             // 
-            // lblTotalPagar
+            // lblTotal
             // 
-            lblTotalPagar.AutoSize = true;
-            lblTotalPagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotalPagar.ForeColor = Color.Black;
-            lblTotalPagar.Location = new Point(92, 143);
-            lblTotalPagar.Name = "lblTotalPagar";
-            lblTotalPagar.Size = new Size(127, 28);
-            lblTotalPagar.TabIndex = 34;
-            lblTotalPagar.Text = "Total a Pagar:";
+            lblTotal.AutoSize = true;
+            lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotal.ForeColor = Color.Black;
+            lblTotal.Location = new Point(100, 150);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(127, 28);
+            lblTotal.TabIndex = 34;
+            lblTotal.Text = "Total a Pagar:";
             // 
             // btnVender
             // 
-            btnVender.BackColor = Color.FromArgb(194, 24, 91);
+            btnVender.BackColor = Color.FromArgb(30, 41, 59);
             btnVender.FlatStyle = FlatStyle.Flat;
             btnVender.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnVender.ForeColor = Color.White;
-            btnVender.Location = new Point(240, 353);
+            btnVender.Location = new Point(300, 320);
             btnVender.Name = "btnVender";
             btnVender.Size = new Size(150, 50);
             btnVender.TabIndex = 3;
@@ -122,34 +122,34 @@
             txtCambio.BorderStyle = BorderStyle.FixedSingle;
             txtCambio.Font = new Font("Segoe UI", 12F);
             txtCambio.ForeColor = Color.Black;
-            txtCambio.Location = new Point(299, 269);
+            txtCambio.Location = new Point(300, 250);
             txtCambio.Name = "txtCambio";
             txtCambio.Size = new Size(243, 34);
             txtCambio.TabIndex = 2;
             // 
-            // txtTotalAPagar
+            // txtTotal
             // 
-            txtTotalAPagar.BorderStyle = BorderStyle.FixedSingle;
-            txtTotalAPagar.Font = new Font("Segoe UI", 12F);
-            txtTotalAPagar.ForeColor = Color.Black;
-            txtTotalAPagar.Location = new Point(299, 147);
-            txtTotalAPagar.Name = "txtTotalAPagar";
-            txtTotalAPagar.Size = new Size(243, 34);
-            txtTotalAPagar.TabIndex = 0;
+            txtTotal.BorderStyle = BorderStyle.FixedSingle;
+            txtTotal.Font = new Font("Segoe UI", 12F);
+            txtTotal.ForeColor = Color.Black;
+            txtTotal.Location = new Point(300, 150);
+            txtTotal.Name = "txtTotal";
+            txtTotal.Size = new Size(243, 34);
+            txtTotal.TabIndex = 0;
             // 
             // frmCobrar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 242, 245);
+            BackColor = Color.FromArgb(243, 244, 246);
             ClientSize = new Size(632, 453);
-            Controls.Add(txtTotalAPagar);
+            Controls.Add(txtTotal);
             Controls.Add(txtCambio);
             Controls.Add(btnVender);
             Controls.Add(lblCambio);
             Controls.Add(txtMontoRecibido);
             Controls.Add(lblMontoRecibido);
-            Controls.Add(lblTotalPagar);
+            Controls.Add(lblTotal);
             Controls.Add(lblTitulo);
             Controls.Add(pcbCarrito);
             ForeColor = SystemColors.ActiveCaptionText;
@@ -168,9 +168,9 @@
         private Label lblCambio;
         private TextBox txtMontoRecibido;
         private Label lblMontoRecibido;
-        private Label lblTotalPagar;
+        private Label lblTotal;
         private Button btnVender;
         private TextBox txtCambio;
-        private TextBox txtTotalAPagar;
+        private TextBox txtTotal;
     }
 }

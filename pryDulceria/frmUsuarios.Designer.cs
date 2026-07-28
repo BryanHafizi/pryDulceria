@@ -59,7 +59,7 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsuarios.Size = new Size(900, 360);
+            dgvUsuarios.Size = new Size(900, 350);
             dgvUsuarios.TabIndex = 4;
             // 
             // txtBuscar
@@ -79,7 +79,7 @@
             pcbUsuarios.Image = (Image)resources.GetObject("pcbUsuarios.Image");
             pcbUsuarios.Location = new Point(200, 13);
             pcbUsuarios.Name = "pcbUsuarios";
-            pcbUsuarios.Size = new Size(101, 51);
+            pcbUsuarios.Size = new Size(100, 50);
             pcbUsuarios.SizeMode = PictureBoxSizeMode.Zoom;
             pcbUsuarios.TabIndex = 26;
             pcbUsuarios.TabStop = false;
@@ -87,7 +87,7 @@
             // btnEliminar
             // 
             btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEliminar.BackColor = Color.LightCoral;
+            btnEliminar.BackColor = Color.FromArgb(108, 117, 125);
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
@@ -102,7 +102,7 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.BackColor = Color.FromArgb(194, 24, 91);
+            btnEditar.BackColor = Color.FromArgb(30, 41, 59);
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEditar.ForeColor = Color.White;
@@ -117,7 +117,7 @@
             // btnNuevo
             // 
             btnNuevo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnNuevo.BackColor = Color.FromArgb(194, 24, 91);
+            btnNuevo.BackColor = Color.FromArgb(30, 41, 59);
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
@@ -145,7 +145,7 @@
             pcbBuscar.Image = Properties.Resources.buscar;
             pcbBuscar.Location = new Point(350, 80);
             pcbBuscar.Name = "pcbBuscar";
-            pcbBuscar.Size = new Size(30, 34);
+            pcbBuscar.Size = new Size(35, 35);
             pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbBuscar.TabIndex = 37;
             pcbBuscar.TabStop = false;
@@ -154,7 +154,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 242, 245);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(1316, 603);
             Controls.Add(pcbBuscar);
             Controls.Add(dgvUsuarios);

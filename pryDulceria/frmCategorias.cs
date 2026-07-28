@@ -59,6 +59,9 @@ namespace pryDulceria
 
         }
 
-       
+        private void frmCategorias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

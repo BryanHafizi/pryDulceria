@@ -74,13 +74,13 @@
             // 
             // btnAceptar
             // 
-            btnAceptar.BackColor = Color.FromArgb(194, 24, 91);
+            btnAceptar.BackColor = Color.FromArgb(30, 41, 59);
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAceptar.ForeColor = Color.White;
             btnAceptar.Location = new Point(280, 250);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(150, 51);
+            btnAceptar.Size = new Size(150, 50);
             btnAceptar.TabIndex = 42;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = false;
@@ -102,7 +102,7 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Black;
-            lblTitulo.Location = new Point(11, 11);
+            lblTitulo.Location = new Point(12, 13);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(289, 54);
             lblTitulo.TabIndex = 41;
@@ -111,7 +111,7 @@
             // pcbUsuario
             // 
             pcbUsuario.Image = (Image)resources.GetObject("pcbUsuario.Image");
-            pcbUsuario.Location = new Point(280, 13);
+            pcbUsuario.Location = new Point(300, 13);
             pcbUsuario.Name = "pcbUsuario";
             pcbUsuario.Size = new Size(100, 50);
             pcbUsuario.SizeMode = PictureBoxSizeMode.Zoom;
@@ -144,7 +144,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 242, 245);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(632, 453);
             Controls.Add(lblRol);
             Controls.Add(cmbRol);
@@ -158,7 +158,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmUsuariosEdicion";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmUsuariosEdicion";
+            Text = "Módulo de Edición de Usuarios";
             ((System.ComponentModel.ISupportInitialize)pcbUsuario).EndInit();
             ResumeLayout(false);
             PerformLayout();

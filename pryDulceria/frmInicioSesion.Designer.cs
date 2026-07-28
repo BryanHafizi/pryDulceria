@@ -60,7 +60,7 @@
             // 
             // btnAcceder
             // 
-            btnAcceder.BackColor = Color.FromArgb(194, 24, 91);
+            btnAcceder.BackColor = Color.FromArgb(30, 41, 59);
             btnAcceder.FlatStyle = FlatStyle.Flat;
             btnAcceder.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = Color.White;
@@ -74,6 +74,7 @@
             // 
             // pcbLogo
             // 
+            pcbLogo.BackColor = Color.Transparent;
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
             pcbLogo.Location = new Point(125, 60);
             pcbLogo.Name = "pcbLogo";
@@ -86,7 +87,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 242, 245);
+            BackColor = Color.FromArgb(243, 244, 246);
             ClientSize = new Size(432, 503);
             Controls.Add(pcbLogo);
             Controls.Add(btnAcceder);
@@ -94,7 +95,7 @@
             Controls.Add(lblContraseña);
             Controls.Add(txtUsuario);
             Controls.Add(lblUsuario);
-            Font = new Font("Segoe UI", 12F);
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmInicioSesion";
             StartPosition = FormStartPosition.CenterScreen;
