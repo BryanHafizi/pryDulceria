@@ -225,7 +225,7 @@
             cmbProveedor.Location = new Point(200, 90);
             cmbProveedor.Margin = new Padding(3, 4, 3, 4);
             cmbProveedor.Name = "cmbProveedor";
-            cmbProveedor.Size = new Size(200, 36);
+            cmbProveedor.Size = new Size(260, 36);
             cmbProveedor.TabIndex = 47;
             // 
             // frmCompras
