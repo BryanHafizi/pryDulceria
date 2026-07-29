@@ -175,6 +175,7 @@
             Name = "frmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menú Principal";
+            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pcbCompras).EndInit();

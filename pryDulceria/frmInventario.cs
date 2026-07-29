@@ -17,7 +17,7 @@ namespace pryDulceria
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmNuevoProducto emergente = new frmNuevoProducto();
+            frmInventarioEdicion emergente = new frmInventarioEdicion();
 
             emergente.ShowDialog();
         }

@@ -14,8 +14,8 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             lblTotal = new Label();
             btnCobrar = new Button();
@@ -28,6 +28,12 @@
             lblAgregarProducto = new Label();
             lblIndicacion = new Label();
             pcbBuscar = new PictureBox();
+            IdProducto = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Subtotal = new DataGridViewTextBoxColumn();
+            Quitar = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)pcbCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
@@ -46,7 +52,7 @@
             // 
             // lblTotal
             // 
-            lblTotal.Anchor = AnchorStyles.Bottom;
+            lblTotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotal.Location = new Point(650, 530);
@@ -57,7 +63,7 @@
             // 
             // btnCobrar
             // 
-            btnCobrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnCobrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCobrar.BackColor = Color.FromArgb(30, 41, 59);
             btnCobrar.FlatStyle = FlatStyle.Flat;
             btnCobrar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -68,10 +74,11 @@
             btnCobrar.TabIndex = 1;
             btnCobrar.Text = "Cobrar";
             btnCobrar.UseVisualStyleBackColor = false;
+            btnCobrar.Click += btnCobrar_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCancelar.BackColor = Color.FromArgb(108, 117, 125);
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -82,6 +89,7 @@
             btnCancelar.TabIndex = 0;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // pcbCarrito
             // 
@@ -104,33 +112,34 @@
             txtBuscar.PlaceholderText = "Buscar Producto";
             txtBuscar.Size = new Size(450, 34);
             txtBuscar.TabIndex = 13;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // dgvCarrito
             // 
             dgvCarrito.AllowUserToAddRows = false;
             dgvCarrito.AllowUserToDeleteRows = false;
             dgvCarrito.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvCarrito.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCarrito.BackgroundColor = Color.White;
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCarrito.Columns.AddRange(new DataGridViewColumn[] { IdProducto, Nombre, Precio, Cantidad, Subtotal, Quitar });
             dgvCarrito.GridColor = SystemColors.WindowText;
             dgvCarrito.Location = new Point(600, 125);
             dgvCarrito.Margin = new Padding(3, 2, 3, 2);
             dgvCarrito.Name = "dgvCarrito";
-            dgvCarrito.ReadOnly = true;
             dgvCarrito.RowHeadersVisible = false;
             dgvCarrito.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Padding = new Padding(3);
-            dgvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dgvCarrito.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvCarrito.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvCarrito.Size = new Size(650, 400);
             dgvCarrito.TabIndex = 30;
+            dgvCarrito.CellContentClick += dgvCarrito_CellContentClick;
+            dgvCarrito.CellValueChanged += dgvCarrito_CellValueChanged;
             // 
             // dgvProductos
             // 
             dgvProductos.AllowUserToAddRows = false;
             dgvProductos.AllowUserToDeleteRows = false;
-            dgvProductos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvProductos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProductos.BackgroundColor = Color.White;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -141,12 +150,12 @@
             dgvProductos.ReadOnly = true;
             dgvProductos.RowHeadersVisible = false;
             dgvProductos.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Padding = new Padding(3);
-            dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProductos.Size = new Size(500, 350);
             dgvProductos.TabIndex = 31;
-            dgvProductos.CellContentClick += dgvProductos_CellContentClick;
+            dgvProductos.CellDoubleClick += dgvProductos_CellDoubleClick;
             // 
             // lblDetalleVenta
             // 
@@ -160,6 +169,7 @@
             // 
             // lblAgregarProducto
             // 
+            lblAgregarProducto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblAgregarProducto.AutoSize = true;
             lblAgregarProducto.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblAgregarProducto.Location = new Point(70, 80);
@@ -170,6 +180,7 @@
             // 
             // lblIndicacion
             // 
+            lblIndicacion.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblIndicacion.AutoSize = true;
             lblIndicacion.BackColor = Color.Transparent;
             lblIndicacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -190,10 +201,65 @@
             pcbBuscar.TabIndex = 35;
             pcbBuscar.TabStop = false;
             // 
+            // IdProducto
+            // 
+            IdProducto.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            IdProducto.HeaderText = "Id";
+            IdProducto.MinimumWidth = 6;
+            IdProducto.Name = "IdProducto";
+            IdProducto.ReadOnly = true;
+            IdProducto.Resizable = DataGridViewTriState.True;
+            IdProducto.Width = 58;
+            // 
+            // Nombre
+            // 
+            Nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Nombre.HeaderText = "Producto";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            Precio.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Precio.HeaderText = "Precio";
+            Precio.MinimumWidth = 6;
+            Precio.Name = "Precio";
+            Precio.ReadOnly = true;
+            Precio.Width = 95;
+            // 
+            // Cantidad
+            // 
+            Cantidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.MinimumWidth = 6;
+            Cantidad.Name = "Cantidad";
+            Cantidad.Width = 120;
+            // 
+            // Subtotal
+            // 
+            Subtotal.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Subtotal.HeaderText = "Subtotal";
+            Subtotal.MinimumWidth = 6;
+            Subtotal.Name = "Subtotal";
+            Subtotal.ReadOnly = true;
+            Subtotal.Width = 116;
+            // 
+            // Quitar
+            // 
+            Quitar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Quitar.HeaderText = "";
+            Quitar.MinimumWidth = 6;
+            Quitar.Name = "Quitar";
+            Quitar.Resizable = DataGridViewTriState.True;
+            Quitar.SortMode = DataGridViewColumnSortMode.Automatic;
+            Quitar.Text = "X";
+            Quitar.UseColumnTextForButtonValue = true;
+            Quitar.Width = 23;
+            // 
             // frmVentas
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(243, 244, 246);
             ClientSize = new Size(1316, 603);
             ControlBox = false;
@@ -235,5 +301,11 @@
         private Label lblAgregarProducto;
         private Label lblIndicacion;
         private PictureBox pcbBuscar;
+        private DataGridViewTextBoxColumn IdProducto;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Precio;
+        private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn Subtotal;
+        private DataGridViewButtonColumn Quitar;
     }
 }

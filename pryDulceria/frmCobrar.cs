@@ -10,9 +10,55 @@ namespace pryDulceria
 {
     public partial class frmCobrar : Form
     {
-        public frmCobrar()
+        decimal totalPagarCobro;
+        decimal cambioActual;
+
+        public frmCobrar(decimal total)
         {
             InitializeComponent();
+            totalPagarCobro = total;
+
+            // Llenamos la caja de texto del total
+            txtTotal.Text = totalPagarCobro.ToString("0.00");
+            txtTotal.Enabled = false;
+            txtCambio.Enabled = false;
         }
+
+        private void txtMontoRecibido_TextChanged(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(txtMontoRecibido.Text, out decimal montoRecibido))
+            {
+                cambioActual = montoRecibido - totalPagarCobro;
+
+                if (cambioActual >= 0)
+                {
+                    txtCambio.Text = cambioActual.ToString("0.00");
+                }
+                else
+                {
+                    txtCambio.Text = "Insuficiente";
+                }
+            }
+            else
+            {
+                txtCambio.Clear();
+            }
+        }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            // Validamos que alcance el dinero
+            if (decimal.TryParse(txtMontoRecibido.Text, out decimal monto) && cambioActual >= 0)
+            {
+                // Le decimos al Formulario Principal (frmVentas) que sí se cobró
+                DialogResult = DialogResult.OK;
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("El monto recibido no es suficiente para cubrir el total.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
     }
 }

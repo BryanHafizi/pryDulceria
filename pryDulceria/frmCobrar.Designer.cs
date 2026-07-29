@@ -81,6 +81,7 @@
             txtMontoRecibido.Name = "txtMontoRecibido";
             txtMontoRecibido.Size = new Size(243, 34);
             txtMontoRecibido.TabIndex = 1;
+            txtMontoRecibido.TextChanged += txtMontoRecibido_TextChanged;
             // 
             // lblMontoRecibido
             // 
@@ -116,6 +117,7 @@
             btnVender.TabIndex = 3;
             btnVender.Text = "Vender";
             btnVender.UseVisualStyleBackColor = false;
+            btnVender.Click += btnVender_Click;
             // 
             // txtCambio
             // 

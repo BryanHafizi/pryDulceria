@@ -85,6 +85,7 @@
             // 
             // lblIndicacion
             // 
+            lblIndicacion.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblIndicacion.AutoSize = true;
             lblIndicacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblIndicacion.Location = new Point(70, 530);
@@ -117,7 +118,7 @@
             // 
             dgvProductos.AllowUserToAddRows = false;
             dgvProductos.AllowUserToDeleteRows = false;
-            dgvProductos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvProductos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProductos.BackgroundColor = Color.White;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -169,7 +170,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCancelar.BackColor = Color.FromArgb(108, 117, 125);
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -184,7 +185,7 @@
             // 
             // btnComprar
             // 
-            btnComprar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnComprar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnComprar.BackColor = Color.FromArgb(30, 41, 59);
             btnComprar.FlatStyle = FlatStyle.Flat;
             btnComprar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
@@ -199,7 +200,7 @@
             // 
             // lblTotal
             // 
-            lblTotal.Anchor = AnchorStyles.Bottom;
+            lblTotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotal.Location = new Point(650, 530);
@@ -230,8 +231,7 @@
             // 
             // frmCompras
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(243, 244, 246);
             ClientSize = new Size(1316, 603);
             Controls.Add(cmbProveedor);
