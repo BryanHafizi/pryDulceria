@@ -69,8 +69,8 @@ namespace pryDulceria
                 string nombre = dgvProvedores.CurrentRow.Cells[1].Value.ToString();
                 string ap = dgvProvedores.CurrentRow.Cells[2].Value.ToString();
                 string am = dgvProvedores.CurrentRow.Cells[3].Value.ToString();
-                int tel = int.Parse(dgvProvedores.CurrentRow.Cells[4].Value.ToString());
-                int tel_sec = int.Parse(dgvProvedores.CurrentRow.Cells[5].Value.ToString());
+                string tel = dgvProvedores.CurrentRow.Cells[4].Value.ToString();
+                string tel_sec = dgvProvedores.CurrentRow.Cells[5].Value.ToString();
 
                 // Mandamos un 1 (EDITAR) y los datos a la ventana emergente
                 frmProveedoresEdicion emergente = new frmProveedoresEdicion(1, id, nombre, ap, am, tel, tel_sec);
@@ -82,7 +82,7 @@ namespace pryDulceria
             }
             else
             {
-                MessageBox.Show("Selecciona un usuario de la tabla para editar.", "Aviso");
+                MessageBox.Show("Selecciona un proveedor de la tabla para editar.", "Aviso");
             }
         }
 
@@ -90,7 +90,7 @@ namespace pryDulceria
         {
             if (dgvProvedores.CurrentRow != null)
             {
-                var resp = MessageBox.Show("¿Confirmar que deseas eliminar el usuario seleccionado?", "ALERTA!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                var resp = MessageBox.Show("¿Confirmar que deseas eliminar el proveedor seleccionado?", "ALERTA!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
                 if (resp == DialogResult.Yes)
                 {
                     proveedores.IdProveedor = int.Parse(dgvProvedores.CurrentRow.Cells[0].Value.ToString());

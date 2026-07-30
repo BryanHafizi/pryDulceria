@@ -82,6 +82,7 @@
             txtMontoRecibido.Size = new Size(243, 34);
             txtMontoRecibido.TabIndex = 1;
             txtMontoRecibido.TextChanged += txtMontoRecibido_TextChanged;
+            txtMontoRecibido.KeyPress += txtMontoRecibido_KeyPress;
             // 
             // lblMontoRecibido
             // 
@@ -157,6 +158,7 @@
             ForeColor = SystemColors.ActiveCaptionText;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmCobrar";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Módulo de Cobro";
             ((System.ComponentModel.ISupportInitialize)pcbCarrito).EndInit();
             ResumeLayout(false);

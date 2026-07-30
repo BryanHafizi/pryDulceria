@@ -13,7 +13,7 @@ namespace pryDulceria
         private string productoBuscar;
         private decimal totalVenta;
         private int idCliente;
-        private int idEmpleado;
+        private int idUsuario;
 
         private MySqlDataAdapter consulta;
         private MySqlCommand comando;
@@ -22,7 +22,7 @@ namespace pryDulceria
         public string ProductoBuscar { get => productoBuscar; set => productoBuscar = value; }
         public decimal TotalVenta { get => totalVenta; set => totalVenta = value; }
         public int IdCliente { get => idCliente; set => idCliente = value; }
-        public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
+        public int IdUsuario { get => idUsuario; set => idUsuario = value; }
 
         public DataTable ConsultarCoincidenciasProductos()
         {
@@ -32,7 +32,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    // Consultamos los productos según tu base de datos
+                    // Consultamos los productos a la base de datos
                     string sql = "SELECT Id_producto AS Id, Nombre, Precio, Stock FROM tblproductos WHERE Nombre LIKE @nombre AND Stock > 0;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
@@ -59,20 +59,21 @@ namespace pryDulceria
                         try
                         {
                             // 1. Insertamos la Venta
-                            string sqlVenta = "INSERT INTO tblventa (fecha, Total, Id_cliente, Id_Empleado) VALUES (CURDATE(), @total, @idCliente, @idEmpleado); SELECT LAST_INSERT_ID();";
+                            // Ahora insertamos en intidUsuario en lugar de Id_Empleado
+                            string sqlVenta = "INSERT INTO tblventa (fecha, Total, Id_cliente, intidUsuario) VALUES (CURDATE(), @total, @idCliente, @idUsuario); SELECT LAST_INSERT_ID();"; 
                             int idVentaGenerada;
 
                             using (comando = new MySqlCommand(sqlVenta, conexion, transaccion))
                             {
                                 comando.Parameters.AddWithValue("@total", TotalVenta);
                                 comando.Parameters.AddWithValue("@idCliente", IdCliente);
-                                comando.Parameters.AddWithValue("@idEmpleado", IdEmpleado);
+                                comando.Parameters.AddWithValue("@idUsuario", IdUsuario);
 
                                 // Ejecutamos y obtenemos el ID de la venta recién creada
                                 idVentaGenerada = Convert.ToInt32(comando.ExecuteScalar());
                             }
 
-                            // 2. Insertamos el detalle iterando el DataGridView y actualizamos el stock
+                            // Insertamos el detalle  del DataGridView y actualizamos el stock
                             foreach (DataGridViewRow fila in carrito)
                             {
                                 if (fila.Cells["IdProducto"].Value != null)

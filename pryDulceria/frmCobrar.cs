@@ -26,7 +26,7 @@ namespace pryDulceria
 
         private void txtMontoRecibido_TextChanged(object sender, EventArgs e)
         {
-            if (decimal.TryParse(txtMontoRecibido.Text, out decimal montoRecibido))
+            if (decimal.TryParse(txtMontoRecibido.Text, out decimal montoRecibido))// convertimos si o si a decimal
             {
                 cambioActual = montoRecibido - totalPagarCobro;
 
@@ -59,6 +59,10 @@ namespace pryDulceria
                 MessageBox.Show("El monto recibido no es suficiente para cubrir el total.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
+        //validacion para el txtMontoRecibido
+        private void txtMontoRecibido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloDecimales(sender, e);
+        }
     }
 }

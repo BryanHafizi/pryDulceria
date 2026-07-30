@@ -50,10 +50,10 @@ namespace pryDulceria
 
         private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvProductos.CurrentRow != null)
-            {
-                // Extraemos los datos del producto seleccionado
-                string id = dgvProductos.CurrentRow.Cells["Id"].Value.ToString();
+            if (e.RowIndex < 0) return;//Solucion al error con el column header
+            { 
+            // Extraemos los datos del producto seleccionado
+            string id = dgvProductos.CurrentRow.Cells["Id"].Value.ToString();
                 string nombre = dgvProductos.CurrentRow.Cells["Nombre"].Value.ToString();
                 decimal precio = Convert.ToDecimal(dgvProductos.CurrentRow.Cells["Precio"].Value);
                 int stockDisponible = Convert.ToInt32(dgvProductos.CurrentRow.Cells["Stock"].Value);
@@ -134,7 +134,7 @@ namespace pryDulceria
                     // Asignamos propiedades (aquí pon el ID real del empleado que inició sesión)
                     ventas.TotalVenta = totalPagar;
                     ventas.IdCliente = 1; // Cliente por defecto o "Venta al mostrador"
-                    ventas.IdEmpleado = 1; // Cámbialo por el ID de sesión
+                    ventas.IdUsuario = clsInicioSesion.IdUsuarioActual; // Trabajador/usuario que realiza la venta
 
                     // Mandamos a guardar pasando las filas del carrito
                     string msg = ventas.GuardarVentaTransaccion(dgvCarrito.Rows);
