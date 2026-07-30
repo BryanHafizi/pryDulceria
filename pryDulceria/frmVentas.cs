@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace pryDulceria
 {
@@ -32,7 +33,18 @@ namespace pryDulceria
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private void CalcularTotal()
+        {
+            decimal total = 0;
+            foreach (DataGridViewRow fila in dgvCarrito.Rows)
+            {
+                if (fila.Cells["Subtotal"].Value != null)
+                {
+                    total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
+                }
+            }
+            lblTotal.Text = "Total a Pagar: $" + total.ToString("0.00");
+        }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dgvProductos.DataSource = null;
@@ -51,9 +63,9 @@ namespace pryDulceria
         private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;//Solucion al error con el column header
-            { 
-            // Extraemos los datos del producto seleccionado
-            string id = dgvProductos.CurrentRow.Cells["Id"].Value.ToString();
+            {
+                // Extraemos los datos del producto seleccionado
+                string id = dgvProductos.CurrentRow.Cells["Id"].Value.ToString();
                 string nombre = dgvProductos.CurrentRow.Cells["Nombre"].Value.ToString();
                 decimal precio = Convert.ToDecimal(dgvProductos.CurrentRow.Cells["Precio"].Value);
                 int stockDisponible = Convert.ToInt32(dgvProductos.CurrentRow.Cells["Stock"].Value);
@@ -97,21 +109,28 @@ namespace pryDulceria
             {
                 decimal precio = Convert.ToDecimal(dgvCarrito.Rows[e.RowIndex].Cells["Precio"].Value);
                 int nuevaCant = Convert.ToInt32(dgvCarrito.Rows[e.RowIndex].Cells["Cantidad"].Value);
-                dgvCarrito.Rows[e.RowIndex].Cells["Subtotal"].Value = precio * nuevaCant;
-                CalcularTotal();
-            }
-        }
-        private void CalcularTotal()
-        {
-            decimal total = 0;
-            foreach (DataGridViewRow fila in dgvCarrito.Rows)
-            {
-                if (fila.Cells["Subtotal"].Value != null)
+                int stockDisponible = Convert.ToInt32(dgvProductos.CurrentRow.Cells["Stock"].Value);
+                // Checamos q no ponga una cantidad nulla o igual a 0
+                if (nuevaCant == 0 )
                 {
-                    total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
+                    MessageBox.Show("Ingresa una cantidad válida mayor a 0.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    dgvCarrito.Rows[e.RowIndex].Cells["Cantidad"].Value = 1;//le damos valor de 1
+                    return;
                 }
+                // Checamos q no sobrepase el stock
+                if (nuevaCant <= stockDisponible)
+                {
+                    //Recalculamos el subtotal y total
+                    dgvCarrito.Rows[e.RowIndex].Cells["Subtotal"].Value = precio * nuevaCant;
+                    CalcularTotal();
+                }
+                else
+                {
+                    MessageBox.Show("No hay suficiente stock.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    dgvCarrito.Rows[e.RowIndex].Cells["Cantidad"].Value = stockDisponible;
+                    return;
+                }             
             }
-            lblTotal.Text = "Total a Pagar: $" + total.ToString("0.00");
         }
 
         private void btnCobrar_Click(object sender, EventArgs e)
@@ -185,6 +204,23 @@ namespace pryDulceria
                     CalcularTotal();
                 }
             }
+        }
+        // Aquí atrapamos la celda cuando le dan doble clic y le conectamos el KeyPress
+        // esto para poder ponerle la validacion de solo numeros al grid ()
+        private void dgvCarrito_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (e.Control is TextBox txt)
+            {
+                // Desconectamos primero por si ya estaba conectado (evita que se ejecute doble)
+                txt.KeyPress -= txtCantidad_KeyPress;
+                // Conectamos el evento KeyPress
+                txt.KeyPress += txtCantidad_KeyPress;
+            }
+        }
+        // Le asignamos la validacion al metodo keypress del textbox del dgv
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        { 
+            clsValidaciones.SoloNumeros(e);
         }
     }
 }
