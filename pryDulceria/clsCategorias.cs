@@ -57,63 +57,64 @@ namespace pryDulceria
             catch (Exception ex) { throw new Exception("Error: " + ex.Message); }
             return tabla;
         }
-        public bool AgregarCategoria()
+        public string AgregarCategoria()
         {
             clsConexion conexionBD = new clsConexion();
-            MySqlConnection conexion = null;
-
-            string SqlN = "INSERT INTO tblcategorias (id_categoria, categoria) VALUES (@id_categoria, @categoria)";
-
+            string msg = "";
             try
             {
-                conexion = conexionBD.AbrirConexion();
-                comando = new MySqlCommand(SqlN, conexion);
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string SqlN = "INSERT INTO tblcategorias (categoria) VALUES (@categoria);";
 
-                comando.Parameters.AddWithValue("@id_categoria", Id_categoria);
-                comando.Parameters.AddWithValue("@categoria", Categoria);
-               
-                int filasAfectadas = comando.ExecuteNonQuery();
-                return filasAfectadas > 0;
+                    using (MySqlCommand comando = new MySqlCommand(SqlN, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@categoria", Categoria);
 
+                        msg = comando.ExecuteNonQuery() > 0 ? "Categoría agregada correctamente" : "Error al agregar la categoría";
+                    }
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception("Error al intentar guardar la categoria: " + ex.Message);
             }
-            finally
-            {
-                if (conexion != null)
-                {
-                    conexionBD.CerrarConexion(conexion);
-                }
-            }
+            return msg;
+
         }
         public string Actualizar()
         {
             string msg = "";
-
-            clsConexion conexionBD = new clsConexion();
-            using (var conexion = conexionBD.AbrirConexion())
-                try
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
                 {
                     string sqlA = "UPDATE tblcategorias SET categoria = @nombre WHERE id_categoria = @id;";
-                    using (comando = new MySqlCommand(sqlA, conexion))
+
+                    using (MySqlCommand comando = new MySqlCommand(sqlA, conexion))
                     {
-                        comando.Parameters.AddWithValue("@id", Id_categoria);
                         comando.Parameters.AddWithValue("@nombre", Categoria);
+                        comando.Parameters.AddWithValue("@id", Id_categoria);
+
                         int filasAfectadas = comando.ExecuteNonQuery();
                         if (filasAfectadas > 0)
                         {
-                            msg = "Registro guardado correctamente";
+                            msg = "Categoría actualizada correctamente";
                         }
                         else
                         {
-                            msg = "Error, Datos no guardados";
+                            msg = "Error, no se pudo actualizar la categoría";
                         }
                     }
                 }
-                catch (Exception ex) { throw new Exception("Error: " + ex.Message); }
-                return msg;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error: " + ex.Message);
+            }
+            return msg;
+
         }
         public string Eliminar()
         {
@@ -123,16 +124,21 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
+                    // La instrucción SQL ya corregida
                     string sql = "DELETE FROM tblcategorias WHERE id_categoria = @id;";
-                    using (comando = new MySqlCommand(sql, conexion))
+                    using (MySqlCommand comando = new MySqlCommand(sql, conexion))
                     {
                         comando.Parameters.AddWithValue("@id", Id_categoria);
-                        msg = comando.ExecuteNonQuery() > 0 ? "Categoria eliminado correctamente" : "Error al eliminar";
+                        msg = comando.ExecuteNonQuery() > 0 ? "Categoría eliminada correctamente" : "Error al eliminar";
                     }
                 }
             }
-            catch (Exception ex) { throw new Exception("Error: " + ex.Message); }
+            catch (Exception ex)
+            {
+                throw new Exception("No puedes eliminar esta categoría porque ya tiene productos en ella.");
+            }
             return msg;
+
         }
     }
 }
