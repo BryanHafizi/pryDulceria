@@ -53,31 +53,6 @@ namespace pryDulceria
                 CargarGrid();
             }
         }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (dgvUsuarios.CurrentRow != null)
-            {
-                // Extraemos los datos de la fila seleccionada
-                int id = int.Parse(dgvUsuarios.CurrentRow.Cells[0].Value.ToString());
-                string nombre = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
-                string pass = dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
-                string rol = dgvUsuarios.CurrentRow.Cells[3].Value.ToString();
-
-                // Mandamos un 1 (EDITAR) y los datos a la ventana emergente
-                frmUsuariosEdicion emergente = new frmUsuariosEdicion(1, id, nombre, pass, rol);
-
-                if (emergente.ShowDialog() == DialogResult.OK)
-                {
-                    CargarGrid();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Selecciona un usuario de la tabla para editar.", "Aviso");
-            }
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgvUsuarios.CurrentRow != null)

@@ -14,7 +14,6 @@ namespace pryDulceria
         {
             InitializeComponent();
         }
-
         private void pcbNuevaCategoria_Click(object sender, EventArgs e)
         {
 
