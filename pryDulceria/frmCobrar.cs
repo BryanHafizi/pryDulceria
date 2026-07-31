@@ -12,6 +12,7 @@ namespace pryDulceria
     {
         decimal totalPagarCobro;
         decimal cambioActual;
+        clsVentas ventas = new clsVentas();
 
         public frmCobrar(decimal total)
         {
@@ -28,7 +29,7 @@ namespace pryDulceria
         {
             if (decimal.TryParse(txtMontoRecibido.Text, out decimal montoRecibido))// convertimos si o si a decimal
             {
-                cambioActual = montoRecibido - totalPagarCobro;
+                cambioActual = ventas.CalcularCambioCobrado(montoRecibido, totalPagarCobro);
 
                 if (cambioActual >= 0)
                 {

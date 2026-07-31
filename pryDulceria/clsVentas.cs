@@ -24,6 +24,26 @@ namespace pryDulceria
         public int IdCliente { get => idCliente; set => idCliente = value; }
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
 
+        public decimal CalcularSubtotalProducto(int cantidad, decimal precio)
+        {
+            return cantidad * precio;
+        }
+
+        public decimal CalcularTotalCarrito(DataGridViewRowCollection filas)
+        {
+            decimal total = 0;
+            foreach (DataGridViewRow fila in filas)
+            {
+                    total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
+            }
+            return total;
+        }
+
+        public decimal CalcularCambioCobrado(decimal montoRecibido, decimal totalPagar)
+        {
+            return montoRecibido - totalPagar;
+        }
+
         public DataTable ConsultarCoincidenciasProductos()
         {
             tabla = new DataTable();
@@ -60,7 +80,7 @@ namespace pryDulceria
                         {
                             // 1. Insertamos la Venta
                             // Ahora insertamos en intidUsuario en lugar de Id_Empleado
-                            string sqlVenta = "INSERT INTO tblventa (fecha, Total, Id_cliente, intidUsuario) VALUES (CURDATE(), @total, @idCliente, @idUsuario); SELECT LAST_INSERT_ID();"; 
+                            string sqlVenta = "INSERT INTO tblventa (fecha, Total, Id_cliente, intidUsuario) VALUES (CURDATE(), @total, @idCliente, @idUsuario); SELECT LAST_INSERT_ID();";
                             int idVentaGenerada;
 
                             using (comando = new MySqlCommand(sqlVenta, conexion, transaccion))
@@ -76,32 +96,31 @@ namespace pryDulceria
                             // Insertamos el detalle  del DataGridView y actualizamos el stock
                             foreach (DataGridViewRow fila in carrito)
                             {
-                                if (fila.Cells["IdProducto"].Value != null)
+                                
+                                int idProd = Convert.ToInt32(fila.Cells["IdProducto"].Value);
+                                int cant = Convert.ToInt32(fila.Cells["Cantidad"].Value);
+                                decimal precioUnitario = Convert.ToDecimal(fila.Cells["Precio"].Value);
+
+                                // Insertar en tbldet_venta
+                                string sqlDetalle = "INSERT INTO tbldet_venta (Id_venta, Id_producto, Cantidad, Precio_Unitario) VALUES (@idVenta, @idProd, @cant, @precio);";
+                                using (var cmdDetalle = new MySqlCommand(sqlDetalle, conexion, transaccion))
                                 {
-                                    int idProd = Convert.ToInt32(fila.Cells["IdProducto"].Value);
-                                    int cant = Convert.ToInt32(fila.Cells["Cantidad"].Value);
-                                    decimal precioUnitario = Convert.ToDecimal(fila.Cells["Precio"].Value);
-
-                                    // Insertar en tbldet_venta
-                                    string sqlDetalle = "INSERT INTO tbldet_venta (Id_venta, Id_producto, Cantidad, Precio_Unitario) VALUES (@idVenta, @idProd, @cant, @precio);";
-                                    using (var cmdDetalle = new MySqlCommand(sqlDetalle, conexion, transaccion))
-                                    {
-                                        cmdDetalle.Parameters.AddWithValue("@idVenta", idVentaGenerada);
-                                        cmdDetalle.Parameters.AddWithValue("@idProd", idProd);
-                                        cmdDetalle.Parameters.AddWithValue("@cant", cant);
-                                        cmdDetalle.Parameters.AddWithValue("@precio", precioUnitario);
-                                        cmdDetalle.ExecuteNonQuery();
-                                    }
-
-                                    // Descontar Stock en tblproductos
-                                    string sqlStock = "UPDATE tblproductos SET Stock = Stock - @cant WHERE Id_producto = @idProd;";
-                                    using (var cmdStock = new MySqlCommand(sqlStock, conexion, transaccion))
-                                    {
-                                        cmdStock.Parameters.AddWithValue("@cant", cant);
-                                        cmdStock.Parameters.AddWithValue("@idProd", idProd);
-                                        cmdStock.ExecuteNonQuery();
-                                    }
+                                cmdDetalle.Parameters.AddWithValue("@idVenta", idVentaGenerada);
+                                cmdDetalle.Parameters.AddWithValue("@idProd", idProd);
+                                cmdDetalle.Parameters.AddWithValue("@cant", cant);
+                                cmdDetalle.Parameters.AddWithValue("@precio", precioUnitario);
+                                cmdDetalle.ExecuteNonQuery();
                                 }
+
+                                // Descontar Stock en tblproductos
+                                string sqlStock = "UPDATE tblproductos SET Stock = Stock - @cant WHERE Id_producto = @idProd;";
+                                using (var cmdStock = new MySqlCommand(sqlStock, conexion, transaccion))
+                                {
+                                cmdStock.Parameters.AddWithValue("@cant", cant);
+                                cmdStock.Parameters.AddWithValue("@idProd", idProd);
+                                cmdStock.ExecuteNonQuery();
+                                }
+                                
                             }
 
                             // Si todo salió bien, confirmamos los cambios

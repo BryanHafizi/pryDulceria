@@ -35,14 +35,7 @@ namespace pryDulceria
         }
         private void CalcularTotal()
         {
-            decimal total = 0;
-            foreach (DataGridViewRow fila in dgvCarrito.Rows)
-            {
-                if (fila.Cells["Subtotal"].Value != null)
-                {
-                    total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
-                }
-            }
+            decimal total = ventas.CalcularTotalCarrito(dgvCarrito.Rows);
             lblTotal.Text = "Total a Pagar: $" + total.ToString("0.00");
         }
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -75,13 +68,13 @@ namespace pryDulceria
                 // Buscamos si ya lo agregamos antes al carrito
                 foreach (DataGridViewRow fila in dgvCarrito.Rows)
                 {
-                    if (fila.Cells["IdProducto"].Value != null && fila.Cells["IdProducto"].Value.ToString() == id)
+                    if (fila.Cells["IdProducto"].Value.ToString() == id)
                     {
                         int cantActual = Convert.ToInt32(fila.Cells["Cantidad"].Value);
                         if (cantActual + 1 <= stockDisponible)
                         {
                             fila.Cells["Cantidad"].Value = cantActual + 1;
-                            fila.Cells["Subtotal"].Value = (cantActual + 1) * precio;
+                            fila.Cells["Subtotal"].Value = ventas.CalcularSubtotalProducto(cantActual + 1, precio);
                         }
                         else
                         {
@@ -111,7 +104,7 @@ namespace pryDulceria
                 int nuevaCant = Convert.ToInt32(dgvCarrito.Rows[e.RowIndex].Cells["Cantidad"].Value);
                 int stockDisponible = Convert.ToInt32(dgvProductos.CurrentRow.Cells["Stock"].Value);
                 // Checamos q no ponga una cantidad nulla o igual a 0
-                if (nuevaCant == 0 )
+                if (nuevaCant == 0)
                 {
                     MessageBox.Show("Ingresa una cantidad válida mayor a 0.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     dgvCarrito.Rows[e.RowIndex].Cells["Cantidad"].Value = 1;//le damos valor de 1
@@ -121,7 +114,7 @@ namespace pryDulceria
                 if (nuevaCant <= stockDisponible)
                 {
                     //Recalculamos el subtotal y total
-                    dgvCarrito.Rows[e.RowIndex].Cells["Subtotal"].Value = precio * nuevaCant;
+                    dgvCarrito.Rows[e.RowIndex].Cells["Subtotal"].Value = ventas.CalcularSubtotalProducto(nuevaCant, precio);
                     CalcularTotal();
                 }
                 else
@@ -129,13 +122,13 @@ namespace pryDulceria
                     MessageBox.Show("No hay suficiente stock.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     dgvCarrito.Rows[e.RowIndex].Cells["Cantidad"].Value = stockDisponible;
                     return;
-                }             
+                }
             }
         }
 
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-            if (dgvCarrito.Rows.Count == 0 || (dgvCarrito.Rows.Count == 1 && dgvCarrito.Rows[0].IsNewRow))
+            if (dgvCarrito.Rows.Count == 0)
             {
                 MessageBox.Show("Agrega productos al carrito primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -173,7 +166,7 @@ namespace pryDulceria
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             // Primero validamos que sí haya algo en el carrito para no preguntar si está vacío
-            if (dgvCarrito.Rows.Count > 0 && !(dgvCarrito.Rows.Count == 1 && dgvCarrito.Rows[0].IsNewRow))
+            if (dgvCarrito.Rows.Count > 0)
             {
                 var resp = MessageBox.Show("¿Confirmar que deseas cancelar la venta y vaciar el carrito?", "ALERTA!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
 
@@ -219,7 +212,7 @@ namespace pryDulceria
         }
         // Le asignamos la validacion al metodo keypress del textbox del dgv
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
-        { 
+        {
             clsValidaciones.SoloNumeros(e);
         }
     }
