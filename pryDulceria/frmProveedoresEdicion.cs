@@ -20,29 +20,48 @@ namespace pryDulceria
             InitializeComponent();
             tipoOperacion = operacion;
             idProveedorModificar = 0;
-
+            lblTitulo.Text = "Agregar Proveedor";
         }
 
         //para Editar
-        public frmProveedoresEdicion(int operacion, int id, string nombre, string ap, string am, int tel, int tel_sec)
+        public frmProveedoresEdicion(int operacion, int id, string nombre, string ap, string am, string tel, string tel_sec)
         {
             InitializeComponent();
             tipoOperacion = operacion;
             idProveedorModificar = id;
-
+            lblTitulo.Text = "Editar Proveedor";
 
             // Rellenamos las cajas y el combo con info del form principal
             txtNombre.Text = nombre;
             txtAP.Text = ap;
             txtAM.Text = am;
-            txtTel.Text = tel.ToString();
-            txtTel.Text = tel_sec.ToString();
+            txtTel.Text = tel;
+            txtTelSecundario.Text = tel_sec;
         }
 
 
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            // Validamos que esten llenos campos obligatorios (txtAP y txtTelSecundario son opcionales)
+            if (clsValidaciones.EstaVacio(txtNombre, "Nombre")) return;
+            if (clsValidaciones.EstaVacio(txtAM, "Apellido materno")) return;
+            if (clsValidaciones.EstaVacio(txtTel, "Teléfono")) return;
+            // Validamos q el telefono tenga 10 digitos exactos
+            if (txtTel.Text.Trim().Length != 10)
+            {
+                MessageBox.Show("El teléfono principal debe tener exactamente 10 dígitos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTel.Focus();
+                return;
+            }
+            // Validar 10 dígitos del teléfono secundario (SOLO si escribieron algo)
+            if (!string.IsNullOrWhiteSpace(txtTelSecundario.Text) && txtTelSecundario.Text.Trim().Length != 10)
+            {
+                MessageBox.Show("El teléfono secundario debe tener exactamente 10 dígitos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTelSecundario.Focus();
+                return;
+            }
+            //
             try
             {
 
@@ -67,12 +86,31 @@ namespace pryDulceria
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
+        //Validaciones en los TxtBox
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Cerramos la ventana sin hacer nada
-            DialogResult = DialogResult.Cancel;
-            Close();
+            clsValidaciones.SoloLetras(e);
         }
+
+        private void txtAP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
+        }
+
+        private void txtAM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
+        }
+
+        private void txtTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloNumeros(e);
+        }
+
+        private void txtTelSecundario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloNumeros(e);
+        }
+        // Terminan los metodos de validacion
     }
 }

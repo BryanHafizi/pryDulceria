@@ -16,6 +16,8 @@ namespace pryDulceria
         private static string rol;
         private static bool esAdministrador;
         private static bool esCajero;
+        private static int idUsuarioActual;
+        public static int IdUsuarioActual { get => idUsuarioActual; }
 
         public void AsignarPermisos()
         {
@@ -47,7 +49,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT vchrol FROM tblusuarios " + "WHERE vchnombreUsuario = @usuario AND vchpassword = MD5(@password);";
+                    string sql = "SELECT intidUsuario, vchRol FROM tblusuarios WHERE vchnombreUsuario = @usuario AND vchpassword = MD5(@password);";
                     using (var consulta = new MySqlCommand(sql, conexion))
                     {
                         consulta.Parameters.AddWithValue("@usuario", usuario);
@@ -57,6 +59,7 @@ namespace pryDulceria
                         {
                             if (resultado.Read())
                             {
+                                idUsuarioActual = resultado.GetInt32("intidUsuario");
                                 rol = resultado.GetString("vchRol");
                                 AsignarPermisos();
                                 MessageBox.Show("Tu perfil es: " + rol, "sistema");

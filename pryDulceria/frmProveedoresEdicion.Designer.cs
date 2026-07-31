@@ -50,9 +50,11 @@
             txtAP.Font = new Font("Segoe UI", 12F);
             txtAP.ForeColor = Color.Black;
             txtAP.Location = new Point(300, 150);
+            txtAP.MaxLength = 50;
             txtAP.Name = "txtAP";
             txtAP.Size = new Size(260, 34);
             txtAP.TabIndex = 55;
+            txtAP.KeyPress += txtAP_KeyPress;
             // 
             // lblAP
             // 
@@ -71,9 +73,11 @@
             txtNombre.Font = new Font("Segoe UI", 12F);
             txtNombre.ForeColor = Color.Black;
             txtNombre.Location = new Point(300, 100);
+            txtNombre.MaxLength = 50;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(260, 34);
             txtNombre.TabIndex = 53;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // btnAceptar
             // 
@@ -128,9 +132,11 @@
             txtTelSecundario.Font = new Font("Segoe UI", 12F);
             txtTelSecundario.ForeColor = Color.Black;
             txtTelSecundario.Location = new Point(300, 300);
+            txtTelSecundario.MaxLength = 10;
             txtTelSecundario.Name = "txtTelSecundario";
             txtTelSecundario.Size = new Size(260, 34);
             txtTelSecundario.TabIndex = 59;
+            txtTelSecundario.KeyPress += txtTelSecundario_KeyPress;
             // 
             // lblTelefonoSecundario
             // 
@@ -149,9 +155,11 @@
             txtTel.Font = new Font("Segoe UI", 12F);
             txtTel.ForeColor = Color.Black;
             txtTel.Location = new Point(300, 250);
+            txtTel.MaxLength = 10;
             txtTel.Name = "txtTel";
             txtTel.Size = new Size(260, 34);
             txtTel.TabIndex = 63;
+            txtTel.KeyPress += txtTel_KeyPress;
             // 
             // lblTel
             // 
@@ -170,9 +178,11 @@
             txtAM.Font = new Font("Segoe UI", 12F);
             txtAM.ForeColor = Color.Black;
             txtAM.Location = new Point(300, 200);
+            txtAM.MaxLength = 50;
             txtAM.Name = "txtAM";
             txtAM.Size = new Size(260, 34);
             txtAM.TabIndex = 61;
+            txtAM.KeyPress += txtAM_KeyPress;
             // 
             // lblAM
             // 
@@ -207,6 +217,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmProveedoresEdicion";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Módulo de Edición de Proveedores ";
             ((System.ComponentModel.ISupportInitialize)pcbProveedores).EndInit();
             ResumeLayout(false);

@@ -51,6 +51,10 @@ namespace pryDulceria
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //validamos que los campos no esten vacios
+            if (clsValidaciones.EstaVacio(txtUsuario, "Usuario")) return;
+            if (clsValidaciones.EstaVacio(txtPassword, "Password")) return;
+            //
             try
             {
                 // validación para que no guarden el placeholder "-- Selecciona un Rol --"

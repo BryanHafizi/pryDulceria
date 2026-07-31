@@ -12,6 +12,7 @@ namespace pryDulceria
     {
         decimal totalPagarCobro;
         decimal cambioActual;
+        clsVentas ventas = new clsVentas();
 
         public frmCobrar(decimal total)
         {
@@ -26,9 +27,9 @@ namespace pryDulceria
 
         private void txtMontoRecibido_TextChanged(object sender, EventArgs e)
         {
-            if (decimal.TryParse(txtMontoRecibido.Text, out decimal montoRecibido))
+            if (decimal.TryParse(txtMontoRecibido.Text, out decimal montoRecibido))// convertimos si o si a decimal
             {
-                cambioActual = montoRecibido - totalPagarCobro;
+                cambioActual = ventas.CalcularCambioCobrado(montoRecibido, totalPagarCobro);
 
                 if (cambioActual >= 0)
                 {
@@ -59,6 +60,10 @@ namespace pryDulceria
                 MessageBox.Show("El monto recibido no es suficiente para cubrir el total.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
+        //validacion para el txtMontoRecibido
+        private void txtMontoRecibido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloDecimales(sender, e);
+        }
     }
 }

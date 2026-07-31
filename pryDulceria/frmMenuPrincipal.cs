@@ -10,6 +10,20 @@ namespace pryDulceria
         public frmMenuPrincipal()
         {
             InitializeComponent();
+            AplicarPermisos();
+        }
+        private void AplicarPermisos()
+        {
+            // Si el usuario que inició sesión es Cajero, ocultamos todo los modulos menos Ventas y Cerrar Sesión
+            if (clsInicioSesion.EsCajero)
+            {
+                pcbCompras.Visible = false;
+                pcbInventario.Visible = false;
+                pcbReportes.Visible = false;
+                pcbProveedores.Visible = false;
+                pcbUsuarios.Visible = false;
+            }
+            // Si es Administrador (o cualquier otro caso autorizado), se queda todo visible por defecto
         }
         private void pcbGeneral_MouseDown(object pictureSeleccionado, MouseEventArgs e)
         {
