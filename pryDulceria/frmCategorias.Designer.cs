@@ -73,7 +73,7 @@
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCategorias.Size = new Size(650, 400);
             dgvCategorias.TabIndex = 40;
-            dgvCategorias.CellContentClick += dgvCategorias_CellContentClick;
+            dgvCategorias.CellClick += dgvCategorias_CellClick;
             // 
             // txtBuscar
             // 
