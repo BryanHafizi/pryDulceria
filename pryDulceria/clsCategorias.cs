@@ -80,7 +80,6 @@ namespace pryDulceria
                 throw new Exception("Error al intentar guardar la categoria: " + ex.Message);
             }
             return msg;
-
         }
         public string Actualizar()
         {
@@ -114,8 +113,6 @@ namespace pryDulceria
                 throw new Exception("Error: " + ex.Message);
             }
             return msg;
-
-
         }
         public string Eliminar()
         {
@@ -134,12 +131,22 @@ namespace pryDulceria
                     }
                 }
             }
+            catch (MySqlException ex)
+            {
+                if (ex.Number == 1451)
+                {
+                    throw new Exception("No puedes eliminar esta categoría porque ya tiene productos en ella.");
+                }
+                else
+                {
+                    throw new Exception("Error de base de datos: " + ex.Message);
+                }
+            }
             catch (Exception ex)
             {
-                throw new Exception("No puedes eliminar esta categoría porque ya tiene productos en ella.");
+                throw new Exception("Error inesperado: " + ex.Message);
             }
             return msg;
-
         }
     }
 }
