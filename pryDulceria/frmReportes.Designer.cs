@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportes));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pcbReportes = new PictureBox();
             lblTitulo = new Label();
             lblFecha = new Label();
@@ -39,6 +39,8 @@
             dtpFechaCorte = new DateTimePicker();
             lblTipoReporte = new Label();
             cmbTipoReporte = new ComboBox();
+            dtpFechaFin = new DateTimePicker();
+            lblFechaFin = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbReportes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvReportes).BeginInit();
             SuspendLayout();
@@ -91,8 +93,8 @@
             dgvReportes.ReadOnly = true;
             dgvReportes.RowHeadersVisible = false;
             dgvReportes.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Padding = new Padding(3);
-            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvReportes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvReportes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvReportes.Size = new Size(700, 225);
             dgvReportes.TabIndex = 15;
@@ -159,13 +161,40 @@
             cmbTipoReporte.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbTipoReporte.ForeColor = Color.Black;
             cmbTipoReporte.FormattingEnabled = true;
-            cmbTipoReporte.Items.AddRange(new object[] { "Ventas del dia", "Producto más vendido" });
+            cmbTipoReporte.Items.AddRange(new object[] { "Ventas del dia", "Ventas semanales/mensuales", "Producto más vendido", "Compras Realizadas" });
             cmbTipoReporte.Location = new Point(481, 75);
             cmbTipoReporte.Margin = new Padding(3, 2, 3, 2);
             cmbTipoReporte.Name = "cmbTipoReporte";
             cmbTipoReporte.Size = new Size(228, 29);
             cmbTipoReporte.TabIndex = 20;
             cmbTipoReporte.Tag = "";
+            cmbTipoReporte.SelectedIndexChanged += cmbTipoReporte_SelectedIndexChanged;
+            // 
+            // dtpFechaFin
+            // 
+            dtpFechaFin.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpFechaFin.CalendarForeColor = Color.Black;
+            dtpFechaFin.CalendarTitleForeColor = Color.Black;
+            dtpFechaFin.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpFechaFin.Format = DateTimePickerFormat.Short;
+            dtpFechaFin.Location = new Point(782, 38);
+            dtpFechaFin.Margin = new Padding(3, 2, 3, 2);
+            dtpFechaFin.Name = "dtpFechaFin";
+            dtpFechaFin.Size = new Size(228, 29);
+            dtpFechaFin.TabIndex = 21;
+            dtpFechaFin.Value = new DateTime(2026, 7, 23, 20, 38, 4, 0);
+            dtpFechaFin.Visible = false;
+            // 
+            // lblFechaFin
+            // 
+            lblFechaFin.AutoSize = true;
+            lblFechaFin.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFechaFin.Location = new Point(724, 38);
+            lblFechaFin.Name = "lblFechaFin";
+            lblFechaFin.Size = new Size(52, 21);
+            lblFechaFin.TabIndex = 22;
+            lblFechaFin.Text = "Hasta:";
+            lblFechaFin.Visible = false;
             // 
             // frmReportes
             // 
@@ -173,6 +202,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 244, 246);
             ClientSize = new Size(1152, 452);
+            Controls.Add(lblFechaFin);
+            Controls.Add(dtpFechaFin);
             Controls.Add(cmbTipoReporte);
             Controls.Add(lblTipoReporte);
             Controls.Add(dtpFechaCorte);
@@ -203,5 +234,7 @@
         private DateTimePicker dtpFechaCorte;
         private Label lblTipoReporte;
         private ComboBox cmbTipoReporte;
+        private DateTimePicker dtpFechaFin;
+        private Label lblFechaFin;
     }
 }

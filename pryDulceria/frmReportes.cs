@@ -39,6 +39,9 @@ namespace pryDulceria
             {
                 reportes.Fechacorte = dtpFechaCorte.Value;
                 reportes.Tiporeporte = cmbTipoReporte.SelectedItem.ToString();
+                reportes.Fechafin = dtpFechaFin.Value;
+
+
                 CargarGrid();
             }
             else
@@ -49,8 +52,27 @@ namespace pryDulceria
 
         private void btnPdf_Click(object sender, EventArgs e)
         {
-            reportes= new clsReportes();
+            reportes = new clsReportes();
             reportes.exportarPDF(dgvReportes.DataSource as DataTable, cmbTipoReporte.SelectedItem.ToString(), "Reporte.pdf");
+        }
+
+        private void cmbTipoReporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Verificamos qué opción eligió el usuario
+            string opcionSeleccionada = cmbTipoReporte.SelectedItem.ToString();
+
+            // Si la opción es el reporte por rango/mensual, mostramos el segundo calendario
+            if (opcionSeleccionada == "Ventas semanales/mensuales")
+            {
+                dtpFechaFin.Visible = true;
+                lblFechaFin.Visible = true; 
+            }
+            else
+            {
+                
+                dtpFechaFin.Visible = false;
+                lblFechaFin.Visible = false;
+            }
         }
     }
 }
