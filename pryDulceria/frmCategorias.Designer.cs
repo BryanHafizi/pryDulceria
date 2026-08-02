@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             dgvCategorias = new DataGridView();
             txtBuscar = new TextBox();
@@ -62,15 +62,15 @@
             dgvCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCategorias.BackgroundColor = Color.White;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCategorias.Location = new Point(600, 125);
+            dgvCategorias.Location = new Point(25, 233);
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.ReadOnly = true;
             dgvCategorias.RowHeadersVisible = false;
             dgvCategorias.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Padding = new Padding(3);
-            dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategorias.Size = new Size(650, 400);
+            dgvCategorias.Size = new Size(600, 300);
             dgvCategorias.TabIndex = 40;
             dgvCategorias.CellClick += dgvCategorias_CellClick;
             // 
@@ -78,7 +78,7 @@
             // 
             txtBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(641, 85);
+            txtBuscar.Location = new Point(66, 192);
             txtBuscar.Margin = new Padding(3, 4, 3, 4);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar categoria";
@@ -91,10 +91,10 @@
             btnNuevo.BackColor = Color.FromArgb(30, 41, 59);
             btnNuevo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnNuevo.ForeColor = Color.White;
-            btnNuevo.Location = new Point(25, 88);
+            btnNuevo.Location = new Point(25, 540);
             btnNuevo.Margin = new Padding(3, 4, 3, 4);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(150, 51);
+            btnNuevo.Size = new Size(150, 50);
             btnNuevo.TabIndex = 31;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
@@ -105,10 +105,10 @@
             btnEliminar.BackColor = Color.FromArgb(108, 117, 125);
             btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(203, 88);
+            btnEliminar.Location = new Point(345, 540);
             btnEliminar.Margin = new Padding(3, 4, 3, 4);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(150, 51);
+            btnEliminar.Size = new Size(150, 50);
             btnEliminar.TabIndex = 33;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(25, 187);
+            lblNombre.Location = new Point(25, 142);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(231, 28);
             lblNombre.TabIndex = 34;
@@ -128,7 +128,7 @@
             // 
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombre.Location = new Point(262, 187);
+            txtNombre.Location = new Point(300, 140);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(260, 34);
             txtNombre.TabIndex = 35;
@@ -139,10 +139,10 @@
             btnGuardar.BackColor = Color.FromArgb(30, 41, 59);
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(154, 284);
+            btnGuardar.Location = new Point(185, 540);
             btnGuardar.Margin = new Padding(3, 4, 3, 4);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(150, 51);
+            btnGuardar.Size = new Size(150, 50);
             btnGuardar.TabIndex = 36;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -151,7 +151,7 @@
             // pcbBuscar
             // 
             pcbBuscar.Image = Properties.Resources.buscar;
-            pcbBuscar.Location = new Point(600, 84);
+            pcbBuscar.Location = new Point(25, 192);
             pcbBuscar.Name = "pcbBuscar";
             pcbBuscar.Size = new Size(35, 35);
             pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -162,7 +162,7 @@
             // 
             lblListaCategoria.AutoSize = true;
             lblListaCategoria.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblListaCategoria.Location = new Point(600, 25);
+            lblListaCategoria.Location = new Point(25, 80);
             lblListaCategoria.Name = "lblListaCategoria";
             lblListaCategoria.Size = new Size(254, 38);
             lblListaCategoria.TabIndex = 41;
@@ -173,7 +173,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 246, 249);
-            ClientSize = new Size(1317, 603);
+            ClientSize = new Size(682, 603);
             Controls.Add(lblListaCategoria);
             Controls.Add(pcbBuscar);
             Controls.Add(btnGuardar);
