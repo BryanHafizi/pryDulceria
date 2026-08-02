@@ -8,6 +8,15 @@ namespace pryDulceria
 {
     internal class clsValidaciones
     {
+        // SOLO ALFANUMÉRICO (Para Nombres de Productos, Direcciones, etc.)
+        public static void Alfanumerico(KeyPressEventArgs e)
+        {
+            // Permite letras, números, teclas de control y espacios en blanco
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true; // Bloquea caracteres especiales raros (como @, %, etc.)
+            }
+        }
         //SOLO NÚMEROS ENTEROS (Para Cantidades, Stock, Teléfonos)
         public static void SoloNumeros(KeyPressEventArgs e)
         {

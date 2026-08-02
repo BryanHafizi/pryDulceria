@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             dgvCategorias = new DataGridView();
             txtBuscar = new TextBox();
@@ -48,7 +48,7 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = Color.Black;
-            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Location = new Point(11, 9);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(224, 54);
             lblTitulo.TabIndex = 16;
@@ -63,17 +63,16 @@
             dgvCategorias.BackgroundColor = Color.White;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCategorias.Location = new Point(600, 125);
-            dgvCategorias.Margin = new Padding(3, 2, 3, 2);
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.ReadOnly = true;
             dgvCategorias.RowHeadersVisible = false;
             dgvCategorias.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Padding = new Padding(3);
-            dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Padding = new Padding(3);
+            dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCategorias.Size = new Size(650, 400);
             dgvCategorias.TabIndex = 40;
-            dgvCategorias.CellContentClick += dgvCategorias_CellContentClick;
+            dgvCategorias.CellClick += dgvCategorias_CellClick;
             // 
             // txtBuscar
             // 
@@ -95,7 +94,7 @@
             btnNuevo.Location = new Point(25, 88);
             btnNuevo.Margin = new Padding(3, 4, 3, 4);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(150, 50);
+            btnNuevo.Size = new Size(150, 51);
             btnNuevo.TabIndex = 31;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
@@ -109,7 +108,7 @@
             btnEliminar.Location = new Point(203, 88);
             btnEliminar.Margin = new Padding(3, 4, 3, 4);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(150, 50);
+            btnEliminar.Size = new Size(150, 51);
             btnEliminar.TabIndex = 33;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
@@ -119,7 +118,7 @@
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(25, 186);
+            lblNombre.Location = new Point(25, 187);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(231, 28);
             lblNombre.TabIndex = 34;
@@ -129,10 +128,11 @@
             // 
             txtNombre.BorderStyle = BorderStyle.FixedSingle;
             txtNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombre.Location = new Point(262, 186);
+            txtNombre.Location = new Point(262, 187);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(260, 34);
             txtNombre.TabIndex = 35;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // btnGuardar
             // 
@@ -142,7 +142,7 @@
             btnGuardar.Location = new Point(154, 284);
             btnGuardar.Margin = new Padding(3, 4, 3, 4);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(150, 50);
+            btnGuardar.Size = new Size(150, 51);
             btnGuardar.TabIndex = 36;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -173,7 +173,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 246, 249);
-            ClientSize = new Size(1316, 603);
+            ClientSize = new Size(1317, 603);
             Controls.Add(lblListaCategoria);
             Controls.Add(pcbBuscar);
             Controls.Add(btnGuardar);

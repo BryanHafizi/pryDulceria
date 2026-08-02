@@ -61,7 +61,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT Id_proveedor AS Id,Nombre AS nom,Ap AS a_p,AM AS a_m,Tel AS telf,Tel_secundario AS tel_sec FROM tblproveedor;";
+                    string sql = "SELECT Id_proveedor AS Id,Nombre AS nom,Ap AS a_p,AM AS a_m,Tel AS telf,Tel_secundario AS tel_sec FROM tblproveedor WHERE Nombre LIKE @nombre;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
                         consultar.Parameters.AddWithValue("@nombre", "%" + Nombre + "%");

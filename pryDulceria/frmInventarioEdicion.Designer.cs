@@ -55,6 +55,7 @@
             btnGuardar.TabIndex = 0;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // pcbEditar
             // 
@@ -74,6 +75,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(260, 34);
             txtNombre.TabIndex = 6;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // lblCategoria
             // 
@@ -94,6 +96,7 @@
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(260, 34);
             txtPrecio.TabIndex = 12;
+            txtPrecio.KeyPress += txtPrecio_KeyPress;
             // 
             // lblPrecio
             // 
@@ -114,6 +117,7 @@
             txtStock.Name = "txtStock";
             txtStock.Size = new Size(260, 34);
             txtStock.TabIndex = 14;
+            txtStock.KeyPress += txtStock_KeyPress;
             // 
             // lblStock
             // 
@@ -139,6 +143,7 @@
             // 
             // cmbCategoria
             // 
+            cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Location = new Point(267, 138);
             cmbCategoria.Name = "cmbCategoria";
@@ -153,6 +158,7 @@
             txtMargenGanancia.Name = "txtMargenGanancia";
             txtMargenGanancia.Size = new Size(260, 34);
             txtMargenGanancia.TabIndex = 17;
+            txtMargenGanancia.TextChanged += txtMargenGanancia_TextChanged;
             // 
             // lblMargenGanancia
             // 
@@ -173,6 +179,7 @@
             txtPrecioVenta.Name = "txtPrecioVenta";
             txtPrecioVenta.Size = new Size(260, 34);
             txtPrecioVenta.TabIndex = 19;
+            txtPrecioVenta.KeyPress += txtPrecioVenta_KeyPress;
             // 
             // lblPrecioVenta
             // 

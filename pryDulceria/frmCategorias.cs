@@ -54,17 +54,14 @@ namespace pryDulceria
 
             txtNombre.Focus();
         }
-
-        private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-
                 idCategoriaSeleccionada = Convert.ToInt32(dgvCategorias.Rows[e.RowIndex].Cells[0].Value);
-                txtNombre.Text = dgvCategorias.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtNombre.Text = Convert.ToString(dgvCategorias.Rows[e.RowIndex].Cells[1].Value);
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (idCategoriaSeleccionada == 0)
@@ -73,7 +70,6 @@ namespace pryDulceria
                 return;
             }
             DialogResult respuesta = MessageBox.Show("¿Estás seguro de que deseas eliminar esta categoría?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
             if (respuesta == DialogResult.Yes)
             {
                 try
@@ -89,14 +85,11 @@ namespace pryDulceria
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
-
         private void frmCategorias_Load(object sender, EventArgs e)
         {
             CargarGrid();
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
@@ -130,6 +123,11 @@ namespace pryDulceria
                 MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+        //Validaciones para que no se guarden categorías vacías
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
         }
     }
 }
