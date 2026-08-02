@@ -152,7 +152,7 @@
             // 
             // pnlContenedor
             // 
-            pnlContenedor.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pnlContenedor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlContenedor.AutoSize = true;
             pnlContenedor.BackColor = Color.White;
             pnlContenedor.BorderStyle = BorderStyle.FixedSingle;

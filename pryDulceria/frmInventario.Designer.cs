@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             txtBuscar = new TextBox();
             pcbInventario = new PictureBox();
             btnEliminar = new Button();
@@ -52,6 +52,7 @@
             txtBuscar.PlaceholderText = "Buscar Producto";
             txtBuscar.Size = new Size(600, 34);
             txtBuscar.TabIndex = 0;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // pcbInventario
             // 
@@ -77,6 +78,7 @@
             btnEliminar.TabIndex = 4;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnEditar
             // 
@@ -91,6 +93,7 @@
             btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnNuevo
             // 
@@ -131,8 +134,8 @@
             dgvInventario.ReadOnly = true;
             dgvInventario.RowHeadersVisible = false;
             dgvInventario.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Padding = new Padding(3);
-            dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvInventario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInventario.Size = new Size(900, 350);
             dgvInventario.TabIndex = 1;

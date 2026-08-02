@@ -92,7 +92,7 @@ namespace pryDulceria
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtNombre.Text))
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 MessageBox.Show("¡Ingrese un nombre valido!.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -122,6 +122,12 @@ namespace pryDulceria
             {
                 MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+        //Validaciones para que no se guarden categorías vacías
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
         }
     }
 }
