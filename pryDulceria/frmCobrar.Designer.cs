@@ -79,7 +79,7 @@
             txtMontoRecibido.ForeColor = Color.Black;
             txtMontoRecibido.Location = new Point(300, 200);
             txtMontoRecibido.Name = "txtMontoRecibido";
-            txtMontoRecibido.Size = new Size(243, 34);
+            txtMontoRecibido.Size = new Size(260, 34);
             txtMontoRecibido.TabIndex = 1;
             txtMontoRecibido.TextChanged += txtMontoRecibido_TextChanged;
             txtMontoRecibido.KeyPress += txtMontoRecibido_KeyPress;
@@ -127,7 +127,7 @@
             txtCambio.ForeColor = Color.Black;
             txtCambio.Location = new Point(300, 250);
             txtCambio.Name = "txtCambio";
-            txtCambio.Size = new Size(243, 34);
+            txtCambio.Size = new Size(260, 34);
             txtCambio.TabIndex = 2;
             // 
             // txtTotal
@@ -137,14 +137,14 @@
             txtTotal.ForeColor = Color.Black;
             txtTotal.Location = new Point(300, 150);
             txtTotal.Name = "txtTotal";
-            txtTotal.Size = new Size(243, 34);
+            txtTotal.Size = new Size(260, 34);
             txtTotal.TabIndex = 0;
             // 
             // frmCobrar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(243, 244, 246);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(632, 453);
             Controls.Add(txtTotal);
             Controls.Add(txtCambio);

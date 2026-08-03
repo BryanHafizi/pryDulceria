@@ -62,7 +62,7 @@
             // 
             btnAcceder.BackColor = Color.FromArgb(30, 41, 59);
             btnAcceder.FlatStyle = FlatStyle.Flat;
-            btnAcceder.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAcceder.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAcceder.ForeColor = Color.White;
             btnAcceder.Location = new Point(150, 380);
             btnAcceder.Name = "btnAcceder";
@@ -87,7 +87,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(243, 244, 246);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(432, 503);
             Controls.Add(pcbLogo);
             Controls.Add(btnAcceder);
