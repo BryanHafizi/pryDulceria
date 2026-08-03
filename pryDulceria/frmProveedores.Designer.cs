@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dgvProvedores = new DataGridView();
             txtBuscar = new TextBox();
             pbProveedores = new PictureBox();
@@ -56,11 +56,11 @@
             dgvProvedores.ReadOnly = true;
             dgvProvedores.RowHeadersVisible = false;
             dgvProvedores.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Padding = new Padding(3);
-            dgvProvedores.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvProvedores.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvProvedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProvedores.Size = new Size(900, 350);
-            dgvProvedores.TabIndex = 4;
+            dgvProvedores.TabIndex = 1;
             // 
             // txtBuscar
             // 
@@ -94,7 +94,7 @@
             btnEliminar.Location = new Point(670, 480);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(150, 50);
-            btnEliminar.TabIndex = 3;
+            btnEliminar.TabIndex = 4;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
             btnEliminar.Click += btnEliminar_Click;
@@ -109,7 +109,7 @@
             btnEditar.Location = new Point(510, 480);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(150, 50);
-            btnEditar.TabIndex = 2;
+            btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
             btnEditar.Click += btnEditar_Click;
@@ -124,7 +124,7 @@
             btnNuevo.Location = new Point(350, 480);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(150, 50);
-            btnNuevo.TabIndex = 1;
+            btnNuevo.TabIndex = 2;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
             btnNuevo.Click += btnNuevo_Click;
@@ -154,7 +154,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(243, 244, 246);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(1316, 603);
             Controls.Add(pcbBuscar);
             Controls.Add(dgvProvedores);

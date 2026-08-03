@@ -166,7 +166,7 @@
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = Color.FromArgb(243, 244, 246);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(1348, 721);
             Controls.Add(pnlContenedor);
             Controls.Add(pnlMenu);

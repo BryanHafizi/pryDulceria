@@ -53,7 +53,7 @@
             txtAP.MaxLength = 50;
             txtAP.Name = "txtAP";
             txtAP.Size = new Size(260, 34);
-            txtAP.TabIndex = 55;
+            txtAP.TabIndex = 1;
             txtAP.KeyPress += txtAP_KeyPress;
             // 
             // lblAP
@@ -76,7 +76,7 @@
             txtNombre.MaxLength = 50;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(260, 34);
-            txtNombre.TabIndex = 53;
+            txtNombre.TabIndex = 0;
             txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // btnAceptar
@@ -88,7 +88,7 @@
             btnAceptar.Location = new Point(350, 350);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(150, 50);
-            btnAceptar.TabIndex = 51;
+            btnAceptar.TabIndex = 5;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = false;
             btnAceptar.Click += btnGuardar_Click;
@@ -135,7 +135,7 @@
             txtTelSecundario.MaxLength = 10;
             txtTelSecundario.Name = "txtTelSecundario";
             txtTelSecundario.Size = new Size(260, 34);
-            txtTelSecundario.TabIndex = 59;
+            txtTelSecundario.TabIndex = 4;
             txtTelSecundario.KeyPress += txtTelSecundario_KeyPress;
             // 
             // lblTelefonoSecundario
@@ -158,7 +158,7 @@
             txtTel.MaxLength = 10;
             txtTel.Name = "txtTel";
             txtTel.Size = new Size(260, 34);
-            txtTel.TabIndex = 63;
+            txtTel.TabIndex = 3;
             txtTel.KeyPress += txtTel_KeyPress;
             // 
             // lblTel
@@ -181,7 +181,7 @@
             txtAM.MaxLength = 50;
             txtAM.Name = "txtAM";
             txtAM.Size = new Size(260, 34);
-            txtAM.TabIndex = 61;
+            txtAM.TabIndex = 2;
             txtAM.KeyPress += txtAM_KeyPress;
             // 
             // lblAM
@@ -199,7 +199,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(243, 244, 246);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(632, 453);
             Controls.Add(txtTel);
             Controls.Add(lblTel);

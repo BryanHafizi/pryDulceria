@@ -70,8 +70,8 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategorias.Size = new Size(600, 300);
-            dgvCategorias.TabIndex = 40;
+            dgvCategorias.Size = new Size(650, 400);
+            dgvCategorias.TabIndex = 1;
             dgvCategorias.CellClick += dgvCategorias_CellClick;
             // 
             // txtBuscar
@@ -83,7 +83,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar categoria";
             txtBuscar.Size = new Size(500, 34);
-            txtBuscar.TabIndex = 30;
+            txtBuscar.TabIndex = 0;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // btnNuevo
@@ -94,8 +94,8 @@
             btnNuevo.Location = new Point(25, 540);
             btnNuevo.Margin = new Padding(3, 4, 3, 4);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(150, 50);
-            btnNuevo.TabIndex = 31;
+            btnNuevo.Size = new Size(150, 51);
+            btnNuevo.TabIndex = 2;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
             btnNuevo.Click += btnNuevo_Click;
@@ -108,8 +108,8 @@
             btnEliminar.Location = new Point(345, 540);
             btnEliminar.Margin = new Padding(3, 4, 3, 4);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(150, 50);
-            btnEliminar.TabIndex = 33;
+            btnEliminar.Size = new Size(150, 51);
+            btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = false;
             btnEliminar.Click += btnEliminar_Click;
@@ -131,7 +131,7 @@
             txtNombre.Location = new Point(300, 140);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(260, 34);
-            txtNombre.TabIndex = 35;
+            txtNombre.TabIndex = 3;
             txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // btnGuardar
@@ -142,8 +142,8 @@
             btnGuardar.Location = new Point(185, 540);
             btnGuardar.Margin = new Padding(3, 4, 3, 4);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(150, 50);
-            btnGuardar.TabIndex = 36;
+            btnGuardar.Size = new Size(150, 51);
+            btnGuardar.TabIndex = 4;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;

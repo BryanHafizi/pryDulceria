@@ -96,6 +96,7 @@
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(260, 34);
             txtPrecio.TabIndex = 2;
+            txtPrecio.TabIndex = 2;
             txtPrecio.TextChanged += txtPrecio_TextChanged;
             txtPrecio.KeyPress += txtPrecio_KeyPress;
             // 
@@ -180,6 +181,7 @@
             txtPrecioVenta.Location = new Point(267, 288);
             txtPrecioVenta.Name = "txtPrecioVenta";
             txtPrecioVenta.Size = new Size(260, 34);
+            txtPrecioVenta.TabIndex = 4;
             txtPrecioVenta.TabIndex = 4;
             txtPrecioVenta.TextChanged += txtPrecioVenta_TextChanged;
             txtPrecioVenta.KeyPress += txtPrecioVenta_KeyPress;

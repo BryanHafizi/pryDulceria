@@ -71,7 +71,7 @@
             btnCobrar.Location = new Point(940, 530);
             btnCobrar.Name = "btnCobrar";
             btnCobrar.Size = new Size(150, 50);
-            btnCobrar.TabIndex = 1;
+            btnCobrar.TabIndex = 2;
             btnCobrar.Text = "Cobrar";
             btnCobrar.UseVisualStyleBackColor = false;
             btnCobrar.Click += btnCobrar_Click;
@@ -86,7 +86,7 @@
             btnCancelar.Location = new Point(1100, 530);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 50);
-            btnCancelar.TabIndex = 0;
+            btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
@@ -111,7 +111,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar Producto";
             txtBuscar.Size = new Size(450, 34);
-            txtBuscar.TabIndex = 13;
+            txtBuscar.TabIndex = 0;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // dgvCarrito
@@ -211,7 +211,7 @@
             dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProductos.Size = new Size(500, 350);
-            dgvProductos.TabIndex = 31;
+            dgvProductos.TabIndex = 1;
             dgvProductos.CellDoubleClick += dgvProductos_CellDoubleClick;
             // 
             // lblDetalleVenta
@@ -261,7 +261,7 @@
             // frmVentas
             // 
             AutoScaleMode = AutoScaleMode.None;
-            BackColor = Color.FromArgb(243, 244, 246);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(1316, 603);
             ControlBox = false;
             Controls.Add(pcbBuscar);

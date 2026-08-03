@@ -298,7 +298,7 @@
             // frmCompras
             // 
             AutoScaleMode = AutoScaleMode.None;
-            BackColor = Color.FromArgb(243, 244, 246);
+            BackColor = Color.FromArgb(244, 246, 249);
             ClientSize = new Size(1316, 603);
             Controls.Add(cmbProveedor);
             Controls.Add(lblProveedor);
