@@ -66,54 +66,65 @@ namespace pryDulceria
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             try
             {
-                compras.ProductoBuscar = txtBuscar.Text;
+                string buscado = txtBuscar.Text.Trim();
+                compras.ProductoBuscar = buscado;
                 dgvProductos.DataSource = compras.ConsultarCoincidenciasProductos();
                 dgvProductos.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvProductos.Columns["Costo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvProductos.Columns["Precio"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvProductos.Columns["Stock"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                if (!string.IsNullOrEmpty(buscado))
+                {
+                    foreach (DataGridViewRow fila in dgvProductos.Rows)
+                    {
+                        string cod = fila.Cells["Codigo"].Value?.ToString();
+                        if (!string.IsNullOrEmpty(cod) && cod == buscado)
+                        {
+                            AgregarProductoAlCarrito(fila);
+                            txtBuscar.Clear(); // Borramos y reiniciamos búsqueda para el próximo scan
+                            return;
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        // Método para agregar desde Doble Clic O desde el Escáner:
+        private void AgregarProductoAlCarrito(DataGridViewRow filaProducto)
         {
-            if (e.RowIndex < 0) return;//Solucion al error con el column header
+            string id = filaProducto.Cells["Id"].Value.ToString();
+            string nombre = filaProducto.Cells["Nombre"].Value.ToString();
+            decimal costo = Convert.ToDecimal(filaProducto.Cells["Costo"].Value);
+
+            bool existeEnCarrito = false;
+
+            foreach (DataGridViewRow fila in dgvCompras.Rows)
             {
-                // Extraemos los datos del producto seleccionado
-                string id = dgvProductos.CurrentRow.Cells["Id"].Value.ToString();
-                string nombre = dgvProductos.CurrentRow.Cells["Nombre"].Value.ToString();
-                decimal costo = Convert.ToDecimal(dgvProductos.CurrentRow.Cells["Costo"].Value);
-
-                bool existeEnCarrito = false;
-
-                // Buscamos si ya lo agregamos antes al carrito
-                foreach (DataGridViewRow fila in dgvCompras.Rows)
+                if (fila.Cells["IdProducto"].Value.ToString() == id)
                 {
-                    if (fila.Cells["IdProducto"].Value.ToString() == id)
-                    {
-                        // ASÍ DEBE QUEDAR:
-                        int cantActual = Convert.ToInt32(fila.Cells["Cantidad"].Value);
-                        decimal costoActualEnCarrito = Convert.ToDecimal(fila.Cells["Costo"].Value);
-                        fila.Cells["Cantidad"].Value = cantActual + 1;
-                        fila.Cells["Subtotal"].Value = compras.CalcularSubtotalProducto(cantActual + 1, costoActualEnCarrito);
-                        existeEnCarrito = true;
-                        break;
-                    }
+                    int cantActual = Convert.ToInt32(fila.Cells["Cantidad"].Value);
+                    decimal costoActualEnCarrito = Convert.ToDecimal(fila.Cells["Costo"].Value);
+                    fila.Cells["Cantidad"].Value = cantActual + 1;
+                    fila.Cells["Subtotal"].Value = compras.CalcularSubtotalProducto(cantActual + 1, costoActualEnCarrito);
+                    existeEnCarrito = true;
+                    break;
                 }
-
-                // Si no existe, lo agregamos como fila nueva
-                if (!existeEnCarrito)
-                {
-                    dgvCompras.Rows.Add(id, nombre, costo, 1, costo);
-                }
-
-                CalcularTotal();
             }
 
+            if (!existeEnCarrito)
+            {
+                dgvCompras.Rows.Add(id, nombre, costo, 1, costo);
+            }
+
+            CalcularTotal();
+        }
+        private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            AgregarProductoAlCarrito(dgvProductos.Rows[e.RowIndex]);
         }
 
         // Si editas la cantidad manual en el carrito, se debe recalcular (necesita el evento CellValueChanged del dgvCompras)

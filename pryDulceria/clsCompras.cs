@@ -47,7 +47,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT Id_producto AS Id, Nombre, Costo, Precio, Stock FROM tblproductos WHERE Nombre LIKE @nombre;";
+                    string sql = "SELECT Id_producto AS Id, codigo_barras AS Codigo, Nombre, Costo, Precio, Stock FROM tblproductos WHERE Nombre LIKE @nombre OR codigo_barras LIKE @nombre;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
                         consultar.Parameters.AddWithValue("@nombre", "%" + ProductoBuscar + "%");

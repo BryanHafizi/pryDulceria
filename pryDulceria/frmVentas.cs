@@ -47,58 +47,75 @@ namespace pryDulceria
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             try
             {
-                ventas.ProductoBuscar = txtBuscar.Text;
+                string buscado = txtBuscar.Text.Trim();
+                ventas.ProductoBuscar = buscado;
                 dgvProductos.DataSource = ventas.ConsultarCoincidenciasProductos();
                 dgvProductos.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvProductos.Columns["Precio"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvProductos.Columns["Stock"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                if (!string.IsNullOrEmpty(buscado))
+                {
+                    foreach (DataGridViewRow fila in dgvProductos.Rows)
+                    {
+                        string cod = fila.Cells["Codigo"].Value?.ToString();
+                        // Si el texto de búsqueda es idéntico a un código de barras real:
+                        if (!string.IsNullOrEmpty(cod) && cod == buscado)
+                        {
+                            AgregarProductoAlCarrito(fila);
+                            txtBuscar.Clear(); // Limpiamos para estar listos para el siguiente escaneo
+                            return;
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+        // Método para agregar desde Doble Clic O desde el Escáner:
+        private void AgregarProductoAlCarrito(DataGridViewRow filaProducto)
+        {
+            string id = filaProducto.Cells["Id"].Value.ToString();
+            string nombre = filaProducto.Cells["Nombre"].Value.ToString();
+            decimal precio = Convert.ToDecimal(filaProducto.Cells["Precio"].Value);
+            int stockDisponible = Convert.ToInt32(filaProducto.Cells["Stock"].Value);
+
+            bool existeEnCarrito = false;
+
+            // Buscamos si ya lo agregamos antes al carrito
+            foreach (DataGridViewRow fila in dgvCarrito.Rows)
+            {
+                if (fila.Cells["IdProducto"].Value.ToString() == id)
+                {
+                    int cantActual = Convert.ToInt32(fila.Cells["Cantidad"].Value);
+                    if (cantActual + 1 <= stockDisponible)
+                    {
+                        fila.Cells["Cantidad"].Value = cantActual + 1;
+                        fila.Cells["Subtotal"].Value = ventas.CalcularSubtotalProducto(cantActual + 1, precio);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay suficiente stock.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    existeEnCarrito = true;
+                    break;
+                }
+            }
+
+            // Si no existe, lo agregamos como fila nueva
+            if (!existeEnCarrito && stockDisponible > 0)
+            {
+                dgvCarrito.Rows.Add(id, nombre, precio, 1, precio);
+            }
+
+            CalcularTotal();
+        }
 
         private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;//Solucion al error con el column header
-            {
-                // Extraemos los datos del producto seleccionado
-                string id = dgvProductos.CurrentRow.Cells["Id"].Value.ToString();
-                string nombre = dgvProductos.CurrentRow.Cells["Nombre"].Value.ToString();
-                decimal precio = Convert.ToDecimal(dgvProductos.CurrentRow.Cells["Precio"].Value);
-                int stockDisponible = Convert.ToInt32(dgvProductos.CurrentRow.Cells["Stock"].Value);
-
-                bool existeEnCarrito = false;
-
-                // Buscamos si ya lo agregamos antes al carrito
-                foreach (DataGridViewRow fila in dgvCarrito.Rows)
-                {
-                    if (fila.Cells["IdProducto"].Value.ToString() == id)
-                    {
-                        int cantActual = Convert.ToInt32(fila.Cells["Cantidad"].Value);
-                        if (cantActual + 1 <= stockDisponible)
-                        {
-                            fila.Cells["Cantidad"].Value = cantActual + 1;
-                            fila.Cells["Subtotal"].Value = ventas.CalcularSubtotalProducto(cantActual + 1, precio);
-                        }
-                        else
-                        {
-                            MessageBox.Show("No hay suficiente stock.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        existeEnCarrito = true;
-                        break;
-                    }
-                }
-
-                // Si no existe, lo agregamos como fila nueva
-                if (!existeEnCarrito && stockDisponible > 0)
-                {
-                    dgvCarrito.Rows.Add(id, nombre, precio, 1, precio);
-                }
-
-                CalcularTotal();
-            }
+            if (e.RowIndex < 0) return; // Solución al error con el column header
+            AgregarProductoAlCarrito(dgvProductos.Rows[e.RowIndex]);
         }
 
         // Si editas la cantidad manual en el carrito, se debe recalcular (necesita el evento CellValueChanged del dgvCarrito)
