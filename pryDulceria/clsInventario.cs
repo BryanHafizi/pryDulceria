@@ -35,8 +35,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT p.Id_producto AS Id, p.Nombre AS nom, p.Costo AS costo, p.Precio AS precio_venta, p.Stock AS stock, c.categoria AS Categoria FROM tblproductos p INNER JOIN tblcategorias c ON p.id_categoria = c.id_categoria;";
-
+                    string sql = "SELECT p.Id_producto AS Id, p.Nombre AS Nombre, p.Costo AS Costo, p.Precio AS 'Precio de venta', p.Stock AS Stock, c.categoria AS Categoria FROM tblproductos p INNER JOIN tblcategorias c ON p.id_categoria = c.id_categoria;";
                     using (var consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
@@ -59,7 +58,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT p.Id_producto AS Id, p.Nombre AS nom, p.Costo AS costo, p.Precio AS precio_venta, p.Stock AS stock, c.categoria AS Categoria FROM tblproductos p INNER JOIN tblcategorias c ON p.id_categoria = c.id_categoria WHERE p.Nombre LIKE @nombre;";
+                    string sql = "SELECT p.Id_producto AS Id, p.Nombre AS Nombre, p.Costo AS Costo, p.Precio AS 'Precio de venta', p.Stock AS Stock, c.categoria AS Categoria FROM tblproductos p INNER JOIN tblcategorias c ON p.id_categoria = c.id_categoria WHERE p.Nombre LIKE @nombre;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
                         consultar.Parameters.AddWithValue("@nombre", "%" + nombreProd + "%");

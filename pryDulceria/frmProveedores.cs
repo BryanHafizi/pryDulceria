@@ -26,6 +26,9 @@ namespace pryDulceria
             try
             {
                 dgvProvedores.DataSource = proveedores.CargarDataGrid();
+                dgvProvedores.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProvedores.Columns["Telefono"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProvedores.Columns["Telefono secundario"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {
@@ -41,6 +44,9 @@ namespace pryDulceria
             {
                 proveedores.Nombre = txtBuscar.Text;
                 dgvProvedores.DataSource = proveedores.ConsultarCoincidencias();
+                dgvProvedores.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProvedores.Columns["Telefono"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProvedores.Columns["Telefono secundario"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {

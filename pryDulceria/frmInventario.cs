@@ -24,6 +24,10 @@ namespace pryDulceria
             try
             {
                 dgvInventario.DataSource = inventario.CargarDataGrid();
+                dgvInventario.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvInventario.Columns["Costo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvInventario.Columns["Precio de venta"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvInventario.Columns["Stock"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {
@@ -79,6 +83,10 @@ namespace pryDulceria
             {
                 inventario.NombreProd = txtBuscar.Text;
                 dgvInventario.DataSource = inventario.ConsultarCoincidencias();
+                dgvInventario.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvInventario.Columns["Costo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvInventario.Columns["Precio de venta"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvInventario.Columns["Stock"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {

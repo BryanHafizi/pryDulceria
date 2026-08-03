@@ -135,6 +135,33 @@ namespace pryDulceria
             catch (Exception ex) { throw new Exception("Error: " + ex.Message); }
             return msg;
         }
+        // Verifica si el nombre de usuario ya está ocupado por otra persona
+        public bool ExisteUsuarioRepetido(string usuarioBuscar, int idActual)
+        {
+            bool existe = false;
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    // Checamos si alguien más ya tiene ese nombre
+                    string sql = "SELECT COUNT(*) FROM tblusuarios WHERE vchnombreUsuario = @user AND intIdUsuario != @id;";
+                    using (var comando = new MySqlCommand(sql, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@user", usuarioBuscar.Trim());
+                        comando.Parameters.AddWithValue("@id", idActual);
+
+                        int cantidad = Convert.ToInt32(comando.ExecuteScalar());
+                        if (cantidad > 0)
+                        {
+                            existe = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { throw new Exception("Error al validar usuario: " + ex.Message); }
+            return existe;
+        }
 
         public string Eliminar()
         {

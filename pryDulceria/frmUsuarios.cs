@@ -20,6 +20,7 @@ namespace pryDulceria
             try
             {
                 dgvUsuarios.DataSource = usuarios.CargarDataGrid();
+                dgvUsuarios.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex) 
             {
@@ -35,6 +36,7 @@ namespace pryDulceria
             {
                 usuarios.NombreUsuario = txtBuscar.Text;
                 dgvUsuarios.DataSource = usuarios.ConsultarCoincidencias();
+                dgvUsuarios.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex) 
             { 
@@ -80,6 +82,12 @@ namespace pryDulceria
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            int idSeleccionado = int.Parse(dgvUsuarios.CurrentRow.Cells[0].Value.ToString());
+            if (idSeleccionado == clsInicioSesion.IdUsuarioActual)
+            {
+                MessageBox.Show("No puedes eliminar tu propio usuario mientras tienes una sesión activa.", "Acción Bloqueada", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
             if (dgvUsuarios.CurrentRow != null)
             {
                 var resp = MessageBox.Show("¿Confirmar que deseas eliminar el usuario seleccionado?", "ALERTA!!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);

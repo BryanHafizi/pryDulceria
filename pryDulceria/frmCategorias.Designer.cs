@@ -187,6 +187,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmCategorias";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Módulo de Categorías";
             Load += frmCategorias_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();

@@ -51,8 +51,15 @@ namespace pryDulceria
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //validamos que los campos no esten vacios
+            //validamos q los campos no esten vacios
             if (clsValidaciones.EstaVacio(txtUsuario, "Usuario")) return;
+            //validamos q no se repitan nombres de usuario
+            if (usuarios.ExisteUsuarioRepetido(txtUsuario.Text, idUsuarioModificar))
+            {
+                MessageBox.Show($"El nombre de usuario '{txtUsuario.Text.Trim()}' ya está siendo usado por otra persona.\n\nPor favor, elige un nombre diferente.", "Usuario Repetido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsuario.Focus();
+                return; // Detenemos el guardado aquí
+            }
 
             // Si es un usuario NUEVO (0), la contraseña es 100% obligatoria.
             // Si es EDITAR (1), permitimos que la dejen vacía si no quieren cambiarla.

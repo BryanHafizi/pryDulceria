@@ -28,6 +28,10 @@ namespace pryDulceria
             {
                 compras.ProductoBuscar = ""; // Para que traiga todos al inicio
                 dgvProductos.DataSource = compras.ConsultarCoincidenciasProductos();
+                dgvProductos.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProductos.Columns["Costo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProductos.Columns["Precio"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProductos.Columns["Stock"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {
@@ -64,6 +68,10 @@ namespace pryDulceria
             {
                 compras.ProductoBuscar = txtBuscar.Text;
                 dgvProductos.DataSource = compras.ConsultarCoincidenciasProductos();
+                dgvProductos.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProductos.Columns["Costo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProductos.Columns["Precio"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProductos.Columns["Stock"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {

@@ -25,6 +25,7 @@ namespace pryDulceria
             try
             {
                 dgvCategorias.DataSource = categoria.CargarDataGrid();
+                dgvCategorias.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {
@@ -39,6 +40,7 @@ namespace pryDulceria
             {
                 categoria.Categoria = txtBuscar.Text;
                 dgvCategorias.DataSource = categoria.ConsultarCoincidencias();
+                dgvCategorias.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
             catch (Exception ex)
             {
