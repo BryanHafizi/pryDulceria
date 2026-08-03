@@ -52,7 +52,7 @@
             btnGuardar.Location = new Point(300, 390);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 50);
-            btnGuardar.TabIndex = 0;
+            btnGuardar.TabIndex = 6;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
@@ -74,7 +74,7 @@
             txtNombre.Location = new Point(267, 88);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(260, 34);
-            txtNombre.TabIndex = 6;
+            txtNombre.TabIndex = 0;
             txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // lblCategoria
@@ -95,7 +95,8 @@
             txtPrecio.Location = new Point(267, 188);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(260, 34);
-            txtPrecio.TabIndex = 12;
+            txtPrecio.TabIndex = 2;
+            txtPrecio.TextChanged += txtPrecio_TextChanged;
             txtPrecio.KeyPress += txtPrecio_KeyPress;
             // 
             // lblPrecio
@@ -116,7 +117,7 @@
             txtStock.Location = new Point(267, 338);
             txtStock.Name = "txtStock";
             txtStock.Size = new Size(260, 34);
-            txtStock.TabIndex = 14;
+            txtStock.TabIndex = 5;
             txtStock.KeyPress += txtStock_KeyPress;
             // 
             // lblStock
@@ -148,7 +149,7 @@
             cmbCategoria.Location = new Point(267, 138);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(260, 36);
-            cmbCategoria.TabIndex = 16;
+            cmbCategoria.TabIndex = 1;
             // 
             // txtMargenGanancia
             // 
@@ -157,8 +158,9 @@
             txtMargenGanancia.Location = new Point(267, 238);
             txtMargenGanancia.Name = "txtMargenGanancia";
             txtMargenGanancia.Size = new Size(260, 34);
-            txtMargenGanancia.TabIndex = 17;
+            txtMargenGanancia.TabIndex = 3;
             txtMargenGanancia.TextChanged += txtMargenGanancia_TextChanged;
+            txtMargenGanancia.KeyPress += txtMargenGanancia_KeyPress;
             // 
             // lblMargenGanancia
             // 
@@ -178,7 +180,8 @@
             txtPrecioVenta.Location = new Point(267, 288);
             txtPrecioVenta.Name = "txtPrecioVenta";
             txtPrecioVenta.Size = new Size(260, 34);
-            txtPrecioVenta.TabIndex = 19;
+            txtPrecioVenta.TabIndex = 4;
+            txtPrecioVenta.TextChanged += txtPrecioVenta_TextChanged;
             txtPrecioVenta.KeyPress += txtPrecioVenta_KeyPress;
             // 
             // lblPrecioVenta

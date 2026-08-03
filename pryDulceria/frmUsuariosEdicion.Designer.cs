@@ -49,7 +49,7 @@
             txtPassword.Location = new Point(200, 150);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(260, 34);
-            txtPassword.TabIndex = 46;
+            txtPassword.TabIndex = 1;
             // 
             // lblPassword
             // 
@@ -70,7 +70,7 @@
             txtUsuario.Location = new Point(200, 100);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(260, 34);
-            txtUsuario.TabIndex = 44;
+            txtUsuario.TabIndex = 0;
             // 
             // btnAceptar
             // 
@@ -81,7 +81,7 @@
             btnAceptar.Location = new Point(280, 250);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(150, 50);
-            btnAceptar.TabIndex = 42;
+            btnAceptar.TabIndex = 3;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = false;
             btnAceptar.Click += btnGuardar_Click;
@@ -127,7 +127,7 @@
             cmbRol.Margin = new Padding(3, 4, 3, 4);
             cmbRol.Name = "cmbRol";
             cmbRol.Size = new Size(260, 36);
-            cmbRol.TabIndex = 47;
+            cmbRol.TabIndex = 2;
             // 
             // lblRol
             // 

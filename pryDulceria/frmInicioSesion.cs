@@ -12,7 +12,7 @@ namespace pryDulceria
             try
             {
                 clsInicioSesion login = new clsInicioSesion();
-                login.Usuario = txtUsuario.Text;
+                login.Usuario = txtUsuario.Text.Trim();// el trim es para q se borren los espacios en blanco
                 login.Password = txtContraseña.Text;
 
                 bool resp = login.ValidarAcceso();

@@ -39,18 +39,18 @@
             lblDetalleCompra = new Label();
             dgvProductos = new DataGridView();
             dgvCompras = new DataGridView();
-            IdProducto = new DataGridViewTextBoxColumn();
-            Nombre = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            Subtotal = new DataGridViewTextBoxColumn();
-            Quitar = new DataGridViewButtonColumn();
             txtBuscar = new TextBox();
             btnCancelar = new Button();
             btnComprar = new Button();
             lblTotal = new Label();
             lblProveedor = new Label();
             cmbProveedor = new ComboBox();
+            IdProducto = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            Costo = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Subtotal = new DataGridViewTextBoxColumn();
+            Quitar = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)pcbCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbBuscar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
@@ -139,7 +139,7 @@
             dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProductos.Size = new Size(500, 300);
-            dgvProductos.TabIndex = 41;
+            dgvProductos.TabIndex = 2;
             dgvProductos.CellDoubleClick += dgvProductos_CellDoubleClick;
             // 
             // dgvCompras
@@ -150,7 +150,7 @@
             dgvCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCompras.BackgroundColor = Color.White;
             dgvCompras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCompras.Columns.AddRange(new DataGridViewColumn[] { IdProducto, Nombre, Precio, Cantidad, Subtotal, Quitar });
+            dgvCompras.Columns.AddRange(new DataGridViewColumn[] { IdProducto, Nombre, Costo, Cantidad, Subtotal, Quitar });
             dgvCompras.GridColor = SystemColors.WindowText;
             dgvCompras.Location = new Point(600, 125);
             dgvCompras.Margin = new Padding(3, 2, 3, 2);
@@ -161,61 +161,10 @@
             dgvCompras.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvCompras.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCompras.Size = new Size(650, 400);
-            dgvCompras.TabIndex = 40;
+            dgvCompras.TabIndex = 3;
             dgvCompras.CellContentClick += dgvCompras_CellContentClick;
             dgvCompras.CellValueChanged += dgvCompras_CellValueChanged;
             dgvCompras.EditingControlShowing += dgvCompras_EditingControlShowing;
-            // 
-            // IdProducto
-            // 
-            IdProducto.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            IdProducto.HeaderText = "Id";
-            IdProducto.MinimumWidth = 6;
-            IdProducto.Name = "IdProducto";
-            IdProducto.ReadOnly = true;
-            IdProducto.Width = 51;
-            // 
-            // Nombre
-            // 
-            Nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Nombre.HeaderText = "Producto";
-            Nombre.MinimumWidth = 6;
-            Nombre.Name = "Nombre";
-            Nombre.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            Precio.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Precio.HeaderText = "Costo";
-            Precio.MinimumWidth = 6;
-            Precio.Name = "Precio";
-            Precio.Width = 76;
-            // 
-            // Cantidad
-            // 
-            Cantidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Cantidad.HeaderText = "Cantidad";
-            Cantidad.MinimumWidth = 6;
-            Cantidad.Name = "Cantidad";
-            Cantidad.Width = 98;
-            // 
-            // Subtotal
-            // 
-            Subtotal.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Subtotal.HeaderText = "Subtotal";
-            Subtotal.MinimumWidth = 6;
-            Subtotal.Name = "Subtotal";
-            Subtotal.ReadOnly = true;
-            Subtotal.Width = 94;
-            // 
-            // Quitar
-            // 
-            Quitar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Quitar.HeaderText = "";
-            Quitar.MinimumWidth = 6;
-            Quitar.Name = "Quitar";
-            Quitar.Text = "X";
-            Quitar.Width = 6;
             // 
             // txtBuscar
             // 
@@ -227,7 +176,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar Producto";
             txtBuscar.Size = new Size(450, 34);
-            txtBuscar.TabIndex = 39;
+            txtBuscar.TabIndex = 1;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // btnCancelar
@@ -241,7 +190,7 @@
             btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(150, 50);
-            btnCancelar.TabIndex = 36;
+            btnCancelar.TabIndex = 5;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
@@ -257,7 +206,7 @@
             btnComprar.Margin = new Padding(3, 4, 3, 4);
             btnComprar.Name = "btnComprar";
             btnComprar.Size = new Size(150, 50);
-            btnComprar.TabIndex = 37;
+            btnComprar.TabIndex = 4;
             btnComprar.Text = "Comprar";
             btnComprar.UseVisualStyleBackColor = false;
             btnComprar.Click += btnComprar_Click;
@@ -285,13 +234,66 @@
             // 
             // cmbProveedor
             // 
+            cmbProveedor.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbProveedor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbProveedor.FormattingEnabled = true;
             cmbProveedor.Location = new Point(200, 90);
             cmbProveedor.Margin = new Padding(3, 4, 3, 4);
             cmbProveedor.Name = "cmbProveedor";
             cmbProveedor.Size = new Size(260, 36);
-            cmbProveedor.TabIndex = 47;
+            cmbProveedor.TabIndex = 0;
+            // 
+            // IdProducto
+            // 
+            IdProducto.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            IdProducto.HeaderText = "Id";
+            IdProducto.MinimumWidth = 6;
+            IdProducto.Name = "IdProducto";
+            IdProducto.ReadOnly = true;
+            IdProducto.Width = 51;
+            // 
+            // Nombre
+            // 
+            Nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Nombre.HeaderText = "Producto";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            // 
+            // Costo
+            // 
+            Costo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Costo.HeaderText = "Costo";
+            Costo.MinimumWidth = 6;
+            Costo.Name = "Costo";
+            Costo.Width = 76;
+            // 
+            // Cantidad
+            // 
+            Cantidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.MinimumWidth = 6;
+            Cantidad.Name = "Cantidad";
+            Cantidad.Width = 98;
+            // 
+            // Subtotal
+            // 
+            Subtotal.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Subtotal.HeaderText = "Subtotal";
+            Subtotal.MinimumWidth = 6;
+            Subtotal.Name = "Subtotal";
+            Subtotal.ReadOnly = true;
+            Subtotal.Width = 94;
+            // 
+            // Quitar
+            // 
+            Quitar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Quitar.HeaderText = "";
+            Quitar.MinimumWidth = 6;
+            Quitar.Name = "Quitar";
+            Quitar.Text = "X";
+            Quitar.UseColumnTextForButtonValue = true;
+            Quitar.Width = 6;
             // 
             // frmCompras
             // 
@@ -340,7 +342,7 @@
         private ComboBox cmbProveedor;
         private DataGridViewTextBoxColumn IdProducto;
         private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Precio;
+        private DataGridViewTextBoxColumn Costo;
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn Subtotal;
         private DataGridViewButtonColumn Quitar;

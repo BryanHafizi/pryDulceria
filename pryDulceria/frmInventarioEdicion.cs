@@ -13,6 +13,7 @@ namespace pryDulceria
         int tipoOperacion; // 0 = Nuevo, 1 = Editar
         int idProductoModificar;
         clsInventario inventario = new clsInventario();
+        bool calculandoAutomatico = false; // Candado para evitar bucles de cálculo
 
         //Para un producto nuevo
         public frmInventarioEdicion(int operacion)
@@ -28,12 +29,14 @@ namespace pryDulceria
             lblTitulo.Text = "Agregar Producto";
         }
         //para Editar
-        public frmInventarioEdicion(int operacion, int id, string nombre, float precio, int margenGan, float precioVenta, int stock, string categoria)
+        public frmInventarioEdicion(int operacion, int id, string nombre, float precio, float margenGan, float precioVenta, int stock, string categoria)
         {
             InitializeComponent();
             tipoOperacion = operacion;
             idProductoModificar = id;
             lblTitulo.Text = "Editar Producto";
+
+            CargarCombos(); // Lo subimos aqui para que la categoria si aparezca seleccionada
 
             // Rellenamos las cajas y el combo con info del form principal
             txtNombre.Text = nombre;
@@ -52,13 +55,23 @@ namespace pryDulceria
             if (clsValidaciones.EstaVacio(txtMargenGanancia, "Margen de ganancia")) return;
             if (clsValidaciones.EstaVacio(txtPrecioVenta, "Precio de venta")) return;
             if (clsValidaciones.EstaVacio(txtStock, "Stock del producto")) return;
+
+            float costoVal = float.Parse(txtPrecio.Text);
+            float ventaVal = float.Parse(txtPrecioVenta.Text);
+
+            if (ventaVal <= costoVal)
+            {
+                MessageBox.Show("¡Alerta! El precio de venta no puede ser menor o igual al costo de compra, ya que estarías vendiendo a pérdida o sin ganancia.", "Venta a pérdida detectada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
 
                 inventario.IdProducto = idProductoModificar;
                 inventario.NombreProd = txtNombre.Text;
                 inventario.PrecioProd = float.Parse(txtPrecio.Text);
-                inventario.MargenGanancia = int.Parse(txtMargenGanancia.Text);
+                inventario.MargenGanancia = float.Parse(txtMargenGanancia.Text);
                 inventario.PrecioVentaProd = float.Parse(txtPrecioVenta.Text);
                 inventario.StockProd = int.Parse(txtStock.Text);
                 // Extraemos el ID numérico de la categoría seleccionada
@@ -110,17 +123,44 @@ namespace pryDulceria
         {
             try
             {
-                if (!string.IsNullOrWhiteSpace(txtPrecio.Text) && !string.IsNullOrWhiteSpace(txtMargenGanancia.Text))
+                if (!calculandoAutomatico && !string.IsNullOrWhiteSpace(txtPrecio.Text) && !string.IsNullOrWhiteSpace(txtMargenGanancia.Text))
                 {
+                    calculandoAutomatico = true; // Activamos candado
                     float costo = float.Parse(txtPrecio.Text);
-                    int margen = int.Parse(txtMargenGanancia.Text);
+                    float margen = float.Parse(txtMargenGanancia.Text);
 
                     txtPrecioVenta.Text = inventario.CalcularPrecioSugerido(costo, margen).ToString("0.00");
+                    calculandoAutomatico = false; // Soltamos candado
                 }
             }
             catch
             {
+                calculandoAutomatico = false;
+            }
+        }
 
+        //Calcular el margen de ganancia si se edita el precio de venta manual
+        private void CalcularMargen()
+        {
+            try
+            {
+                if (!calculandoAutomatico && !string.IsNullOrWhiteSpace(txtPrecio.Text) && !string.IsNullOrWhiteSpace(txtPrecioVenta.Text))
+                {
+                    calculandoAutomatico = true; // Activamos candado
+                    float costo = float.Parse(txtPrecio.Text);
+                    float precioVenta = float.Parse(txtPrecioVenta.Text);
+
+                    if (costo > 0)
+                    {
+                        float margen = ((precioVenta - costo) / costo) * 100;
+                        txtMargenGanancia.Text = margen.ToString("0.00");
+                    }
+                    calculandoAutomatico = false; // Soltamos candado
+                }
+            }
+            catch
+            {
+                calculandoAutomatico = false;
             }
         }
 
@@ -130,6 +170,10 @@ namespace pryDulceria
             clsValidaciones.Alfanumerico(e);
         }
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloDecimales(sender, e);
+        }
+        private void txtMargenGanancia_KeyPress(object sender, KeyPressEventArgs e)
         {
             clsValidaciones.SoloDecimales(sender, e);
         }
@@ -145,6 +189,14 @@ namespace pryDulceria
         private void txtMargenGanancia_TextChanged(object sender, EventArgs e)
         {
             CalcularPrecioVenta();
+        }
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            CalcularPrecioVenta();
+        }
+        private void txtPrecioVenta_TextChanged(object sender, EventArgs e)
+        {
+            CalcularMargen();
         }
     }
 }

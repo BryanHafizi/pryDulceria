@@ -19,7 +19,7 @@ namespace pryDulceria
         {
             InitializeComponent();
             tipoOperacion = operacion;
-            idUsuarioModificar = 0; 
+            idUsuarioModificar = 0;
             CargarComboRoles(); // Llenamos el combobox
             lblTitulo.Text = "Agregar Usuario";
         }
@@ -35,7 +35,7 @@ namespace pryDulceria
 
             // Rellenamos las cajas y el combo con info del form principal
             txtUsuario.Text = nombre;
-            txtPassword.Text = pass;
+            txtPassword.Text = ""; // Lo dejamos vacio para no mostrar y q edite en MD5
             cmbRol.Text = rol; // Esto va a seleccionar automáticamente el rol en el combo
         }
 
@@ -43,7 +43,7 @@ namespace pryDulceria
         {
             cmbRol.Items.Clear();
             cmbRol.Items.Add("-- Selecciona un Rol --");
-            cmbRol.Items.Add("Administrador"); 
+            cmbRol.Items.Add("Administrador");
             cmbRol.Items.Add("Cajero");
             // Hacemos que por defecto muestre "-- Selecciona un Rol --"
             cmbRol.SelectedIndex = 0;
@@ -53,7 +53,10 @@ namespace pryDulceria
         {
             //validamos que los campos no esten vacios
             if (clsValidaciones.EstaVacio(txtUsuario, "Usuario")) return;
-            if (clsValidaciones.EstaVacio(txtPassword, "Password")) return;
+
+            // Si es un usuario NUEVO (0), la contraseña es 100% obligatoria.
+            // Si es EDITAR (1), permitimos que la dejen vacía si no quieren cambiarla.
+            if (tipoOperacion == 0 && clsValidaciones.EstaVacio(txtPassword, "Password")) return;
             //
             try
             {
@@ -66,7 +69,7 @@ namespace pryDulceria
 
                 usuarios.IdUsuario = idUsuarioModificar;
                 usuarios.NombreUsuario = txtUsuario.Text;
-                usuarios.Password = txtPassword.Text;
+                usuarios.Password = txtPassword.Text; // Si se quedó vacía, mandará ""
                 usuarios.Rol = cmbRol.Text; // Extraemos el texto del combo seleccionado
 
                 // Llamamos a la clase para que haga el Insert o el Update
@@ -81,13 +84,6 @@ namespace pryDulceria
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            // Cerramos la ventana sin hacer nada
-            DialogResult = DialogResult.Cancel;
-            Close();
         }
     }
 }

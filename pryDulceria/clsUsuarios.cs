@@ -73,7 +73,7 @@ namespace pryDulceria
                         string sqlN = "INSERT INTO tblusuarios(vchnombreUsuario, vchPassword, vchRol) VALUES(@nombre, MD5(@pass), @rol);";
                         using (comando = new MySqlCommand(sqlN, conexion))
                         {
-                            comando.Parameters.AddWithValue("@nombre", NombreUsuario);
+                            comando.Parameters.AddWithValue("@nombre", NombreUsuario.Trim());
                             comando.Parameters.AddWithValue("@pass", Password);
                             comando.Parameters.AddWithValue("@rol", Rol);
                             int filasAfectadas = comando.ExecuteNonQuery();
@@ -89,21 +89,44 @@ namespace pryDulceria
                     }
                     else // Actualizar Registro
                     {
-                        string sqlA = "UPDATE tblusuarios SET vchnombreUsuario = @nombre, vchPassword = MD5(@pass), vchRol = @rol WHERE intIdUsuario = @id;";
-                        using (comando = new MySqlCommand(sqlA, conexion))
+                        // CASO 1: si la caja de contraseña vino vacia No modificamos vchPassword
+                        if (string.IsNullOrWhiteSpace(Password))
                         {
-                            comando.Parameters.AddWithValue("@id", IdUsuario);
-                            comando.Parameters.AddWithValue("@nombre", NombreUsuario);
-                            comando.Parameters.AddWithValue("@pass", Password);
-                            comando.Parameters.AddWithValue("@rol", Rol);
-                            int filasAfectadas = comando.ExecuteNonQuery();
-                            if (filasAfectadas > 0)
+                            string sqlSinPass = "UPDATE tblusuarios SET vchnombreUsuario = @nombre, vchRol = @rol WHERE intIdUsuario = @id;";
+                            using (comando = new MySqlCommand(sqlSinPass, conexion))
                             {
-                                msg = "Registro guardado correctamente";
+                                comando.Parameters.AddWithValue("@id", IdUsuario);
+                                comando.Parameters.AddWithValue("@nombre", NombreUsuario.Trim());
+                                comando.Parameters.AddWithValue("@rol", Rol);
+                                int filasAfectadas = comando.ExecuteNonQuery();
+                                if (filasAfectadas > 0)
+                                {
+                                    msg = "Registro guardado correctamente";
+                                }
+                                else
+                                {
+                                    msg = "Error, Datos no guardados";
+                                }
                             }
-                            else
+                        }
+                        else // CASO 2: si escribieron contraseña nueva
+                        {
+                            string sqlA = "UPDATE tblusuarios SET vchnombreUsuario = @nombre, vchPassword = MD5(@pass), vchRol = @rol WHERE intIdUsuario = @id;";
+                            using (comando = new MySqlCommand(sqlA, conexion))
                             {
-                                msg = "Error, Datos no guardados";
+                                comando.Parameters.AddWithValue("@id", IdUsuario);
+                                comando.Parameters.AddWithValue("@nombre", NombreUsuario.Trim());
+                                comando.Parameters.AddWithValue("@pass", Password);
+                                comando.Parameters.AddWithValue("@rol", Rol);
+                                int filasAfectadas = comando.ExecuteNonQuery();
+                                if (filasAfectadas > 0)
+                                {
+                                    msg = "Registro guardado correctamente";
+                                }
+                                else
+                                {
+                                    msg = "Error, Datos no guardados";
+                                }
                             }
                         }
                     }

@@ -11,8 +11,8 @@ namespace pryDulceria
     {
         //Propiedades de los productos
         private string nombreProd;
-        private float precioProd, precioVentaProd;
-        private int idProducto,idCategoria, margenGanancia, stockProd;
+        private float precioProd, precioVentaProd, margenGanancia;
+        private int idProducto, idCategoria, stockProd;
 
         private MySqlDataAdapter consulta;
         private MySqlCommand comando;
@@ -23,7 +23,7 @@ namespace pryDulceria
         public string NombreProd { get => nombreProd; set => nombreProd = value; }
         public float PrecioProd { get => precioProd; set => precioProd = value; }
         public float PrecioVentaProd { get => precioVentaProd; set => precioVentaProd = value; }
-        public int MargenGanancia { get => margenGanancia; set => margenGanancia = value; }
+        public float MargenGanancia { get => margenGanancia; set => margenGanancia = value; }
         public int StockProd { get => stockProd; set => stockProd = value; }
 
         //Metodo para cargar los datos el DataGrid (dgvInventario)
@@ -156,7 +156,7 @@ namespace pryDulceria
             return msg;
         }
         //Metodo para calcular el precio sugerido
-        public float CalcularPrecioSugerido(float costo, int margen)
+        public float CalcularPrecioSugerido(float costo, float margen)
         {
             return costo + (costo * (margen / 100f));
         }

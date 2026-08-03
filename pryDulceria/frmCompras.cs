@@ -54,15 +54,6 @@ namespace pryDulceria
         {
             decimal total = compras.CalcularTotalCarrito(dgvCompras.Rows);
             lblTotal.Text = "Total a Pagar: $" + total.ToString("0.00");
-
-            if (dgvCompras.Rows.Count > 0)
-            {
-                cmbProveedor.Enabled = false;
-            }
-            else
-            {
-                cmbProveedor.Enabled = true;
-            }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -87,7 +78,7 @@ namespace pryDulceria
                 // Extraemos los datos del producto seleccionado
                 string id = dgvProductos.CurrentRow.Cells["Id"].Value.ToString();
                 string nombre = dgvProductos.CurrentRow.Cells["Nombre"].Value.ToString();
-                decimal precio = Convert.ToDecimal(dgvProductos.CurrentRow.Cells["Precio"].Value);
+                decimal costo = Convert.ToDecimal(dgvProductos.CurrentRow.Cells["Costo"].Value);
 
                 bool existeEnCarrito = false;
 
@@ -96,9 +87,11 @@ namespace pryDulceria
                 {
                     if (fila.Cells["IdProducto"].Value.ToString() == id)
                     {
+                        // ASÍ DEBE QUEDAR:
                         int cantActual = Convert.ToInt32(fila.Cells["Cantidad"].Value);
+                        decimal costoActualEnCarrito = Convert.ToDecimal(fila.Cells["Costo"].Value);
                         fila.Cells["Cantidad"].Value = cantActual + 1;
-                        fila.Cells["Subtotal"].Value = compras.CalcularSubtotalProducto(cantActual + 1, precio);
+                        fila.Cells["Subtotal"].Value = compras.CalcularSubtotalProducto(cantActual + 1, costoActualEnCarrito);
                         existeEnCarrito = true;
                         break;
                     }
@@ -107,19 +100,20 @@ namespace pryDulceria
                 // Si no existe, lo agregamos como fila nueva
                 if (!existeEnCarrito)
                 {
-                    dgvCompras.Rows.Add(id, nombre, precio, 1, precio);
+                    dgvCompras.Rows.Add(id, nombre, costo, 1, costo);
                 }
 
                 CalcularTotal();
             }
+
         }
 
         // Si editas la cantidad manual en el carrito, se debe recalcular (necesita el evento CellValueChanged del dgvCompras)
         private void dgvCompras_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && dgvCompras.Columns[e.ColumnIndex].Name == "Cantidad")
+            if (e.RowIndex >= 0 && (dgvCompras.Columns[e.ColumnIndex].Name == "Cantidad" || dgvCompras.Columns[e.ColumnIndex].Name == "Costo"))
             {
-                decimal precio = Convert.ToDecimal(dgvCompras.Rows[e.RowIndex].Cells["Precio"].Value);
+                decimal precio = Convert.ToDecimal(dgvCompras.Rows[e.RowIndex].Cells["Costo"].Value);
                 int nuevaCant = Convert.ToInt32(dgvCompras.Rows[e.RowIndex].Cells["Cantidad"].Value);
                 // Checamos q no ponga una cantidad nulla o igual a 0
                 if (nuevaCant == 0)
@@ -128,10 +122,10 @@ namespace pryDulceria
                     dgvCompras.Rows[e.RowIndex].Cells["Cantidad"].Value = 1;//le damos valor de 1
                     return;
                 }
-                if(precio == 0) 
+                if (precio == 0)
                 {
-                    MessageBox.Show("Ingresa un precio válido mayor a 0.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    dgvCompras.Rows[e.RowIndex].Cells["Precio"].Value = 1;//le damos valor de 1
+                    MessageBox.Show("Ingresa un coste válido mayor a 0.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    dgvCompras.Rows[e.RowIndex].Cells["Costo"].Value = 1;//le damos valor de 1
                     return;
                 }
                 //Recalculamos el subtotal y total
@@ -220,15 +214,15 @@ namespace pryDulceria
             if (e.Control is TextBox txt)
             {
                 txt.KeyPress -= txtCantidad_KeyPress;
-                txt.KeyPress += txtCantidad_KeyPress;
+                txt.KeyPress -= txtPrecio_KeyPress;
                 // Dependiendo de qué columna esté editando el usuario, conectamos el evento correcto
-                string nombreColumna = dgvCompras.Columns[dgvCompras.CurrentCell.ColumnIndex].Name;
+                string Columna = dgvCompras.Columns[dgvCompras.CurrentCell.ColumnIndex].Name;
 
-                if (nombreColumna == "Cantidad")
+                if (Columna == "Cantidad")
                 {
                     txt.KeyPress += txtCantidad_KeyPress;
                 }
-                else if (nombreColumna == "Precio")
+                else if (Columna == "Costo")
                 {
                     txt.KeyPress += txtPrecio_KeyPress;
                 }

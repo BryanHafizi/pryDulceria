@@ -142,7 +142,7 @@
             // 
             // btnCategorias
             // 
-            btnCategorias.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnCategorias.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCategorias.BackColor = Color.FromArgb(108, 117, 125);
             btnCategorias.FlatStyle = FlatStyle.Flat;
             btnCategorias.Font = new Font("Segoe UI", 12F, FontStyle.Bold);

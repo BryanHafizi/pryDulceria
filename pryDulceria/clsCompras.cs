@@ -47,7 +47,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT Id_producto AS Id, Nombre, Costo AS Precio, Stock FROM tblproductos WHERE Nombre LIKE @nombre;";
+                    string sql = "SELECT Id_producto AS Id, Nombre, Costo, Precio, Stock FROM tblproductos WHERE Nombre LIKE @nombre;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
                         consultar.Parameters.AddWithValue("@nombre", "%" + ProductoBuscar + "%");
@@ -106,7 +106,7 @@ namespace pryDulceria
                             {
                                 int idProd = Convert.ToInt32(fila.Cells["IdProducto"].Value);
                                 int cant = Convert.ToInt32(fila.Cells["Cantidad"].Value);
-                                decimal precioUnitario = Convert.ToDecimal(fila.Cells["Precio"].Value);
+                                decimal precioUnitario = Convert.ToDecimal(fila.Cells["Costo"].Value);
 
                                 string sqlDetalle = "INSERT INTO tbldet_compra (Id_compra, Id_producto, Cantidad, Precio_Unitario) VALUES (@idCompra, @idProd, @cant, @precio);";
                                 using (var cmdDetalle = new MySqlCommand(sqlDetalle, conexion, transaccion))
@@ -123,9 +123,31 @@ namespace pryDulceria
                                 using (var cmdStock = new MySqlCommand(sqlStock, conexion, transaccion))
                                 {
                                     cmdStock.Parameters.AddWithValue("@cant", cant);
-                                    cmdStock.Parameters.AddWithValue("@costo", precioUnitario); // <-- Guarda el costo nuevo
+                                    cmdStock.Parameters.AddWithValue("@costo", precioUnitario);
                                     cmdStock.Parameters.AddWithValue("@idProd", idProd);
                                     cmdStock.ExecuteNonQuery();
+                                }
+
+                                string sqlConsulta = "SELECT Precio FROM tblproductos WHERE Id_producto = @idProd;";
+                                decimal precioVentaActual = 0;
+                                using (var cmdConsulta = new MySqlCommand(sqlConsulta, conexion, transaccion))
+                                {
+                                    cmdConsulta.Parameters.AddWithValue("@idProd", idProd);
+                                    precioVentaActual = Convert.ToDecimal(cmdConsulta.ExecuteScalar());
+                                }
+
+                                if (precioUnitario >= precioVentaActual)
+                                {
+                                    decimal nuevoPrecioVenta = Math.Round(precioUnitario * 1.30m, 2);
+                                    string sqlPrecio = "UPDATE tblproductos SET Precio = @nuevoPrecio WHERE Id_producto = @idProd;";
+                                    using (var cmdPrecio = new MySqlCommand(sqlPrecio, conexion, transaccion))
+                                    {
+                                        cmdPrecio.Parameters.AddWithValue("@nuevoPrecio", nuevoPrecioVenta);
+                                        cmdPrecio.Parameters.AddWithValue("@idProd", idProd);
+                                        cmdPrecio.ExecuteNonQuery();
+                                    }
+
+                                    MessageBox.Show($"¡Aviso de Protección de Ganancias!\n\nEn el producto con ID '{idProd}' el costo de compra (${precioUnitario:0.00}) era mayor o igual al precio de venta actual (${precioVentaActual:0.00}).\n\nEl precio de venta se actualizó automáticamente a ${nuevoPrecioVenta:0.00} con un porcentaje del 30% de margen para evitar pérdidas.", "Precio de Venta Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                             }
 

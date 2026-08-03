@@ -99,11 +99,17 @@ namespace pryDulceria
                     int stock = int.Parse(dgvInventario.CurrentRow.Cells[4].Value.ToString());
                     string categoria = dgvInventario.CurrentRow.Cells[5].Value.ToString();
 
-                    frmInventarioEdicion emergente = new frmInventarioEdicion(1, id, nombre, precio, 0, precioVenta, stock, categoria);
+                    float margen = 0;
+                    if (precio > 0)
+                    {
+                        margen = (float)Math.Round(((precioVenta - precio) / precio) * 100, 2);
+                    }
+
+                    frmInventarioEdicion emergente = new frmInventarioEdicion(1, id, nombre, precio, margen, precioVenta, stock, categoria);
 
                     if (emergente.ShowDialog() == DialogResult.OK)
                     {
-                        CargarGrid(); // Asegúrate de que este método se llame así en tu formulario principal
+                        CargarGrid();
                     }
                 }
                 catch (Exception ex)
