@@ -70,7 +70,7 @@
             dataGridViewCellStyle1.Padding = new Padding(3);
             dgvCategorias.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategorias.Size = new Size(650, 400);
+            dgvCategorias.Size = new Size(650, 300);
             dgvCategorias.TabIndex = 1;
             dgvCategorias.CellClick += dgvCategorias_CellClick;
             // 
