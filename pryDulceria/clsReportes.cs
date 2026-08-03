@@ -40,7 +40,7 @@ namespace pryDulceria
                     switch (tiporeporte)
                     { 
                         case "Ventas del dia":
-                            sql = "SELECT v.Id_venta AS Numero_Ticket, t.vchnombreUsuario AS Cajero, v.Total AS Total_Cobrado FROM tblventa v  INNER JOIN tblusuarios t ON v.intidUsuario = t.intidUsuario WHERE v.fecha = @fecha;";
+                            sql = "SELECT v.Id_venta AS Numero_Ticket, t.vchnombreUsuario AS Usuario, v.Total AS Total_Cobrado FROM tblventa v  INNER JOIN tblusuarios t ON v.intidUsuario = t.intidUsuario WHERE v.fecha = @fecha;";
                             break;
 
                         case "Producto más vendido":
