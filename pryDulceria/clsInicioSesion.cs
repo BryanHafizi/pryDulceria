@@ -62,7 +62,6 @@ namespace pryDulceria
                                 idUsuarioActual = resultado.GetInt32("intidUsuario");
                                 rol = resultado.GetString("vchRol");
                                 AsignarPermisos();
-                                MessageBox.Show("Tu perfil es: " + rol, "sistema");
                                 return true;
                             }
                             else

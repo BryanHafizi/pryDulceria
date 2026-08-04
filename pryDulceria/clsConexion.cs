@@ -10,7 +10,7 @@ namespace pryDulceria
 {
     internal class clsConexion
     {
-        private string host = "189.240.192.140";
+        private string host = "localhost";
         private string db = "equipo3_bddulceria";
         private string usuario = "usuario3GB";
         private string password = "equipo3gb";
