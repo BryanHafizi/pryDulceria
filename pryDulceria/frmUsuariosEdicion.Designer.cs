@@ -158,7 +158,7 @@
             Controls.Add(pcbUsuario);
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmUsuariosEdicion";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Módulo de Edición de Usuarios";
             ((System.ComponentModel.ISupportInitialize)pcbUsuario).EndInit();
             ResumeLayout(false);

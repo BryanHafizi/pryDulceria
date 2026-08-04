@@ -68,7 +68,7 @@
             txtBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBuscar.Location = new Point(386, 80);
             txtBuscar.Name = "txtBuscar";
-            txtBuscar.PlaceholderText = "Buscar usuario";
+            txtBuscar.PlaceholderText = "Buscar Usuario";
             txtBuscar.Size = new Size(600, 34);
             txtBuscar.TabIndex = 0;
             txtBuscar.TextChanged += txtBuscar_TextChanged;

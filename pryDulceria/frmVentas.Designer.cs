@@ -23,17 +23,16 @@
             pcbCarrito = new PictureBox();
             txtBuscar = new TextBox();
             dgvCarrito = new DataGridView();
-            dgvProductos = new DataGridView();
-            lblDetalleVenta = new Label();
-            lblAgregarProducto = new Label();
-            lblIndicacion = new Label();
-            pcbBuscar = new PictureBox();
             IdProducto = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
             Precio = new DataGridViewTextBoxColumn();
             Cantidad = new DataGridViewTextBoxColumn();
             Subtotal = new DataGridViewTextBoxColumn();
             Quitar = new DataGridViewButtonColumn();
+            dgvProductos = new DataGridView();
+            lblAgregarProducto = new Label();
+            lblIndicacion = new Label();
+            pcbBuscar = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pcbCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
@@ -137,72 +136,6 @@
             dgvCarrito.CellValueChanged += dgvCarrito_CellValueChanged;
             dgvCarrito.EditingControlShowing += dgvCarrito_EditingControlShowing;
             // 
-            // dgvProductos
-            // 
-            dgvProductos.AllowUserToAddRows = false;
-            dgvProductos.AllowUserToDeleteRows = false;
-            dgvProductos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProductos.BackgroundColor = Color.White;
-            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProductos.GridColor = SystemColors.WindowText;
-            dgvProductos.Location = new Point(70, 175);
-            dgvProductos.Margin = new Padding(3, 2, 3, 2);
-            dgvProductos.Name = "dgvProductos";
-            dgvProductos.ReadOnly = true;
-            dgvProductos.RowHeadersVisible = false;
-            dgvProductos.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Padding = new Padding(3);
-            dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProductos.Size = new Size(500, 350);
-            dgvProductos.TabIndex = 1;
-            dgvProductos.CellDoubleClick += dgvProductos_CellDoubleClick;
-            // 
-            // lblDetalleVenta
-            // 
-            lblDetalleVenta.AutoSize = true;
-            lblDetalleVenta.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDetalleVenta.Location = new Point(600, 80);
-            lblDetalleVenta.Name = "lblDetalleVenta";
-            lblDetalleVenta.Size = new Size(256, 38);
-            lblDetalleVenta.TabIndex = 32;
-            lblDetalleVenta.Text = "Detalle de la Venta";
-            // 
-            // lblAgregarProducto
-            // 
-            lblAgregarProducto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            lblAgregarProducto.AutoSize = true;
-            lblAgregarProducto.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAgregarProducto.Location = new Point(70, 80);
-            lblAgregarProducto.Name = "lblAgregarProducto";
-            lblAgregarProducto.Size = new Size(257, 38);
-            lblAgregarProducto.TabIndex = 33;
-            lblAgregarProducto.Text = "Agregar productos";
-            // 
-            // lblIndicacion
-            // 
-            lblIndicacion.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            lblIndicacion.AutoSize = true;
-            lblIndicacion.BackColor = Color.Transparent;
-            lblIndicacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIndicacion.ForeColor = Color.Black;
-            lblIndicacion.Location = new Point(70, 530);
-            lblIndicacion.Name = "lblIndicacion";
-            lblIndicacion.Size = new Size(312, 28);
-            lblIndicacion.TabIndex = 34;
-            lblIndicacion.Text = "Doble click para agregar producto";
-            // 
-            // pcbBuscar
-            // 
-            pcbBuscar.Image = Properties.Resources.buscar;
-            pcbBuscar.Location = new Point(70, 125);
-            pcbBuscar.Name = "pcbBuscar";
-            pcbBuscar.Size = new Size(35, 35);
-            pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
-            pcbBuscar.TabIndex = 35;
-            pcbBuscar.TabStop = false;
-            // 
             // IdProducto
             // 
             IdProducto.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -254,6 +187,62 @@
             Quitar.UseColumnTextForButtonValue = true;
             Quitar.Width = 23;
             // 
+            // dgvProductos
+            // 
+            dgvProductos.AllowUserToAddRows = false;
+            dgvProductos.AllowUserToDeleteRows = false;
+            dgvProductos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProductos.BackgroundColor = Color.White;
+            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProductos.GridColor = SystemColors.WindowText;
+            dgvProductos.Location = new Point(70, 175);
+            dgvProductos.Margin = new Padding(3, 2, 3, 2);
+            dgvProductos.Name = "dgvProductos";
+            dgvProductos.ReadOnly = true;
+            dgvProductos.RowHeadersVisible = false;
+            dgvProductos.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProductos.Size = new Size(500, 350);
+            dgvProductos.TabIndex = 1;
+            dgvProductos.CellDoubleClick += dgvProductos_CellDoubleClick;
+            // 
+            // lblAgregarProducto
+            // 
+            lblAgregarProducto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            lblAgregarProducto.AutoSize = true;
+            lblAgregarProducto.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAgregarProducto.Location = new Point(70, 80);
+            lblAgregarProducto.Name = "lblAgregarProducto";
+            lblAgregarProducto.Size = new Size(257, 38);
+            lblAgregarProducto.TabIndex = 33;
+            lblAgregarProducto.Text = "Agregar productos";
+            // 
+            // lblIndicacion
+            // 
+            lblIndicacion.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblIndicacion.AutoSize = true;
+            lblIndicacion.BackColor = Color.Transparent;
+            lblIndicacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIndicacion.ForeColor = Color.Black;
+            lblIndicacion.Location = new Point(70, 530);
+            lblIndicacion.Name = "lblIndicacion";
+            lblIndicacion.Size = new Size(312, 28);
+            lblIndicacion.TabIndex = 34;
+            lblIndicacion.Text = "Doble click para agregar producto";
+            // 
+            // pcbBuscar
+            // 
+            pcbBuscar.Image = Properties.Resources.buscar;
+            pcbBuscar.Location = new Point(70, 125);
+            pcbBuscar.Name = "pcbBuscar";
+            pcbBuscar.Size = new Size(35, 35);
+            pcbBuscar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbBuscar.TabIndex = 35;
+            pcbBuscar.TabStop = false;
+            // 
             // frmVentas
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -263,7 +252,6 @@
             Controls.Add(pcbBuscar);
             Controls.Add(lblIndicacion);
             Controls.Add(lblAgregarProducto);
-            Controls.Add(lblDetalleVenta);
             Controls.Add(dgvProductos);
             Controls.Add(dgvCarrito);
             Controls.Add(txtBuscar);
@@ -294,7 +282,6 @@
         private TextBox txtBuscar;
         private DataGridView dgvCarrito;
         private DataGridView dgvProductos;
-        private Label lblDetalleVenta;
         private Label lblAgregarProducto;
         private Label lblIndicacion;
         private PictureBox pcbBuscar;
