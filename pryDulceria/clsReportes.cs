@@ -48,8 +48,8 @@ namespace pryDulceria
                             sql = "SELECT v.fecha AS 'Fecha',COUNT(v.Id_venta) AS 'Tickets Emitidos',SUM(v.Total) AS 'Ingreso Total del Día' FROM tblventa v WHERE v.fecha BETWEEN @fecha AND @fechaFin GROUP BY v.fecha ORDER BY v.fecha ASC;";
                             break;
 
-                        case "Producto más vendido ":
-                            sql = "SELECT p.Nombre AS Producto, SUM(d.Cantidad) AS Total_Vendidos FROM tbldet_venta d INNER JOIN tblventa v ON d.Id_venta = v.Id_venta INNER JOIN tblproductos p ON d.Id_producto = p.Id_producto WHERE v.fecha = @fecha GROUP BY p.Nombre ORDER BY Total_Vendidos DESC;";
+                        case "Ranking de productos ":
+                            sql = "SELECT p.Nombre AS Producto,SUM(dv.Cantidad) AS Total_Unidades_Vendidas FROM tblproductos p INNER JOIN tbldet_venta dv ON p.Id_producto = dv.Id_producto INNER JOIN  tblventa v ON dv.Id_venta = v.Id_venta WHERE v.fecha BETWEEN @fecha AND @fechaFin GROUP BY p.Id_producto, p.Nombre ORDER BY Total_Unidades_Vendidas DESC;";
                             break;
                       
 
