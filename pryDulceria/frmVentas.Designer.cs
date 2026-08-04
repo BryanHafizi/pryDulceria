@@ -28,6 +28,12 @@
             lblAgregarProducto = new Label();
             lblIndicacion = new Label();
             pcbBuscar = new PictureBox();
+            IdProducto = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Subtotal = new DataGridViewTextBoxColumn();
+            Quitar = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)pcbCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
@@ -113,8 +119,10 @@
             dgvCarrito.AllowUserToAddRows = false;
             dgvCarrito.AllowUserToDeleteRows = false;
             dgvCarrito.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvCarrito.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCarrito.BackgroundColor = Color.White;
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCarrito.Columns.AddRange(new DataGridViewColumn[] { IdProducto, Nombre, Precio, Cantidad, Subtotal, Quitar });
             dgvCarrito.GridColor = SystemColors.WindowText;
             dgvCarrito.Location = new Point(600, 125);
             dgvCarrito.Margin = new Padding(3, 2, 3, 2);
@@ -195,6 +203,57 @@
             pcbBuscar.TabIndex = 35;
             pcbBuscar.TabStop = false;
             // 
+            // IdProducto
+            // 
+            IdProducto.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            IdProducto.HeaderText = "Id";
+            IdProducto.MinimumWidth = 6;
+            IdProducto.Name = "IdProducto";
+            IdProducto.Width = 58;
+            // 
+            // Nombre
+            // 
+            Nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Nombre.HeaderText = "Producto";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            // 
+            // Precio
+            // 
+            Precio.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Precio.HeaderText = "Precio";
+            Precio.MinimumWidth = 6;
+            Precio.Name = "Precio";
+            Precio.Width = 95;
+            // 
+            // Cantidad
+            // 
+            Cantidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.MinimumWidth = 6;
+            Cantidad.Name = "Cantidad";
+            Cantidad.Width = 120;
+            // 
+            // Subtotal
+            // 
+            Subtotal.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Subtotal.HeaderText = "Subtotal";
+            Subtotal.MinimumWidth = 6;
+            Subtotal.Name = "Subtotal";
+            Subtotal.Width = 116;
+            // 
+            // Quitar
+            // 
+            Quitar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Quitar.HeaderText = "";
+            Quitar.MinimumWidth = 6;
+            Quitar.Name = "Quitar";
+            Quitar.Resizable = DataGridViewTriState.True;
+            Quitar.SortMode = DataGridViewColumnSortMode.Automatic;
+            Quitar.Text = "X";
+            Quitar.UseColumnTextForButtonValue = true;
+            Quitar.Width = 23;
+            // 
             // frmVentas
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -239,5 +298,11 @@
         private Label lblAgregarProducto;
         private Label lblIndicacion;
         private PictureBox pcbBuscar;
+        private DataGridViewTextBoxColumn IdProducto;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Precio;
+        private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn Subtotal;
+        private DataGridViewButtonColumn Quitar;
     }
 }

@@ -29,7 +29,7 @@ namespace pryDulceria
             lblTitulo.Text = "Agregar Producto";
         }
         //para Editar
-        public frmInventarioEdicion(int operacion, int id, string nombre, float precio, float margenGan, float precioVenta, int stock, string categoria)
+        public frmInventarioEdicion(int operacion, int id,string codigo, string nombre, float precio, float margenGan, float precioVenta, int stock, string categoria)
         {
             InitializeComponent();
             tipoOperacion = operacion;
@@ -45,6 +45,7 @@ namespace pryDulceria
             txtPrecioVenta.Text = precioVenta.ToString();
             txtStock.Text = stock.ToString();
             cmbCategoria.Text = categoria;
+            txtCodigo.Text = codigo;
         }
         //Botón Guardar
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace pryDulceria
             if (clsValidaciones.EstaVacio(txtMargenGanancia, "Margen de ganancia")) return;
             if (clsValidaciones.EstaVacio(txtPrecioVenta, "Precio de venta")) return;
             if (clsValidaciones.EstaVacio(txtStock, "Stock del producto")) return;
+            if(clsValidaciones.EstaVacio(txtCodigo, "Codigo del producto")) return;
 
             float costoVal = float.Parse(txtPrecio.Text);
             float ventaVal = float.Parse(txtPrecioVenta.Text);
@@ -69,6 +71,7 @@ namespace pryDulceria
             {
 
                 inventario.IdProducto = idProductoModificar;
+                inventario.CodigoBarras = txtCodigo.Text;
                 inventario.NombreProd = txtNombre.Text;
                 inventario.PrecioProd = float.Parse(txtPrecio.Text);
                 inventario.MargenGanancia = float.Parse(txtMargenGanancia.Text);
@@ -197,6 +200,11 @@ namespace pryDulceria
         private void txtPrecioVenta_TextChanged(object sender, EventArgs e)
         {
             CalcularMargen();
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloNumeros(e);
         }
     }
 }

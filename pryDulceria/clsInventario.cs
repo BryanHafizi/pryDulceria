@@ -10,7 +10,7 @@ namespace pryDulceria
     internal class clsInventario
     {
         //Propiedades de los productos
-        private string nombreProd;
+        private string nombreProd, codigoBarras;
         private float precioProd, precioVentaProd, margenGanancia;
         private int idProducto, idCategoria, stockProd;
 
@@ -18,6 +18,7 @@ namespace pryDulceria
         private MySqlCommand comando;
         private DataTable tabla;
 
+        public string CodigoBarras { get => codigoBarras; set => codigoBarras = value; }
         public int IdCategoria { get => idCategoria; set => idCategoria = value; }
         public int IdProducto { get => idProducto; set => idProducto = value; }
         public string NombreProd { get => nombreProd; set => nombreProd = value; }
@@ -35,7 +36,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT p.Id_producto AS Id, p.Nombre AS Nombre, p.Costo AS Costo, p.Precio AS 'Precio de venta', p.Stock AS Stock, c.categoria AS Categoria FROM tblproductos p INNER JOIN tblcategorias c ON p.id_categoria = c.id_categoria;";
+                    string sql = "SELECT p.Id_producto AS Id, p.codigo_barras AS Codigo, p.Nombre AS Nombre, p.Costo AS Costo, p.Precio AS 'Precio de venta', p.Stock AS Stock, c.categoria AS Categoria FROM tblproductos p INNER JOIN tblcategorias c ON p.id_categoria = c.id_categoria;";
                     using (var consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
@@ -58,7 +59,7 @@ namespace pryDulceria
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    string sql = "SELECT p.Id_producto AS Id, p.Nombre AS Nombre, p.Costo AS Costo, p.Precio AS 'Precio de venta', p.Stock AS Stock, c.categoria AS Categoria FROM tblproductos p INNER JOIN tblcategorias c ON p.id_categoria = c.id_categoria WHERE p.Nombre LIKE @nombre;";
+                    string sql = "SELECT p.Id_producto AS Id, p.codigo_barras AS Codigo, p.Nombre AS Nombre, p.Costo AS Costo, p.Precio AS 'Precio de venta', p.Stock AS Stock, c.categoria AS Categoria FROM tblproductos p INNER JOIN tblcategorias c ON p.id_categoria = c.id_categoria WHERE p.Nombre LIKE @nombre;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
                         consultar.Parameters.AddWithValue("@nombre", "%" + nombreProd + "%");
@@ -80,10 +81,11 @@ namespace pryDulceria
                 {
                     if (tipoOperacion == 0) // Nuevo registro
                     {
-                        string sqlN = "INSERT INTO tblproductos (Nombre, Costo, Precio, Stock, id_categoria) VALUES (@nombre, @costo, @precio, @stock, @id_categoria);";
+                        string sqlN = "INSERT INTO tblproductos (codigo_barras, Nombre, Costo, Precio, Stock, id_categoria) VALUES (@codigo, @nombre, @costo, @precio, @stock, @id_categoria);";
 
                         using (var comando = new MySqlCommand(sqlN, conexion))
                         {
+                            comando.Parameters.AddWithValue("@codigo", CodigoBarras);
                             comando.Parameters.AddWithValue("@nombre", NombreProd);
                             comando.Parameters.AddWithValue("@costo", PrecioProd);
                             comando.Parameters.AddWithValue("@precio", PrecioVentaProd);
@@ -103,11 +105,12 @@ namespace pryDulceria
                     }
                     else //Actualizar un registro
                     {
-                        string sqlA = "UPDATE tblproductos SET Nombre = @nombre, Costo = @costo, Precio = @precio, Stock = @stock, id_categoria = @id_categoria WHERE Id_producto = @id;";
+                        string sqlA = "UPDATE tblproductos SET codigo_barras = @codigo, Nombre = @nombre, Costo = @costo, Precio = @precio, Stock = @stock, id_categoria = @id_categoria WHERE Id_producto = @id;";
 
                         using (var comando = new MySqlCommand(sqlA, conexion))
                         {
                             comando.Parameters.AddWithValue("@id", IdProducto);
+                            comando.Parameters.AddWithValue("@codigo", CodigoBarras);
                             comando.Parameters.AddWithValue("@nombre", NombreProd);
                             comando.Parameters.AddWithValue("@costo", PrecioProd);
                             comando.Parameters.AddWithValue("@precio", PrecioVentaProd);

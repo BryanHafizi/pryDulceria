@@ -206,6 +206,7 @@
             txtCodigo.Name = "txtCodigo";
             txtCodigo.Size = new Size(260, 34);
             txtCodigo.TabIndex = 21;
+            txtCodigo.KeyPress += txtCodigo_KeyPress;
             // 
             // lblCodigo
             // 
@@ -214,9 +215,9 @@
             lblCodigo.ForeColor = Color.Black;
             lblCodigo.Location = new Point(27, 388);
             lblCodigo.Name = "lblCodigo";
-            lblCodigo.Size = new Size(182, 28);
+            lblCodigo.Size = new Size(199, 28);
             lblCodigo.TabIndex = 22;
-            lblCodigo.Text = "Stock del Producto:";
+            lblCodigo.Text = "Codigo del Producto:";
             // 
             // frmInventarioEdicion
             // 

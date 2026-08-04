@@ -24,7 +24,8 @@ namespace pryDulceria
             try
             {
                 dgvInventario.DataSource = inventario.CargarDataGrid();
-                dgvInventario.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvInventario.Columns["Id"].Visible = false;
+                dgvInventario.Columns["Codigo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvInventario.Columns["Costo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvInventario.Columns["Precio de venta"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvInventario.Columns["Stock"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -83,7 +84,10 @@ namespace pryDulceria
             {
                 inventario.NombreProd = txtBuscar.Text;
                 dgvInventario.DataSource = inventario.ConsultarCoincidencias();
-                dgvInventario.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                dgvInventario.Columns["Id"].Visible = false;
+
+                dgvInventario.Columns["Codigo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvInventario.Columns["Costo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvInventario.Columns["Precio de venta"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 dgvInventario.Columns["Stock"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -101,11 +105,12 @@ namespace pryDulceria
                 try
                 {
                     int id = int.Parse(dgvInventario.CurrentRow.Cells[0].Value.ToString());
-                    string nombre = dgvInventario.CurrentRow.Cells[1].Value.ToString();
-                    float precio = float.Parse(dgvInventario.CurrentRow.Cells[2].Value.ToString()); // Costo
-                    float precioVenta = float.Parse(dgvInventario.CurrentRow.Cells[3].Value.ToString()); // Precio
-                    int stock = int.Parse(dgvInventario.CurrentRow.Cells[4].Value.ToString());
-                    string categoria = dgvInventario.CurrentRow.Cells[5].Value.ToString();
+                    string codigo = dgvInventario.CurrentRow.Cells[1].Value.ToString();
+                    string nombre = dgvInventario.CurrentRow.Cells[2].Value.ToString();
+                    float precio = float.Parse(dgvInventario.CurrentRow.Cells[3].Value.ToString()); // Costo
+                    float precioVenta = float.Parse(dgvInventario.CurrentRow.Cells[4].Value.ToString()); // Precio
+                    int stock = int.Parse(dgvInventario.CurrentRow.Cells[5].Value.ToString());
+                    string categoria = dgvInventario.CurrentRow.Cells[6].Value.ToString();
 
                     float margen = 0;
                     if (precio > 0)
@@ -113,7 +118,7 @@ namespace pryDulceria
                         margen = (float)Math.Round(((precioVenta - precio) / precio) * 100, 2);
                     }
 
-                    frmInventarioEdicion emergente = new frmInventarioEdicion(1, id, nombre, precio, margen, precioVenta, stock, categoria);
+                    frmInventarioEdicion emergente = new frmInventarioEdicion(1, id, codigo, nombre, precio, margen, precioVenta, stock, categoria);
 
                     if (emergente.ShowDialog() == DialogResult.OK)
                     {
