@@ -53,6 +53,7 @@
             // 
             // pcbCarrito
             // 
+            pcbCarrito.BackColor = Color.Transparent;
             pcbCarrito.Image = Properties.Resources.Code_Generated_Image;
             pcbCarrito.Location = new Point(365, 13);
             pcbCarrito.Name = "pcbCarrito";

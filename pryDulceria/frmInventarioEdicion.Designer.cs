@@ -29,6 +29,8 @@
             lblMargenGanancia = new Label();
             txtPrecioVenta = new TextBox();
             lblPrecioVenta = new Label();
+            txtCodigo = new TextBox();
+            lblCodigo = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbEditar).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(300, 390);
+            btnGuardar.Location = new Point(298, 459);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(150, 50);
             btnGuardar.TabIndex = 6;
@@ -59,6 +61,7 @@
             // 
             // pcbEditar
             // 
+            pcbEditar.BackColor = Color.Transparent;
             pcbEditar.Image = (Image)resources.GetObject("pcbEditar.Image");
             pcbEditar.Location = new Point(440, 13);
             pcbEditar.Name = "pcbEditar";
@@ -95,7 +98,6 @@
             txtPrecio.Location = new Point(267, 188);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(260, 34);
-            txtPrecio.TabIndex = 2;
             txtPrecio.TabIndex = 2;
             txtPrecio.TextChanged += txtPrecio_TextChanged;
             txtPrecio.KeyPress += txtPrecio_KeyPress;
@@ -182,7 +184,6 @@
             txtPrecioVenta.Name = "txtPrecioVenta";
             txtPrecioVenta.Size = new Size(260, 34);
             txtPrecioVenta.TabIndex = 4;
-            txtPrecioVenta.TabIndex = 4;
             txtPrecioVenta.TextChanged += txtPrecioVenta_TextChanged;
             txtPrecioVenta.KeyPress += txtPrecioVenta_KeyPress;
             // 
@@ -197,12 +198,34 @@
             lblPrecioVenta.TabIndex = 20;
             lblPrecioVenta.Text = "Precio de venta:";
             // 
+            // txtCodigo
+            // 
+            txtCodigo.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigo.ForeColor = Color.Black;
+            txtCodigo.Location = new Point(267, 388);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(260, 34);
+            txtCodigo.TabIndex = 21;
+            // 
+            // lblCodigo
+            // 
+            lblCodigo.AutoSize = true;
+            lblCodigo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCodigo.ForeColor = Color.Black;
+            lblCodigo.Location = new Point(27, 388);
+            lblCodigo.Name = "lblCodigo";
+            lblCodigo.Size = new Size(182, 28);
+            lblCodigo.TabIndex = 22;
+            lblCodigo.Text = "Stock del Producto:";
+            // 
             // frmInventarioEdicion
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 246, 249);
-            ClientSize = new Size(632, 453);
+            ClientSize = new Size(632, 553);
+            Controls.Add(txtCodigo);
+            Controls.Add(lblCodigo);
             Controls.Add(lblPrecioVenta);
             Controls.Add(txtPrecioVenta);
             Controls.Add(lblMargenGanancia);
@@ -243,5 +266,7 @@
         private Label lblMargenGanancia;
         private TextBox txtPrecioVenta;
         private Label lblPrecioVenta;
+        private TextBox txtCodigo;
+        private Label lblCodigo;
     }
 }

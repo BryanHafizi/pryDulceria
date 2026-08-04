@@ -48,6 +48,7 @@
             // pcbReportes
             // 
             pcbReportes.AccessibleRole = AccessibleRole.None;
+            pcbReportes.BackColor = Color.Transparent;
             pcbReportes.Image = (Image)resources.GetObject("pcbReportes.Image");
             pcbReportes.Location = new Point(210, 13);
             pcbReportes.Name = "pcbReportes";

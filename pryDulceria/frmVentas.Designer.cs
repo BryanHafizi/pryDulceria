@@ -23,12 +23,6 @@
             pcbCarrito = new PictureBox();
             txtBuscar = new TextBox();
             dgvCarrito = new DataGridView();
-            IdProducto = new DataGridViewTextBoxColumn();
-            Nombre = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            Subtotal = new DataGridViewTextBoxColumn();
-            Quitar = new DataGridViewButtonColumn();
             dgvProductos = new DataGridView();
             lblDetalleVenta = new Label();
             lblAgregarProducto = new Label();
@@ -121,7 +115,6 @@
             dgvCarrito.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvCarrito.BackgroundColor = Color.White;
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarrito.Columns.AddRange(new DataGridViewColumn[] { IdProducto, Nombre, Precio, Cantidad, Subtotal, Quitar });
             dgvCarrito.GridColor = SystemColors.WindowText;
             dgvCarrito.Location = new Point(600, 125);
             dgvCarrito.Margin = new Padding(3, 2, 3, 2);
@@ -135,62 +128,6 @@
             dgvCarrito.CellContentClick += dgvCarrito_CellContentClick;
             dgvCarrito.CellValueChanged += dgvCarrito_CellValueChanged;
             dgvCarrito.EditingControlShowing += dgvCarrito_EditingControlShowing;
-            // 
-            // IdProducto
-            // 
-            IdProducto.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            IdProducto.HeaderText = "Id";
-            IdProducto.MinimumWidth = 6;
-            IdProducto.Name = "IdProducto";
-            IdProducto.ReadOnly = true;
-            IdProducto.Resizable = DataGridViewTriState.True;
-            IdProducto.Width = 58;
-            // 
-            // Nombre
-            // 
-            Nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Nombre.HeaderText = "Producto";
-            Nombre.MinimumWidth = 6;
-            Nombre.Name = "Nombre";
-            Nombre.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            Precio.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Precio.HeaderText = "Precio";
-            Precio.MinimumWidth = 6;
-            Precio.Name = "Precio";
-            Precio.ReadOnly = true;
-            Precio.Width = 95;
-            // 
-            // Cantidad
-            // 
-            Cantidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Cantidad.HeaderText = "Cantidad";
-            Cantidad.MinimumWidth = 6;
-            Cantidad.Name = "Cantidad";
-            Cantidad.Width = 120;
-            // 
-            // Subtotal
-            // 
-            Subtotal.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Subtotal.HeaderText = "Subtotal";
-            Subtotal.MinimumWidth = 6;
-            Subtotal.Name = "Subtotal";
-            Subtotal.ReadOnly = true;
-            Subtotal.Width = 116;
-            // 
-            // Quitar
-            // 
-            Quitar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Quitar.HeaderText = "";
-            Quitar.MinimumWidth = 6;
-            Quitar.Name = "Quitar";
-            Quitar.Resizable = DataGridViewTriState.True;
-            Quitar.SortMode = DataGridViewColumnSortMode.Automatic;
-            Quitar.Text = "X";
-            Quitar.UseColumnTextForButtonValue = true;
-            Quitar.Width = 23;
             // 
             // dgvProductos
             // 
@@ -302,11 +239,5 @@
         private Label lblAgregarProducto;
         private Label lblIndicacion;
         private PictureBox pcbBuscar;
-        private DataGridViewTextBoxColumn IdProducto;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Precio;
-        private DataGridViewTextBoxColumn Cantidad;
-        private DataGridViewTextBoxColumn Subtotal;
-        private DataGridViewButtonColumn Quitar;
     }
 }

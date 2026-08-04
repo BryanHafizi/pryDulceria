@@ -57,6 +57,7 @@
             // pcbInventario
             // 
             pcbInventario.AccessibleRole = AccessibleRole.None;
+            pcbInventario.BackColor = Color.Transparent;
             pcbInventario.Image = Properties.Resources.Code_Generated_Image__1_;
             pcbInventario.Location = new Point(232, 13);
             pcbInventario.Name = "pcbInventario";

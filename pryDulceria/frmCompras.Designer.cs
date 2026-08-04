@@ -45,12 +45,6 @@
             lblTotal = new Label();
             lblProveedor = new Label();
             cmbProveedor = new ComboBox();
-            IdProducto = new DataGridViewTextBoxColumn();
-            Nombre = new DataGridViewTextBoxColumn();
-            Costo = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            Subtotal = new DataGridViewTextBoxColumn();
-            Quitar = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)pcbCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbBuscar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
@@ -59,6 +53,7 @@
             // 
             // pcbCarrito
             // 
+            pcbCarrito.BackColor = Color.Transparent;
             pcbCarrito.Image = (Image)resources.GetObject("pcbCarrito.Image");
             pcbCarrito.Location = new Point(200, 13);
             pcbCarrito.Margin = new Padding(3, 4, 3, 4);
@@ -150,7 +145,6 @@
             dgvCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCompras.BackgroundColor = Color.White;
             dgvCompras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCompras.Columns.AddRange(new DataGridViewColumn[] { IdProducto, Nombre, Costo, Cantidad, Subtotal, Quitar });
             dgvCompras.GridColor = SystemColors.WindowText;
             dgvCompras.Location = new Point(600, 125);
             dgvCompras.Margin = new Padding(3, 2, 3, 2);
@@ -243,58 +237,6 @@
             cmbProveedor.Size = new Size(260, 36);
             cmbProveedor.TabIndex = 0;
             // 
-            // IdProducto
-            // 
-            IdProducto.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            IdProducto.HeaderText = "Id";
-            IdProducto.MinimumWidth = 6;
-            IdProducto.Name = "IdProducto";
-            IdProducto.ReadOnly = true;
-            IdProducto.Width = 51;
-            // 
-            // Nombre
-            // 
-            Nombre.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Nombre.HeaderText = "Producto";
-            Nombre.MinimumWidth = 6;
-            Nombre.Name = "Nombre";
-            Nombre.ReadOnly = true;
-            // 
-            // Costo
-            // 
-            Costo.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Costo.HeaderText = "Costo";
-            Costo.MinimumWidth = 6;
-            Costo.Name = "Costo";
-            Costo.Width = 76;
-            // 
-            // Cantidad
-            // 
-            Cantidad.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Cantidad.HeaderText = "Cantidad";
-            Cantidad.MinimumWidth = 6;
-            Cantidad.Name = "Cantidad";
-            Cantidad.Width = 98;
-            // 
-            // Subtotal
-            // 
-            Subtotal.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Subtotal.HeaderText = "Subtotal";
-            Subtotal.MinimumWidth = 6;
-            Subtotal.Name = "Subtotal";
-            Subtotal.ReadOnly = true;
-            Subtotal.Width = 94;
-            // 
-            // Quitar
-            // 
-            Quitar.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Quitar.HeaderText = "";
-            Quitar.MinimumWidth = 6;
-            Quitar.Name = "Quitar";
-            Quitar.Text = "X";
-            Quitar.UseColumnTextForButtonValue = true;
-            Quitar.Width = 6;
-            // 
             // frmCompras
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -340,11 +282,5 @@
         private Label lblTotal;
         private Label lblProveedor;
         private ComboBox cmbProveedor;
-        private DataGridViewTextBoxColumn IdProducto;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Costo;
-        private DataGridViewTextBoxColumn Cantidad;
-        private DataGridViewTextBoxColumn Subtotal;
-        private DataGridViewButtonColumn Quitar;
     }
 }

@@ -76,6 +76,7 @@
             // pcbUsuarios
             // 
             pcbUsuarios.AccessibleRole = AccessibleRole.None;
+            pcbUsuarios.BackColor = Color.Transparent;
             pcbUsuarios.Image = (Image)resources.GetObject("pcbUsuarios.Image");
             pcbUsuarios.Location = new Point(200, 13);
             pcbUsuarios.Name = "pcbUsuarios";

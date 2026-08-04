@@ -110,6 +110,7 @@
             // 
             // pcbUsuario
             // 
+            pcbUsuario.BackColor = Color.Transparent;
             pcbUsuario.Image = (Image)resources.GetObject("pcbUsuario.Image");
             pcbUsuario.Location = new Point(300, 13);
             pcbUsuario.Name = "pcbUsuario";

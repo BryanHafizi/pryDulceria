@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvProvedores = new DataGridView();
             txtBuscar = new TextBox();
             pbProveedores = new PictureBox();
@@ -56,8 +56,8 @@
             dgvProvedores.ReadOnly = true;
             dgvProvedores.RowHeadersVisible = false;
             dgvProvedores.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Padding = new Padding(3);
-            dgvProvedores.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Padding = new Padding(3);
+            dgvProvedores.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvProvedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProvedores.Size = new Size(900, 350);
             dgvProvedores.TabIndex = 1;
@@ -76,6 +76,7 @@
             // pbProveedores
             // 
             pbProveedores.AccessibleRole = AccessibleRole.None;
+            pbProveedores.BackColor = Color.Transparent;
             pbProveedores.Image = Properties.Resources._1782681922009;
             pbProveedores.Location = new Point(265, 13);
             pbProveedores.Name = "pbProveedores";
