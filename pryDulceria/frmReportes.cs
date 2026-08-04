@@ -15,6 +15,7 @@ namespace pryDulceria
         public frmReportes()
         {
             InitializeComponent();
+            dtpFechaCorte.Value = DateTime.Now;
 
         }
 
@@ -62,7 +63,7 @@ namespace pryDulceria
             string opcionSeleccionada = cmbTipoReporte.SelectedItem.ToString();
 
             // Si la opción es el reporte por rango/mensual, mostramos el segundo calendario
-            if (opcionSeleccionada == "Ventas semanales/mensuales")
+            if (opcionSeleccionada == "Ventas por rango (Personalizada)" || opcionSeleccionada == "Compras por rango")
             {
                 dtpFechaFin.Visible = true;
                 lblFechaFin.Visible = true; 

@@ -40,21 +40,26 @@ namespace pryDulceria
                     switch (tiporeporte)
                     { 
                         case "Ventas del dia":
-                            sql = "SELECT v.Id_venta AS Numero_Ticket, t.vchnombreUsuario AS Usuario, v.Total AS Total_Cobrado FROM tblventa v  INNER JOIN tblusuarios t ON v.intidUsuario = t.intidUsuario WHERE v.fecha = @fecha;";
+                            sql = "SELECT Ticket, Concepto, Fecha, Producto, Cantidad, Precio, Total FROM ( SELECT v.Id_venta AS Ticket, 'VENTA DEL DÍA' AS Concepto, v.fecha AS Fecha, '----------------' AS Producto, '----------------' AS Cantidad,'----------------' AS Precio, v.Total AS Total, 1 AS Orden FROM tblventa v WHERE v.fecha = @fecha UNION ALL SELECT v.Id_venta, '   Detalle' AS Concepto, v.fecha, prod.nombre, dv.Cantidad, dv.Precio_Unitario, (dv.Cantidad * dv.Precio_Unitario), 2 AS Orden FROM tblventa v INNER JOIN tbldet_venta dv ON v.Id_venta = dv.Id_venta INNER JOIN tblproductos prod ON dv.Id_producto = prod.Id_producto WHERE v.fecha = @fecha ) AS ReporteCompleto ORDER BY Ticket ASC, Orden ASC;";
                             break;
 
-                        case "Producto más vendido":
+                      
+                        case "Ventas por rango (Personalizada)":
+                            sql = "SELECT v.fecha AS 'Fecha',COUNT(v.Id_venta) AS 'Tickets Emitidos',SUM(v.Total) AS 'Ingreso Total del Día' FROM tblventa v WHERE v.fecha BETWEEN @fecha AND @fechaFin GROUP BY v.fecha ORDER BY v.fecha ASC;";
+                            break;
+
+                        case "Producto más vendido ":
                             sql = "SELECT p.Nombre AS Producto, SUM(d.Cantidad) AS Total_Vendidos FROM tbldet_venta d INNER JOIN tblventa v ON d.Id_venta = v.Id_venta INNER JOIN tblproductos p ON d.Id_producto = p.Id_producto WHERE v.fecha = @fecha GROUP BY p.Nombre ORDER BY Total_Vendidos DESC;";
                             break;
-                        case "Ventas semanales/mensuales":
-                        
-                            sql = "SELECT v.Id_venta AS Numero_Ticket, v.fecha AS Fecha, u.vchnombreUsuario AS Usuario, v.Total AS Total_Cobrado FROM tblventa v INNER JOIN tblusuarios u ON v.intidUsuario = u.intidUsuario WHERE v.fecha BETWEEN @fecha AND @fechaFin ORDER BY v.fecha ASC;"; 
-                            break;
+                      
 
                         case "Compras Realizadas":
                             sql = "SELECT c.Id_compra AS Numero_Compra, c.fecha AS Fecha, CONCAT_WS(' ', p.Nombre, p.Ap, p.Am) AS Proveedor, u.vchnombreUsuario AS Usuario, c.Total AS Total_Invertido FROM tblcompra c LEFT JOIN tblusuarios u ON c.intidUsuario = u.intidUsuario LEFT JOIN tblproveedor p ON c.Id_proveedor = p.Id_proveedor WHERE c.fecha = @fecha ORDER BY c.fecha ASC;";
                             break;
-                        default:
+                        case "Compras por rango":
+                            sql = "SELECT c.Id_compra AS Numero_Compra,c.fecha AS Fecha, CONCAT_WS(' ', p.Nombre, p.Ap, p.Am) AS Proveedor, u.vchnombreUsuario AS Usuario, c.Total AS Total_Invertido FROM tblcompra c LEFT JOIN tblusuarios u ON c.intidUsuario = u.intidUsuario LEFT JOIN tblproveedor p ON c.Id_proveedor = p.Id_proveedor WHERE c.fecha BETWEEN @fecha AND @fechaFin ORDER BY c.fecha ASC;";
+                            break;
+
                             throw new Exception("Seleccione un tipo de reporte válido.");
                     }
                     // Ejecutar la consulta y llenar el DataTable
